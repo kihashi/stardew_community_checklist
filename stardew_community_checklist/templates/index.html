@@ -4,5 +4,80 @@
     <meta charset="UTF-8">
     <title>Stardew Valley Community Checklist</title>
 </head>
+<body>
+<div class="container">
+    <h1>Stardew Valley Community Center Checklist</h1>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#bundles" aria-controls="bundles" role="tab" data-toggle="tab">Bundles</a>
+        </li>
+        <li role="presentation"><a href="#ab-list" aria-controls="ab-list" role="tab" data-toggle="tab">Alphabetical
+            List</a></li>
+        <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
 
+    </ul>
+    <div id="app">
+        <div class="just-padding tab-content">
+
+            <div role="tabpanel" class="tab-pane active" id="bundles">
+                <div class="list-group list-group-root well">
+
+                    <template v-for="room in static.rooms">
+                        <a href="#room-{{ room.id }}" class="list-group-item" data-toggle="collapse">
+                            <div class="checkbox"><i class="glyphicon glyphicon-chevron-right"></i><label><input
+                                    type="checkbox"/>{{ room.name }}</label></div>
+                        </a>
+                        <div class="list-group collapse" id="room-{{ room.id }}">
+
+                            <template v-for="bundle in static.bundles | filterBy room.id in 'room'">
+                                <a href="#bundle-{{ bundle.id }}" class="list-group-item" data-toggle="collapse">
+                                    <div class="checkbox"><i class="glyphicon glyphicon-chevron-right"></i><label><input
+                                            type="checkbox"/>{{ bundle.name }}</label></div>
+                                </a>
+                                <div class="list-group collapse" id="bundle-{{ bundle.id }}">
+                                    <template v-for="item in static.items | filterBy bundle.id in 'bundles'">
+                                        <a class="list-group-item">
+                                            <div class="checkbox"><label>
+                                                <template v-for="bundle in item.bundles"><input type="checkbox"
+                                                                                                v-model="user_data"
+                                                                                                id="{{ item.id }}"
+                                                                                                value="{{ item.id }}"/>
+                                                </template>
+                                                {{ item.name }} — {{ item.source }}</label></div>
+                                        </a>
+                                    </template>
+                                </div>
+
+                            </template>
+
+                        </div>
+                    </template>
+
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="ab-list">
+                <div class="list-group">
+                    <template v-for="item in static.items | orderBy 'name'">
+                        <a class="list-group-item">
+                            <div class="checkbox"><label><input type="checkbox" v-model="user_data" id="{{ item.id }}"
+                                                                value="{{ item.id }}"/>{{ item.name }} — {{ item.source
+                                }}</label></div>
+                        </a>
+                    </template>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="about">
+                <div class="well">
+                    <p>I wanted to have an easy way to keep track of my community center bundles since it is a pain to
+                        do it in game. Here it is. This will be a better explanation when I actually write it.</p>
+                    <p>{{ user_data | json }}</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
 </html>
