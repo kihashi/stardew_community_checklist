@@ -157,38 +157,38 @@
     },
     {
       "id": 21,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Chef's Bundle",
+      "room": 4,
+      "reward": "Pink Cake (x3)",
+      "items_required": 6
     },
     {
       "id": 22,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Dye Bundle",
+      "room": 4,
+      "reward": "Seed Maker",
+      "items_required": 6
     },
     {
       "id": 23,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Field Research Bundle",
+      "room": 4,
+      "reward": "Recycling Machine",
+      "items_required": 4
     },
     {
       "id": 24,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Fodder Bundle",
+      "room": 4,
+      "reward": "Heater",
+      "items_required": 3
     },
     {
       "id": 25,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Enchanter's Bundle",
+      "room": 4,
+      "reward": "Gold Bar (5)",
+      "items_required": 4
     },
     {
       "id": 26,
@@ -213,13 +213,6 @@
     },
     {
       "id": 29,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
-    },
-    {
-      "id": 30,
       "name": "",
       "room": ,
       "reward": "",
