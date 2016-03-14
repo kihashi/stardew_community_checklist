@@ -10,84 +10,84 @@
     {
       "id": 0,
       "name": "Spring Foraging Bundle",
-      "room": "0",
+      "room": 0,
       "reward": "Spring Seeds (30)",
       "items_required": 4
     },
     {
       "id": 1,
       "name": "Summer Foraging Bundle",
-      "room": "0",
+      "room": 0,
       "reward": "Summer Seeds (30)",
       "items_required": 3
     },
     {
       "id": 2,
       "name": "Fall Foraging Bundle",
-      "room": "0",
+      "room": 0,
       "reward": "Fall Seeds (30)",
       "items_required": 4
     },
     {
       "id": 3,
       "name": "Winter Foraging Bundle",
-      "room": "0",
+      "room": 0,
       "reward": "Winter Seeds (30)",
       "items_required": 4
     },
     {
       "id": 4,
       "name": "Construction Bundle",
-      "room": "0",
+      "room": 0,
       "reward": "Charcoal Kiln",
       "items_required": 4
     },
     {
       "id": 5,
       "name": "Exotic Foraging Bundle",
-      "room": "0",
+      "room": 0,
       "reward": "Autumn's Bounty (5)",
       "items_required": 5
     },
     {
       "id": 6,
       "name": "Spring Crops Bundle",
-      "room": "1",
+      "room": 1,
       "reward": "Speed-Gro (20)",
       "items_required": 4
     },
     {
       "id": 7,
       "name": "Summer Crops Bundle",
-      "room": "1",
+      "room": 1,
       "reward": "Quality Sprinkler",
       "items_required": 4
     },
     {
       "id": 8,
       "name": "Fall Crops Bundle",
-      "room": "1",
+      "room": 1,
       "reward": "Bee House",
       "items_required": 4
     },
     {
       "id": 9,
       "name": "Quality Crops Bundle",
-      "room": "1",
+      "room": 1,
       "reward": "Preserves Jar",
       "items_required": 3
     },
     {
       "id": 10,
       "name": "Animal Bundle",
-      "room": "1",
+      "room": 1,
       "reward": "Cheese Press",
       "items_required": 5
     },
     {
       "id": 11,
       "name": "Artisan Bundle",
-      "room": "1",
+      "room": 1,
       "reward": "Keg",
       "items_required": 6
     },
