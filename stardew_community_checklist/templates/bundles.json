@@ -136,24 +136,24 @@
     },
     {
       "id": 18,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Blacksmith's Bundle",
+      "room": 3,
+      "reward": "Furnace",
+      "items_required": 3
     },
     {
       "id": 19,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Geologists's Bundle",
+      "room": 3,
+      "reward": "Omni Geode (5)",
+      "items_required": 4
     },
     {
       "id": 20,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Adventurer's Bundle",
+      "room": 3,
+      "reward": "Small Magnet Ring",
+      "items_required": 2
     },
     {
       "id": 21,
