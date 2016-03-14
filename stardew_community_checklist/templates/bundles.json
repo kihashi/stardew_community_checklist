@@ -94,45 +94,45 @@
     },
     {
       "id": 12,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "River Fish Bundle",
+      "room": 2,
+      "reward": "Bait (30)",
+      "items_required": 4
     },
     {
       "id": 13,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Lake Fish Bundle",
+      "room": 2,
+      "reward": "Dressed Spinner",
+      "items_required": 4
     },
     {
       "id": 14,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Ocean Fish Bundle",
+      "room": 2,
+      "reward": "Warp Totem Beach (5)",
+      "items_required": 4
     },
     {
       "id": 15,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Night Fishing Bundle",
+      "room": 2,
+      "reward": "Small Glow Ring",
+      "items_required": 3
     },
     {
       "id": 16,
-      "name": "",
-      "room": 
-      "reward": "",
+      "name": "Crab Pot Bundle",
+      "room": 2,
+      "reward": "Crab Pot (3)",
       "items_required": 5
     },
     {
       "id": 17,
-      "name": "",
-      "room": ,
-      "reward": "",
-      "items_required": 5
+      "name": "Specialty Fish Bundle",
+      "room": 2,
+      "reward": "Dish O' The Sea (5)",
+      "items_required": 4
     },
     {
       "id": 18,
