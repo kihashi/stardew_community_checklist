@@ -25,6 +25,24 @@
       "bundles": [0]
     },
     {
+      "id": 4,
+      "name": "Grape",
+      "source": "Foraging during Summer.",
+      "bundles": [1]
+    },
+    {
+      "id": 5,
+      "name": "Spice Berry",
+      "source": "Foraging during Summer.",
+      "bundles": [1]
+    },
+    {
+      "id": 6,
+      "name": "Sweet Pea",
+      "source": "Foraging during Summer.",
+      "bundles": [1]
+    },
+    {
       "id": ,
       "name": "",
       "source": "",
