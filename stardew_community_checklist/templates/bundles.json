@@ -1,11 +1,35 @@
 {
   "items": [
     {
+      "id": 0,
+      "name": "Wild Horseradish",
+      "source": "Foraging during Spring.",
+      "bundles": [0]
+    },
+    {
+      "id": 1,
+      "name": "Daffodil",
+      "source": "	Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
+      "bundles": [0]
+    },
+    {
+      "id": 2,
+      "name": "Leek",
+      "source": "Foraging during Spring.",
+      "bundles": [0]
+    },
+    {
+      "id": 3,
+      "name": "Dandelion",
+      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
+      "bundles": [0]
+    },
+    {
       "id": ,
       "name": "",
-      "source": ,
+      "source": "",
       "bundles": []
-    }
+    },
   ],
   "bundles": [
     {
