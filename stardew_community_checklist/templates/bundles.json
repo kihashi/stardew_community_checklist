@@ -43,6 +43,30 @@
       "bundles": [1]
     },
     {
+      "id": 7,
+      "name": "Common Mushroom",
+      "source": "Foraging during Fall Or if you have the mushroom in your cave.",
+      "bundles": [2]
+    },
+    {
+      "id": 8,
+      "name": "Wild Plum",
+      "source": "Foraging during Fall.",
+      "bundles": [2]
+    },
+    {
+      "id": 9,
+      "name": "Hazelnut",
+      "source": "Foraging during Fall.",
+      "bundles": [2]
+    },
+    {
+      "id": 10,
+      "name": "Blackberry",
+      "source": "Foraging during Fall.",
+      "bundles": [2]
+    },
+    {
       "id": ,
       "name": "",
       "source": "",
