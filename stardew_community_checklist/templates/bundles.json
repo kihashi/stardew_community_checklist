@@ -67,6 +67,30 @@
       "bundles": [2]
     },
     {
+      "id": 11,
+      "name": "Winter Root",
+      "source": "Foraging during Winter or dropped by slimes on 41-79 Mines levels.",
+      "bundles": [3]
+    },
+    {
+      "id": 12,
+      "name": "Crystal Fruit",
+      "source": "Foraging during Winter or dropped by coal sprites on 41-79 Mines levels.",
+      "bundles": [3]
+    },
+    {
+      "id": 13,
+      "name": "Snow Yam",
+      "source": "Foraging during Winter (Using a Hoe outside the farm).",
+      "bundles": [3]
+    },
+    {
+      "id": 14,
+      "name": "Crocus",
+      "source": "Foraging during Winter.",
+      "bundles": [3]
+    },
+    {
       "id": ,
       "name": "",
       "source": "",
