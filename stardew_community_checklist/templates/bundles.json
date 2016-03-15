@@ -91,6 +91,24 @@
       "bundles": [3]
     },
     {
+      "id": 15,
+      "name": "Wood (99)",
+      "source": "Chopping trees or logs using an axe.",
+      "bundles": [4, 4]
+    },
+    {
+      "id": 16,
+      "name": "Stone (99)",
+      "source": "Smashing stones with a pickaxe.",
+      "bundles": [4]
+    },
+    {
+      "id": 17,
+      "name": "Hardwood (10)",
+      "source": "Chopping large stumps with an upgraded axe. Also in crates in the Mines",
+      "bundles": [4]
+    },
+    {
       "id": ,
       "name": "",
       "source": "",
