@@ -109,6 +109,60 @@
       "bundles": [4]
     },
     {
+      "id": 18,
+      "name": "Coconut",
+      "source": "Found in the desert.",
+      "bundles": [5]
+    },
+    {
+      "id": 19,
+      "name": "Cactus Fruit",
+      "source": "Found in the desert.",
+      "bundles": [5]
+    },
+    {
+      "id": 20,
+      "name": "Cave Carrot",
+      "source": "In boxes inside the mines or using the hoe on soil spots in the Mines.",
+      "bundles": [5]
+    },
+    {
+      "id": 21,
+      "name": "Red Mushroom",
+      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
+      "bundles": [5]
+    },
+    {
+      "id": 22,
+      "name": "Purple Mushroom",
+      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
+      "bundles": [5]
+    },
+    {
+      "id": 23,
+      "name": "Maple Syrup",
+      "source": "Harvested from maple trees using a Tapper.",
+      "bundles": [5]
+    },
+    {
+      "id": 24,
+      "name": "Oak Resin",
+      "source": "Harvested from oak trees using a Tapper.",
+      "bundles": [5]
+    },
+    {
+      "id": 25,
+      "name": "Pine Tar",
+      "source": "Harvested from pine trees using a Tapper.",
+      "bundles": [5]
+    },
+    {
+      "id": 26,
+      "name": "Morel",
+      "source": "In the farm cave if you selected the mushroom perk",
+      "bundles": [5]
+    },
+    {
       "id": ,
       "name": "",
       "source": "",
