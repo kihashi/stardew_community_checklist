@@ -235,6 +235,30 @@
       "bundles": [8]
     },
     {
+      "id": 39,
+      "name": "Parsnip (Gold Star) (5)",
+      "source": "Crops during Spring.",
+      "bundles": [9]
+    },
+    {
+      "id": 40,
+      "name": "Melon (Gold Star) (5)",
+      "source": "Crops during Summer.",
+      "bundles": [9]
+    },
+    {
+      "id": 41,
+      "name": "Pumpkin (Gold Star) (5)",
+      "source": "Crops during Fall.",
+      "bundles": [9]
+    },
+    {
+      "id": 42,
+      "name": "Corn (Gold Star) (5)",
+      "source": "Crops during Summer and Fall.",
+      "bundles": [9]
+    },
+    {
       "id": ,
       "name": "",
       "source": "",
