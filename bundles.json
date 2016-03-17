@@ -1,0 +1,506 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "name": "Wild Horseradish",
+      "source": "Foraging during Spring.",
+      "bundles": [0]
+    },
+    {
+      "id": 1,
+      "name": "Daffodil",
+      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
+      "bundles": [0]
+    },
+    {
+      "id": 2,
+      "name": "Leek",
+      "source": "Foraging during Spring.",
+      "bundles": [0]
+    },
+    {
+      "id": 3,
+      "name": "Dandelion",
+      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
+      "bundles": [0]
+    },
+    {
+      "id": 4,
+      "name": "Grape",
+      "source": "Foraging during Summer.",
+      "bundles": [1]
+    },
+    {
+      "id": 5,
+      "name": "Spice Berry",
+      "source": "Foraging during Summer.",
+      "bundles": [1]
+    },
+    {
+      "id": 6,
+      "name": "Sweet Pea",
+      "source": "Foraging during Summer.",
+      "bundles": [1]
+    },
+    {
+      "id": 7,
+      "name": "Common Mushroom",
+      "source": "Foraging during Fall Or if you have the mushroom in your cave.",
+      "bundles": [2]
+    },
+    {
+      "id": 8,
+      "name": "Wild Plum",
+      "source": "Foraging during Fall.",
+      "bundles": [2]
+    },
+    {
+      "id": 9,
+      "name": "Hazelnut",
+      "source": "Foraging during Fall.",
+      "bundles": [2]
+    },
+    {
+      "id": 10,
+      "name": "Blackberry",
+      "source": "Foraging during Fall.",
+      "bundles": [2]
+    },
+    {
+      "id": 11,
+      "name": "Winter Root",
+      "source": "Foraging during Winter or dropped by slimes on 41-79 Mines levels.",
+      "bundles": [3]
+    },
+    {
+      "id": 12,
+      "name": "Crystal Fruit",
+      "source": "Foraging during Winter or dropped by coal sprites on 41-79 Mines levels.",
+      "bundles": [3]
+    },
+    {
+      "id": 13,
+      "name": "Snow Yam",
+      "source": "Foraging during Winter (Using a Hoe outside the farm).",
+      "bundles": [3]
+    },
+    {
+      "id": 14,
+      "name": "Crocus",
+      "source": "Foraging during Winter.",
+      "bundles": [3]
+    },
+    {
+      "id": 15,
+      "name": "Wood (99)",
+      "source": "Chopping trees or logs using an axe.",
+      "bundles": [4, 4]
+    },
+    {
+      "id": 16,
+      "name": "Stone (99)",
+      "source": "Smashing stones with a pickaxe.",
+      "bundles": [4]
+    },
+    {
+      "id": 17,
+      "name": "Hardwood (10)",
+      "source": "Chopping large stumps with an upgraded axe. Also in crates in the Mines",
+      "bundles": [4]
+    },
+    {
+      "id": 18,
+      "name": "Coconut",
+      "source": "Found in the desert.",
+      "bundles": [5]
+    },
+    {
+      "id": 19,
+      "name": "Cactus Fruit",
+      "source": "Found in the desert.",
+      "bundles": [5]
+    },
+    {
+      "id": 20,
+      "name": "Cave Carrot",
+      "source": "In boxes inside the mines or using the hoe on soil spots in the Mines.",
+      "bundles": [5]
+    },
+    {
+      "id": 21,
+      "name": "Red Mushroom",
+      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
+      "bundles": [5]
+    },
+    {
+      "id": 22,
+      "name": "Purple Mushroom",
+      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
+      "bundles": [5]
+    },
+    {
+      "id": 23,
+      "name": "Maple Syrup",
+      "source": "Harvested from maple trees using a Tapper.",
+      "bundles": [5]
+    },
+    {
+      "id": 24,
+      "name": "Oak Resin",
+      "source": "Harvested from oak trees using a Tapper.",
+      "bundles": [5]
+    },
+    {
+      "id": 25,
+      "name": "Pine Tar",
+      "source": "Harvested from pine trees using a Tapper.",
+      "bundles": [5]
+    },
+    {
+      "id": 26,
+      "name": "Morel",
+      "source": "In the farm cave if you selected the mushroom perk",
+      "bundles": [5]
+    },
+    {
+      "id": 26,
+      "name": "Parsnip",
+      "source": "Crops during Spring.",
+      "bundles": [6]
+    },
+    {
+      "id": 28,
+      "name": "Green Bean",
+      "source": "Crops during Spring.",
+      "bundles": [6]
+    },
+    {
+      "id": 29,
+      "name": "Cauliflower",
+      "source": "Crops during Spring.",
+      "bundles": [6]
+    },
+    {
+      "id": 30,
+      "name": "Potato",
+      "source": "Crops during Spring.",
+      "bundles": [6]
+    },
+    {
+      "id": 31,
+      "name": "Tomato",
+      "source": "Crops during Summer.",
+      "bundles": [7]
+    },
+    {
+      "id": 32,
+      "name": "Hot Pepper",
+      "source": "Crops during Summer.",
+      "bundles": [7]
+    },
+    {
+      "id": 33,
+      "name": "Blueberry",
+      "source": "Crops during Summer.",
+      "bundles": [7]
+    },
+    {
+      "id": 34,
+      "name": "Melon",
+      "source": "Crops during Summer.",
+      "bundles": [7]
+    },
+    {
+      "id": 35,
+      "name": "Corn",
+      "source": "Crops during Summer and Fall.",
+      "bundles": [8]
+    },
+    {
+      "id": 36,
+      "name": "Eggplant",
+      "source": "",
+      "bundles": [8]
+    },
+    {
+      "id": 37,
+      "name": "Pumpkin",
+      "source": "Crops during Fall.",
+      "bundles": [8]
+    },
+    {
+      "id": 38,
+      "name": "Yam",
+      "source": "Crops during Fall.",
+      "bundles": [8]
+    },
+    {
+      "id": 39,
+      "name": "Parsnip (Gold Star) (5)",
+      "source": "Crops during Spring.",
+      "bundles": [9]
+    },
+    {
+      "id": 40,
+      "name": "Melon (Gold Star) (5)",
+      "source": "Crops during Summer.",
+      "bundles": [9]
+    },
+    {
+      "id": 41,
+      "name": "Pumpkin (Gold Star) (5)",
+      "source": "Crops during Fall.",
+      "bundles": [9]
+    },
+    {
+      "id": 42,
+      "name": "Corn (Gold Star) (5)",
+      "source": "Crops during Summer and Fall.",
+      "bundles": [9]
+    }
+  ],
+  "bundles": [
+    {
+      "id": 0,
+      "name": "Spring Foraging Bundle",
+      "room": 0,
+      "reward": "Spring Seeds (30)",
+      "items_required": 4
+    },
+    {
+      "id": 1,
+      "name": "Summer Foraging Bundle",
+      "room": 0,
+      "reward": "Summer Seeds (30)",
+      "items_required": 3
+    },
+    {
+      "id": 2,
+      "name": "Fall Foraging Bundle",
+      "room": 0,
+      "reward": "Fall Seeds (30)",
+      "items_required": 4
+    },
+    {
+      "id": 3,
+      "name": "Winter Foraging Bundle",
+      "room": 0,
+      "reward": "Winter Seeds (30)",
+      "items_required": 4
+    },
+    {
+      "id": 4,
+      "name": "Construction Bundle",
+      "room": 0,
+      "reward": "Charcoal Kiln",
+      "items_required": 4
+    },
+    {
+      "id": 5,
+      "name": "Exotic Foraging Bundle",
+      "room": 0,
+      "reward": "Autumn's Bounty (5)",
+      "items_required": 5
+    },
+    {
+      "id": 6,
+      "name": "Spring Crops Bundle",
+      "room": 1,
+      "reward": "Speed-Gro (20)",
+      "items_required": 4
+    },
+    {
+      "id": 7,
+      "name": "Summer Crops Bundle",
+      "room": 1,
+      "reward": "Quality Sprinkler",
+      "items_required": 4
+    },
+    {
+      "id": 8,
+      "name": "Fall Crops Bundle",
+      "room": 1,
+      "reward": "Bee House",
+      "items_required": 4
+    },
+    {
+      "id": 9,
+      "name": "Quality Crops Bundle",
+      "room": 1,
+      "reward": "Preserves Jar",
+      "items_required": 3
+    },
+    {
+      "id": 10,
+      "name": "Animal Bundle",
+      "room": 1,
+      "reward": "Cheese Press",
+      "items_required": 5
+    },
+    {
+      "id": 11,
+      "name": "Artisan Bundle",
+      "room": 1,
+      "reward": "Keg",
+      "items_required": 6
+    },
+    {
+      "id": 12,
+      "name": "River Fish Bundle",
+      "room": 2,
+      "reward": "Bait (30)",
+      "items_required": 4
+    },
+    {
+      "id": 13,
+      "name": "Lake Fish Bundle",
+      "room": 2,
+      "reward": "Dressed Spinner",
+      "items_required": 4
+    },
+    {
+      "id": 14,
+      "name": "Ocean Fish Bundle",
+      "room": 2,
+      "reward": "Warp Totem Beach (5)",
+      "items_required": 4
+    },
+    {
+      "id": 15,
+      "name": "Night Fishing Bundle",
+      "room": 2,
+      "reward": "Small Glow Ring",
+      "items_required": 3
+    },
+    {
+      "id": 16,
+      "name": "Crab Pot Bundle",
+      "room": 2,
+      "reward": "Crab Pot (3)",
+      "items_required": 5
+    },
+    {
+      "id": 17,
+      "name": "Specialty Fish Bundle",
+      "room": 2,
+      "reward": "Dish O' The Sea (5)",
+      "items_required": 4
+    },
+    {
+      "id": 18,
+      "name": "Blacksmith's Bundle",
+      "room": 3,
+      "reward": "Furnace",
+      "items_required": 3
+    },
+    {
+      "id": 19,
+      "name": "Geologists's Bundle",
+      "room": 3,
+      "reward": "Omni Geode (5)",
+      "items_required": 4
+    },
+    {
+      "id": 20,
+      "name": "Adventurer's Bundle",
+      "room": 3,
+      "reward": "Small Magnet Ring",
+      "items_required": 2
+    },
+    {
+      "id": 21,
+      "name": "Chef's Bundle",
+      "room": 4,
+      "reward": "Pink Cake (x3)",
+      "items_required": 6
+    },
+    {
+      "id": 22,
+      "name": "Dye Bundle",
+      "room": 4,
+      "reward": "Seed Maker",
+      "items_required": 6
+    },
+    {
+      "id": 23,
+      "name": "Field Research Bundle",
+      "room": 4,
+      "reward": "Recycling Machine",
+      "items_required": 4
+    },
+    {
+      "id": 24,
+      "name": "Fodder Bundle",
+      "room": 4,
+      "reward": "Heater",
+      "items_required": 3
+    },
+    {
+      "id": 25,
+      "name": "Enchanter's Bundle",
+      "room": 4,
+      "reward": "Gold Bar (5)",
+      "items_required": 4
+    },
+    {
+      "id": 26,
+      "name": "2,500 Bundle",
+      "room": 5,
+      "reward": "Chocolate Cake (3)",
+      "items_required": 5
+    },
+    {
+      "id": 27,
+      "name": "5,000 Bundle",
+      "room": 5,
+      "reward": "Quality Fertilizer (30)",
+      "items_required": 5
+    },
+    {
+      "id": 28,
+      "name": "10,000 Bundle",
+      "room": 5,
+      "reward": "Lightning Rod",
+      "items_required": 5
+    },
+    {
+      "id": 29,
+      "name": "25,000 Bundle",
+      "room": 5,
+      "reward": "Crystalarium",
+      "items_required": 5
+    }
+  ],
+  "rooms": [
+    {
+      "id": 0,
+      "name": "Crafts Room",
+      "reward": "Bridge Repair"
+    },
+    {
+      "id": 1,
+      "name": "Pantry",
+      "reward": "Greenhouse"
+    },
+    {
+      "id": 2,
+      "name": "Fish Tank",
+      "reward": "Glittering Boulder Removed"
+    },
+    {
+      "id": 3,
+      "name": "Boiler Room",
+      "reward": "Minecarts Repaired"
+    },
+    {
+      "id": 4,
+      "name": "Bulletin Board",
+      "reward": "Friendship"
+    },
+    {
+      "id": 5,
+      "name": "Vault",
+      "reward": "Bus Repair"
+    }
+  ]
+}

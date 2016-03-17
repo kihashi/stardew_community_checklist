@@ -1,5 +1,22 @@
-v = new Vue({
-  el: '#app'
+var v = new Vue({
+    el: '#app',
+    data:{
+        debug: true,
+        static: null,
+        user_data: []
+    },
+    ready: function(){
+        this.fetchData();
+    },
+    methods: {
+        fetchData: function(){
+            this.$http.get('bundles.json', function(data, status, response){
+                if(status == 200){
+                    this.static = data;
+                }
+            });
+        }
+    }
 });
 
 $(function() {
