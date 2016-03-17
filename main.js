@@ -7,6 +7,11 @@ var v = new Vue({
     },
     ready: function(){
         this.fetchData();
+        $('.list-group-item').on('click', function() {
+            $('.glyphicon', this)
+            .toggleClass('glyphicon-chevron-right')
+            .toggleClass('glyphicon-chevron-down');
+        });
     },
     methods: {
         fetchData: function(){
@@ -17,14 +22,4 @@ var v = new Vue({
             });
         }
     }
-});
-
-$(function() {
-
-  $('.list-group-item').on('click', function() {
-    $('.glyphicon', this)
-      .toggleClass('glyphicon-chevron-right')
-      .toggleClass('glyphicon-chevron-down');
-  });
-
 });
