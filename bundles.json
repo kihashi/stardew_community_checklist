@@ -9,7 +9,7 @@
     {
       "id": 1,
       "name": "Daffodil",
-      "source": "	Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
+      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
       "bundles": [0]
     },
     {
@@ -257,13 +257,7 @@
       "name": "Corn (Gold Star) (5)",
       "source": "Crops during Summer and Fall.",
       "bundles": [9]
-    },
-    {
-      "id": ,
-      "name": "",
-      "source": "",
-      "bundles": []
-    },
+    }
   ],
   "bundles": [
     {
