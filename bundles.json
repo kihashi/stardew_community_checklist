@@ -219,7 +219,7 @@
     {
       "id": 36,
       "name": "Eggplant",
-      "source": "",
+      "source": "Crops during Fall.",
       "bundles": [8]
     },
     {
@@ -501,6 +501,46 @@
       "id": 5,
       "name": "Vault",
       "reward": "Bus Repair"
+    }
+  ],
+  "seasons": [
+    {
+      "id": "spring",
+      "name": "Spring"
+    },
+    {
+      "id": "summer",
+      "name": "Summer"
+    },
+    {
+      "id": "fall",
+      "name": "Fall"
+    },
+    {
+      "id": "winter",
+      "name": "Winter"
+    }
+  ],
+  "skills": [
+    {
+      "id": "farming",
+      "name": "Farming"
+    },
+    {
+      "id": "mining",
+      "name": "Mining" 
+    },
+    {
+      "id": "foraging",
+      "name": "Foraging"
+    },
+    {
+      "id": "fishing",
+      "name": "Fishing"
+    },
+    {
+      "id": "combat",
+      "name": "Combat"
     }
   ]
 }
