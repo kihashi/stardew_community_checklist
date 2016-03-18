@@ -10,14 +10,11 @@
 <div class="container">
     <h1>Stardew Valley Community Center Checklist</h1>
     <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#bundles" aria-controls="bundles" role="tab" data-toggle="tab">Bundles</a>
-        </li>
-        <li role="presentation"><a href="#ab-list" aria-controls="ab-list" role="tab" data-toggle="tab">Alphabetical
-            List</a></li>
+        <li role="presentation" class="active"><a href="#bundles" aria-controls="bundles" role="tab" data-toggle="tab">By Bundle</a></li>
+        <li role="presentation"><a href="#ab-list" aria-controls="ab-list" role="tab" data-toggle="tab">Alphabetical List</a></li>
         <li role="presentation"><a href="#season-list" aria-controls="season-list" role="tab" data-toggle="tab">By Season</a></li>
         <li role="presentation"><a href="#skill-list" aria-controls="skill-list" role="tab" data-toggle="tab">By Skill</a></li>
         <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
-
     </ul>
     <div id="app">
         <div class="just-padding tab-content">
@@ -34,19 +31,25 @@
 
                             <template v-for="bundle in static.bundles | filterBy room.id in 'room'">
                                 <a href="#bundle-{{ bundle.id }}" class="list-group-item" data-toggle="collapse">
-                                    <div class="checkbox"><i class="glyphicon glyphicon-chevron-right"></i><label><input
-                                            type="checkbox"/>{{ bundle.name }}</label></div>
+                                    <div class="checkbox">
+                                        <i class="glyphicon glyphicon-chevron-right"></i>
+                                        <label>
+                                            <input type="checkbox"/>
+                                            {{ bundle.name }}
+                                        </label>
+                                    </div>
                                 </a>
                                 <div class="list-group collapse" id="bundle-{{ bundle.id }}">
                                     <template v-for="item in static.items | filterBy bundle.id in 'bundles'">
                                         <a class="list-group-item">
-                                            <div class="checkbox"><label>
-                                                <template v-for="bundle in item.bundles"><input type="checkbox"
-                                                                                                v-model="user_data"
-                                                                                                id="{{ item.id }}"
-                                                                                                value="{{ item.id }}"/>
-                                                </template>
-                                                {{ item.name }} — {{ item.source }}</label></div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <template v-for="bundle in item.bundles">
+                                                        <input type="checkbox" v-model="user_data" id="{{ item.id }}" value="{{ item.id }}"/>
+                                                    </template>
+                                                    {{ item.name }} — {{ item.source }}
+                                                </label>
+                                            </div>
                                         </a>
                                     </template>
                                 </div>
@@ -63,9 +66,17 @@
                 <div class="list-group">
                     <template v-for="item in static.items | orderBy 'name'">
                         <a class="list-group-item">
-                            <div class="checkbox"><label><input type="checkbox" v-model="user_data" id="{{ item.id }}"
-                                                                value="{{ item.id }}"/>{{ item.name }} — {{ item.source
-                                }}</label></div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" v-model="user_data" id="{{ item.id }}" value="{{ item.id }}"/>
+                                    {{ item.name }} — {{ item.source }}
+                                </label>
+                            </div>
+                        </a>
+                    </template>
+                </div>
+            </div>
+
             <div role="tabpanel" class="tab-pane" id="season-list">
                 <div class="list-group list-group-root well">
 
