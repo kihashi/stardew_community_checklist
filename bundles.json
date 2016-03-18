@@ -502,5 +502,45 @@
       "name": "Vault",
       "reward": "Bus Repair"
     }
+  ],
+  "seasons": [
+    {
+      "id": 0,
+      "name": "Spring"
+    },
+    {
+      "id": 1,
+      "name": "Summer"
+    },
+    {
+      "id": 2,
+      "name": "Fall"
+    },
+    {
+      "id": 3,
+      "name": "Winter"
+    }
+  ],
+  "skills": [
+    {
+      "id": 0,
+      "name": "Farming"
+    },
+    {
+      "id": 1,
+      "name": "Mining" 
+    },
+    {
+      "id": 2,
+      "name": "Foraging"
+    },
+    {
+      "id": 3,
+      "name": "Fishing"
+    },
+    {
+      "id": 4,
+      "name": "Combat"
+    }
   ]
 }
