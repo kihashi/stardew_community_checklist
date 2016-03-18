@@ -505,41 +505,41 @@
   ],
   "seasons": [
     {
-      "id": 0,
+      "id": "spring",
       "name": "Spring"
     },
     {
-      "id": 1,
+      "id": "summer",
       "name": "Summer"
     },
     {
-      "id": 2,
+      "id": "fall",
       "name": "Fall"
     },
     {
-      "id": 3,
+      "id": "winter",
       "name": "Winter"
     }
   ],
   "skills": [
     {
-      "id": 0,
+      "id": "farming",
       "name": "Farming"
     },
     {
-      "id": 1,
+      "id": "mining",
       "name": "Mining" 
     },
     {
-      "id": 2,
+      "id": "foraging",
       "name": "Foraging"
     },
     {
-      "id": 3,
+      "id": "fishing",
       "name": "Fishing"
     },
     {
-      "id": 4,
+      "id": "combat",
       "name": "Combat"
     }
   ]
