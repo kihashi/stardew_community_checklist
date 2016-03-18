@@ -14,6 +14,8 @@
         </li>
         <li role="presentation"><a href="#ab-list" aria-controls="ab-list" role="tab" data-toggle="tab">Alphabetical
             List</a></li>
+        <li role="presentation"><a href="#season-list" aria-controls="season-list" role="tab" data-toggle="tab">By Season</a></li>
+        <li role="presentation"><a href="#skill-list" aria-controls="skill-list" role="tab" data-toggle="tab">By Skill</a></li>
         <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
 
     </ul>
@@ -64,8 +66,57 @@
                             <div class="checkbox"><label><input type="checkbox" v-model="user_data" id="{{ item.id }}"
                                                                 value="{{ item.id }}"/>{{ item.name }} — {{ item.source
                                 }}</label></div>
+            <div role="tabpanel" class="tab-pane" id="season-list">
+                <div class="list-group list-group-root well">
+
+                    <template v-for="season in static.seasons">
+                        <a href="#season-{{ season.id }}" class="list-group-item" data-toggle="collapse">
+                            <div class="checkbox">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                <label><input type="checkbox"/>{{ season.name }}</label>
+                            </div>
                         </a>
+                        <div class="list-group collapse" id="season-{{ season.id }}">
+                            <template v-for="item in static.items | filterBy season.id in 'seasons'">
+                                <a class="list-group-item">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" v-model="user_data" id="{{ item.id }}" value="{{ item.id }}"/>
+                                            {{ item.name }} — {{ item.source }}
+                                        </label>
+                                    </div>
+                                </a>
+                            </template>
+                        </div>
                     </template>
+
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="skill-list">
+                <div class="list-group list-group-root well">
+
+                    <template v-for="skill in static.skills">
+                        <a href="#skill-{{ skill.id }}" class="list-group-item" data-toggle="collapse">
+                            <div class="checkbox">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                <label><input type="checkbox"/>{{ skill.name }}</label>
+                            </div>
+                        </a>
+                        <div class="list-group collapse" id="skill-{{ skill.id }}">
+                            <template v-for="item in static.items | filterBy skill.id in 'skills'">
+                                <a class="list-group-item">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" v-model="user_data" id="{{ item.id }}" value="{{ item.id }}"/>
+                                            {{ item.name }} — {{ item.source }}
+                                        </label>
+                                    </div>
+                                </a>
+                            </template>
+                        </div>
+                    </template>
+
                 </div>
             </div>
 
