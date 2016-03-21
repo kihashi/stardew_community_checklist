@@ -343,6 +343,54 @@
       "seasons": ["summer", "fall"],
       "skills": ["farming"],
       "bundles": [9]
+    },
+    {
+      "id": 43,
+      "name": "Milk (Large)",
+      "source": "Cows",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 44,
+      "name": "Egg (Large, Brown)",
+      "source": "Chickens",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 45,
+      "name": "Egg (Large, White)",
+      "source": "Chickens",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 46,
+      "name": "Goat Milk (Large)",
+      "source": "Goats",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 47,
+      "name": "Wool",
+      "source": "Sheep, Rabbits",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 48,
+      "name": "Duck Egg",
+      "source": "Ducks",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
     }
   ],
   "bundles": [
