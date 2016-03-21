@@ -174,7 +174,7 @@
       "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["foraging", "mining"],
-      "bundles": [5 22]
+      "bundles": [5, 22]
     },
     {
       "id": 22,
