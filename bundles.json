@@ -174,7 +174,7 @@
       "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["foraging", "mining"],
-      "bundles": [5]
+      "bundles": [5 22]
     },
     {
       "id": 22,
@@ -182,7 +182,7 @@
       "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["foraging", "mining"],
-      "bundles": [5]
+      "bundles": [5, 23]
     },
     {
       "id": 23,
@@ -190,7 +190,7 @@
       "source": "Harvested from maple trees using a Tapper.",
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["foraging"],
-      "bundles": [5]
+      "bundles": [5, 21]
     },
     {
       "id": 24,
