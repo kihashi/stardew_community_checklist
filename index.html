@@ -93,8 +93,18 @@
 
             <div role="tabpanel" class="tab-pane" id="ab-list">
                 <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="search">Filter</label>
+                                    <input type="text" class="form-control" id="search" v-model="search_name" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <div class="row row-eq-height">
-                        <template v-for="item in static.items | orderBy 'name'">
+                        <template v-for="item in static.items | orderBy 'name' | filterBy search_name in 'name'">
                             <div class="col-md-3">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">

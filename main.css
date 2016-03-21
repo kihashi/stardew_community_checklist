@@ -95,3 +95,7 @@
 .footer-text{
     flex-grow: 1;
 }
+
+form{
+    margin-bottom: 1rem;
+}
