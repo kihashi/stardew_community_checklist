@@ -391,6 +391,102 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["farming"],
       "bundles": [10]
+    },
+    {
+      "id": 49,
+      "name": "Truffle Oil",
+      "source": "Made from Truffles. Requires Oil Maker",
+      "seasons": ["spring", "summer", "fall"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 50,
+      "name": "Cloth",
+      "source": "Made from Wool. Requires Loom. Can also be rarely obtained by Recycling Soggy Newspaper.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [11]
+    },
+    {
+      "id": 51,
+      "name": "Goat Cheese",
+      "source": "Made from Goat Milk. Requires Cheese Press.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 52,
+      "name": "Cheese",
+      "source": "Made from Cow Milk. Requires Cheese Press",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 53,
+      "name": "Honey",
+      "source": "Produced by Bees. Requires Beehive.",
+      "seasons": ["spring", "summer", "fall"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 54,
+      "name": "Jelly",
+      "source": "Made from any Fruit. Requires Preserves Jar.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [11]
+    },
+    {
+      "id": 55,
+      "name": "Apple",
+      "source": "Gathered from Apple Trees during Fall. Fodder Bundle requires 3.",
+      "seasons": ["fall"],
+      "skills": ["farming"],
+      "bundles": [11, 24]
+    },
+    {
+      "id": 56,
+      "name": "Apricot",
+      "source": "Gathered from Apricot Trees during Spring.",
+      "seasons": ["spring"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 57,
+      "name": "Orange",
+      "source": "Gathered from Orange Trees during Summer or found in farm cave if fruit perk selected.",
+      "seasons": ["summer", "spring", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [11]
+    },
+    {
+      "id": 58,
+      "name": "Peach",
+      "source": "Gathered from Peach Trees during Summer.",
+      "seasons": ["summer"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 59,
+      "name": "Pomegranate",
+      "source": "Gathered from Pomegranate Trees during Fall.",
+      "seasons": ["fall"],
+      "skills": ["farming"],
+      "bundles": [11, 25]
+    },
+    {
+      "id": 60,
+      "name": "Cherry",
+      "source": "Gathered from Cherry Trees during Spring or found in farm cave if fruit perk selected.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [11]
     }
   ],
   "bundles": [
