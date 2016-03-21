@@ -10,12 +10,11 @@
 <div class="container">
     <h1>Stardew Valley Community Center Checklist</h1>
     <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#bundles" aria-controls="bundles" role="tab" data-toggle="tab">Bundles</a>
-        </li>
-        <li role="presentation"><a href="#ab-list" aria-controls="ab-list" role="tab" data-toggle="tab">Alphabetical
-            List</a></li>
+        <li role="presentation" class="active"><a href="#bundles" aria-controls="bundles" role="tab" data-toggle="tab">By Bundle</a></li>
+        <li role="presentation"><a href="#ab-list" aria-controls="ab-list" role="tab" data-toggle="tab">Alphabetical List</a></li>
+        <li role="presentation"><a href="#season-list" aria-controls="season-list" role="tab" data-toggle="tab">By Season</a></li>
+        <li role="presentation"><a href="#skill-list" aria-controls="skill-list" role="tab" data-toggle="tab">By Skill</a></li>
         <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
-
     </ul>
     <div id="app">
         <div class="just-padding tab-content">
@@ -32,21 +31,56 @@
 
                             <template v-for="bundle in static.bundles | filterBy room.id in 'room'">
                                 <a href="#bundle-{{ bundle.id }}" class="list-group-item" data-toggle="collapse">
-                                    <div class="checkbox"><i class="glyphicon glyphicon-chevron-right"></i><label><input
-                                            type="checkbox"/>{{ bundle.name }}</label></div>
+                                    <div class="checkbox">
+                                        <i class="glyphicon glyphicon-chevron-right"></i>
+                                        <label>
+                                            <input type="checkbox"/>
+                                            {{ bundle.name }}
+                                        </label>
+                                    </div>
                                 </a>
                                 <div class="list-group collapse" id="bundle-{{ bundle.id }}">
-                                    <template v-for="item in static.items | filterBy bundle.id in 'bundles'">
-                                        <a class="list-group-item">
-                                            <div class="checkbox"><label>
-                                                <template v-for="bundle in item.bundles"><input type="checkbox"
-                                                                                                v-model="user_data"
-                                                                                                id="{{ item.id }}"
-                                                                                                value="{{ item.id }}"/>
-                                                </template>
-                                                {{ item.name }} — {{ item.source }}</label></div>
-                                        </a>
-                                    </template>
+                                    <div class="container-fluid">
+                                        <div class="row row-eq-height">
+                                            <template v-for="item in static.items | filterBy bundle.id in 'bundles'">
+                                                <div class="col-md-3">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h3 class="panel-title">{{ item.name }}</h3>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <p>{{ item.source }}</p>
+                                                            <div class="button-area">
+                                                                <button v-for="bundle_id in item.bundles" class="btn btn-warning"><span class="glyphicon glyphicon-unchecked"></span>{{ static.bundles[bundle_id].name }}</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel-footer">
+                                                            <div class="panel-footer-area">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                                <span class="footer-text-area">
+                                                                    <template v-for="season_id in item.seasons">
+                                                                        <template v-for="season in static.seasons | filterBy season_id in 'id'">
+                                                                            <span class="footer-text">{{ season.name }}</span>
+                                                                        </template>
+                                                                    </template>
+                                                                </span>
+                                                            </div>
+                                                            <div class="panel-footer-area">
+                                                                <span class="glyphicon glyphicon-grain"></span>
+                                                                <div class="footer-text-area">
+                                                                    <template v-for="skill_id in item.skills">
+                                                                        <template v-for="skill in static.skills | filterBy skill_id in 'id'">
+                                                                            <div class="footer-text">{{ skill.name }}</div>
+                                                                        </template>
+                                                                    </template>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </template>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </template>
@@ -58,14 +92,162 @@
             </div>
 
             <div role="tabpanel" class="tab-pane" id="ab-list">
-                <div class="list-group">
-                    <template v-for="item in static.items | orderBy 'name'">
-                        <a class="list-group-item">
-                            <div class="checkbox"><label><input type="checkbox" v-model="user_data" id="{{ item.id }}"
-                                                                value="{{ item.id }}"/>{{ item.name }} — {{ item.source
-                                }}</label></div>
+                <div class="container-fluid">
+                    <div class="row row-eq-height">
+                        <template v-for="item in static.items | orderBy 'name'">
+                            <div class="col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">{{ item.name }}</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>{{ item.source }}</p>
+                                        <div class="button-area">
+                                            <button v-for="bundle_id in item.bundles" class="btn btn-warning"><span class="glyphicon glyphicon-unchecked"></span>{{ static.bundles[bundle_id].name }}</button>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="panel-footer-area">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                                <span class="footer-text-area">
+                                                                    <template v-for="season_id in item.seasons">
+                                                                        <template v-for="season in static.seasons | filterBy season_id in 'id'">
+                                                                            <span class="footer-text">{{ season.name }}</span>
+                                                                        </template>
+                                                                    </template>
+                                                                </span>
+                                        </div>
+                                        <div class="panel-footer-area">
+                                            <span class="glyphicon glyphicon-grain"></span>
+                                            <div class="footer-text-area">
+                                                <template v-for="skill_id in item.skills">
+                                                    <template v-for="skill in static.skills | filterBy skill_id in 'id'">
+                                                        <div class="footer-text">{{ skill.name }}</div>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="season-list">
+                <div class="list-group list-group-root well">
+
+                    <template v-for="season in static.seasons">
+                        <a href="#season-{{ season.id }}" class="list-group-item" data-toggle="collapse">
+                            <div class="checkbox">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                <label><input type="checkbox"/>{{ season.name }}</label>
+                            </div>
                         </a>
+                        <div class="list-group collapse" id="season-{{ season.id }}">
+                            <div class="container-fluid">
+                                <div class="row row-eq-height">
+                                    <template v-for="item in static.items | filterBy season.id in 'seasons'">
+                                        <div class="col-md-3">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">{{ item.name }}</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <p>{{ item.source }}</p>
+                                                    <div class="button-area">
+                                                        <button v-for="bundle_id in item.bundles" class="btn btn-warning"><span class="glyphicon glyphicon-unchecked"></span>{{ static.bundles[bundle_id].name }}</button>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <div class="panel-footer-area">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                                <span class="footer-text-area">
+                                                                    <template v-for="season_id in item.seasons">
+                                                                        <template v-for="season in static.seasons | filterBy season_id in 'id'">
+                                                                            <span class="footer-text">{{ season.name }}</span>
+                                                                        </template>
+                                                                    </template>
+                                                                </span>
+                                                    </div>
+                                                    <div class="panel-footer-area">
+                                                        <span class="glyphicon glyphicon-grain"></span>
+                                                        <div class="footer-text-area">
+                                                            <template v-for="skill_id in item.skills">
+                                                                <template v-for="skill in static.skills | filterBy skill_id in 'id'">
+                                                                    <div class="footer-text">{{ skill.name }}</div>
+                                                                </template>
+                                                            </template>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
                     </template>
+
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="skill-list">
+                <div class="list-group list-group-root well">
+
+                    <template v-for="skill in static.skills">
+                        <a href="#skill-{{ skill.id }}" class="list-group-item" data-toggle="collapse">
+                            <div class="checkbox">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                <label><input type="checkbox"/>{{ skill.name }}</label>
+                            </div>
+                        </a>
+                        <div class="list-group collapse" id="skill-{{ skill.id }}">
+                            <div class="container-fluid">
+                                <div class="row row-eq-height">
+                                    <template v-for="item in static.items | filterBy skill.id in 'skills'">
+                                        <div class="col-md-3">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">{{ item.name }}</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <p>{{ item.source }}</p>
+                                                    <div class="button-area">
+                                                        <button v-for="bundle_id in item.bundles" class="btn btn-warning"><span class="glyphicon glyphicon-unchecked"></span>{{ static.bundles[bundle_id].name }}</button>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <div class="panel-footer-area">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                                <span class="footer-text-area">
+                                                                    <template v-for="season_id in item.seasons">
+                                                                        <template v-for="season in static.seasons | filterBy season_id in 'id'">
+                                                                            <span class="footer-text">{{ season.name }}</span>
+                                                                        </template>
+                                                                    </template>
+                                                                </span>
+                                                    </div>
+                                                    <div class="panel-footer-area">
+                                                        <span class="glyphicon glyphicon-grain"></span>
+                                                        <div class="footer-text-area">
+                                                            <template v-for="skill_id in item.skills">
+                                                                <template v-for="skill in static.skills | filterBy skill_id in 'id'">
+                                                                    <div class="footer-text">{{ skill.name }}</div>
+                                                                </template>
+                                                            </template>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
                 </div>
             </div>
 
