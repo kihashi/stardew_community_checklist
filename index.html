@@ -51,7 +51,7 @@
                                                         <div class="panel-body">
                                                             <p>{{ item.source }}</p>
                                                             <div class="button-area">
-                                                                <button v-for="bundle_id in item.bundles" class="btn btn-warning"><span class="glyphicon glyphicon-unchecked"></span>{{ static.bundles[bundle_id].name }}</button>
+                                                                <button v-for="bundle_id in item.bundles" class="btn" v-bind:class="[user_data[item.id] ? btnChecked : btnUnchecked]" v-on:click="completeItem(item.id)"><span class="glyphicon" v-bind:class="[user_data[item.id] ? boxChecked : boxUnchecked]" ></span>{{ static.bundles[bundle_id].name }}</button>
                                                             </div>
                                                         </div>
                                                         <div class="panel-footer">
@@ -93,8 +93,18 @@
 
             <div role="tabpanel" class="tab-pane" id="ab-list">
                 <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="search">Filter</label>
+                                    <input type="text" class="form-control" id="search" v-model="search_name" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <div class="row row-eq-height">
-                        <template v-for="item in static.items | orderBy 'name'">
+                        <template v-for="item in static.items | orderBy 'name' | filterBy search_name in 'name'">
                             <div class="col-md-3">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
@@ -103,7 +113,7 @@
                                     <div class="panel-body">
                                         <p>{{ item.source }}</p>
                                         <div class="button-area">
-                                            <button v-for="bundle_id in item.bundles" class="btn btn-warning"><span class="glyphicon glyphicon-unchecked"></span>{{ static.bundles[bundle_id].name }}</button>
+                                            <button v-for="bundle_id in item.bundles" class="btn" v-bind:class="[user_data[item.id] ? btnChecked : btnUnchecked]" v-on:click="completeItem(item.id)"><span class="glyphicon" v-bind:class="[user_data[item.id] ? boxChecked : boxUnchecked]" ></span>{{ static.bundles[bundle_id].name }}</button>
                                         </div>
                                     </div>
                                     <div class="panel-footer">
@@ -157,7 +167,7 @@
                                                 <div class="panel-body">
                                                     <p>{{ item.source }}</p>
                                                     <div class="button-area">
-                                                        <button v-for="bundle_id in item.bundles" class="btn btn-warning"><span class="glyphicon glyphicon-unchecked"></span>{{ static.bundles[bundle_id].name }}</button>
+                                                        <button v-for="bundle_id in item.bundles" class="btn" v-bind:class="[user_data[item.id] ? btnChecked : btnUnchecked]" v-on:click="completeItem(item.id)"><span class="glyphicon" v-bind:class="[user_data[item.id] ? boxChecked : boxUnchecked]" ></span>{{ static.bundles[bundle_id].name }}</button>
                                                     </div>
                                                 </div>
                                                 <div class="panel-footer">
@@ -215,7 +225,7 @@
                                                 <div class="panel-body">
                                                     <p>{{ item.source }}</p>
                                                     <div class="button-area">
-                                                        <button v-for="bundle_id in item.bundles" class="btn btn-warning"><span class="glyphicon glyphicon-unchecked"></span>{{ static.bundles[bundle_id].name }}</button>
+                                                        <button v-for="bundle_id in item.bundles" class="btn" v-bind:class="[user_data[item.id] ? btnChecked : btnUnchecked]" v-on:click="completeItem(item.id)"><span class="glyphicon" v-bind:class="[user_data[item.id] ? boxChecked : boxUnchecked]" ></span>{{ static.bundles[bundle_id].name }}</button>
                                                     </div>
                                                 </div>
                                                 <div class="panel-footer">
