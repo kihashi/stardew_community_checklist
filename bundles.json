@@ -174,7 +174,7 @@
       "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["foraging", "mining"],
-      "bundles": [5]
+      "bundles": [5, 22]
     },
     {
       "id": 22,
@@ -182,7 +182,7 @@
       "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["foraging", "mining"],
-      "bundles": [5]
+      "bundles": [5, 23]
     },
     {
       "id": 23,
@@ -190,7 +190,7 @@
       "source": "Harvested from maple trees using a Tapper.",
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["foraging"],
-      "bundles": [5]
+      "bundles": [5, 21]
     },
     {
       "id": 24,
@@ -343,6 +343,182 @@
       "seasons": ["summer", "fall"],
       "skills": ["farming"],
       "bundles": [9]
+    },
+    {
+      "id": 43,
+      "name": "Milk (Large)",
+      "source": "Cows",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 44,
+      "name": "Egg (Large, Brown)",
+      "source": "Chickens",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 45,
+      "name": "Egg (Large, White)",
+      "source": "Chickens",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 46,
+      "name": "Goat Milk (Large)",
+      "source": "Goats",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 47,
+      "name": "Wool",
+      "source": "Sheep, Rabbits",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 48,
+      "name": "Duck Egg",
+      "source": "Ducks",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [10]
+    },
+    {
+      "id": 49,
+      "name": "Truffle Oil",
+      "source": "Made from Truffles. Requires Oil Maker",
+      "seasons": ["spring", "summer", "fall"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 50,
+      "name": "Cloth",
+      "source": "Made from Wool. Requires Loom. Can also be rarely obtained by Recycling Soggy Newspaper.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [11]
+    },
+    {
+      "id": 51,
+      "name": "Goat Cheese",
+      "source": "Made from Goat Milk. Requires Cheese Press.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 52,
+      "name": "Cheese",
+      "source": "Made from Cow Milk. Requires Cheese Press",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 53,
+      "name": "Honey",
+      "source": "Produced by Bees. Requires Beehive.",
+      "seasons": ["spring", "summer", "fall"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 54,
+      "name": "Jelly",
+      "source": "Made from any Fruit. Requires Preserves Jar.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [11]
+    },
+    {
+      "id": 55,
+      "name": "Apple",
+      "source": "Gathered from Apple Trees during Fall. Fodder Bundle requires 3.",
+      "seasons": ["fall"],
+      "skills": ["farming"],
+      "bundles": [11, 24]
+    },
+    {
+      "id": 56,
+      "name": "Apricot",
+      "source": "Gathered from Apricot Trees during Spring.",
+      "seasons": ["spring"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 57,
+      "name": "Orange",
+      "source": "Gathered from Orange Trees during Summer or found in farm cave if fruit perk selected.",
+      "seasons": ["summer", "spring", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [11]
+    },
+    {
+      "id": 58,
+      "name": "Peach",
+      "source": "Gathered from Peach Trees during Summer.",
+      "seasons": ["summer"],
+      "skills": ["farming"],
+      "bundles": [11]
+    },
+    {
+      "id": 59,
+      "name": "Pomegranate",
+      "source": "Gathered from Pomegranate Trees during Fall.",
+      "seasons": ["fall"],
+      "skills": ["farming"],
+      "bundles": [11, 25]
+    },
+    {
+      "id": 60,
+      "name": "Cherry",
+      "source": "Gathered from Cherry Trees during Spring or found in farm cave if fruit perk selected.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [11]
+    },
+    {
+      "id": 61,
+      "name": "Sunfish",
+      "source": "Found in Rivers, Daytime, Spring, and Summer.",
+      "seasons": ["spring", "summer"]
+      "skills": ["fishing"],
+      "bundles": [12]
+    },
+    {
+      "id": 62,
+      "name": "Catfish",
+      "source": "Found in Rivers, Anytime, Spring and Fall. Only when raining.",
+      "seasons": ["spring", "fall"]
+      "skills": ["fishing"],
+      "bundles": [12]
+    },
+    {
+      "id": 63,
+      "name": "Shad",
+      "source": "Found in Rivers, Daytime, Spring, Summer, and Fall. Only when raining.",
+      "seasons": ["spring", "summer", "fall"]
+      "skills": ["fishing"],
+      "bundles": [12]
+    },
+    {
+      "id": 64,
+      "name": "Tiger Trout",
+      "source": "Found in Rivers, Daytime (Early afternoon), Fall and Winter.",
+      "seasons": ["fall", "winter"]
+      "skills": ["fishing"],
+      "bundles": [12]
     }
   ],
   "bundles": [
