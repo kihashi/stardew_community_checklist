@@ -492,7 +492,7 @@
       "id": 61,
       "name": "Sunfish",
       "source": "Found in Rivers, Daytime, Spring, and Summer.",
-      "seasons": ["spring", "summer"]
+      "seasons": ["spring", "summer"],
       "skills": ["fishing"],
       "bundles": [12]
     },
@@ -500,7 +500,7 @@
       "id": 62,
       "name": "Catfish",
       "source": "Found in Rivers, Anytime, Spring and Fall. Only when raining.",
-      "seasons": ["spring", "fall"]
+      "seasons": ["spring", "fall"],
       "skills": ["fishing"],
       "bundles": [12]
     },
@@ -508,7 +508,7 @@
       "id": 63,
       "name": "Shad",
       "source": "Found in Rivers, Daytime, Spring, Summer, and Fall. Only when raining.",
-      "seasons": ["spring", "summer", "fall"]
+      "seasons": ["spring", "summer", "fall"],
       "skills": ["fishing"],
       "bundles": [12]
     },
@@ -516,7 +516,7 @@
       "id": 64,
       "name": "Tiger Trout",
       "source": "Found in Rivers, Daytime (Early afternoon), Fall and Winter.",
-      "seasons": ["fall", "winter"]
+      "seasons": ["fall", "winter"],
       "skills": ["fishing"],
       "bundles": [12]
     }

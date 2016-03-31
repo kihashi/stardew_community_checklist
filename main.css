@@ -1,101 +1,12 @@
-.just-padding {
-    padding: 15px;
-}
-
-.list-group.list-group-root {
-    padding: 0;
-    overflow: hidden;
-}
-
-.list-group.list-group-root .list-group {
-    margin-bottom: 0;
-}
-
-.list-group.list-group-root .list-group-item {
-    border-radius: 0;
-    border-width: 1px 0 0 0;
-}
-
-.list-group.list-group-root > .list-group-item:first-child {
-    border-top-width: 0;
-}
-
-.list-group.list-group-root > .list-group > .list-group-item {
-    padding-left: 30px;
-}
-
-.list-group.list-group-root > .list-group > .list-group > .list-group-item {
-    padding-left: 45px;
-}
-
-.list-group-item .glyphicon {
-    margin-right: 5px;
-}
-
-.row-eq-height, .row-eq-height > div[class*='col-']{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+.eq-line {
     flex: 1 0 auto;
-    flex-wrap: wrap;
 }
 
-.panel {
-   display: flex;
-   flex-direction:column;
-   align-content:stretch;
-    flex-grow: 1;
-}
-
-.panel-body{
-    display:         flex;
+.card {
     flex-direction: column;
-    flex-grow: 1;
 }
 
-.panel-body > p{
-    flex-grow: 1;
-}
-
-.panel-body > .button-area{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.button-area > .btn{
-    flex: 1 0 auto;
-    margin-top: 1rem;
-}
-
-.panel-footer{
-    display: flex;
+.card-content{
     flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.panel-footer-area{
-    display: flex;
-    flex-direction: row;
-    flex: 1 0 auto;
-    justify-content: space-around;
-}
-
-.footer-text-area{
-    margin-left: 1rem;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.footer-text{
-    flex-grow: 1;
-}
-
-form{
-    margin-bottom: 1rem;
+    justify-content: space-between;
 }
