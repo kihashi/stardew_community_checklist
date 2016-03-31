@@ -70,23 +70,31 @@ var v = new Vue({
         change_skill: function(new_skill){
             this.active_skill = new_skill;
         },
-        addItemToBundle: function(bundleId, itemId){
-            this.user_data[bundleId].push(itemId);
+        addItemToBundle: function(bundleId, itemId, itemPosition){
+            this.user_data[bundleId].push({item: itemId, position: itemPosition});
         },
-        removeItemFromBundle: function(bundleId, itemId){
-            i = this.user_data[bundleId].indexOf(itemId);
-            this.user_data[bundleId].splice(i, 1);
+        removeItemFromBundle: function(bundleId, itemId, itemPosition){
+            console.log("Removing item from bundle" + bundleId + " | " + itemId + " | " + itemPosition);
+            for(i = 0; i < this.user_data[bundleId].length; i++){
+                if(this.user_data[bundleId][i].item === itemId && this.user_data[bundleId][i].position === itemPosition){
+                    console.log("Found a match with: ");
+                    console.log(this.user_data[bundleId][i]);
+                    this.user_data[bundleId].splice(i, 1);
+                }
+            }
         },
-        toggleItemInBundle: function(bundleId, itemId){
-            if(this.isItemInBundle(bundleId, itemId)){
-                this.removeItemFromBundle(bundleId, itemId);
+        toggleItemInBundle: function(bundleId, itemId, itemPosition){
+            if(this.isItemInBundle(bundleId, itemId, itemPosition)){
+                this.removeItemFromBundle(bundleId, itemId, itemPosition);
             }
             else{
-                this.addItemToBundle(bundleId, itemId);
+                this.addItemToBundle(bundleId, itemId, itemPosition);
             }
         },
-        isItemInBundle: function(bundleId, itemId){
-            if(this.user_data[bundleId].indexOf(itemId) > -1){
+        isItemInBundle: function(bundleId, itemId, itemPosition){
+            if(this.user_data[bundleId].filter(function(element){
+                    return element.item === itemId && element.position === itemPosition;
+                }).length > 0){
                 return true;
             }
             else{

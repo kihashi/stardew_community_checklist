@@ -163,11 +163,11 @@
                                 <div class="content">
                                     <p class="control">
                                         <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                           v-on:click="toggleItemInBundle(bundle_id, item.id)"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id) ? 'is-success' : 'is-danger']">
+                                           v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
+                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
                                                 <span class="icon">
                                     <i class="fa"
-                                       v-bind:class="[isItemInBundle(bundle_id, item.id) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                 </span>
                                             <span>{{ static.bundles[bundle_id].name }}</span>
                                         </a>
@@ -236,12 +236,12 @@
                         </div>
                         <div class="content">
                             <p class="control">
-                                <a class="button is-danger is-fullwidth" v-for="bundle_id in item.bundles"
-                                   v-on:click="toggleItemInBundle(bundle_id, item.id)"
-                                   v-bind:class="[isItemInBundle(bundle_id, item.id) ? 'is-success' : 'is-danger']">
+                                <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
+                                   v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
+                                   v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
                                         <span class="icon">
                                     <i class="fa"
-                                       v-bind:class="[isItemInBundle(bundle_id, item.id) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                 </span>
                                     <span>{{ static.bundles[bundle_id].name }}</span>
                                 </a>
@@ -311,12 +311,12 @@
                                 </div>
                                 <div class="content">
                                     <p class="control">
-                                        <a class="button is-danger is-fullwidth" v-for="bundle_id in item.bundles"
-                                           v-on:click="toggleItemInBundle(bundle_id, item.id)"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id) ? 'is-success' : 'is-danger']">
+                                        <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
+                                           v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
+                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
                                                 <span class="icon">
                                             <i class="fa"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                         </span>
                                             <span>{{ static.bundles[bundle_id].name }}</span>
                                         </a>
@@ -388,12 +388,12 @@
                                 </div>
                                 <div class="content">
                                     <p class="control">
-                                        <a class="button is-danger is-fullwidth" v-for="bundle_id in item.bundles"
-                                           v-on:click="toggleItemInBundle(bundle_id, item.id)"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id) ? 'is-success' : 'is-danger']">
+                                        <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
+                                           v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
+                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
                                                 <span class="icon">
                                             <i class="fa"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                         </span>
                                             <span>{{ static.bundles[bundle_id].name }}</span>
                                         </a>
@@ -425,6 +425,33 @@
         </div>
     </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content is-centered is-text-centered">
+      <p>
+        <strong>Stardew Community Checklist</strong> by <a href="http://johncleaver.com">John Cleaver</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
+        <p>
+            Bundle and Item information is from the <a href="http://stardewvalleywiki.com/Stardew_Valley_Wiki">Stardew Valley Wiki</a>
+            and is used under the <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0 License</a>.
+        </p>
+        <p>
+            <a href="http://stardewvalley.net/">Stardew Valley</a> &copy; <a href="">Chucklefish LTD</a>.
+            Developed by <a href="https://twitter.com/ConcernedApe">ConcernedApe</a>.
+        </p>
+      <p>
+        <a class="icon" href="https://github.com/kihashi/stardew_community_checklist">
+          <i class="fa fa-github"></i>
+        </a>
+          <a class="icon" href="https://www.reddit.com/r/stardewvalley">
+              <i class="fa fa-reddit"></i>
+          </a>
+      </p>
+    </div>
+  </div>
+</footer>
 
 <!-- Javascript -->
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
