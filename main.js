@@ -16,13 +16,13 @@ var v = new Vue({
         this.fetchData();
         new Clipboard('.copy');
         storedUserData = localStorage.getItem('user_data');
-        if(storedUserData !== null){
+        if(storedUserData !== null && storedUserData !== ""){
             this.loadData(storedUserData);
         }
     },
     computed: {
        user_data_serialized: function(){
-           return JSON.stringify(this.user_data);
+           return btoa(JSON.stringify(this.user_data));
        }
     },
     methods: {
@@ -45,7 +45,7 @@ var v = new Vue({
             this.load_mode = false;
         },
         loadData: function(data){
-            this.user_data = JSON.parse(data);
+            this.user_data = JSON.parse(atob(data));
             this.exitLoadMode();
         },
         enterSaveMode: function(){
