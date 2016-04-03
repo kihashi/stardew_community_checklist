@@ -519,6 +519,94 @@
       "seasons": ["fall", "winter"],
       "skills": ["fishing"],
       "bundles": [12]
+    },
+    {
+      "id": 65,
+      "name": "Largemouth Bass",
+      "source": "Found in Lakes, Daytime, All Seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [13]
+    },
+    {
+      "id": 66,
+      "name": "Carp",
+      "source": "Found in Lakes, Anytime, All Seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [13]
+    },
+    {
+      "id": 67,
+      "name": "Bullhead",
+      "source": "Found in Lakes, Anytime, All Seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [13]
+    },
+    {
+      "id": 68,
+      "name": "Sturgeon",
+      "source": "Found in Lakes, Daytime, Summer and Winter.",
+      "seasons": ["summer", "winter"],
+      "skills": ["fishing"],
+      "bundles": [13]
+    },
+    {
+      "id": 69,
+      "name": "Sardine",
+      "source": "Found in the Ocean, Daytime, Spring, Fall, and Winter.",
+      "seasons": ["spring", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [14]
+    },
+    {
+      "id": 70,
+      "name": "Tuna",
+      "source": "Found in the Ocean, Daytime, Summer and Winter.",
+      "seasons": ["summer", "winter"],
+      "skills": ["fishing"],
+      "bundles": [14]
+    },
+    {
+      "id": 71,
+      "name": "Red Snapper",
+      "source": "Found in the Ocean, Daytime, Summer and Fall. Only when raining.",
+      "seasons": ["summer", "fall"],
+      "skills": ["fishing"],
+      "bundles": [14]
+    },
+    {
+      "id": 72,
+      "name": "Tilapia",
+      "source": "Found in the Ocean, Daytime, Summer and Fall.",
+      "seasons": ["summer", "fall"],
+      "skills": ["fishing"],
+      "bundles": [14]
+    },
+    {
+      "id": 73,
+      "name": "Walleye",
+      "source": "Found in Rivers, Nighttime, Fall and Winter. Only when raining.",
+      "seasons": ["fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [15]
+    },
+    {
+      "id": 74,
+      "name": "Bream",
+      "source": "Found in Rivers, Nighttime, All Seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [15]
+    },
+    {
+      "id": 75,
+      "name": "Eel",
+      "source": "Found in the Ocean, Nighttime, Spring or Fall. Only when raining.",
+      "seasons": ["spring", "fall"],
+      "skills": ["fishing"],
+      "bundles": [15]
     }
   ],
   "bundles": [
