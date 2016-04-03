@@ -141,9 +141,25 @@
                 </nav>
             </div>
             <div class="column">
-                <h3 class="title">{{ static.bundles[active_bundle].name }}</h3>
-                <progress class="progress is-info" value="{{ user_data[active_bundle].length }}"
-                          max="{{ static.bundles[active_bundle].items_required }}"></progress>
+                <div class="columns">
+                    <div class="column">
+                        <h3 class="title">{{ static.bundles[active_bundle].name }}</h3>
+                        <h5 class="subtitle">{{ static.bundles[active_bundle].reward }}</h5>
+                        <progress class="progress is-info"
+                                  value="{{ user_data[active_bundle].length }}"
+                                  max="{{ static.bundles[active_bundle].items_required }}"></progress>
+                    </div>
+                    <div class="column">
+                        <h3 class="title">{{ static.rooms[static.bundles[active_bundle].room].name }}</h3>
+                        <h5 class="subtitle">{{ static.rooms[static.bundles[active_bundle].room].reward }}</h5>
+                        <progress class="progress is-info"
+                                  value="{{ getRoomItemsChecked(static.bundles[active_bundle].room) }}"
+                                  max="{{ getRoomItemsRequired(static.bundles[active_bundle].room) }}"
+                        >
+
+                        </progress>
+                    </div>
+                </div>
                 <div class="columns is-multiline">
                     <div class="column is-3 is-flex" v-for="item in static.items | inBundle active_bundle">
                         <div class="card is-fullwidth is-flex eq-line">
