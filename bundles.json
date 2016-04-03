@@ -551,6 +551,38 @@
       "seasons": ["summer", "winter"],
       "skills": ["fishing"],
       "bundles": [13]
+    },
+    {
+      "id": 69,
+      "name": "Sardine",
+      "source": "Found in the Ocean, Daytime, Spring, Fall, and Winter.",
+      "seasons": ["spring", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [14]
+    },
+    {
+      "id": 70,
+      "name": "Tuna",
+      "source": "Found in the Ocean, Daytime, Summer and Winter.",
+      "seasons": ["summer", "winter"],
+      "skills": ["fishing"],
+      "bundles": [14]
+    },
+    {
+      "id": 71,
+      "name": "Red Snapper",
+      "source": "Found in the Ocean, Daytime, Summer and Fall. Only when raining.",
+      "seasons": ["summer", "fall"],
+      "skills": ["fishing"],
+      "bundles": [14]
+    },
+    {
+      "id": 72,
+      "name": "Tilapia",
+      "source": "Found in the Ocean, Daytime, Summer and Fall.",
+      "seasons": ["summer", "fall"],
+      "skills": ["fishing"],
+      "bundles": [14]
     }
   ],
   "bundles": [
