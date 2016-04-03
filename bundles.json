@@ -519,6 +519,38 @@
       "seasons": ["fall", "winter"],
       "skills": ["fishing"],
       "bundles": [12]
+    },
+    {
+      "id": 65,
+      "name": "Largemouth Bass",
+      "source": "Found in Lakes, Daytime, All Seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [13]
+    },
+    {
+      "id": 66,
+      "name": "Carp",
+      "source": "Found in Lakes, Anytime, All Seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [13]
+    },
+    {
+      "id": ,
+      "name": "Bullhead",
+      "source": "Found in Lakes, Anytime, All Seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [13]
+    },
+    {
+      "id": 67,
+      "name": "Sturgeon",
+      "source": "Found in Lakes, Daytime, Summer and Winter.",
+      "seasons": ["summer", "winter"],
+      "skills": ["fishing"],
+      "bundles": [13]
     }
   ],
   "bundles": [
