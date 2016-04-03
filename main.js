@@ -116,6 +116,22 @@ var v = new Vue({
                 }
             }
             return "";
+        },
+        getRoomItemsRequired: function(roomId) {
+            return this.static.bundles.reduce(function(previousValue, nextValue){
+                if(nextValue.room === roomId){
+                    return previousValue + nextValue.items_required;
+                }
+                else{
+                    return previousValue;
+                }
+            }, 0)
+        },
+        getRoomItemsChecked: function(roomId){
+            return this.static.bundles
+                .filter(function(b){ return b.room === roomId; })
+                .map(function(b){ return b.id; })
+                .reduce(function(p, c){ return p + v.user_data[c].length; }, 0);
         }
     }
 });
