@@ -583,6 +583,30 @@
       "seasons": ["summer", "fall"],
       "skills": ["fishing"],
       "bundles": [14]
+    },
+    {
+      "id": 73,
+      "name": "Walleye",
+      "source": "Found in Rivers, Nighttime, Fall and Winter. Only when raining.",
+      "seasons": ["fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [15]
+    },
+    {
+      "id": 74,
+      "name": "Bream",
+      "source": "Found in Rivers, Nighttime, All Seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [15]
+    },
+    {
+      "id": 75,
+      "name": "Eel",
+      "source": "Found in the Ocean, Nighttime, Spring or Fall. Only when raining.",
+      "seasons": ["spring", "fall"],
+      "skills": ["fishing"],
+      "bundles": [15]
     }
   ],
   "bundles": [
