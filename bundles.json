@@ -607,6 +607,86 @@
       "seasons": ["spring", "fall"],
       "skills": ["fishing"],
       "bundles": [15]
+    },
+    {
+      "id": 76,
+      "name": "Lobster",
+      "source": "Gathered from Crab Pots.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [16]
+    },
+    {
+      "id": 77,
+      "name": "Crayfish",
+      "source": "Gathered from Crab Pots. Rivers, Spring",
+      "seasons": ["spring"],
+      "skills": ["fishing"],
+      "bundles": [16]
+    },
+    {
+      "id": 78,
+      "name": "Crab",
+      "source": "Gathered from Crab Pots. Also drops from killing hermit crabs in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing", "combat"],
+      "bundles": [16]
+    },
+    {
+      "id": 79,
+      "name": "Cockle",
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing", "foraging"],
+      "bundles": [16]
+    },
+    {
+      "id": 80,
+      "name": "Mussel",
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing", "foraging"],
+      "bundles": [16]
+    },
+    {
+      "id": 81,
+      "name": "Shrimp",
+      "source": "Gathered from Crab Pots.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [16]
+    },
+    {
+      "id": 82,
+      "name": "Snail",
+      "source": "Gathered from Crab Pots.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [16]
+    },
+    {
+      "id": 83,
+      "name": "Periwinkle",
+      "source": "Gathered from Crab Pots.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [16]
+    },
+    {
+      "id": 84,
+      "name": "Oyster",
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing", "foraging"],
+      "bundles": [16]
+    },
+    {
+      "id": 85,
+      "name": "Clam",
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing", "foraging"],
+      "bundles": [16]
     }
   ],
   "bundles": [
