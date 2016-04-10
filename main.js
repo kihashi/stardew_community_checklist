@@ -130,8 +130,7 @@ var v = new Vue({
         getRoomItemsChecked: function(roomId){
             return this.static.bundles
                 .filter(function(b){ return b.room === roomId; })
-                .map(function(b){ return b.id; })
-                .reduce(function(p, c){ return p + v.user_data[c].length; }, 0);
+                .reduce(function(p, c){ return p + Math.min(v.user_data[c.id].length, c.items_required); }, 0);
         }
     }
 });
