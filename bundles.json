@@ -687,6 +687,38 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["fishing", "foraging"],
       "bundles": [16]
+    },
+    {
+      "id": 86,
+      "name": "Pufferfish",
+      "source": "Found in the Ocean, Early Afternoon, Summer. May also be purchased from the Traveling Cart.",
+      "seasons": ["summer"],
+      "skills": ["fishing"],
+      "bundles": [17]
+    },
+    {
+      "id": 87,
+      "name": "Ghostfish",
+      "source": "Found in ponds in The Mines, Anytime, All Seasons. May also be dropped by Ghosts.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing", "combat"],
+      "bundles": [17]
+    },
+    {
+      "id": 88,
+      "name": "Sandfish",
+      "source": "Found in the pond at Calico Desert. May also be purchased from the Traveling Cart.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing", "combat"],
+      "bundles": [17]
+    },
+    {
+      "id": 89,
+      "name": "Woodskip",
+      "source": "Found in the Secret Woods, Anytime, All Seasons. May also be purchased from the Traveling Cart.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [17]
     }
   ],
   "bundles": [
