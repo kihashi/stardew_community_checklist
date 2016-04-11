@@ -887,6 +887,30 @@
       "seasons": ["summer"],
       "skills": ["farming"],
       "bundles": [22]
+    },
+    {
+      "id": 111,
+      "name": "Nautilus Shell",
+      "source": "Found by foraging from the beach in the Winter.",
+      "seasons": ["winter"],
+      "skills": ["foraging"],
+      "bundles": [23]
+    },
+    {
+      "id": 112,
+      "name": "Chub",
+      "source": "Can be found in the mountain lake and river during all seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [23]
+    },
+    {
+      "id": 113,
+      "name": "Frozen Geode",
+      "source": "Found on levels 40-79 of The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [23]
     }
   ],
   "bundles": [
