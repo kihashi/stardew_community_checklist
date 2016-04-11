@@ -951,6 +951,38 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["farming", "combat"],
       "bundles": [25]
+    },
+    {
+      "id": 119,
+      "name": "2,500 Gold",
+      "source": "Collect 2,500 Gold and turn in.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
+      "bundles": [26]
+    },
+    {
+      "id": 120,
+      "name": "5,000 Gold",
+      "source": "Collect 5,000 Gold and turn in.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
+      "bundles": [27]
+    },
+    {
+      "id": 121,
+      "name": "10,000 Gold",
+      "source": "Collect 10,000 Gold and turn in.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
+      "bundles": [28]
+    },
+    {
+      "id": 122,
+      "name": "25,000 Gold",
+      "source": "Collect 25,000 Gold and turn in.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
+      "bundles": [29]
     }
   ],
   "bundles": [
