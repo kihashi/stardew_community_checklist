@@ -743,6 +743,38 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["mining"],
       "bundles": [18]
+    },
+    {
+      "id": 93,
+      "name": "Quartz",
+      "source": "Found on all levels of The Mines and in geodes.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [19]
+    },
+    {
+      "id": 94,
+      "name": "Earth Crystal",
+      "source": "Found on levels 1 - 39 of The Mines and in geodes.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [19]
+    },
+    {
+      "id": 95,
+      "name": "Frozen Tear",
+      "source": "Found on levels 40 - 79 of The Mines and in geodes.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [19]
+    },
+    {
+      "id": 96,
+      "name": "Fire Quartz",
+      "source": "Found on levels 80 - 120 of The Mines and in magma geodes.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [19]
     }
   ],
   "bundles": [
