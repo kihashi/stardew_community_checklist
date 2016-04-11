@@ -807,6 +807,46 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["combat"],
       "bundles": [20]
+    },
+    {
+      "id": 101,
+      "name": "Fiddlehead Fern",
+      "source": "Found in the Secret Woods during Summer.",
+      "seasons": ["summer"],
+      "skills": ["foraging"],
+      "bundles": [21]
+    },
+    {
+      "id": 102,
+      "name": "Truffle",
+      "source": "Found by pigs while grazing outdoors.",
+      "seasons": ["spring", "summer", "fall"],
+      "skills": ["farming"],
+      "bundles": [21]
+    },
+    {
+      "id": 103,
+      "name": "Poppy",
+      "source": "Crops during Summer.",
+      "seasons": ["summer"],
+      "skills": ["farming"],
+      "bundles": [21]
+    },
+    {
+      "id": 104,
+      "name": "Maki Roll",
+      "source": "Acquired by Cooking. Recipe available from the cooking channel on Summer 21 during odd years.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [21]
+    },
+    {
+      "id": 105,
+      "name": "Fried Egg",
+      "source": "Acquired by Cooking.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [21]
     }
   ],
   "bundles": [
