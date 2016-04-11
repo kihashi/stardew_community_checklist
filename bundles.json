@@ -719,6 +719,270 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["fishing"],
       "bundles": [17]
+    },
+    {
+      "id": 90,
+      "name": "Copper Bar",
+      "source": "Smelting copper ore in the furnace.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [18]
+    },
+    {
+      "id": 91,
+      "name": "Iron Bar",
+      "source": "Smelting iron ore in the furnace.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [18]
+    },
+    {
+      "id": 92,
+      "name": "Gold Bar",
+      "source": "Smelting gold ore in the furnace.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [18]
+    },
+    {
+      "id": 93,
+      "name": "Quartz",
+      "source": "Found on all levels of The Mines and in geodes.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [19]
+    },
+    {
+      "id": 94,
+      "name": "Earth Crystal",
+      "source": "Found on levels 1 - 39 of The Mines and in geodes.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [19]
+    },
+    {
+      "id": 95,
+      "name": "Frozen Tear",
+      "source": "Found on levels 40 - 79 of The Mines and in geodes.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [19]
+    },
+    {
+      "id": 96,
+      "name": "Fire Quartz",
+      "source": "Found on levels 80 - 120 of The Mines and in magma geodes.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [19]
+    },
+    {
+      "id": 97,
+      "name": "Slime (99)",
+      "source": "Dropped by Slimes in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["combat"],
+      "bundles": [20]
+    },
+    {
+      "id": 98,
+      "name": "Bat Wing (10)",
+      "source": "Dropped by Bats in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["combat"],
+      "bundles": [20]
+    },
+    {
+      "id": 99,
+      "name": "Solar Essence",
+      "source": "Dropped by Ghosts in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["combat"],
+      "bundles": [20]
+    },
+    {
+      "id": 100,
+      "name": "Void Essence",
+      "source": "Dropped by Shadow Brutes in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["combat"],
+      "bundles": [20]
+    },
+    {
+      "id": 101,
+      "name": "Fiddlehead Fern",
+      "source": "Found in the Secret Woods during Summer.",
+      "seasons": ["summer"],
+      "skills": ["foraging"],
+      "bundles": [21]
+    },
+    {
+      "id": 102,
+      "name": "Truffle",
+      "source": "Found by pigs while grazing outdoors.",
+      "seasons": ["spring", "summer", "fall"],
+      "skills": ["farming"],
+      "bundles": [21]
+    },
+    {
+      "id": 103,
+      "name": "Poppy",
+      "source": "Crops during Summer.",
+      "seasons": ["summer"],
+      "skills": ["farming"],
+      "bundles": [21]
+    },
+    {
+      "id": 104,
+      "name": "Maki Roll",
+      "source": "Acquired by Cooking. Recipe available from the cooking channel on Summer 21 during odd years.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [21]
+    },
+    {
+      "id": 105,
+      "name": "Fried Egg",
+      "source": "Acquired by Cooking.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [21]
+    },
+    {
+      "id": 106,
+      "name": "Sea Urchin",
+      "source": "Can be foraged on the far right side of the beach, accessible after using 300 wood to fix the bridge.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["foraging"],
+      "bundles": [22]
+    },
+    {
+      "id": 107,
+      "name": "Sunflower",
+      "source": "Crops during Fall.",
+      "seasons": ["fall"],
+      "skills": ["farming"],
+      "bundles": [22]
+    },
+    {
+      "id": 108,
+      "name": "Duck Feather",
+      "source": "Produced by ducks in the coop (similar to how chickens and ducks lay eggs)",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [22]
+    },
+    {
+      "id": 109,
+      "name": "Aquamarine",
+      "source": "Can be found in stones and boxes in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [22]
+    },
+    {
+      "id": 110,
+      "name": "Red Cabbage",
+      "source": "Crops during the Summer. Seeds can be purchased from Pierre's Year 2 and onward. Can be purchased from the Traveling Cart",
+      "seasons": ["summer"],
+      "skills": ["farming"],
+      "bundles": [22]
+    },
+    {
+      "id": 111,
+      "name": "Nautilus Shell",
+      "source": "Found by foraging from the beach in the Winter.",
+      "seasons": ["winter"],
+      "skills": ["foraging"],
+      "bundles": [23]
+    },
+    {
+      "id": 112,
+      "name": "Chub",
+      "source": "Can be found in the mountain lake and river during all seasons.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["fishing"],
+      "bundles": [23]
+    },
+    {
+      "id": 113,
+      "name": "Frozen Geode",
+      "source": "Found on levels 40-79 of The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [23]
+    },
+    {
+      "id": 114,
+      "name": "Wheat (10)",
+      "source": "Crops during Summer.",
+      "seasons": ["summer"],
+      "skills": ["farming"],
+      "bundles": [24]
+    },
+    {
+      "id": 115,
+      "name": "Hay (10)",
+      "source": "Purchased from Marnie at The Ranch or created by using the sickle on grass once you have a silo.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [24]
+    },
+    {
+      "id": 116,
+      "name": "Oak Resin",
+      "source": "Harvested from oak trees using a Tapper.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["foraging"],
+      "bundles": [25]
+    },
+    {
+      "id": 117,
+      "name": "Wine",
+      "source": "Produced by putting most fruits into a keg.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [25]
+    },
+    {
+      "id": 118,
+      "name": "Rabbit's Foot",
+      "source": "Dropped by Rabbits in the Coop, also dropped by a Serpent in Skull Cavern (0.8%).",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "combat"],
+      "bundles": [25]
+    },
+    {
+      "id": 119,
+      "name": "2,500 Gold",
+      "source": "Collect 2,500 Gold and turn in.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
+      "bundles": [26]
+    },
+    {
+      "id": 120,
+      "name": "5,000 Gold",
+      "source": "Collect 5,000 Gold and turn in.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
+      "bundles": [27]
+    },
+    {
+      "id": 121,
+      "name": "10,000 Gold",
+      "source": "Collect 10,000 Gold and turn in.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
+      "bundles": [28]
+    },
+    {
+      "id": 122,
+      "name": "25,000 Gold",
+      "source": "Collect 25,000 Gold and turn in.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
+      "bundles": [29]
     }
   ],
   "bundles": [
