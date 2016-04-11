@@ -911,6 +911,22 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["mining"],
       "bundles": [23]
+    },
+    {
+      "id": 114,
+      "name": "Wheat (10)",
+      "source": "Crops during Summer.",
+      "seasons": ["summer"],
+      "skills": ["farming"],
+      "bundles": [24]
+    },
+    {
+      "id": 115,
+      "name": "Hay (10)",
+      "source": "Purchased from Marnie at The Ranch or created by using the sickle on grass once you have a silo.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [24]
     }
   ],
   "bundles": [
