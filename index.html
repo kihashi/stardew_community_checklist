@@ -65,6 +65,28 @@
                 Skills
             </a>
         </div>
+        <div class="header-right header-menu">
+            <span class="header-item">
+                <a class="button" v-on:click="hideCompleted = !hideCompleted">
+                    <span class="icon">
+                        <i class="fa" v-bind:class="[hideCompleted ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                    </span>
+                    <span>
+                        Hide Completed
+                    </span>
+                </a>
+            </span>
+            <span class="header-item">
+                <a class="button" v-on:click="hideSpoilers = !hideSpoilers">
+                    <span class="icon">
+                        <i class="fa" v-bind:class="[hideSpoilers ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                    </span>
+                    <span>
+                        Hide Spoilers
+                    </span>
+                </a>
+            </span>
+        </div>
     </div>
 </nav>
 
