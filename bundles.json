@@ -775,6 +775,38 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["mining"],
       "bundles": [19]
+    },
+    {
+      "id": 97,
+      "name": "Slime (99)",
+      "source": "Dropped by Slimes in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["combat"],
+      "bundles": [20]
+    },
+    {
+      "id": 98,
+      "name": "Bat Wing (10)",
+      "source": "Dropped by Bats in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["combat"],
+      "bundles": [20]
+    },
+    {
+      "id": 99,
+      "name": "Solar Essence",
+      "source": "Dropped by Ghosts in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["combat"],
+      "bundles": [20]
+    },
+    {
+      "id": 100,
+      "name": "Void Essence",
+      "source": "Dropped by Shadow Brutes in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["combat"],
+      "bundles": [20]
     }
   ],
   "bundles": [
