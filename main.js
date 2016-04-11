@@ -10,7 +10,9 @@ var v = new Vue({
         active_season: "spring",
         active_skill: "farming",
         save_mode: false,
-        load_mode: false
+        load_mode: false,
+        hideCompleted: false,
+        hideSpoilers: false
     },
     ready: function(){
         this.fetchData();
