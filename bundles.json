@@ -719,6 +719,30 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["fishing"],
       "bundles": [17]
+    },
+    {
+      "id": 90,
+      "name": "Copper Bar",
+      "source": "Smelting copper ore in the furnace.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [18]
+    },
+    {
+      "id": 91,
+      "name": "Iron Bar",
+      "source": "Smelting iron ore in the furnace.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [18]
+    },
+    {
+      "id": 92,
+      "name": "Gold Bar",
+      "source": "Smelting gold ore in the furnace.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [18]
     }
   ],
   "bundles": [
