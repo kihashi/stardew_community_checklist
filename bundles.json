@@ -927,6 +927,30 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["farming"],
       "bundles": [24]
+    },
+    {
+      "id": 116,
+      "name": "Oak Resin",
+      "source": "Harvested from oak trees using a Tapper.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["foraging"],
+      "bundles": [25]
+    },
+    {
+      "id": 117,
+      "name": "Wine",
+      "source": "Produced by putting most fruits into a keg.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "foraging"],
+      "bundles": [25]
+    },
+    {
+      "id": 118,
+      "name": "Rabbit's Foot",
+      "source": "Dropped by Rabbits in the Coop, also dropped by a Serpent in Skull Cavern (0.8%).",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming", "combat"],
+      "bundles": [25]
     }
   ],
   "bundles": [
