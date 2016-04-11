@@ -847,6 +847,46 @@
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["farming"],
       "bundles": [21]
+    },
+    {
+      "id": 106,
+      "name": "Sea Urchin",
+      "source": "Can be foraged on the far right side of the beach, accessible after using 300 wood to fix the bridge.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["foraging"],
+      "bundles": [22]
+    },
+    {
+      "id": 107,
+      "name": "Sunflower",
+      "source": "Crops during Fall.",
+      "seasons": ["fall"],
+      "skills": ["farming"],
+      "bundles": [22]
+    },
+    {
+      "id": 108,
+      "name": "Duck Feather",
+      "source": "Produced by ducks in the coop (similar to how chickens and ducks lay eggs)",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["farming"],
+      "bundles": [22]
+    },
+    {
+      "id": 109,
+      "name": "Aquamarine",
+      "source": "Can be found in stones and boxes in The Mines.",
+      "seasons": ["spring", "summer", "fall", "winter"],
+      "skills": ["mining"],
+      "bundles": [22]
+    },
+    {
+      "id": 110,
+      "name": "Red Cabbage",
+      "source": "Crops during the Summer. Seeds can be purchased from Pierre's Year 2 and onward. Can be purchased from the Traveling Cart",
+      "seasons": ["summer"],
+      "skills": ["farming"],
+      "bundles": [22]
     }
   ],
   "bundles": [
