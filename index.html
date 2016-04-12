@@ -183,55 +183,57 @@
                     </div>
                 </div>
                 <div class="columns is-multiline">
-                    <div class="column is-3 is-flex" v-for="item in static.items | inBundle active_bundle">
-                        <div class="card is-fullwidth is-flex eq-line">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    {{ item.name }}
-                                </p>
-                            </header>
-                            <div class="card-content eq-line is-flex">
-                                <div class="content is-flex">
-                                    <div class="columns source">
-                                        <div class="column">
-                                            <div class="">{{ item.source }}</div>
+                    <template v-for="item in static.items | inBundle active_bundle">
+                        <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
+                            <div class="card is-fullwidth is-flex eq-line">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        {{ item.name }}
+                                    </p>
+                                </header>
+                                <div class="card-content eq-line is-flex">
+                                    <div class="content is-flex">
+                                        <div class="columns source">
+                                            <div class="column">
+                                                <div v-if="!hideSpoilers">{{ item.source }}</div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="content">
+                                        <p class="control">
+                                            <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
+                                               v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                                    <span class="icon">
+                                        <i class="fa"
+                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                    </span>
+                                                <span>{{ static.bundles[bundle_id].name }}</span>
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="content">
-                                    <p class="control">
-                                        <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                           v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
-                                                <span class="icon">
-                                    <i class="fa"
-                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
-                                </span>
-                                            <span>{{ static.bundles[bundle_id].name }}</span>
-                                        </a>
-                                    </p>
-                                </div>
+                                <footer class="card-footer" v-if="!hideSpoilers">
+                                    <div class="card-footer-item">
+                                        <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
+                                            <span class="tag is-primary is-text-centered"
+                                                  v-for="season in static.seasons | filterByArray item.seasons">
+                              {{ season.name }}
+                            </span>
+                                    </div>
+                                </footer>
+                                <footer class="card-footer" v-if="!hideSpoilers">
+                                    <div class="card-footer-item">
+                                        <span class="icon is-small"><i class="fa fa-tree"></i></span>
+                                            <span class="tag is-info is-text-centered"
+                                                  v-for="skill in static.skills | filterByArray item.skills">
+                              {{ skill.name }}
+                            </span>
+                                    </div>
+                                </footer>
                             </div>
-                            <footer class="card-footer">
-                                <div class="card-footer-item">
-                                    <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
-                                        <span class="tag is-primary is-text-centered"
-                                              v-for="season in static.seasons | filterByArray item.seasons">
-                          {{ season.name }}
-                        </span>
-                                </div>
-                            </footer>
-                            <footer class="card-footer">
-                                <div class="card-footer-item">
-                                    <span class="icon is-small"><i class="fa fa-tree"></i></span>
-                                        <span class="tag is-info is-text-centered"
-                                              v-for="skill in static.skills | filterByArray item.skills">
-                          {{ skill.name }}
-                        </span>
-                                </div>
-                            </footer>
                         </div>
-                    </div>
+                    </template>
                 </div>
             </div>
         </div>
@@ -256,56 +258,57 @@
 
 
         <div class="columns is-multiline">
-            <div class="column is-3 is-flex"
-                 v-for="item in static.items | filterBy search_term in 'name' | orderBy 'name'">
-                <div class="card is-fullwidth is-flex eq-line">
-                    <header class="card-header">
-                        <p class="card-header-title">
-                            {{ item.name }}
-                        </p>
-                    </header>
-                    <div class="card-content eq-line is-flex">
-                        <div class="content is-flex">
-                            <div class="columns source">
-                                <div class="column">
-                                    <div class="">{{ item.source }}</div>
+            <template v-for="item in static.items | filterBy search_term in 'name' | orderBy 'name'">
+                <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
+                    <div class="card is-fullwidth is-flex eq-line">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                {{ item.name }}
+                            </p>
+                        </header>
+                        <div class="card-content eq-line is-flex">
+                            <div class="content is-flex">
+                                <div class="columns source">
+                                    <div class="column">
+                                        <div v-if="!hideSpoilers">{{ item.source }}</div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="content">
+                                <p class="control">
+                                    <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
+                                       v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
+                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                            <span class="icon">
+                                        <i class="fa"
+                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                    </span>
+                                        <span>{{ static.bundles[bundle_id].name }}</span>
+                                    </a>
+                                </p>
+                            </div>
                         </div>
-                        <div class="content">
-                            <p class="control">
-                                <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                   v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                   v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
-                                        <span class="icon">
-                                    <i class="fa"
-                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
-                                </span>
-                                    <span>{{ static.bundles[bundle_id].name }}</span>
-                                </a>
-                            </p>
-                        </div>
+                        <footer class="card-footer" v-if="!hideSpoilers">
+                            <div class="card-footer-item">
+                                <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
+                                    <span class="tag is-primary is-text-centered"
+                                          v-for="season in static.seasons | filterByArray item.seasons">
+                              {{ season.name }}
+                            </span>
+                            </div>
+                        </footer>
+                        <footer class="card-footer" v-if="!hideSpoilers">
+                            <div class="card-footer-item">
+                                <span class="icon is-small"><i class="fa fa-tree"></i></span>
+                                    <span class="tag is-info is-text-centered"
+                                          v-for="skill in static.skills | filterByArray item.skills">
+                              {{ skill.name }}
+                            </span>
+                            </div>
+                        </footer>
                     </div>
-                    <footer class="card-footer">
-                        <div class="card-footer-item">
-                            <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
-                                <span class="tag is-primary is-text-centered"
-                                      v-for="season in static.seasons | filterByArray item.seasons">
-                          {{ season.name }}
-                        </span>
-                        </div>
-                    </footer>
-                    <footer class="card-footer">
-                        <div class="card-footer-item">
-                            <span class="icon is-small"><i class="fa fa-tree"></i></span>
-                                <span class="tag is-info is-text-centered"
-                                      v-for="skill in static.skills | filterByArray item.skills">
-                          {{ skill.name }}
-                        </span>
-                        </div>
-                    </footer>
                 </div>
-            </div>
+            </template>
         </div>
     </div>
 </section>
@@ -332,55 +335,57 @@
                 <h3 class="title">{{ getSeasonName(active_season) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <div class="column is-3 is-flex" v-for="item in static.items | filterBy active_season in 'seasons'">
-                        <div class="card is-fullwidth is-flex eq-line">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    {{ item.name }}
-                                </p>
-                            </header>
-                            <div class="card-content eq-line is-flex">
-                                <div class="content is-flex">
-                                    <div class="columns source">
-                                        <div class="column">
-                                            <div class="">{{ item.source }}</div>
+                    <template v-for="item in static.items | filterBy active_season in 'seasons'">
+                        <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
+                            <div class="card is-fullwidth is-flex eq-line">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        {{ item.name }}
+                                    </p>
+                                </header>
+                                <div class="card-content eq-line is-flex">
+                                    <div class="content is-flex">
+                                        <div class="columns source">
+                                            <div class="column">
+                                                <div v-if="!hideSpoilers">{{ item.source }}</div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="content">
+                                        <p class="control">
+                                            <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
+                                               v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                                    <span class="icon">
+                                                <i class="fa"
+                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                            </span>
+                                                <span>{{ static.bundles[bundle_id].name }}</span>
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="content">
-                                    <p class="control">
-                                        <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                           v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
-                                                <span class="icon">
-                                            <i class="fa"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
-                                        </span>
-                                            <span>{{ static.bundles[bundle_id].name }}</span>
-                                        </a>
-                                    </p>
-                                </div>
+                                <footer class="card-footer" v-if="!hideSpoilers">
+                                    <div class="card-footer-item">
+                                        <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
+                                            <span class="tag is-primary is-text-centered"
+                                                  v-for="season in static.seasons | filterByArray item.seasons">
+                                      {{ season.name }}
+                                    </span>
+                                    </div>
+                                </footer>
+                                <footer class="card-footer" v-if="!hideSpoilers">
+                                    <div class="card-footer-item">
+                                        <span class="icon is-small"><i class="fa fa-tree"></i></span>
+                                            <span class="tag is-info is-text-centered"
+                                                  v-for="skill in static.skills | filterByArray item.skills">
+                                              {{ skill.name }}
+                                            </span>
+                                    </div>
+                                </footer>
                             </div>
-                            <footer class="card-footer">
-                                <div class="card-footer-item">
-                                    <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
-                                        <span class="tag is-primary is-text-centered"
-                                              v-for="season in static.seasons | filterByArray item.seasons">
-                                  {{ season.name }}
-                                </span>
-                                </div>
-                            </footer>
-                            <footer class="card-footer">
-                                <div class="card-footer-item">
-                                    <span class="icon is-small"><i class="fa fa-tree"></i></span>
-                                        <span class="tag is-info is-text-centered"
-                                              v-for="skill in static.skills | filterByArray item.skills">
-                                          {{ skill.name }}
-                                        </span>
-                                </div>
-                            </footer>
                         </div>
-                    </div>
+                    </template>
                 </div>
             </div>
         </div>
@@ -409,55 +414,57 @@
                 <h3 class="title">{{ getSkillName(active_skill) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <div class="column is-3 is-flex" v-for="item in static.items | filterBy active_skill in 'skills'">
-                        <div class="card is-fullwidth is-flex eq-line">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    {{ item.name }}
-                                </p>
-                            </header>
-                            <div class="card-content eq-line is-flex">
-                                <div class="content is-flex">
-                                    <div class="columns source">
-                                        <div class="column">
-                                            <div class="">{{ item.source }}</div>
+                    <template v-for="item in static.items | filterBy active_skill in 'skills'">
+                        <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
+                            <div class="card is-fullwidth is-flex eq-line">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        {{ item.name }}
+                                    </p>
+                                </header>
+                                <div class="card-content eq-line is-flex">
+                                    <div class="content is-flex">
+                                        <div class="columns source">
+                                            <div class="column">
+                                                <div v-if="!hideSpoilers">{{ item.source }}</div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="content">
+                                        <p class="control">
+                                            <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
+                                               v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                                    <span class="icon">
+                                                <i class="fa"
+                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                            </span>
+                                                <span>{{ static.bundles[bundle_id].name }}</span>
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="content">
-                                    <p class="control">
-                                        <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                           v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
-                                                <span class="icon">
-                                            <i class="fa"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
-                                        </span>
-                                            <span>{{ static.bundles[bundle_id].name }}</span>
-                                        </a>
-                                    </p>
-                                </div>
+                                <footer class="card-footer" v-if="!hideSpoilers">
+                                    <div class="card-footer-item">
+                                        <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
+                                            <span class="tag is-primary is-text-centered"
+                                                  v-for="season in static.seasons | filterByArray item.seasons">
+                                      {{ season.name }}
+                                    </span>
+                                    </div>
+                                </footer>
+                                <footer class="card-footer" v-if="!hideSpoilers">
+                                    <div class="card-footer-item">
+                                        <span class="icon is-small"><i class="fa fa-tree"></i></span>
+                                            <span class="tag is-info is-text-centered"
+                                                  v-for="skill in static.skills | filterByArray item.skills">
+                                              {{ skill.name }}
+                                            </span>
+                                    </div>
+                                </footer>
                             </div>
-                            <footer class="card-footer">
-                                <div class="card-footer-item">
-                                    <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
-                                        <span class="tag is-primary is-text-centered"
-                                              v-for="season in static.seasons | filterByArray item.seasons">
-                                  {{ season.name }}
-                                </span>
-                                </div>
-                            </footer>
-                            <footer class="card-footer">
-                                <div class="card-footer-item">
-                                    <span class="icon is-small"><i class="fa fa-tree"></i></span>
-                                        <span class="tag is-info is-text-centered"
-                                              v-for="skill in static.skills | filterByArray item.skills">
-                                          {{ skill.name }}
-                                        </span>
-                                </div>
-                            </footer>
                         </div>
-                    </div>
+                    </template>
                 </div>
             </div>
         </div>
