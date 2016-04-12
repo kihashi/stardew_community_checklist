@@ -10,7 +10,9 @@ var v = new Vue({
         active_season: "spring",
         active_skill: "farming",
         save_mode: false,
-        load_mode: false
+        load_mode: false,
+        hideCompleted: false,
+        hideSpoilers: false
     },
     ready: function(){
         this.fetchData();
@@ -131,6 +133,15 @@ var v = new Vue({
             return this.static.bundles
                 .filter(function(b){ return b.room === roomId; })
                 .reduce(function(p, c){ return p + Math.min(v.user_data[c.id].length, c.items_required); }, 0);
+        },
+        isCompleted: function (item) {
+            for(i=0; i < item.bundles.length; i++){
+                if(!this.isItemInBundle(item.bundles[i], item.id, i)){
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 });
