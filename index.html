@@ -215,7 +215,8 @@
                                         <p class="control">
                                             <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
                                                v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                         <i class="fa"
                                            v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -290,7 +291,8 @@
                                 <p class="control">
                                     <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
                                        v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
+                                                      !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                             <span class="icon">
                                         <i class="fa"
                                            v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -367,7 +369,8 @@
                                         <p class="control">
                                             <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
                                                v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                                 <i class="fa"
                                                    v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -446,7 +449,8 @@
                                         <p class="control">
                                             <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
                                                v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                                 <i class="fa"
                                                    v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>

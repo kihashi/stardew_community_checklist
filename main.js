@@ -140,6 +140,9 @@ var v = new Vue({
             }
 
             return true;
+        },
+        isBundleComplete: function(bundle_id){
+            return this.user_data[bundle_id].length >= this.static.bundles[bundle_id].items_required;
         }
     }
 });
