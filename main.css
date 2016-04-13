@@ -10,3 +10,11 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.card-footer-item{
+    flex-wrap: wrap;
+}
+
+.button{
+    flex-wrap: wrap;
+}
