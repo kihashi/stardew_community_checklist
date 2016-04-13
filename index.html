@@ -167,14 +167,24 @@
             <div class="column">
                 <div class="columns">
                     <div class="column">
-                        <h3 class="title">{{ static.bundles[active_bundle].name }}</h3>
+                        <h3 class="title">
+                            {{ static.bundles[active_bundle].name }}
+                            <span class="is-pulled-right">
+                                {{ user_data[active_bundle].length }} / {{ static.bundles[active_bundle].items_required }}
+                            </span>
+                        </h3>
                         <h5 class="subtitle">{{ static.bundles[active_bundle].reward }}</h5>
                         <progress class="progress is-info"
                                   value="{{ user_data[active_bundle].length }}"
                                   max="{{ static.bundles[active_bundle].items_required }}"></progress>
                     </div>
                     <div class="column">
-                        <h3 class="title">{{ static.rooms[static.bundles[active_bundle].room].name }}</h3>
+                        <h3 class="title">
+                            {{ static.rooms[static.bundles[active_bundle].room].name }}
+                            <span class="is-pulled-right">
+                                {{ getRoomItemsChecked(static.bundles[active_bundle].room) }} / {{ getRoomItemsRequired(static.bundles[active_bundle].room) }}
+                            </span>
+                        </h3>
                         <h5 class="subtitle">{{ static.rooms[static.bundles[active_bundle].room].reward }}</h5>
                         <progress class="progress is-info"
                                   value="{{ getRoomItemsChecked(static.bundles[active_bundle].room) }}"
