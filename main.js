@@ -76,11 +76,8 @@ var v = new Vue({
             this.user_data[bundleId].push({item: itemId, position: itemPosition});
         },
         removeItemFromBundle: function(bundleId, itemId, itemPosition){
-            console.log("Removing item from bundle" + bundleId + " | " + itemId + " | " + itemPosition);
             for(i = 0; i < this.user_data[bundleId].length; i++){
                 if(this.user_data[bundleId][i].item === itemId && this.user_data[bundleId][i].position === itemPosition){
-                    console.log("Found a match with: ");
-                    console.log(this.user_data[bundleId][i]);
                     this.user_data[bundleId].splice(i, 1);
                 }
             }
