@@ -134,7 +134,7 @@ var v = new Vue({
         },
         isCompleted: function (item) {
             for(i=0; i < item.bundles.length; i++){
-                if(!this.isItemInBundle(item.bundles[i], item.id, i)){
+                if(!(this.isItemInBundle(item.bundles[i], item.id, i) || this.isBundleComplete(item.bundles[i]))){
                     return false;
                 }
             }
