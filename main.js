@@ -89,6 +89,7 @@ var v = new Vue({
             else{
                 this.addItemToBundle(bundleId, itemId, itemPosition);
             }
+            localStorage.setItem('user_data', this.user_data_serialized);
         },
         isItemInBundle: function(bundleId, itemId, itemPosition){
             if(this.user_data[bundleId].filter(function(element){
