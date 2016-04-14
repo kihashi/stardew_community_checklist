@@ -154,6 +154,7 @@
                     </p>
                     <p class="panel-tabs">
                         <a href="#" v-for="room in static.rooms" id="panel-room-{{ room.id }}"
+                           class="has-text-centered"
                            v-bind:class="[room.id == active_room ? 'is-active' : '']"
                            v-on:click.stop="change_room(room.id)">
                             {{ room.name }}
