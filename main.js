@@ -176,3 +176,17 @@ Vue.filter('filterByArray', function(array1, array2){
         }
     });
 });
+
+Vue.filter('seasonFilter', function(items, season_id){
+   return items.filter(function(element){
+       if(season_id == "allseasons" && element.seasons.length > 3){
+           return true;
+       }
+       else if(element.seasons.length < 4 && element.seasons.indexOf(season_id) > -1){
+           return true;
+       }
+       else{
+           return false;
+       }
+   });
+});
