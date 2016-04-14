@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "id": "Version 1.1",
+      "changes": [
+        "Added bundle completion numbers (#40)",
+        "'Hide Completed' toggle now hides items in completed bundles, even if the item is not checked.",
+        "Buttons for items in bundles that have been completed, but are not checked are now transparent.",
+        "Updated scripts to load via HTTPS so that users loading Github via HTTPS can use the page."
+      ]
+    },
+    {
       "id": "Version 1.0",
       "changes": [
         "Initial Version"
