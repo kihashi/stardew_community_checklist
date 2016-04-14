@@ -83,14 +83,21 @@
                 </a>
             </span>
             <span class="header-item">
-                <a class="button" v-on:click="hideSpoilers = !hideSpoilers">
-                    <span class="icon">
-                        <i class="fa" v-bind:class="[hideSpoilers ? 'fa-check-square-o' : 'fa-square-o']"></i>
-                    </span>
-                    <span>
-                        Hide Spoilers
-                    </span>
-                </a>
+                <p class="control has-addons">
+                    <a class="button" v-on:click="hideSpoilers = !hideSpoilers">
+                        <span class="icon">
+                            <i class="fa" v-bind:class="[hideSpoilers ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                        </span>
+                        <span>
+                            Hide Spoilers
+                        </span>
+                    </a>
+                    <a class="button is-info is-marginless" v-on:click="enterSpoilerSettings">
+                        <span class="icon">
+                            <i class="fa fa-cogs"></i>
+                        </span>
+                    </a>
+                </p>
             </span>
         </div>
     </div>
@@ -141,6 +148,56 @@
         </div>
     </div>
     <button class="modal-close" v-on:click="exitLoadMode"></button>
+</div>
+
+<!-- Spoilers Settings Modal -->
+<div id="spoilers-modal" class="modal" v-bind:class="[pick_spoilers ? 'is-active' : '']">
+    <div class="modal-background" v-on:click="exitSpoilerSettings"></div>
+    <div class="modal-container">
+        <div class="modal-content">
+            <div class="box">
+                <div class="content">
+                    <p class="notification is-info">
+                        These settings control which elements are hidden when Hide Spoilers is enabled.
+                    </p>
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" v-model="temp_spoilers.bundle_rewards">
+                            Bundle Rewards
+                        </label>
+                    </p>
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" v-model="temp_spoilers.item_source">
+                            Item Source Information
+                        </label>
+                    </p>
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" v-model="temp_spoilers.item_seasons">
+                            Item Seasons
+                        </label>
+                    </p>
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" v-model="temp_spoilers.item_skills">
+                            Item Skills
+                        </label>
+                    </p>
+                    <a class="button is-info is-pulled-right" v-on:click="saveSpoilerSettings">
+                        <span class="icon">
+                            <i class="fa fa-save"></i>
+                        </span>
+                        <span>
+                            Save
+                        </span>
+                    </a>
+                    <div class="is-clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="modal-close" v-on:click="exitSpoilerSettings"></button>
 </div>
 
 <!-- BUNDLE TAB -->
