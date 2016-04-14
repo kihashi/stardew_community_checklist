@@ -66,6 +66,10 @@
                v-bind:class="['skills' == active_page ? 'is-active' : '']">
                 Skills
             </a>
+            <a id="change-nav" class="header-tab" href="#" v-on:click.stop="change_page('changelog')"
+               v-bind:class="['changelog' == active_page ? 'is-active' : '']">
+                Change Log
+            </a>
         </div>
         <div class="header-right header-menu">
             <span class="header-item">
@@ -482,6 +486,39 @@
                         </div>
                     </template>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" v-if="active_page == 'changelog'">
+    <div class="container">
+        <h1 class="title">Change Log</h1>
+        <div class="card is-fullwidth" v-for="version in changelog">
+            <header class="card-header">
+                <p class="card-header-title">
+                    {{ version.id }}
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <ul>
+                        <li v-for="change in version.changes">{{ change }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-footer">
+                <p class="card-footer-item">
+                    Release Date: {{ version.date }}
+                </p>
+                <a href="https://github.com/kihashi/stardew_community_checklist/releases/tag/{{ version.link }}" class="card-footer-item">
+                    <span class="icon">
+                        <i class="fa fa-github-square" aria-hidden="true"></i>
+                    </span>
+                    <span>
+                        Github Release
+                    </span>
+                </a>
             </div>
         </div>
     </div>
