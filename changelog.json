@@ -3,6 +3,7 @@
     {
       "id": "Version 1.1",
       "date": "2016-04-14",
+      "link": "Version-1.1",
       "changes": [
         "Added bundle completion numbers (#40)",
         "'Hide Completed' toggle now hides items in completed bundles, even if the item is not checked.",
@@ -13,6 +14,7 @@
     {
       "id": "Version 1.0",
       "date": "2016-04-13",
+      "link": "Version-1.0",
       "changes": [
         "Initial Version"
       ]
