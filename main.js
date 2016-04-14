@@ -11,8 +11,17 @@ var v = new Vue({
         active_skill: "farming",
         save_mode: false,
         load_mode: false,
+        pick_spoilers: false,
         hideCompleted: false,
-        hideSpoilers: false
+        hideSpoilers: false,
+        spoilers: {
+            bundle_rewards: true,
+            item_source: true,
+            item_seasons: true,
+            item_skills: true
+        },
+        temp_spoilers: {}
+
     },
     ready: function(){
         this.fetchData();
@@ -21,6 +30,10 @@ var v = new Vue({
         storedUserData = localStorage.getItem('user_data');
         if(storedUserData !== null && storedUserData !== ""){
             this.loadData(storedUserData);
+        }
+        spoilers = localStorage.getItem('spoilers');
+        if(spoilers !== null && spoilers !== ""){
+            this.spoilers = JSON.parse(spoilers);
         }
     },
     computed: {
@@ -64,6 +77,18 @@ var v = new Vue({
         },
         exitSaveMode: function(){
             this.save_mode = false;
+        },
+        enterSpoilerSettings: function(){
+            this.temp_spoilers = JSON.parse(JSON.stringify(this.spoilers));
+            this.pick_spoilers = true;
+        },
+        saveSpoilerSettings: function(){
+            this.spoilers = JSON.parse(JSON.stringify(this.temp_spoilers));
+            localStorage.setItem('spoilers', JSON.stringify(this.spoilers));
+            this.exitSpoilerSettings();
+        },
+        exitSpoilerSettings: function(){
+            this.pick_spoilers = false
         },
         change_page: function(new_page){
           this.active_page = new_page;
