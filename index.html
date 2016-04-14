@@ -353,7 +353,7 @@
                 <h3 class="title">{{ getSeasonName(active_season) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | filterBy active_season in 'seasons'">
+                    <template v-for="item in static.items | seasonFilter active_season">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
