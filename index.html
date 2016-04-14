@@ -83,14 +83,21 @@
                 </a>
             </span>
             <span class="header-item">
-                <a class="button" v-on:click="hideSpoilers = !hideSpoilers">
-                    <span class="icon">
-                        <i class="fa" v-bind:class="[hideSpoilers ? 'fa-check-square-o' : 'fa-square-o']"></i>
-                    </span>
-                    <span>
-                        Hide Spoilers
-                    </span>
-                </a>
+                <p class="control has-addons">
+                    <a class="button" v-on:click="hideSpoilers = !hideSpoilers">
+                        <span class="icon">
+                            <i class="fa" v-bind:class="[hideSpoilers ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                        </span>
+                        <span>
+                            Hide Spoilers
+                        </span>
+                    </a>
+                    <a class="button is-info is-marginless" v-on:click="enterSpoilerSettings">
+                        <span class="icon">
+                            <i class="fa fa-cogs"></i>
+                        </span>
+                    </a>
+                </p>
             </span>
         </div>
     </div>
@@ -143,6 +150,56 @@
     <button class="modal-close" v-on:click="exitLoadMode"></button>
 </div>
 
+<!-- Spoilers Settings Modal -->
+<div id="spoilers-modal" class="modal" v-bind:class="[pick_spoilers ? 'is-active' : '']">
+    <div class="modal-background" v-on:click="exitSpoilerSettings"></div>
+    <div class="modal-container">
+        <div class="modal-content">
+            <div class="box">
+                <div class="content">
+                    <p class="notification is-info">
+                        These settings control which elements are hidden when Hide Spoilers is enabled.
+                    </p>
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" v-model="temp_spoilers.bundle_rewards">
+                            Bundle Rewards
+                        </label>
+                    </p>
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" v-model="temp_spoilers.item_source">
+                            Item Source Information
+                        </label>
+                    </p>
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" v-model="temp_spoilers.item_seasons">
+                            Item Seasons
+                        </label>
+                    </p>
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" v-model="temp_spoilers.item_skills">
+                            Item Skills
+                        </label>
+                    </p>
+                    <a class="button is-info is-pulled-right" v-on:click="saveSpoilerSettings">
+                        <span class="icon">
+                            <i class="fa fa-save"></i>
+                        </span>
+                        <span>
+                            Save
+                        </span>
+                    </a>
+                    <div class="is-clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="modal-close" v-on:click="exitSpoilerSettings"></button>
+</div>
+
 <!-- BUNDLE TAB -->
 <section id="bundle-section" class="section" v-if="active_page == 'bundles'">
     <div class="container is-fluid">
@@ -178,7 +235,7 @@
                                 {{ user_data[active_bundle].length }} / {{ static.bundles[active_bundle].items_required }}
                             </span>
                         </h3>
-                        <h5 class="subtitle" v-if="!hideSpoilers">{{ static.bundles[active_bundle].reward }}</h5>
+                        <h5 class="subtitle" v-if="!(hideSpoilers && spoilers.bundle_rewards)">{{ static.bundles[active_bundle].reward }}</h5>
                         <h5 class="subtitle" v-else>&nbsp;</h5>
                         <progress class="progress is-info"
                                   value="{{ user_data[active_bundle].length }}"
@@ -213,7 +270,7 @@
                                     <div class="content is-flex">
                                         <div class="columns source">
                                             <div class="column">
-                                                <div v-if="!hideSpoilers">{{ item.source }}</div>
+                                                <div v-if="!(hideSpoilers && spoilers.item_source)">{{ item.source }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -232,7 +289,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <footer class="card-footer" v-if="!hideSpoilers">
+                                <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
                                             <span class="tag is-primary is-text-centered"
@@ -241,7 +298,7 @@
                             </span>
                                     </div>
                                 </footer>
-                                <footer class="card-footer" v-if="!hideSpoilers">
+                                <footer class="card-footer" v-if="!(hideSpoilers && source.item_skills)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-tree"></i></span>
                                             <span class="tag is-info is-text-centered"
@@ -289,7 +346,7 @@
                             <div class="content is-flex">
                                 <div class="columns source">
                                     <div class="column">
-                                        <div v-if="!hideSpoilers">{{ item.source }}</div>
+                                        <div v-if="!(hideSpoilers && spoilers.item_source)">{{ item.source }}</div>
                                     </div>
                                 </div>
                             </div>
@@ -308,7 +365,7 @@
                                 </p>
                             </div>
                         </div>
-                        <footer class="card-footer" v-if="!hideSpoilers">
+                        <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">
                             <div class="card-footer-item">
                                 <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
                                     <span class="tag is-primary is-text-centered"
@@ -317,7 +374,7 @@
                             </span>
                             </div>
                         </footer>
-                        <footer class="card-footer" v-if="!hideSpoilers">
+                        <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_skills)">
                             <div class="card-footer-item">
                                 <span class="icon is-small"><i class="fa fa-tree"></i></span>
                                     <span class="tag is-info is-text-centered"
@@ -367,7 +424,7 @@
                                     <div class="content is-flex">
                                         <div class="columns source">
                                             <div class="column">
-                                                <div v-if="!hideSpoilers">{{ item.source }}</div>
+                                                <div v-if="!(hideSpoilers && spoilers.item_source)">{{ item.source }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -386,7 +443,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <footer class="card-footer" v-if="!hideSpoilers">
+                                <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
                                             <span class="tag is-primary is-text-centered"
@@ -395,7 +452,7 @@
                                     </span>
                                     </div>
                                 </footer>
-                                <footer class="card-footer" v-if="!hideSpoilers">
+                                <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_skills)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-tree"></i></span>
                                             <span class="tag is-info is-text-centered"
@@ -447,7 +504,7 @@
                                     <div class="content is-flex">
                                         <div class="columns source">
                                             <div class="column">
-                                                <div v-if="!hideSpoilers">{{ item.source }}</div>
+                                                <div v-if="!(hideSpoilers && spoilers.item_source)">{{ item.source }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -466,7 +523,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <footer class="card-footer" v-if="!hideSpoilers">
+                                <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
                                             <span class="tag is-primary is-text-centered"
@@ -475,7 +532,7 @@
                                     </span>
                                     </div>
                                 </footer>
-                                <footer class="card-footer" v-if="!hideSpoilers">
+                                <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_skills)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-tree"></i></span>
                                             <span class="tag is-info is-text-centered"
