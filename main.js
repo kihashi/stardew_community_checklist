@@ -1,7 +1,7 @@
 var v = new Vue({
     el: '#app',
     data:{
-        debug: true,
+        changelog: null,
         static: null,
         user_data: [],
         active_page: "bundles",
@@ -16,6 +16,7 @@ var v = new Vue({
     },
     ready: function(){
         this.fetchData();
+        this.fetchChangeLog();
         new Clipboard('.copy');
         storedUserData = localStorage.getItem('user_data');
         if(storedUserData !== null && storedUserData !== ""){
@@ -37,6 +38,13 @@ var v = new Vue({
                             this.user_data.push([]);
                         }
                     }
+                }
+            });
+        },
+        fetchChangeLog: function() {
+            this.$http.get('changelog.json', function(data, status){
+                if(status == 200){
+                    this.changelog = data.versions
                 }
             });
         },
@@ -134,12 +142,15 @@ var v = new Vue({
         },
         isCompleted: function (item) {
             for(i=0; i < item.bundles.length; i++){
-                if(!this.isItemInBundle(item.bundles[i], item.id, i)){
+                if(!(this.isItemInBundle(item.bundles[i], item.id, i) || this.isBundleComplete(item.bundles[i]))){
                     return false;
                 }
             }
 
             return true;
+        },
+        isBundleComplete: function(bundle_id){
+            return this.user_data[bundle_id].length >= this.static.bundles[bundle_id].items_required;
         }
     }
 });

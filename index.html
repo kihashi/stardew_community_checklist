@@ -66,6 +66,10 @@
                v-bind:class="['skills' == active_page ? 'is-active' : '']">
                 Skills
             </a>
+            <a id="change-nav" class="header-tab" href="#" v-on:click.stop="change_page('changelog')"
+               v-bind:class="['changelog' == active_page ? 'is-active' : '']">
+                Change Log
+            </a>
         </div>
         <div class="header-right header-menu">
             <span class="header-item">
@@ -215,7 +219,8 @@
                                         <p class="control">
                                             <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
                                                v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                         <i class="fa"
                                            v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -290,7 +295,8 @@
                                 <p class="control">
                                     <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
                                        v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
+                                                      !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                             <span class="icon">
                                         <i class="fa"
                                            v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -367,7 +373,8 @@
                                         <p class="control">
                                             <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
                                                v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                                 <i class="fa"
                                                    v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -446,7 +453,8 @@
                                         <p class="control">
                                             <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
                                                v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : 'is-danger']">
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                                 <i class="fa"
                                                    v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -483,6 +491,39 @@
     </div>
 </section>
 
+<section class="section" v-if="active_page == 'changelog'">
+    <div class="container">
+        <h1 class="title">Change Log</h1>
+        <div class="card is-fullwidth" v-for="version in changelog">
+            <header class="card-header">
+                <p class="card-header-title">
+                    {{ version.id }}
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <ul>
+                        <li v-for="change in version.changes">{{ change }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-footer">
+                <p class="card-footer-item">
+                    Release Date: {{ version.date }}
+                </p>
+                <a href="https://github.com/kihashi/stardew_community_checklist/releases/tag/{{ version.link }}" class="card-footer-item">
+                    <span class="icon">
+                        <i class="fa fa-github-square" aria-hidden="true"></i>
+                    </span>
+                    <span>
+                        Github Release
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="content is-centered is-text-centered">
@@ -511,8 +552,8 @@
 </footer>
 
 <!-- Javascript -->
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.1.16/vue-resource.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.1.16/vue-resource.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
 </body>
