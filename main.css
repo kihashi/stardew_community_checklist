@@ -18,3 +18,7 @@
 .button{
     flex-wrap: wrap;
 }
+
+.bundle-complete {
+    text-decoration: line-through;
+}

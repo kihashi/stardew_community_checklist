@@ -220,9 +220,11 @@
                     <a class="panel-block" href="#" v-for="bundle in static.bundles | filterBy active_room in 'room'"
                        id="panel-bundle-{{ bundle.id }}" v-bind:class="[bundle.id == active_bundle ? 'is-active' : '']"
                        v-on:click.stop="change_bundle(bundle.id)">
-                            <span class="panel-icon">
-                <i class="fa fa-archive"></i>
-              </span> {{ bundle.name }}
+
+                        <span class="panel-icon">
+                            <i class="fa fa-archive"></i>
+                        </span>
+                        <span v-bind:class="[isBundleComplete(bundle.id) ? 'bundle-complete' : '']">{{ bundle.name }}</span>
                     </a>
                 </nav>
             </div>
