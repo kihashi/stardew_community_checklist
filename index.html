@@ -412,7 +412,7 @@
                 <h3 class="title">{{ getSeasonName(active_season) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | seasonFilter active_season">
+                    <template v-for="item in static.items | seasonFilter active_season | orderBy 'name'">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
@@ -492,7 +492,7 @@
                 <h3 class="title">{{ getSkillName(active_skill) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | filterBy active_skill in 'skills'">
+                    <template v-for="item in static.items | filterBy active_skill in 'skills' | orderBy 'name'">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
