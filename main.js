@@ -35,6 +35,10 @@ var v = new Vue({
         if(spoilers !== null && spoilers !== ""){
             this.spoilers = JSON.parse(spoilers);
         }
+        hideCompleted = localStorage.getItem('hideCompleted')
+        if(hideCompleted !== null && hideCompleted !== ""){
+            this.hideCompleted = hideCompleted;
+        }
     },
     computed: {
        user_data_serialized: function(){
@@ -104,6 +108,10 @@ var v = new Vue({
         },
         change_skill: function(new_skill){
             this.active_skill = new_skill;
+        },
+        toggleHideCompleted: function(){
+            this.hideCompleted = !this.hideCompleted;
+            localStorage.setItem('hideCompleted', this.hideCompleted);
         },
         addItemToBundle: function(bundleId, itemId, itemPosition){
             this.user_data[bundleId].push({item: itemId, position: itemPosition});
