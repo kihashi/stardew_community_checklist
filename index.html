@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Stardew Valley Community Checklist</title>
     <link type="text/css" rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.19/css/bulma.min.css"/>
+          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.20/css/bulma.min.css"/>
     <link type="text/css" rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link type="text/css" rel="stylesheet" href="main.css"/>
@@ -73,7 +73,7 @@
         </div>
         <div class="header-right header-menu">
             <span class="header-item">
-                <a class="button" v-on:click="hideCompleted = !hideCompleted">
+                <a class="button" v-on:click="toggleHideCompleted">
                     <span class="icon">
                         <i class="fa" v-bind:class="[hideCompleted ? 'fa-check-square-o' : 'fa-square-o']"></i>
                     </span>
@@ -84,7 +84,7 @@
             </span>
             <span class="header-item">
                 <p class="control has-addons">
-                    <a class="button" v-on:click="hideSpoilers = !hideSpoilers">
+                    <a class="button" v-on:click="toggleHideSpoilers">
                         <span class="icon">
                             <i class="fa" v-bind:class="[hideSpoilers ? 'fa-check-square-o' : 'fa-square-o']"></i>
                         </span>
@@ -205,7 +205,7 @@
     <div class="container is-fluid">
         <div class="columns">
             <div class="column is-2">
-                <nav class="panels">
+                <nav class="panel">
                     <p class="panel-heading">
                         Bundles
                     </p>
@@ -217,13 +217,17 @@
                             {{ room.name }}
                         </a>
                     </p>
-                    <a class="panel-block" href="#" v-for="bundle in static.bundles | filterBy active_room in 'room'"
-                       id="panel-bundle-{{ bundle.id }}" v-bind:class="[bundle.id == active_bundle ? 'is-active' : '']"
-                       v-on:click.stop="change_bundle(bundle.id)">
-                            <span class="panel-icon">
-                <i class="fa fa-archive"></i>
-              </span> {{ bundle.name }}
-                    </a>
+                    <template v-for="bundle in static.bundles | filterBy active_room in 'room'">
+                        <a class="panel-block" href="#"
+                           id="panel-bundle-{{ bundle.id }}" v-bind:class="[bundle.id == active_bundle ? 'is-active' : '']"
+                           v-on:click.stop="change_bundle(bundle.id)" v-if="!(hideCompleted && isBundleComplete(bundle.id))">
+
+                        <span class="panel-icon">
+                            <i class="fa fa-archive"></i>
+                        </span>
+                            <span v-bind:class="[isBundleComplete(bundle.id) ? 'bundle-complete' : '']">{{ bundle.name }}</span>
+                        </a>
+                    </template>
                 </nav>
             </div>
             <div class="column">
@@ -395,7 +399,7 @@
     <div class="container is-fluid">
         <div class="columns">
             <div class="column is-2">
-                <nav class="panels">
+                <nav class="panel">
                     <p class="panel-heading">
                         Seasons
                     </p>
@@ -412,7 +416,7 @@
                 <h3 class="title">{{ getSeasonName(active_season) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | seasonFilter active_season">
+                    <template v-for="item in static.items | seasonFilter active_season | orderBy 'name'">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
@@ -475,7 +479,7 @@
     <div class="container is-fluid">
         <div class="columns">
             <div class="column is-2">
-                <nav class="panels">
+                <nav class="panel">
                     <p class="panel-heading">
                         Skills
                     </p>
@@ -492,7 +496,7 @@
                 <h3 class="title">{{ getSkillName(active_skill) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | filterBy active_skill in 'skills'">
+                    <template v-for="item in static.items | filterBy active_skill in 'skills' | orderBy 'name'">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
