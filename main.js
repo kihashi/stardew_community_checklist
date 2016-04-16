@@ -37,11 +37,11 @@ var v = new Vue({
         }
         hideCompleted = localStorage.getItem('hideCompleted');
         if(hideCompleted !== null && hideCompleted !== ""){
-            this.hideCompleted = hideCompleted;
+            this.hideCompleted = JSON.parse(hideCompleted);
         }
         hideSpoilers = localStorage.getItem('hideSpoilers');
         if(hideSpoilers !== null && hideSpoilers !== ""){
-            this.hideSpoilers = hideSpoilers;
+            this.hideSpoilers = JSON.parse(hideSpoilers);
         }
     },
     computed: {
@@ -115,11 +115,11 @@ var v = new Vue({
         },
         toggleHideCompleted: function(){
             this.hideCompleted = !this.hideCompleted;
-            localStorage.setItem('hideCompleted', this.hideCompleted);
+            localStorage.setItem('hideCompleted', JSON.stringify(this.hideCompleted));
         },
         toggleHideSpoilers: function(){
             this.hideSpoilers = !this.hideSpoilers;
-            localStorage.setItem('hideSpoilers', this.hideSpoilers);
+            localStorage.setItem('hideSpoilers', JSON.stringify(this.hideSpoilers));
         },
         addItemToBundle: function(bundleId, itemId, itemPosition){
             this.user_data[bundleId].push({item: itemId, position: itemPosition});
