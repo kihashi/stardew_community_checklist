@@ -19,6 +19,10 @@
     flex-wrap: wrap;
 }
 
+.panel-tabs a {
+    padding: 3px;
+}
+
 .bundle-complete {
     text-decoration: line-through;
 }
