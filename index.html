@@ -73,7 +73,7 @@
         </div>
         <div class="header-right header-menu">
             <span class="header-item">
-                <a class="button" v-on:click="hideCompleted = !hideCompleted">
+                <a class="button" v-on:click="toggleHideCompleted">
                     <span class="icon">
                         <i class="fa" v-bind:class="[hideCompleted ? 'fa-check-square-o' : 'fa-square-o']"></i>
                     </span>
@@ -84,7 +84,7 @@
             </span>
             <span class="header-item">
                 <p class="control has-addons">
-                    <a class="button" v-on:click="hideSpoilers = !hideSpoilers">
+                    <a class="button" v-on:click="toggleHideSpoilers">
                         <span class="icon">
                             <i class="fa" v-bind:class="[hideSpoilers ? 'fa-check-square-o' : 'fa-square-o']"></i>
                         </span>
