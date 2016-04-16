@@ -1,6 +1,22 @@
 {
   "versions": [
     {
+      "id": "Version 1.4",
+      "date": "2016-04-16",
+      "link": "Version-1.4",
+      "changes": [
+        "Fixed a bug where items skills were always being hidden",
+        "Updated Season and Skill tabs to sort alphabetically",
+        "Updated to Bulma 0.0.20",
+        "Added a text decoration to completed bundles",
+        "Fixed a bug with side-panel styling",
+        "Reduced the margin size of the room names so they all fit properly in their container.",
+        "Updated the bundles nav to be included in 'Hide Completed'",
+        "Hide Completed and Hide Spoilers settings are now saved.",
+        "Added a more thorough readme."
+      ]
+    },
+    {
       "id": "Version 1.3",
       "date": "2016-04-15",
       "link": "Version-1.3",
