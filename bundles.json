@@ -1173,28 +1173,28 @@
       "name": "2,500 Bundle",
       "room": 5,
       "reward": "Chocolate Cake (3)",
-      "items_required": 5
+      "items_required": 1
     },
     {
       "id": 27,
       "name": "5,000 Bundle",
       "room": 5,
       "reward": "Quality Fertilizer (30)",
-      "items_required": 5
+      "items_required": 1
     },
     {
       "id": 28,
       "name": "10,000 Bundle",
       "room": 5,
       "reward": "Lightning Rod",
-      "items_required": 5
+      "items_required": 1
     },
     {
       "id": 29,
       "name": "25,000 Bundle",
       "room": 5,
       "reward": "Crystalarium",
-      "items_required": 5
+      "items_required": 1
     }
   ],
   "rooms": [
