@@ -1,6 +1,9 @@
 .eq-line {
     flex: 1;
 }
+
+.column.is-flex {
+    display: flex;
 }
 
 .card {
