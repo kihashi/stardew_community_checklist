@@ -14,18 +14,18 @@
 </head>
 
 <body id="app">
-<section class="hero is-info is-left is-bold">
-    <div class="hero-header">
-        <div class="header">
-            <div class="container">
-                <div class="header-left">
-                    <div class="header-item">
+<section class="hero is-info is-left">
+    <div class="hero-head">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-left">
+                    <div class="nav-item">
                         <a href="./"><h1 class="title">Stardew Community Checklist</h1></a>
                     </div>
                 </div>
-                <div class="header-right">
-                        <span class="header-item">
-                          <a href="#" id="save-button" class="button is-info is-outlined is-inverted"
+                <div class="nav-right">
+                        <span class="nav-item">
+                          <a href="#" id="save-button" class="button is-light is-outlined"
                              v-on:click.stop="enterSaveMode">
                             <span class="icon">
                                 <i class="fa fa-download"></i>
@@ -33,8 +33,8 @@
                               <span>Export Data</span>
                           </a>
                         </span>
-                        <span class="header-item">
-                          <a href="#" id="load-button" class="button is-info is-outlined is-inverted"
+                        <span class="nav-item">
+                          <a href="#" id="load-button" class="button is-light is-outlined"
                              v-on:click.stop="enterLoadMode">
                             <span class="icon">
                                 <i class="fa fa-upload"></i>
@@ -43,36 +43,36 @@
                           </a>
                         </span>
                 </div>
-            </div>
+            </nav>
         </div>
     </div>
 </section>
-<nav class="header has-shadow">
+<nav class="nav has-shadow">
     <div class="container">
-        <div class="header-left">
-            <a id="bundles-nav" class="header-tab" href="#" v-on:click.stop="change_page('bundles')"
+        <div class="nav-left">
+            <a id="bundles-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('bundles')"
                v-bind:class="['bundles' == active_page ? 'is-active' : '']">
                 Bundles
             </a>
-            <a id="ab-nav" class="header-tab" href="#" v-on:click.stop="change_page('ab-list')"
+            <a id="ab-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('ab-list')"
                v-bind:class="['ab-list' == active_page ? 'is-active' : '']">
                 Alphabetical
             </a>
-            <a id="seasons-nav" class="header-tab" href="#" v-on:click.stop="change_page('seasons')"
+            <a id="seasons-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('seasons')"
                v-bind:class="['seasons' == active_page ? 'is-active' : '']">
                 Seasons
             </a>
-            <a id="skills-nav" class="header-tab" href="#" v-on:click.stop="change_page('skills')"
+            <a id="skills-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('skills')"
                v-bind:class="['skills' == active_page ? 'is-active' : '']">
                 Skills
             </a>
-            <a id="change-nav" class="header-tab" href="#" v-on:click.stop="change_page('changelog')"
+            <a id="change-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('changelog')"
                v-bind:class="['changelog' == active_page ? 'is-active' : '']">
                 Change Log
             </a>
         </div>
-        <div class="header-right header-menu">
-            <span class="header-item">
+        <div class="nav-right">
+            <span class="nav-item">
                 <a class="button" v-on:click="toggleHideCompleted">
                     <span class="icon">
                         <i class="fa" v-bind:class="[hideCompleted ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -82,7 +82,7 @@
                     </span>
                 </a>
             </span>
-            <span class="header-item">
+            <span class="nav-item">
                 <p class="control has-addons">
                     <a class="button" v-on:click="toggleHideSpoilers">
                         <span class="icon">
@@ -202,9 +202,9 @@
 
 <!-- BUNDLE TAB -->
 <section id="bundle-section" class="section" v-if="active_page == 'bundles'">
-    <div class="container is-fluid">
+    <div class="container is-fluid is-marginless">
         <div class="columns">
-            <div class="column is-2">
+            <div class="column is-2 is-paddingless">
                 <nav class="panel">
                     <p class="panel-heading">
                         Bundles
@@ -322,7 +322,7 @@
 
 <!-- AB TAB -->
 <section id="ab-section" class="section" v-if="active_page == 'ab-list'">
-    <div class="container is-fluid">
+    <div class="container is-fluid is-marginless">
         <div class="columns">
             <div class="column is-4">
                 <div class="control is-horizontal">
@@ -396,7 +396,7 @@
 
 <!-- Seasons Tab -->
 <section id="seasons-tab" class="section" v-if="active_page == 'seasons'">
-    <div class="container is-fluid">
+    <div class="container is-fluid is-marginless">
         <div class="columns">
             <div class="column is-2">
                 <nav class="panel">
@@ -476,7 +476,7 @@
 
 <!-- Skills Tab -->
 <section id="skills-tab" class="section" v-if="active_page == 'skills'">
-    <div class="container is-fluid">
+    <div class="container is-fluid is-marginless">
         <div class="columns">
             <div class="column is-2">
                 <nav class="panel">
