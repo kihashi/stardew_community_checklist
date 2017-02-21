@@ -23,7 +23,7 @@ var v = new Vue({
         temp_spoilers: {}
 
     },
-    ready: function(){
+    mounted: function(){
         this.fetchData();
         this.fetchChangeLog();
         new Clipboard('.copy');

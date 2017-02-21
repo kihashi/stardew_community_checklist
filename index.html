@@ -115,7 +115,7 @@
                 </div>
                 <p class="control has-addons">
                     <input id="user-data-serialized" disabled class="input" type="text" placeholder="Save Data"
-                           value="{{ user_data_serialized }}">
+                           v-bind:value="user_data_serialized">
                     <a class="button is-info copy" data-clipboard-target="#user-data-serialized">
                       <span class="icon">
                           <i class="fa fa-clipboard"></i>
@@ -210,7 +210,7 @@
                         Bundles
                     </p>
                     <p class="panel-tabs">
-                        <a href="#" v-for="room in static.rooms" id="panel-room-{{ room.id }}"
+                        <a href="#" v-for="room in static.rooms" v-bind:id="'panel-room-' + room.id"
                            class="has-text-centered"
                            v-bind:class="[room.id == active_room ? 'is-active' : '']"
                            v-on:click.stop="change_room(room.id)">
@@ -219,7 +219,7 @@
                     </p>
                     <template v-for="bundle in static.bundles | filterBy active_room in 'room'">
                         <a class="panel-block" href="#"
-                           id="panel-bundle-{{ bundle.id }}" v-bind:class="[bundle.id == active_bundle ? 'is-active' : '']"
+                           v-bind:id="'panel-bundle-' + bundle.id" v-bind:class="[bundle.id == active_bundle ? 'is-active' : '']"
                            v-on:click.stop="change_bundle(bundle.id)" v-if="!(hideCompleted && isBundleComplete(bundle.id))">
 
                         <span class="panel-icon">
@@ -242,8 +242,8 @@
                         <h5 class="subtitle" v-if="!(hideSpoilers && spoilers.bundle_rewards)">{{ static.bundles[active_bundle].reward }}</h5>
                         <h5 class="subtitle" v-else>&nbsp;</h5>
                         <progress class="progress is-info"
-                                  value="{{ user_data[active_bundle].length }}"
-                                  max="{{ static.bundles[active_bundle].items_required }}"></progress>
+                                  v-bind:value="user_data[active_bundle].length"
+                                  v-bind:max="static.bundles[active_bundle].items_required"></progress>
                     </div>
                     <div class="column">
                         <h3 class="title">
@@ -254,8 +254,8 @@
                         </h3>
                         <h5 class="subtitle">{{ static.rooms[static.bundles[active_bundle].room].reward }}</h5>
                         <progress class="progress is-info"
-                                  value="{{ getRoomItemsChecked(static.bundles[active_bundle].room) }}"
-                                  max="{{ getRoomItemsRequired(static.bundles[active_bundle].room) }}"
+                                  v-bind:value="getRoomItemsChecked(static.bundles[active_bundle].room)"
+                                  v-bind:max="getRoomItemsRequired(static.bundles[active_bundle].room)"
                         >
 
                         </progress>
@@ -280,13 +280,13 @@
                                     </div>
                                     <div class="content">
                                         <p class="control">
-                                            <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                               v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
-                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
+                                            <a class="button is-fullwidth" v-for="(bundle_id, index) in item.bundles"
+                                               v-on:click="toggleItemInBundle(bundle_id, item.id, index)"
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                         <i class="fa"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                           v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                     </span>
                                                 <span>{{ static.bundles[bundle_id].name }}</span>
                                             </a>
@@ -356,13 +356,13 @@
                             </div>
                             <div class="content">
                                 <p class="control">
-                                    <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                       v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
-                                                      !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
+                                    <a class="button is-fullwidth" v-for="(bundle_id, index) in item.bundles"
+                                       v-on:click="toggleItemInBundle(bundle_id, item.id, index)"
+                                       v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'is-success' : '',
+                                                      !isItemInBundle(bundle_id, item.id, index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                             <span class="icon">
                                         <i class="fa"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                           v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                     </span>
                                         <span>{{ static.bundles[bundle_id].name }}</span>
                                     </a>
@@ -403,7 +403,7 @@
                     <p class="panel-heading">
                         Seasons
                     </p>
-                    <a class="panel-block" href="#" v-for="season in static.seasons" id="panel-season-{{ season.id }}"
+                    <a class="panel-block" href="#" v-for="season in static.seasons" v-bind:id="'panel-season-' + season.id"
                        v-bind:class="[season.id == active_season ? 'is-active' : '']"
                        v-on:click.stop="change_season(season.id)">
                             <span class="panel-icon">
@@ -434,13 +434,13 @@
                                     </div>
                                     <div class="content">
                                         <p class="control">
-                                            <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                               v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
-                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
+                                            <a class="button is-fullwidth" v-for="(bundle_id, index) in item.bundles"
+                                               v-on:click="toggleItemInBundle(bundle_id, item.id, index)"
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                                 <i class="fa"
-                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                             </span>
                                                 <span>{{ static.bundles[bundle_id].name }}</span>
                                             </a>
@@ -483,7 +483,7 @@
                     <p class="panel-heading">
                         Skills
                     </p>
-                    <a class="panel-block" href="#" v-for="skill in static.skills" id="panel-skill-{{ skill.id }}"
+                    <a class="panel-block" href="#" v-for="skill in static.skills" v-bind:id="'panel-skill-' + skill.id"
                        v-bind:class="[skill.id == active_skill ? 'is-active' : '']"
                        v-on:click.stop="change_skill(skill.id)">
                             <span class="panel-icon">
@@ -514,13 +514,13 @@
                                     </div>
                                     <div class="content">
                                         <p class="control">
-                                            <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                               v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
-                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
+                                            <a class="button is-fullwidth" v-for="(bundle_id, index) in item.bundles"
+                                               v-on:click="toggleItemInBundle(bundle_id, item.id, index)"
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                                 <i class="fa"
-                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                             </span>
                                                 <span>{{ static.bundles[bundle_id].name }}</span>
                                             </a>
@@ -574,7 +574,7 @@
                 <p class="card-footer-item">
                     Release Date: {{ version.date }}
                 </p>
-                <a href="https://github.com/kihashi/stardew_community_checklist/releases/tag/{{ version.link }}" class="card-footer-item">
+                <a v-bind:href="'https://github.com/kihashi/stardew_community_checklist/releases/tag/' + version.link" class="card-footer-item">
                     <span class="icon">
                         <i class="fa fa-github-square" aria-hidden="true"></i>
                     </span>
