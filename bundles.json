@@ -929,7 +929,7 @@
       "bundles": [24]
     },
     {
-      "id": 116,
+      "id": 117,
       "name": "Wine",
       "source": "Produced by putting most fruits into a keg.",
       "seasons": ["spring", "summer", "fall", "winter"],
@@ -937,7 +937,7 @@
       "bundles": [25]
     },
     {
-      "id": 117,
+      "id": 118,
       "name": "Rabbit's Foot",
       "source": "Dropped by Rabbits in the Coop, also dropped by a Serpent in Skull Cavern (0.8%).",
       "seasons": ["spring", "summer", "fall", "winter"],
@@ -945,7 +945,7 @@
       "bundles": [25]
     },
     {
-      "id": 118,
+      "id": 119,
       "name": "2,500 Gold",
       "source": "Collect 2,500 Gold and turn in.",
       "seasons": ["spring", "summer", "fall", "winter"],
@@ -953,7 +953,7 @@
       "bundles": [26]
     },
     {
-      "id": 119,
+      "id": 120,
       "name": "5,000 Gold",
       "source": "Collect 5,000 Gold and turn in.",
       "seasons": ["spring", "summer", "fall", "winter"],
@@ -961,7 +961,7 @@
       "bundles": [27]
     },
     {
-      "id": 120,
+      "id": 121,
       "name": "10,000 Gold",
       "source": "Collect 10,000 Gold and turn in.",
       "seasons": ["spring", "summer", "fall", "winter"],
@@ -969,7 +969,7 @@
       "bundles": [28]
     },
     {
-      "id": 121,
+      "id": 122,
       "name": "25,000 Gold",
       "source": "Collect 25,000 Gold and turn in.",
       "seasons": ["spring", "summer", "fall", "winter"],
