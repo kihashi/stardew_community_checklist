@@ -198,7 +198,7 @@
       "source": "Harvested from oak trees using a Tapper.",
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["foraging"],
-      "bundles": [5]
+      "bundles": [5, 25]
     },
     {
       "id": 25,
@@ -929,14 +929,6 @@
       "bundles": [24]
     },
     {
-      "id": 116,
-      "name": "Oak Resin",
-      "source": "Harvested from oak trees using a Tapper.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging"],
-      "bundles": [25]
-    },
-    {
       "id": 117,
       "name": "Wine",
       "source": "Produced by putting most fruits into a keg.",
@@ -1258,7 +1250,7 @@
     },
     {
       "id": "mining",
-      "name": "Mining" 
+      "name": "Mining"
     },
     {
       "id": "foraging",
