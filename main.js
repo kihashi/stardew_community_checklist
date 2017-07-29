@@ -54,22 +54,23 @@ var v = new Vue({
     },
     methods: {
         fetchData: function(){
-            this.$http.get('bundles.json', function(data, status, response){
-                if(status == 200){
-                    this.static = data;
-                    if(this.user_data.length <= 0){
-                        for(i=0; i<this.static.bundles.length;i++){
-                            this.user_data.push([]);
-                        }
+            this.$http.get('bundles.json').then(function(response) {
+                this.static = response.body;
+                if(this.user_data.length <= 0){
+                    for(i=0; i<this.static.bundles.length;i++){
+                        this.user_data.push([]);
                     }
-                }
+                };
+            }, function(response) {
+                console.log("error fetching bundle data");
             });
+
         },
         fetchChangeLog: function() {
-            this.$http.get('changelog.json', function(data, status){
-                if(status == 200){
-                    this.changelog = data.versions
-                }
+            this.$http.get('changelog.json').then(function(response) {
+                    this.changelog = response.body.versions;
+            }, function(response) {
+                console.log("error fetching change log data");
             });
         },
         enterLoadMode: function(){
