@@ -47,7 +47,10 @@ var v = new Vue({
     computed: {
        user_data_serialized: function(){
            return btoa(JSON.stringify(this.user_data));
-       }
+       },
+        room_bundles: function(roomId){
+           this.static.bundles.filter(function(bundle){ return roomId in bundle.room });
+        }
     },
     methods: {
         fetchData: function(){
