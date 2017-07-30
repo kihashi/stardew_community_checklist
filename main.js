@@ -51,6 +51,10 @@ var v = new Vue({
         room_bundles: function(){
            var self = this;
            return this.static.bundles.filter(function(bundle){ return bundle.room === self.active_room });
+        },
+        active_bundle_items: function(){
+            var self = this;
+            return this.static.items.filter(function(item){ return item.bundles.indexOf(self.active_bundle) > -1});
         }
     },
     methods: {
