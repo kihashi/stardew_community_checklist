@@ -263,7 +263,7 @@
                     </div>
                 </div>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | inBundle active_bundle">
+                    <template v-for="item in active_bundle_items">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
