@@ -202,6 +202,12 @@ var v = new Vue({
         },
         isBundleComplete: function(bundle_id){
             return this.user_data[bundle_id].length >= this.static.bundles[bundle_id].items_required;
+        },
+        getItemSeasons: function(item){
+            return this.static.seasons.filter(function(season){ return item.seasons.indexOf(season.id) > -1 });
+        },
+        getItemSkills: function(item){
+            return this.static.skills.filter(function(skill){ return item.skills.indexOf(skill.id) > -1 });
         }
     }
 });
