@@ -223,17 +223,6 @@ Vue.filter('inBundle', function(value, id){
     });
 });
 
-Vue.filter('filterByArray', function(array1, array2){
-    return array1.filter(function(element){
-        if(array2.indexOf(element.id) > -1){
-            return true;
-        }
-        else{
-            return false;
-        }
-    });
-});
-
 Vue.filter('seasonFilter', function(items, season_id){
    return items.filter(function(element){
        if(season_id == "allseasons" && element.seasons.length > 3){
