@@ -218,7 +218,7 @@
                             {{ room.name }}
                         </a>
                     </p>
-                    <template v-for="bundle in room_bundles">
+                    <template v-for="bundle in active_room_bundles">
                         <a class="panel-block" href="#"
                            v-bind:id="'panel-bundle-' + bundle.id" v-bind:class="[bundle.id == active_bundle ? 'is-active' : '']"
                            v-on:click.stop="change_bundle(bundle.id)" v-if="!(hideCompleted && isBundleComplete(bundle.id))">
