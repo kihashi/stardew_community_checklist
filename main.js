@@ -186,9 +186,10 @@ var v = new Vue({
             }, 0)
         },
         getRoomItemsChecked: function(roomId){
+            var self = this;
             return this.static.bundles
                 .filter(function(b){ return b.room === roomId; })
-                .reduce(function(p, c){ return p + Math.min(v.user_data[c.id].length, c.items_required); }, 0);
+                .reduce(function(p, c){ return p + Math.min(self.user_data[c.id].length, c.items_required); }, 0);
         },
         isCompleted: function (item) {
             for(i=0; i < item.bundles.length; i++){
