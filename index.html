@@ -67,10 +67,6 @@
                v-bind:class="['skills' == active_page ? 'is-active' : '']">
                 Skills
             </a>
-            <a id="change-nav" class="header-tab" href="#" v-on:click.stop="change_page('changelog')"
-               v-bind:class="['changelog' == active_page ? 'is-active' : '']">
-                Change Log
-            </a>
         </div>
         <div class="header-right header-menu">
             <span class="header-item">
@@ -602,6 +598,12 @@
         <p>
             <a href="http://stardewvalley.net/">Stardew Valley</a> &copy; <a href="">Chucklefish LTD</a>.
             Developed by <a href="https://twitter.com/ConcernedApe">ConcernedApe</a>.
+        </p>
+        <p>
+            <a id="change-nav" href="#" v-on:click.stop="change_page('changelog')"
+               v-bind:class="['changelog' == active_page ? 'is-active' : '']">
+                Change Log
+            </a>
         </p>
       <p>
         <a class="icon" href="https://github.com/kihashi/stardew_community_checklist">
