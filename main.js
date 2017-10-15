@@ -1,3 +1,75 @@
+Vue.component('item-card', {
+    methods: {
+		isBundleComplete: function(bundle_id){
+			return this.userData[bundle_id].length >= this.bundles[bundle_id].items_required;
+		},
+		isItemInBundle: function(bundleId, itemId, itemPosition){
+		    return (this.userData[bundleId].filter(function(element){
+				return element.item === itemId && element.position === itemPosition;
+			    }).length > 0);
+		},
+		toggleItemInBundle: function(bundleId, itemId, itemPosition){
+		    var item = {
+		        bundleId: bundleId,
+                itemId: itemId,
+                itemPosition: itemPosition,
+                action: (this.isItemInBundle(bundleId, itemId, itemPosition)) ? 'remove' : 'add'
+            };
+
+		    this.$emit('toggle', item);
+		}
+    },
+    props: ['item', 'skills', 'seasons', 'bundles', 'userData'],
+	template: '<div class="card is-fullwidth is-flex eq-line">\n' +
+	'    <header class="card-header">\n' +
+	'        <p class="card-header-title">\n' +
+	'            {{ item.name }}\n' +
+	'        </p>\n' +
+	'    </header>\n' +
+	'    <div class="card-content eq-line is-flex">\n' +
+	'        <div class="content is-flex">\n' +
+	'        <div class="columns source">\n' +
+	'                <div class="column">\n' +
+	'                    <div v-if="!(hideSpoilers && spoilers.item_source)">{{ item.source }}</div>\n' +
+	'                </div>\n' +
+	'            </div>\n' +
+	'        </div>\n' +
+	'        <div class="content">\n' +
+	'            <p class="control">\n' +
+	'                <a class="button is-fullwidth" v-for="bundle_id in item.bundles"\n' +
+	'                   v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"\n' +
+	'                   v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? \'is-success\' : \'\',\n' +
+	'      !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? \'is-danger\' : \'\' ]">\n' +
+	'                        <span class="icon">\n' +
+	'                    <i class="fa"\n' +
+	'                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? \'fa-check-square-o\' : \'fa-square-o\']"></i>\n' +
+	'                </span>\n' +
+	'                    <span>{{ bundles[bundle_id].name }}</span>\n' +
+	'                </a>\n' +
+	'            </p>\n' +
+	'        </div>\n' +
+	'    </div>\n' +
+	'    <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">\n' +
+	'        <div class="card-footer-item">\n' +
+	'            <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>\n' +
+	'                <span class="tag is-primary is-text-centered"\n' +
+	'                      v-for="season in seasons | filterByArray item.seasons">\n' +
+	'          {{ season.name }}\n' +
+	'        </span>\n' +
+	'        </div>\n' +
+	'    </footer>\n' +
+	'    <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_skills)">\n' +
+	'        <div class="card-footer-item">\n' +
+	'            <span class="icon is-small"><i class="fa fa-tree"></i></span>\n' +
+	'                <span class="tag is-info is-text-centered"\n' +
+	'                      v-for="skill in skills | filterByArray item.skills">\n' +
+	'                  {{ skill.name }}\n' +
+	'                </span>\n' +
+	'        </div>\n' +
+	'    </footer>\n' +
+	'</div>\n'
+});
+
 var v = new Vue({
     el: '#app',
     data:{
@@ -129,15 +201,16 @@ var v = new Vue({
                 if(this.user_data[bundleId][i].item === itemId && this.user_data[bundleId][i].position === itemPosition){
                     this.user_data[bundleId].splice(i, 1);
                 }
+
             }
         },
-        toggleItemInBundle: function(bundleId, itemId, itemPosition){
-            if(this.isItemInBundle(bundleId, itemId, itemPosition)){
-                this.removeItemFromBundle(bundleId, itemId, itemPosition);
+        toggleItemInBundle: function(item){
+            if (item.action === 'add') {
+				this.addItemToBundle(item.bundleId, item.itemId, item.itemPosition);
+            } else {
+				this.removeItemFromBundle(item.bundleId, item.itemId, item.itemPosition);
             }
-            else{
-                this.addItemToBundle(bundleId, itemId, itemPosition);
-            }
+
             localStorage.setItem('user_data', this.user_data_serialized);
         },
         isItemInBundle: function(bundleId, itemId, itemPosition){
