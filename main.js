@@ -52,7 +52,7 @@ Vue.component('item-card', {
 	'    <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">\n' +
 	'        <div class="card-footer-item">\n' +
 	'            <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>\n' +
-	'                <span class="tag is-primary is-text-centered"\n' +
+	'                <span class="tag is-primary is-text-centered {{ season.name.toLowerCase()  }} "\n' +
 	'                      v-for="season in seasons | filterByArray item.seasons">\n' +
 	'          {{ season.name }}\n' +
 	'        </span>\n' +

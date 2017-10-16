@@ -1,6 +1,5 @@
 .eq-line {
-    flex: 1;
-}
+    flex: 1 0 auto;
 }
 
 .card {
@@ -26,4 +25,21 @@
 
 .bundle-complete {
     text-decoration: line-through;
+}
+
+.tag.spring {
+    background-color: #00cc65;
+}
+
+.tag.summer {
+    background-color: #f7f749;
+    color: #000;
+}
+
+.tag.fall {
+    background-color: #CF5230;
+}
+
+.tag.winter {
+    background-color: #ACE4EA;
 }
