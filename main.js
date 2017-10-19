@@ -4,6 +4,7 @@ var v = new Vue({
         changelog: null,
         static: null,
         user_data: [],
+        search_term: "",
         active_page: "bundles",
         active_room: 0,
         active_bundle: 0,
