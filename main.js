@@ -5,6 +5,7 @@ var v = new Vue({
         static: null,
         user_data: [],
         search_term: "",
+        enteredData: "",
         active_page: "bundles",
         active_room: 0,
         active_bundle: 0,
