@@ -57,6 +57,10 @@ var v = new Vue({
         active_bundle_items: function(){
             var self = this;
             return this.static.items.filter(function(item){ return item.bundles.indexOf(self.active_bundle) > -1});
+        },
+        filtered_items: function(){
+            var self = this;
+            return _.orderBy(self.static.items.filter(function(item){ return item.name.toLowerCase().indexOf(self.search_term.toLowerCase()) !== -1 }), 'name');
         }
     },
     methods: {
