@@ -339,7 +339,7 @@
 
 
         <div class="columns is-multiline">
-            <template v-for="item in static.items | filterBy search_term in 'name' | orderBy 'name'">
+            <template v-for="item in filtered_items">
                 <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                     <div class="card is-fullwidth is-flex eq-line">
                         <header class="card-header">
