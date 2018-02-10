@@ -61,7 +61,7 @@ var v = new Vue({
         active_season_items: function() {
            var self = this;
            return _.orderBy(
-               this.statis.items.filter(
+               this.static.items.filter(
                     function(item){
                         return item.seasons.indexOf(self.active_season) > -1
                     }
@@ -72,7 +72,7 @@ var v = new Vue({
         active_skill_items: function() {
             var self = this;
             return _.orderBy(
-                this.statis.items.filter(
+                this.static.items.filter(
                     function(item){
                         return item.seasons.indexOf(self.active_skill) > -1
                     }
