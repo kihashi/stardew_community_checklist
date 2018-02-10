@@ -417,7 +417,7 @@
                 <h3 class="title">{{ getSeasonName(active_season) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | seasonFilter active_season | orderBy 'name'">
+                    <template v-for="item in active_season_items">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
@@ -452,7 +452,7 @@
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
                                             <span class="tag is-primary is-text-centered"
-                                                  v-for="season in static.seasons | filterByArray item.seasons">
+                                                          v-for="season in getItemSeasons(item)">
                                       {{ season.name }}
                                     </span>
                                     </div>
@@ -461,9 +461,9 @@
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-tree"></i></span>
                                             <span class="tag is-info is-text-centered"
-                                                  v-for="skill in static.skills | filterByArray item.skills">
-                                              {{ skill.name }}
-                                            </span>
+                                                          v-for="skill in getItemSkills(item)">
+                                      {{ skill.name }}
+                                    </span>
                                     </div>
                                 </footer>
                             </div>
@@ -497,7 +497,7 @@
                 <h3 class="title">{{ getSkillName(active_skill) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | filterBy active_skill in 'skills' | orderBy 'name'">
+                    <template v-for="item in active_skill_items">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
@@ -532,7 +532,7 @@
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
                                             <span class="tag is-primary is-text-centered"
-                                                  v-for="season in static.seasons | filterByArray item.seasons">
+                                                          v-for="season in getItemSeasons(item)">
                                       {{ season.name }}
                                     </span>
                                     </div>
@@ -541,9 +541,9 @@
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-tree"></i></span>
                                             <span class="tag is-info is-text-centered"
-                                                  v-for="skill in static.skills | filterByArray item.skills">
-                                              {{ skill.name }}
-                                            </span>
+                                                          v-for="skill in getItemSkills(item)">
+                                      {{ skill.name }}
+                                    </span>
                                     </div>
                                 </footer>
                             </div>
