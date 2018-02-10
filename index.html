@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stardew Valley Community Checklist</title>
     <link type="text/css" rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.1/css/bulma.min.css"/>
+          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
     <link type="text/css" rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <link type="text/css" rel="stylesheet" href="main.css"/>
@@ -15,76 +16,70 @@
 
 <body>
 <div id="app">
-<section class="hero is-info is-left">
+<section class="hero is-info">
     <div class="hero-head">
-        <div class="container">
-            <nav class="nav">
-                <div class="nav-left">
-                    <div class="nav-item">
-                        <a href="./"><h1 class="title">Stardew Community Checklist</h1></a>
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="./" class="navbar-item"><h1 class="title">Stardew Community Checklist</h1></a>
+                </div>
+                <div class="navbar-menu">
+                    <div class="navbar-end">
+                        <span class="navbar-item">
+                            <a href="#" id="save-button" class="button is-light is-outlined" v-on:click.stop="enterSaveMode">
+                            <span class="icon"><i class="fa fa-download"></i></span>
+                            <span>Export Data</span>
+                            </a>
+                        </span>
+                        <span class="navbar-item">
+                            <a href="#" id="load-button" class="button is-light is-outlined" v-on:click.stop="enterLoadMode">
+                                <span class="icon"><i class="fa fa-upload"></i></span>
+                                <span>Import Data</span>
+                            </a>
+                        </span>
                     </div>
                 </div>
-                <div class="nav-right">
-                        <span class="nav-item">
-                          <a href="#" id="save-button" class="button is-light is-outlined"
-                             v-on:click.stop="enterSaveMode">
-                            <span class="icon">
-                                <i class="fa fa-download"></i>
-                            </span>
-                              <span>Export Data</span>
-                          </a>
-                        </span>
-                        <span class="nav-item">
-                          <a href="#" id="load-button" class="button is-light is-outlined"
-                             v-on:click.stop="enterLoadMode">
-                            <span class="icon">
-                                <i class="fa fa-upload"></i>
-                            </span>
-                              <span>Import Data</span>
-                          </a>
-                        </span>
-                </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </div>
 </section>
-<nav class="nav has-shadow">
+<nav class="navbar has-shadow">
     <div class="container">
-        <div class="nav-left">
-            <a id="bundles-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('bundles')"
-               v-bind:class="['bundles' == active_page ? 'is-active' : '']">
+        <div class="navbar-tabs">
+            <a id="bundles-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('bundles')"
+                v-bind:class="['bundles' == active_page ? 'is-active' : '']">
                 Bundles
             </a>
-            <a id="ab-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('ab-list')"
-               v-bind:class="['ab-list' == active_page ? 'is-active' : '']">
+            <a id="ab-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('ab-list')"
+                v-bind:class="['ab-list' == active_page ? 'is-active' : '']">
                 Alphabetical
             </a>
-            <a id="seasons-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('seasons')"
-               v-bind:class="['seasons' == active_page ? 'is-active' : '']">
+            <a id="seasons-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('seasons')"
+                v-bind:class="['seasons' == active_page ? 'is-active' : '']">
                 Seasons
             </a>
-            <a id="skills-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('skills')"
-               v-bind:class="['skills' == active_page ? 'is-active' : '']">
+            <a id="skills-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('skills')"
+                v-bind:class="['skills' == active_page ? 'is-active' : '']">
                 Skills
             </a>
-            <a id="change-nav" class="nav-item is-tab" href="#" v-on:click.stop="change_page('changelog')"
-               v-bind:class="['changelog' == active_page ? 'is-active' : '']">
+            <a id="change-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('changelog')"
+                v-bind:class="['changelog' == active_page ? 'is-active' : '']">
                 Change Log
             </a>
         </div>
-        <div class="nav-right">
-            <span class="nav-item">
-                <a class="button" v-on:click="toggleHideCompleted">
-                    <span class="icon">
-                        <i class="fa" v-bind:class="[hideCompleted ? 'fa-check-square-o' : 'fa-square-o']"></i>
-                    </span>
-                    <span>
-                        Hide Completed
-                    </span>
-                </a>
+        <div class="navbar-end">
+            <span class="navbar-item">
+            <a class="button" v-on:click="toggleHideCompleted">
+            <span class="icon">
+            <i class="fa" v-bind:class="[hideCompleted ? 'fa-check-square-o' : 'fa-square-o']"></i>
             </span>
-            <span class="nav-item">
-                <p class="control has-addons">
+            <span>
+            Hide Completed
+            </span>
+            </a>
+            </span>
+            <span class="navbar-item">
+                <div class="buttons has-addons">
                     <a class="button" v-on:click="toggleHideSpoilers">
                         <span class="icon">
                             <i class="fa" v-bind:class="[hideSpoilers ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -93,12 +88,12 @@
                             Hide Spoilers
                         </span>
                     </a>
-                    <a class="button is-info is-marginless" v-on:click="enterSpoilerSettings">
+                    <a class="button is-info" v-on:click="enterSpoilerSettings">
                         <span class="icon">
                             <i class="fa fa-cogs"></i>
                         </span>
                     </a>
-                </p>
+                </div>
             </span>
         </div>
     </div>
@@ -114,15 +109,19 @@
                     Your data has been saved locally. This data string is provided in case you want to make a backup or
                     take your data to another computer.
                 </div>
-                <p class="control has-addons">
-                    <input id="user-data-serialized" disabled class="input" type="text" placeholder="Save Data"
-                           v-bind:value="user_data_serialized">
-                    <a class="button is-info copy" data-clipboard-target="#user-data-serialized">
-                      <span class="icon">
-                          <i class="fa fa-clipboard"></i>
-                      </span>
-                    </a>
-                </p>
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input id="user-data-serialized" disabled class="input" type="text" placeholder="Save Data"
+                                v-bind:value="user_data_serialized">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info copy" data-clipboard-target="#user-data-serialized">
+                          <span class="icon">
+                              <i class="fa fa-clipboard"></i>
+                          </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -139,12 +138,16 @@
                     If you previously saved your data on this computer, it should already be loaded. This utility is
                     only for loading a data string from a backup or another computer.
                 </div>
-                <p class="control has-addons">
-                    <input class="input" type="text" placeholder="Load Data" v-model="enteredData">
-                    <a class="button is-info" v-on:click="loadData(enteredData)">
-                        Load Data
-                    </a>
-                </p>
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="Load Data" v-model="enteredData">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info" v-on:click="loadData(enteredData)">
+                            Load Data
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -210,7 +213,7 @@
                     <p class="panel-heading">
                         Bundles
                     </p>
-                    <p class="panel-tabs">
+                    <p class="panel-tabs is-size-7">
                         <a href="#" v-for="room in static.rooms" v-bind:id="'panel-room-' + room.id"
                            class="has-text-centered"
                            v-bind:class="[room.id == active_room ? 'is-active' : '']"
@@ -326,11 +329,11 @@
     <div class="container is-fluid is-marginless">
         <div class="columns">
             <div class="column is-4">
-                <div class="control is-horizontal">
-                    <div class="control-label">
-                        <label class="label">Search: </label>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Search</label>
                     </div>
-                    <div class="control">
+                    <div class="field-body">
                         <input class="input" type="text" placeholder="Search" v-model="search_term">
                     </div>
                 </div>
