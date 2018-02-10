@@ -4,6 +4,8 @@ var v = new Vue({
         changelog: null,
         static: null,
         user_data: [],
+        search_term: "",
+        enteredData: "",
         active_page: "bundles",
         active_room: 0,
         active_bundle: 0,
@@ -23,7 +25,7 @@ var v = new Vue({
         temp_spoilers: {}
 
     },
-    ready: function(){
+    beforeMount: function(){
         this.fetchData();
         this.fetchChangeLog();
         new Clipboard('.copy');
@@ -47,26 +49,74 @@ var v = new Vue({
     computed: {
        user_data_serialized: function(){
            return btoa(JSON.stringify(this.user_data));
-       }
+       },
+        active_room_bundles: function(){
+           var self = this;
+           return this.static.bundles.filter(function(bundle){ return bundle.room === self.active_room });
+        },
+        active_bundle_items: function(){
+            var self = this;
+            return this.static.items.filter(function(item){ return item.bundles.indexOf(self.active_bundle) > -1});
+        },
+        active_season_items: function() {
+           var self = this;
+           if (self.active_season === self.static.seasons[0].id){
+               return _.orderBy(
+                   this.static.items.filter(
+                       function(item){
+                           return item.seasons.length === 4;
+                       }
+                   ),
+                   'name'
+               )
+
+           }
+           else {
+               return _.orderBy(
+                   this.static.items.filter(
+                       function (item) {
+                           return item.seasons.indexOf(self.active_season) > -1
+                       }
+                   ),
+                   'name'
+               )
+           }
+        },
+        active_skill_items: function() {
+            var self = this;
+            return _.orderBy(
+                this.static.items.filter(
+                    function(item){
+                        return item.skills.indexOf(self.active_skill) > -1
+                    }
+                ),
+                'name'
+            )
+        },
+        filtered_items: function(){
+            var self = this;
+            return _.orderBy(self.static.items.filter(function(item){ return item.name.toLowerCase().indexOf(self.search_term.toLowerCase()) !== -1 }), 'name');
+        }
     },
     methods: {
         fetchData: function(){
-            this.$http.get('bundles.json', function(data, status, response){
-                if(status == 200){
-                    this.static = data;
-                    if(this.user_data.length <= 0){
-                        for(i=0; i<this.static.bundles.length;i++){
-                            this.user_data.push([]);
-                        }
+            this.$http.get('bundles.json').then(function(response) {
+                this.static = response.body;
+                if(this.user_data.length <= 0){
+                    for(i=0; i<this.static.bundles.length;i++){
+                        this.user_data.push([]);
                     }
-                }
+                };
+            }, function(response) {
+                console.log("error fetching bundle data");
             });
+
         },
         fetchChangeLog: function() {
-            this.$http.get('changelog.json', function(data, status){
-                if(status == 200){
-                    this.changelog = data.versions
-                }
+            this.$http.get('changelog.json').then(function(response) {
+                    this.changelog = response.body.versions;
+            }, function(response) {
+                console.log("error fetching change log data");
             });
         },
         enterLoadMode: function(){
@@ -177,9 +227,10 @@ var v = new Vue({
             }, 0)
         },
         getRoomItemsChecked: function(roomId){
+            var self = this;
             return this.static.bundles
                 .filter(function(b){ return b.room === roomId; })
-                .reduce(function(p, c){ return p + Math.min(v.user_data[c.id].length, c.items_required); }, 0);
+                .reduce(function(p, c){ return p + Math.min(self.user_data[c.id].length, c.items_required); }, 0);
         },
         isCompleted: function (item) {
             for(i=0; i < item.bundles.length; i++){
@@ -192,6 +243,12 @@ var v = new Vue({
         },
         isBundleComplete: function(bundle_id){
             return this.user_data[bundle_id].length >= this.static.bundles[bundle_id].items_required;
+        },
+        getItemSeasons: function(item){
+            return this.static.seasons.filter(function(season){ return item.seasons.indexOf(season.id) > -1 });
+        },
+        getItemSkills: function(item){
+            return this.static.skills.filter(function(skill){ return item.skills.indexOf(skill.id) > -1 });
         }
     }
 });
@@ -199,17 +256,6 @@ var v = new Vue({
 Vue.filter('inBundle', function(value, id){
     return value.filter(function(element){
         if(element.bundles.indexOf(id) > -1){
-            return true;
-        }
-        else{
-            return false;
-        }
-    });
-});
-
-Vue.filter('filterByArray', function(array1, array2){
-    return array1.filter(function(element){
-        if(array2.indexOf(element.id) > -1){
             return true;
         }
         else{

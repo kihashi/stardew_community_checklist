@@ -3,88 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stardew Valley Community Checklist</title>
     <link type="text/css" rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.20/css/bulma.min.css"/>
+          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
     <link type="text/css" rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <link type="text/css" rel="stylesheet" href="main.css"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body id="app">
-<section class="hero is-info is-left is-bold">
-    <div class="hero-header">
-        <div class="header">
+<body>
+<div id="app">
+<section class="hero is-info">
+    <div class="hero-head">
+        <nav class="navbar">
             <div class="container">
-                <div class="header-left">
-                    <div class="header-item">
-                        <a href="./"><h1 class="title">Stardew Community Checklist</h1></a>
+                <div class="navbar-brand">
+                    <a href="./" class="navbar-item"><h1 class="title">Stardew Community Checklist</h1></a>
+                </div>
+                <div class="navbar-menu">
+                    <div class="navbar-end">
+                        <span class="navbar-item">
+                            <a href="#" id="save-button" class="button is-light is-outlined" v-on:click.stop="enterSaveMode">
+                            <span class="icon"><i class="fa fa-download"></i></span>
+                            <span>Export Data</span>
+                            </a>
+                        </span>
+                        <span class="navbar-item">
+                            <a href="#" id="load-button" class="button is-light is-outlined" v-on:click.stop="enterLoadMode">
+                                <span class="icon"><i class="fa fa-upload"></i></span>
+                                <span>Import Data</span>
+                            </a>
+                        </span>
                     </div>
                 </div>
-                <div class="header-right">
-                        <span class="header-item">
-                          <a href="#" id="save-button" class="button is-info is-outlined is-inverted"
-                             v-on:click.stop="enterSaveMode">
-                            <span class="icon">
-                                <i class="fa fa-download"></i>
-                            </span>
-                              <span>Export Data</span>
-                          </a>
-                        </span>
-                        <span class="header-item">
-                          <a href="#" id="load-button" class="button is-info is-outlined is-inverted"
-                             v-on:click.stop="enterLoadMode">
-                            <span class="icon">
-                                <i class="fa fa-upload"></i>
-                            </span>
-                              <span>Import Data</span>
-                          </a>
-                        </span>
-                </div>
             </div>
-        </div>
+        </nav>
     </div>
 </section>
-<nav class="header has-shadow">
+<nav class="navbar has-shadow">
     <div class="container">
-        <div class="header-left">
-            <a id="bundles-nav" class="header-tab" href="#" v-on:click.stop="change_page('bundles')"
-               v-bind:class="['bundles' == active_page ? 'is-active' : '']">
+        <div class="navbar-tabs">
+            <a id="bundles-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('bundles')"
+                v-bind:class="['bundles' == active_page ? 'is-active' : '']">
                 Bundles
             </a>
-            <a id="ab-nav" class="header-tab" href="#" v-on:click.stop="change_page('ab-list')"
-               v-bind:class="['ab-list' == active_page ? 'is-active' : '']">
+            <a id="ab-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('ab-list')"
+                v-bind:class="['ab-list' == active_page ? 'is-active' : '']">
                 Alphabetical
             </a>
-            <a id="seasons-nav" class="header-tab" href="#" v-on:click.stop="change_page('seasons')"
-               v-bind:class="['seasons' == active_page ? 'is-active' : '']">
+            <a id="seasons-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('seasons')"
+                v-bind:class="['seasons' == active_page ? 'is-active' : '']">
                 Seasons
             </a>
-            <a id="skills-nav" class="header-tab" href="#" v-on:click.stop="change_page('skills')"
-               v-bind:class="['skills' == active_page ? 'is-active' : '']">
+            <a id="skills-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('skills')"
+                v-bind:class="['skills' == active_page ? 'is-active' : '']">
                 Skills
             </a>
-            <a id="change-nav" class="header-tab" href="#" v-on:click.stop="change_page('changelog')"
-               v-bind:class="['changelog' == active_page ? 'is-active' : '']">
+            <a id="change-nav" class="navbar-item is-tab" href="#" v-on:click.stop="change_page('changelog')"
+                v-bind:class="['changelog' == active_page ? 'is-active' : '']">
                 Change Log
             </a>
         </div>
-        <div class="header-right header-menu">
-            <span class="header-item">
-                <a class="button" v-on:click="toggleHideCompleted">
-                    <span class="icon">
-                        <i class="fa" v-bind:class="[hideCompleted ? 'fa-check-square-o' : 'fa-square-o']"></i>
-                    </span>
-                    <span>
-                        Hide Completed
-                    </span>
-                </a>
+        <div class="navbar-end">
+            <span class="navbar-item">
+            <a class="button" v-on:click="toggleHideCompleted">
+            <span class="icon">
+            <i class="fa" v-bind:class="[hideCompleted ? 'fa-check-square-o' : 'fa-square-o']"></i>
             </span>
-            <span class="header-item">
-                <p class="control has-addons">
+            <span>
+            Hide Completed
+            </span>
+            </a>
+            </span>
+            <span class="navbar-item">
+                <div class="buttons has-addons">
                     <a class="button" v-on:click="toggleHideSpoilers">
                         <span class="icon">
                             <i class="fa" v-bind:class="[hideSpoilers ? 'fa-check-square-o' : 'fa-square-o']"></i>
@@ -93,12 +89,12 @@
                             Hide Spoilers
                         </span>
                     </a>
-                    <a class="button is-info is-marginless" v-on:click="enterSpoilerSettings">
+                    <a class="button is-info" v-on:click="enterSpoilerSettings">
                         <span class="icon">
                             <i class="fa fa-cogs"></i>
                         </span>
                     </a>
-                </p>
+                </div>
             </span>
         </div>
     </div>
@@ -114,15 +110,19 @@
                     Your data has been saved locally. This data string is provided in case you want to make a backup or
                     take your data to another computer.
                 </div>
-                <p class="control has-addons">
-                    <input id="user-data-serialized" readonly class="input" type="text" placeholder="Save Data"
-                           value="{{ user_data_serialized }}">
-                    <a class="button is-info copy" data-clipboard-target="#user-data-serialized">
-                      <span class="icon">
-                          <i class="fa fa-clipboard"></i>
-                      </span>
-                    </a>
-                </p>
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input id="user-data-serialized" readonly class="input" type="text" placeholder="Save Data"
+                                v-bind:value="user_data_serialized">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info copy" data-clipboard-target="#user-data-serialized">
+                          <span class="icon">
+                              <i class="fa fa-clipboard"></i>
+                          </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -139,12 +139,16 @@
                     If you previously saved your data on this computer, it should already be loaded. This utility is
                     only for loading a data string from a backup or another computer.
                 </div>
-                <p class="control has-addons">
-                    <input class="input" type="text" placeholder="Load Data" v-model="enteredData">
-                    <a class="button is-info" v-on:click="loadData(enteredData)">
-                        Load Data
-                    </a>
-                </p>
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="Load Data" v-model="enteredData">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info" v-on:click="loadData(enteredData)">
+                            Load Data
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -202,25 +206,25 @@
 </div>
 
 <!-- BUNDLE TAB -->
-<section id="bundle-section" class="section" v-if="active_page == 'bundles'">
-    <div class="container is-fluid">
+<section id="bundle-section" class="section" v-if="active_page == 'bundles' && static !== null">
+    <div class="container is-fluid is-marginless">
         <div class="columns">
-            <div class="column is-2">
+            <div class="column is-2 is-paddingless">
                 <nav class="panel">
                     <p class="panel-heading">
                         Bundles
                     </p>
-                    <p class="panel-tabs">
-                        <a href="#" v-for="room in static.rooms" id="panel-room-{{ room.id }}"
+                    <p class="panel-tabs is-size-7">
+                        <a href="#" v-for="room in static.rooms" v-bind:id="'panel-room-' + room.id"
                            class="has-text-centered"
                            v-bind:class="[room.id == active_room ? 'is-active' : '']"
                            v-on:click.stop="change_room(room.id)">
                             {{ room.name }}
                         </a>
                     </p>
-                    <template v-for="bundle in static.bundles | filterBy active_room in 'room'">
+                    <template v-for="bundle in active_room_bundles">
                         <a class="panel-block" href="#"
-                           id="panel-bundle-{{ bundle.id }}" v-bind:class="[bundle.id == active_bundle ? 'is-active' : '']"
+                           v-bind:id="'panel-bundle-' + bundle.id" v-bind:class="[bundle.id == active_bundle ? 'is-active' : '']"
                            v-on:click.stop="change_bundle(bundle.id)" v-if="!(hideCompleted && isBundleComplete(bundle.id))">
 
                         <span class="panel-icon">
@@ -243,8 +247,8 @@
                         <h5 class="subtitle" v-if="!(hideSpoilers && spoilers.bundle_rewards)">{{ static.bundles[active_bundle].reward }}</h5>
                         <h5 class="subtitle" v-else>&nbsp;</h5>
                         <progress class="progress is-info"
-                                  value="{{ user_data[active_bundle].length }}"
-                                  max="{{ static.bundles[active_bundle].items_required }}"></progress>
+                                  v-bind:value="user_data[active_bundle].length"
+                                  v-bind:max="static.bundles[active_bundle].items_required"></progress>
                     </div>
                     <div class="column">
                         <h3 class="title">
@@ -255,15 +259,15 @@
                         </h3>
                         <h5 class="subtitle">{{ static.rooms[static.bundles[active_bundle].room].reward }}</h5>
                         <progress class="progress is-info"
-                                  value="{{ getRoomItemsChecked(static.bundles[active_bundle].room) }}"
-                                  max="{{ getRoomItemsRequired(static.bundles[active_bundle].room) }}"
+                                  v-bind:value="getRoomItemsChecked(static.bundles[active_bundle].room)"
+                                  v-bind:max="getRoomItemsRequired(static.bundles[active_bundle].room)"
                         >
 
                         </progress>
                     </div>
                 </div>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | inBundle active_bundle">
+                    <template v-for="item in active_bundle_items">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
@@ -281,13 +285,13 @@
                                     </div>
                                     <div class="content">
                                         <p class="control">
-                                            <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                               v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
-                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
+                                            <a class="button is-fullwidth" v-for="(bundle_id, index) in item.bundles"
+                                               v-on:click="toggleItemInBundle(bundle_id, item.id, index)"
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                         <i class="fa"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                           v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                     </span>
                                                 <span>{{ static.bundles[bundle_id].name }}</span>
                                             </a>
@@ -297,8 +301,8 @@
                                 <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
-                                            <span class="tag is-primary is-text-centered"
-                                                  v-for="season in static.seasons | filterByArray item.seasons">
+                                            <span class="tag is-primary is-text-centered is-rounded"
+                                                  v-for="season in getItemSeasons(item)">
                               {{ season.name }}
                             </span>
                                     </div>
@@ -306,8 +310,8 @@
                                 <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_skills)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-tree"></i></span>
-                                            <span class="tag is-info is-text-centered"
-                                                  v-for="skill in static.skills | filterByArray item.skills">
+                                            <span class="tag is-info is-text-centered is-rounded"
+                                                  v-for="skill in getItemSkills(item)">
                               {{ skill.name }}
                             </span>
                                     </div>
@@ -322,15 +326,15 @@
 </section>
 
 <!-- AB TAB -->
-<section id="ab-section" class="section" v-if="active_page == 'ab-list'">
-    <div class="container is-fluid">
+<section id="ab-section" class="section" v-if="active_page == 'ab-list' && static !== null">
+    <div class="container is-fluid is-marginless">
         <div class="columns">
             <div class="column is-4">
-                <div class="control is-horizontal">
-                    <div class="control-label">
-                        <label class="label">Search: </label>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Search</label>
                     </div>
-                    <div class="control">
+                    <div class="field-body">
                         <input class="input" type="text" placeholder="Search" v-model="search_term">
                     </div>
                 </div>
@@ -339,7 +343,7 @@
 
 
         <div class="columns is-multiline">
-            <template v-for="item in static.items | filterBy search_term in 'name' | orderBy 'name'">
+            <template v-for="item in filtered_items">
                 <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                     <div class="card is-fullwidth is-flex eq-line">
                         <header class="card-header">
@@ -357,13 +361,13 @@
                             </div>
                             <div class="content">
                                 <p class="control">
-                                    <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                       v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                       v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
-                                                      !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
+                                    <a class="button is-fullwidth" v-for="(bundle_id, index) in item.bundles"
+                                       v-on:click="toggleItemInBundle(bundle_id, item.id, index)"
+                                       v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'is-success' : '',
+                                                      !isItemInBundle(bundle_id, item.id, index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                             <span class="icon">
                                         <i class="fa"
-                                           v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                           v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                     </span>
                                         <span>{{ static.bundles[bundle_id].name }}</span>
                                     </a>
@@ -373,8 +377,8 @@
                         <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">
                             <div class="card-footer-item">
                                 <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
-                                    <span class="tag is-primary is-text-centered"
-                                          v-for="season in static.seasons | filterByArray item.seasons">
+                                    <span class="tag is-primary is-text-centered is-rounded"
+                                                  v-for="season in getItemSeasons(item)">
                               {{ season.name }}
                             </span>
                             </div>
@@ -382,8 +386,8 @@
                         <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_skills)">
                             <div class="card-footer-item">
                                 <span class="icon is-small"><i class="fa fa-tree"></i></span>
-                                    <span class="tag is-info is-text-centered"
-                                          v-for="skill in static.skills | filterByArray item.skills">
+                                    <span class="tag is-info is-text-centered is-rounded"
+                                                  v-for="skill in getItemSkills(item)">
                               {{ skill.name }}
                             </span>
                             </div>
@@ -397,14 +401,14 @@
 
 <!-- Seasons Tab -->
 <section id="seasons-tab" class="section" v-if="active_page == 'seasons'">
-    <div class="container is-fluid">
+    <div class="container is-fluid is-marginless">
         <div class="columns">
             <div class="column is-2">
                 <nav class="panel">
                     <p class="panel-heading">
                         Seasons
                     </p>
-                    <a class="panel-block" href="#" v-for="season in static.seasons" id="panel-season-{{ season.id }}"
+                    <a class="panel-block" href="#" v-for="season in static.seasons" v-bind:id="'panel-season-' + season.id"
                        v-bind:class="[season.id == active_season ? 'is-active' : '']"
                        v-on:click.stop="change_season(season.id)">
                             <span class="panel-icon">
@@ -417,7 +421,7 @@
                 <h3 class="title">{{ getSeasonName(active_season) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | seasonFilter active_season | orderBy 'name'">
+                    <template v-for="item in active_season_items">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
@@ -435,13 +439,13 @@
                                     </div>
                                     <div class="content">
                                         <p class="control">
-                                            <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                               v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
-                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
+                                            <a class="button is-fullwidth" v-for="(bundle_id, index) in item.bundles"
+                                               v-on:click="toggleItemInBundle(bundle_id, item.id, index)"
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                                 <i class="fa"
-                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                             </span>
                                                 <span>{{ static.bundles[bundle_id].name }}</span>
                                             </a>
@@ -451,8 +455,8 @@
                                 <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
-                                            <span class="tag is-primary is-text-centered"
-                                                  v-for="season in static.seasons | filterByArray item.seasons">
+                                            <span class="tag is-primary is-text-centered is-rounded"
+                                                          v-for="season in getItemSeasons(item)">
                                       {{ season.name }}
                                     </span>
                                     </div>
@@ -460,10 +464,10 @@
                                 <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_skills)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-tree"></i></span>
-                                            <span class="tag is-info is-text-centered"
-                                                  v-for="skill in static.skills | filterByArray item.skills">
-                                              {{ skill.name }}
-                                            </span>
+                                            <span class="tag is-info is-text-centered is-rounded"
+                                                          v-for="skill in getItemSkills(item)">
+                                      {{ skill.name }}
+                                    </span>
                                     </div>
                                 </footer>
                             </div>
@@ -477,14 +481,14 @@
 
 <!-- Skills Tab -->
 <section id="skills-tab" class="section" v-if="active_page == 'skills'">
-    <div class="container is-fluid">
+    <div class="container is-fluid is-marginless">
         <div class="columns">
             <div class="column is-2">
                 <nav class="panel">
                     <p class="panel-heading">
                         Skills
                     </p>
-                    <a class="panel-block" href="#" v-for="skill in static.skills" id="panel-skill-{{ skill.id }}"
+                    <a class="panel-block" href="#" v-for="skill in static.skills" v-bind:id="'panel-skill-' + skill.id"
                        v-bind:class="[skill.id == active_skill ? 'is-active' : '']"
                        v-on:click.stop="change_skill(skill.id)">
                             <span class="panel-icon">
@@ -497,7 +501,7 @@
                 <h3 class="title">{{ getSkillName(active_skill) }}</h3>
                 <progress class="progress is-info" value="" max=""></progress>
                 <div class="columns is-multiline">
-                    <template v-for="item in static.items | filterBy active_skill in 'skills' | orderBy 'name'">
+                    <template v-for="item in active_skill_items">
                         <div class="column is-3 is-flex" v-if="!(hideCompleted && isCompleted(item))">
                             <div class="card is-fullwidth is-flex eq-line">
                                 <header class="card-header">
@@ -515,13 +519,13 @@
                                     </div>
                                     <div class="content">
                                         <p class="control">
-                                            <a class="button is-fullwidth" v-for="bundle_id in item.bundles"
-                                               v-on:click="toggleItemInBundle(bundle_id, item.id, $index)"
-                                               v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'is-success' : '',
-                                                              !isItemInBundle(bundle_id, item.id, $index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
+                                            <a class="button is-fullwidth" v-for="(bundle_id, index) in item.bundles"
+                                               v-on:click="toggleItemInBundle(bundle_id, item.id, index)"
+                                               v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'is-success' : '',
+                                                              !isItemInBundle(bundle_id, item.id, index) && !isBundleComplete(bundle_id) ? 'is-danger' : '' ]">
                                                     <span class="icon">
                                                 <i class="fa"
-                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, $index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
+                                                   v-bind:class="[isItemInBundle(bundle_id, item.id, index) ? 'fa-check-square-o' : 'fa-square-o']"></i>
                                             </span>
                                                 <span>{{ static.bundles[bundle_id].name }}</span>
                                             </a>
@@ -531,8 +535,8 @@
                                 <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_seasons)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-calendar-check-o"></i></span>
-                                            <span class="tag is-primary is-text-centered"
-                                                  v-for="season in static.seasons | filterByArray item.seasons">
+                                            <span class="tag is-primary is-text-centered is-rounded"
+                                                          v-for="season in getItemSeasons(item)">
                                       {{ season.name }}
                                     </span>
                                     </div>
@@ -540,10 +544,10 @@
                                 <footer class="card-footer" v-if="!(hideSpoilers && spoilers.item_skills)">
                                     <div class="card-footer-item">
                                         <span class="icon is-small"><i class="fa fa-tree"></i></span>
-                                            <span class="tag is-info is-text-centered"
-                                                  v-for="skill in static.skills | filterByArray item.skills">
-                                              {{ skill.name }}
-                                            </span>
+                                            <span class="tag is-info is-text-centered is-rounded"
+                                                          v-for="skill in getItemSkills(item)">
+                                      {{ skill.name }}
+                                    </span>
                                     </div>
                                 </footer>
                             </div>
@@ -575,7 +579,7 @@
                 <p class="card-footer-item">
                     Release Date: {{ version.date }}
                 </p>
-                <a href="https://github.com/kihashi/stardew_community_checklist/releases/tag/{{ version.link }}" class="card-footer-item">
+                <a v-bind:href="'https://github.com/kihashi/stardew_community_checklist/releases/tag/' + version.link" class="card-footer-item">
                     <span class="icon">
                         <i class="fa fa-github-square" aria-hidden="true"></i>
                     </span>
@@ -614,11 +618,13 @@
     </div>
   </div>
 </footer>
+</div>
 
 <!-- Javascript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.1.16/vue-resource.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
