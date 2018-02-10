@@ -87,7 +87,7 @@ var v = new Vue({
             return _.orderBy(
                 this.static.items.filter(
                     function(item){
-                        return item.seasons.indexOf(self.active_skill) > -1
+                        return item.skills.indexOf(self.active_skill) > -1
                     }
                 ),
                 'name'
