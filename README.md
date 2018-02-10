@@ -42,7 +42,7 @@ off? Simply click the button for the appropriate bundle.
 # Things to come
 
 I have some planned features listed below, but I am open to feature requests.
-If you think of something, please, list it below or
+If you think of something, please, [make a post on the subreddit](https://www.reddit.com/r/stardewchecklist/) or
 [open an issue](https://github.com/kihashi/stardew_community_checklist/issues/new).
 
 * Season Completion Rate
