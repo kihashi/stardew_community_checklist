@@ -82,7 +82,16 @@ var v = new Vue({
         },
         filtered_items: function(){
             var self = this;
-            return _.orderBy(self.static.items.filter(function(item){ return item.name.toLowerCase().indexOf(self.search_term.toLowerCase()) !== -1 }), 'name');
+            if (self.active_season === "All Seasons"){
+                return _.orderBy(self.static.items.filter(function (item) {
+                    return item.seasons.length === 4;
+                }), 'name');
+            }
+            else {
+                return _.orderBy(self.static.items.filter(function (item) {
+                    return item.name.toLowerCase().indexOf(self.search_term.toLowerCase()) !== -1
+                }), 'name');
+            }
         }
     },
     methods: {
