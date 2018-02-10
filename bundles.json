@@ -619,7 +619,7 @@
     {
       "id": 77,
       "name": "Crayfish",
-      "source": "Gathered from Crab Pots. Rivers, Spring",
+      "source": "Gathered from Crab Pot in rivers during any season.",
       "seasons": ["spring", "summer", "fall", "winter"],
       "skills": ["fishing"],
       "bundles": [16]
@@ -859,7 +859,7 @@
     {
       "id": 107,
       "name": "Sunflower",
-      "source": "Crops during Fall.",
+      "source": "Crops during Summer and Fall.",
       "seasons": ["summer", "fall"],
       "skills": ["farming"],
       "bundles": [22]
