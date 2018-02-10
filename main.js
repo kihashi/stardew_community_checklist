@@ -58,6 +58,28 @@ var v = new Vue({
             var self = this;
             return this.static.items.filter(function(item){ return item.bundles.indexOf(self.active_bundle) > -1});
         },
+        active_season_items: function() {
+           var self = this;
+           return _.orderBy(
+               this.statis.items.filter(
+                    function(item){
+                        return item.seasons.indexOf(self.active_season) > -1
+                    }
+                ),
+               'name'
+           )
+        },
+        active_skill_items: function() {
+            var self = this;
+            return _.orderBy(
+                this.statis.items.filter(
+                    function(item){
+                        return item.seasons.indexOf(self.active_skill) > -1
+                    }
+                ),
+                'name'
+            )
+        },
         filtered_items: function(){
             var self = this;
             return _.orderBy(self.static.items.filter(function(item){ return item.name.toLowerCase().indexOf(self.search_term.toLowerCase()) !== -1 }), 'name');
