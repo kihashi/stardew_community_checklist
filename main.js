@@ -60,14 +60,27 @@ var v = new Vue({
         },
         active_season_items: function() {
            var self = this;
-           return _.orderBy(
-               this.static.items.filter(
-                    function(item){
-                        return item.seasons.indexOf(self.active_season) > -1
-                    }
-                ),
-               'name'
-           )
+           if (self.active_season === self.static.seasons[0].id){
+               return _.orderBy(
+                   this.static.items.filter(
+                       function(item){
+                           return item.seasons.length === 4;
+                       }
+                   ),
+                   'name'
+               )
+
+           }
+           else {
+               return _.orderBy(
+                   this.static.items.filter(
+                       function (item) {
+                           return item.seasons.indexOf(self.active_season) > -1
+                       }
+                   ),
+                   'name'
+               )
+           }
         },
         active_skill_items: function() {
             var self = this;
