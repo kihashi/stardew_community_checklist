@@ -7,12 +7,15 @@
         <h2 class="subtitle">
           Track Your Progress on the Community Center!
         </h2>
+        <item-card/>
       </div>
     </section>
 </template>
 
 <script>
+import ItemCard from '@/components/item_card/ItemCard'
 export default {
+  components: {ItemCard},
   name: 'welcome'
 }
 </script>
