@@ -1,0 +1,18 @@
+{
+  "spring": {
+    "id": 0,
+    "name": "Spring"
+  },
+  "summer": {
+    "id": 1,
+    "name": "Summer"
+  },
+  "fall": {
+    "id": 2,
+    "name": "Fall"
+  },
+  "winter": {
+    "id": 3,
+    "name": "Winter"
+  }
+}
