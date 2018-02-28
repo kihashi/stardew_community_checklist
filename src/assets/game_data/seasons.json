@@ -1,18 +1,24 @@
 {
-  "spring": {
-    "id": 0,
-    "name": "Spring"
-  },
-  "summer": {
-    "id": 1,
-    "name": "Summer"
-  },
-  "fall": {
-    "id": 2,
-    "name": "Fall"
-  },
-  "winter": {
-    "id": 3,
-    "name": "Winter"
-  }
+  "seasons": [
+    {
+      "id": "allseasons",
+      "name": "All Seasons"
+    },
+    {
+      "id": "spring",
+      "name": "Spring"
+    },
+    {
+      "id": "summer",
+      "name": "Summer"
+    },
+    {
+      "id": "fall",
+      "name": "Fall"
+    },
+    {
+      "id": "winter",
+      "name": "Winter"
+    }
+  ]
 }

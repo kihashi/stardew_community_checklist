@@ -1,22 +1,24 @@
 {
-  "farming": {
-    "id": 0,
-    "name": "Farming"
-  },
-  "mining": {
-    "id": 1,
-    "name": "Mining"
-  },
-  "foraging": {
-    "id": 2,
-    "name": "Foraging"
-  },
-  "fishing": {
-    "id": 3,
-    "name": "Fishing"
-  }
-  "combat": {
-    "id": 4,
-    "name": "Combat"
-  }
+  "skills": [
+    {
+      "id": "farming",
+      "name": "Farming"
+    },
+    {
+      "id": "mining",
+      "name": "Mining"
+    },
+    {
+      "id": "foraging",
+      "name": "Foraging"
+    },
+    {
+      "id": "fishing",
+      "name": "Fishing"
+    },
+    {
+      "id": "combat",
+      "name": "Combat"
+    }
+  ]
 }
