@@ -1,0 +1,22 @@
+{
+  "farming": {
+    "id": 0,
+    "name": "Farming"
+  },
+  "mining": {
+    "id": 1,
+    "name": "Mining"
+  },
+  "foraging": {
+    "id": 2,
+    "name": "Foraging"
+  },
+  "fishing": {
+    "id": 3,
+    "name": "Fishing"
+  }
+  "combat": {
+    "id": 4,
+    "name": "Combat"
+  }
+}
