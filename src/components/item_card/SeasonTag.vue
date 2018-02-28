@@ -1,5 +1,5 @@
 <template>
-  <span class="tag" v-bind:class="seasonColor">
+  <span class="tag is-primary">
     <span class="icon">
         <spring-icon v-if="season === 'spring'"/>
         <summer-icon v-if="season === 'summer'"/>
@@ -23,21 +23,7 @@ export default {
       required: true,
       default: 'spring',
       validator: function (value) {
-        return value.toLowerCase() in Seasons
-      }
-    }
-  },
-  computed: {
-    seasonColor: function () {
-      switch (this.season) {
-        case 'spring':
-          return 'is-success'
-        case 'summer':
-          return 'is-warning'
-        case 'fall':
-          return 'is-danger'
-        case 'winter':
-          return 'is-info'
+        return value in Seasons
       }
     }
   },
