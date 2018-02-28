@@ -1,5 +1,5 @@
 <template>
-    <section class="hero is-success is-medium is-bold">
+    <section class="hero is-medium is-bold">
       <div class="hero-body">
         <h1 class="title">
           Stardew Community Checklist
