@@ -1,17 +1,16 @@
 <template>
   <span class="tag is-info">
     <span class="icon">
-      <farming-icon v-if="skill === 'farming'"/>
-      <mining-icon v-if="skill === 'mining'"/>
-      <foraging-icon v-if="skill === 'foraging'"/>
-      <fishing-icon v-if="skill === 'fishing'"/>
-      <combat-icon v-if="skill === 'combat'"/>
+      <farming-icon v-if="skill.id === 'farming'"/>
+      <mining-icon v-if="skill.id === 'mining'"/>
+      <foraging-icon v-if="skill.id === 'foraging'"/>
+      <fishing-icon v-if="skill.id === 'fishing'"/>
+      <combat-icon v-if="skill.id === 'combat'"/>
     </span>
   </span>
 </template>
 
 <script>
-import Skills from '@/assets/game_data/skills.json'
 import FarmingIcon from 'mdi-vue/CowIcon'
 import MiningIcon from 'mdi-vue/DiamondIcon'
 import ForagingIcon from 'mdi-vue/MushroomIcon'
@@ -21,11 +20,13 @@ export default {
   name: 'skill-tag',
   props: {
     skill: {
-      type: String,
+      type: Object,
       required: true,
-      default: 'farming',
-      validator: function (value) {
-        return value.toLowerCase() in Skills
+      default: function () {
+        return {
+          id: 'farming',
+          name: 'Farming'
+        }
       }
     }
   },

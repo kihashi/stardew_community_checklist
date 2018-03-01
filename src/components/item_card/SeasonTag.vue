@@ -1,16 +1,15 @@
 <template>
   <span class="tag is-primary">
     <span class="icon">
-        <spring-icon v-if="season === 'spring'"/>
-        <summer-icon v-if="season === 'summer'"/>
-        <fall-icon v-if="season === 'fall'"/>
-        <winter-icon v-if="season === 'winter'"/>
+        <spring-icon v-if="season.id === 'spring'"/>
+        <summer-icon v-if="season.id === 'summer'"/>
+        <fall-icon v-if="season.id === 'fall'"/>
+        <winter-icon v-if="season.id === 'winter'"/>
     </span>
   </span>
 </template>
 
 <script>
-import Seasons from '@/assets/game_data/seasons.json'
 import SpringIcon from 'mdi-vue/FlowerIcon'
 import SummerIcon from 'mdi-vue/WhiteBalanceSunnyIcon'
 import FallIcon from 'mdi-vue/LeafIcon'
@@ -19,11 +18,13 @@ export default {
   name: 'season-tag',
   props: {
     season: {
-      type: String,
+      type: Object,
       required: true,
-      default: 'spring',
-      validator: function (value) {
-        return value in Seasons
+      default: function () {
+        return {
+          id: 'spring',
+          name: 'Spring'
+        }
       }
     }
   },
