@@ -2,22 +2,27 @@
   "skills": [
     {
       "id": "farming",
+      "order": 0,
       "name": "Farming"
     },
     {
       "id": "mining",
+      "order": 1,
       "name": "Mining"
     },
     {
       "id": "foraging",
+      "order": 2,
       "name": "Foraging"
     },
     {
       "id": "fishing",
+      "order": 3,
       "name": "Fishing"
     },
     {
       "id": "combat",
+      "order": 4,
       "name": "Combat"
     }
   ]

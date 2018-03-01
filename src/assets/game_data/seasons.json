@@ -1,23 +1,23 @@
 {
   "seasons": [
     {
-      "id": "allseasons",
-      "name": "All Seasons"
-    },
-    {
       "id": "spring",
+      "order": 0,
       "name": "Spring"
     },
     {
       "id": "summer",
+      "order": 1,
       "name": "Summer"
     },
     {
       "id": "fall",
+      "order": 2,
       "name": "Fall"
     },
     {
       "id": "winter",
+      "order": 3,
       "name": "Winter"
     }
   ]
