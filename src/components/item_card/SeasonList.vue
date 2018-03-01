@@ -1,12 +1,11 @@
 <template>
-  <span class="tags">
-    <season-tag v-for="season in seasons" :key="SeasonOrder(season)" :season="season"/>
+  <span class='tags'>
+    <season-tag v-for='season in seasons' :key='season.order' :season='season'/>
   </span>
 </template>
 
 <script>
 import SeasonTag from './SeasonTag'
-import SeasonData from '@/assets/game_data/seasons.json'
 
 export default {
   components: {SeasonTag},
@@ -14,12 +13,31 @@ export default {
   props: {
     seasons: {
       type: Array,
-      required: true
-    }
-  },
-  methods: {
-    SeasonOrder: function (value) {
-      return SeasonData[value].id
+      required: true,
+      default: function () {
+        return [
+          {
+            id: 'spring',
+            order: 0,
+            name: 'Spring'
+          },
+          {
+            id: 'summer',
+            order: 1,
+            name: 'Summer'
+          },
+          {
+            id: 'fall',
+            order: 2,
+            name: 'Fall'
+          },
+          {
+            id: 'winter',
+            order: 3,
+            name: 'Winter'
+          }
+        ]
+      }
     }
   }
 }
