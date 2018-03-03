@@ -1,6 +1,6 @@
 <template>
   <span class="tag is-primary">
-    <span class="icon">
+    <span class="icon is-small">
         <spring-icon v-if="season.id === 'spring'"/>
         <summer-icon v-if="season.id === 'summer'"/>
         <fall-icon v-if="season.id === 'fall'"/>

@@ -1,6 +1,6 @@
 <template>
   <span class="tag is-info">
-    <span class="icon">
+    <span class="icon is-small">
       <farming-icon v-if="skill.id === 'farming'"/>
       <mining-icon v-if="skill.id === 'mining'"/>
       <foraging-icon v-if="skill.id === 'foraging'"/>
