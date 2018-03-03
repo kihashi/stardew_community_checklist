@@ -1,5 +1,5 @@
 <template>
-  <span class="tags">
+  <span class="tags has-addons">
     <skill-tag v-for="skill in skills" :key="skill.order" :skill="skill"/>
   </span>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <span class='tags'>
+  <span class='tags has-addons'>
     <season-tag v-for='season in seasons' :key='season.order' :season='season'/>
   </span>
 </template>
