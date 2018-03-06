@@ -1,11 +1,115 @@
 <template>
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        {{item.name}}
+      </p>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        {{item.source}}
+      </div>
+      <div class="content">
+        <div class="columns">
+          <template v-for="bundleItem in item.bundles">
+            <div class="column" :key="bundleItem.bundle.id">
+              <bundle-button :bundle-item="bundleItem" :item="item"/>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <div class="card-footer-item">
+        <season-list :seasons="item.seasons"/>
+      </div>
+      <div class="card-footer-item">
+        <skill-list :skills="item.skills"/>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
-import SeasonTag from '@/components/item_card/SeasonTag'
+import SeasonList from './SeasonList'
+import SkillList from './SkillList'
+import BundleButton from './BundleButton'
+
 export default {
-  components: {SeasonTag},
-  name: 'item-card'
+  components: {
+    BundleButton,
+    SkillList,
+    SeasonList
+  },
+  name: 'item-card',
+  props: {
+    item: {
+      type: Object,
+      default: function () {
+        return {
+          id: 22,
+          name: 'Purple Mushroom',
+          source: 'Can be found in the mines or in the farm cave if you selected the mushroom perk.',
+          seasons: [
+            {
+              id: 'spring',
+              order: 0,
+              name: 'Spring'
+            },
+            {
+              id: 'summer',
+              order: 1,
+              name: 'Summer'
+            },
+            {
+              id: 'fall',
+              order: 2,
+              name: 'Fall'
+            },
+            {
+              id: 'winter',
+              order: 3,
+              name: 'Winter'
+            }
+          ],
+          skills: [
+            {
+              id: 'mining',
+              order: 1,
+              name: 'Mining'
+            },
+            {
+              id: 'foraging',
+              order: 2,
+              name: 'Foraging'
+            }
+          ],
+          'bundles': [
+            {
+              'count': 1,
+              'bundle': {
+                id: 5,
+                name: 'Exotic Foraging Bundle',
+                room: 0,
+                reward: 'Autumn\'s Bounty (5)'
+              },
+              'id': 24
+            },
+            {
+              'count': 1,
+              'bundle': {
+                id: 23,
+                name: 'Field Research Bundle',
+                room: 4,
+                reward: 'Recycling Machine'
+              },
+              'id': 25
+            }
+          ]
+        }
+      }
+    }
+  }
 }
 </script>
 
