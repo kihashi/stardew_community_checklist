@@ -9,20 +9,15 @@ export default new Vuex.Store({
   },
   getters: {
     IsBundleItemRedeemed: (state) => (BundleItem) => {
-      return state.StoredItems[BundleItem.bundle.id].hasOwnProperty(BundleItem.item.id)
+      return state.StoredItems.hasOwnProperty(BundleItem.id)
     }
   },
   mutations: {
     RedeemItem (state, BundleItem) {
-      state.StoredItems[BundleItem.bundle.id][BundleItem.item.id] = 1
+      Vue.set(state.StoredItems, BundleItem.id, 1)
     },
     UndoRedeemItem (state, BundleItem) {
-      delete state.StoredItems[BundleItem.bundle.id][BundleItem.item.id]
-    },
-    AddBundles (state, Bundles) {
-      for (let bundle of Bundles) {
-        state.StoredItems.set(bundle.id, {})
-      }
+      Vue.delete(state.StoredItems, BundleItem.id)
     }
   }
 })
