@@ -3,7 +3,8 @@
       <nav class="navbar">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
-            <h1 class="title">Stardew Community Checklist</h1>
+            <h1 class="title is-hidden-mobile">Stardew Community Checklist</h1>
+            <h1 class="title is-hidden-tablet">SCC</h1>
           </a>
           <div class="navbar-burger"
                v-bind:class="{ 'is-active': menu_active }"
