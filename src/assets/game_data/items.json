@@ -284,16 +284,16 @@
       "bundles": [
         {
           "bundle_id": 4,
-          "count": 1,
+          "count": 99,
           "id": 15
         },
         {
           "bundle_id": 4,
-          "count": 1,
+          "count": 99,
           "id": 16
         }
       ],
-      "name": "Wood (99)",
+      "name": "Wood",
       "skills": [
         "foraging"
       ],
@@ -310,11 +310,11 @@
       "bundles": [
         {
           "bundle_id": 4,
-          "count": 1,
+          "count": 99,
           "id": 17
         }
       ],
-      "name": "Stone (99)",
+      "name": "Stone",
       "skills": [
         "mining"
       ],
@@ -331,11 +331,11 @@
       "bundles": [
         {
           "bundle_id": 4,
-          "count": 1,
+          "count": 10,
           "id": 18
         }
       ],
-      "name": "Hardwood (10)",
+      "name": "Hardwood",
       "skills": [
         "foraging",
         "mining"
@@ -781,11 +781,11 @@
       "bundles": [
         {
           "bundle_id": 9,
-          "count": 1,
+          "count": 5,
           "id": 44
         }
       ],
-      "name": "Parsnip (Gold Star) (5)",
+      "name": "Parsnip (Gold Star)",
       "skills": [
         "farming"
       ],
@@ -799,11 +799,11 @@
       "bundles": [
         {
           "bundle_id": 9,
-          "count": 1,
+          "count": 5,
           "id": 45
         }
       ],
-      "name": "Melon (Gold Star) (5)",
+      "name": "Melon (Gold Star)",
       "skills": [
         "farming"
       ],
@@ -817,11 +817,11 @@
       "bundles": [
         {
           "bundle_id": 9,
-          "count": 1,
+          "count": 5,
           "id": 46
         }
       ],
-      "name": "Pumpkin (Gold Star) (5)",
+      "name": "Pumpkin (Gold Star)",
       "skills": [
         "farming"
       ],
@@ -835,11 +835,11 @@
       "bundles": [
         {
           "bundle_id": 9,
-          "count": 1,
+          "count": 5,
           "id": 47
         }
       ],
-      "name": "Corn (Gold Star) (5)",
+      "name": "Corn (Gold Star)",
       "skills": [
         "farming"
       ],
@@ -1111,7 +1111,7 @@
         },
         {
           "bundle_id": 24,
-          "count": 1,
+          "count": 3,
           "id": 61
         }
       ],
@@ -1123,7 +1123,7 @@
         "fall"
       ],
       "id": 55,
-      "source": "Gathered from Apple Trees during Fall. Fodder Bundle requires 3."
+      "source": "Gathered from Apple Trees during Fall."
     },
     {
       "bundles": [
@@ -1972,11 +1972,11 @@
       "bundles": [
         {
           "bundle_id": 20,
-          "count": 1,
+          "count": 99,
           "id": 104
         }
       ],
-      "name": "Slime (99)",
+      "name": "Slime",
       "skills": [
         "combat"
       ],
@@ -1993,11 +1993,11 @@
       "bundles": [
         {
           "bundle_id": 20,
-          "count": 1,
+          "count": 10,
           "id": 105
         }
       ],
-      "name": "Bat Wing (10)",
+      "name": "Bat Wing",
       "skills": [
         "combat"
       ],
@@ -2314,11 +2314,11 @@
       "bundles": [
         {
           "bundle_id": 24,
-          "count": 1,
+          "count": 10,
           "id": 121
         }
       ],
-      "name": "Wheat (10)",
+      "name": "Wheat",
       "skills": [
         "farming"
       ],
@@ -2332,11 +2332,11 @@
       "bundles": [
         {
           "bundle_id": 24,
-          "count": 1,
+          "count": 10,
           "id": 122
         }
       ],
-      "name": "Hay (10)",
+      "name": "Hay",
       "skills": [
         "farming"
       ],
