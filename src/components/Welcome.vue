@@ -7,7 +7,6 @@
         <h2 class="subtitle">
           Track Your Progress on the Community Center!
         </h2>
-        <item-card/>
       </div>
     </section>
 </template>
