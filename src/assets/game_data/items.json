@@ -1,980 +1,2497 @@
 {
   "items": [
     {
-      "id": 0,
+      "bundles": [
+        {
+          "bundle_id": 0,
+          "count": 1,
+          "id": 0
+        }
+      ],
       "name": "Wild Horseradish",
-      "source": "Foraging during Spring.",
-      "seasons": ["spring"],
-      "skills": ["foraging"],
-      "bundles": [0]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 0,
+      "source": "Foraging during Spring."
     },
     {
-      "id": 1,
+      "bundles": [
+        {
+          "bundle_id": 0,
+          "count": 1,
+          "id": 1
+        }
+      ],
       "name": "Daffodil",
-      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
-      "seasons": ["spring"],
-      "skills": ["foraging"],
-      "bundles": [0]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 1,
+      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance."
     },
     {
-      "id": 2,
+      "bundles": [
+        {
+          "bundle_id": 0,
+          "count": 1,
+          "id": 2
+        }
+      ],
       "name": "Leek",
-      "source": "Foraging during Spring.",
-      "seasons": ["spring"],
-      "skills": ["foraging"],
-      "bundles": [0]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 2,
+      "source": "Foraging during Spring."
     },
     {
-      "id": 3,
+      "bundles": [
+        {
+          "bundle_id": 0,
+          "count": 1,
+          "id": 3
+        }
+      ],
       "name": "Dandelion",
-      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
-      "seasons": ["spring"],
-      "skills": ["foraging"],
-      "bundles": [0]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 3,
+      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance."
     },
     {
-      "id": 4,
+      "bundles": [
+        {
+          "bundle_id": 1,
+          "count": 1,
+          "id": 4
+        }
+      ],
       "name": "Grape",
-      "source": "Foraging during Summer.",
-      "seasons": ["summer", "fall"],
-      "skills": ["foraging", "farming"],
-      "bundles": [1]
+      "skills": [
+        "foraging",
+        "farming"
+      ],
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "id": 4,
+      "source": "Foraging during Summer."
     },
     {
-      "id": 5,
+      "bundles": [
+        {
+          "bundle_id": 1,
+          "count": 1,
+          "id": 5
+        }
+      ],
       "name": "Spice Berry",
-      "source": "Foraging during Summer.",
-      "seasons": ["summer"],
-      "skills": ["foraging"],
-      "bundles": [1]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 5,
+      "source": "Foraging during Summer."
     },
     {
-      "id": 6,
+      "bundles": [
+        {
+          "bundle_id": 1,
+          "count": 1,
+          "id": 6
+        }
+      ],
       "name": "Sweet Pea",
-      "source": "Foraging during Summer.",
-      "seasons": ["summer"],
-      "skills": ["foraging"],
-      "bundles": [1]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 6,
+      "source": "Foraging during Summer."
     },
     {
-      "id": 7,
+      "bundles": [
+        {
+          "bundle_id": 2,
+          "count": 1,
+          "id": 7
+        }
+      ],
       "name": "Common Mushroom",
-      "source": "Foraging during Fall Or if you have the mushroom in your cave.",
-      "seasons": ["fall"],
-      "skills": ["foraging"],
-      "bundles": [2]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 7,
+      "source": "Foraging during Fall Or if you have the mushroom in your cave."
     },
     {
-      "id": 8,
+      "bundles": [
+        {
+          "bundle_id": 2,
+          "count": 1,
+          "id": 8
+        }
+      ],
       "name": "Wild Plum",
-      "source": "Foraging during Fall.",
-      "seasons": ["fall"],
-      "skills": ["foraging"],
-      "bundles": [2]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 8,
+      "source": "Foraging during Fall."
     },
     {
-      "id": 9,
+      "bundles": [
+        {
+          "bundle_id": 2,
+          "count": 1,
+          "id": 9
+        }
+      ],
       "name": "Hazelnut",
-      "source": "Foraging during Fall.",
-      "seasons": ["fall"],
-      "skills": ["foraging"],
-      "bundles": [2]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 9,
+      "source": "Foraging during Fall."
     },
     {
-      "id": 10,
+      "bundles": [
+        {
+          "bundle_id": 2,
+          "count": 1,
+          "id": 10
+        }
+      ],
       "name": "Blackberry",
-      "source": "Foraging during Fall.",
-      "seasons": ["fall"],
-      "skills": ["foraging"],
-      "bundles": [2]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 10,
+      "source": "Foraging during Fall."
     },
     {
-      "id": 11,
+      "bundles": [
+        {
+          "bundle_id": 3,
+          "count": 1,
+          "id": 11
+        }
+      ],
       "name": "Winter Root",
-      "source": "Foraging during Winter or dropped by slimes on 41-79 Mines levels.",
-      "seasons": ["winter", "spring", "summer", "fall"],
-      "skills": ["foraging", "combat"],
-      "bundles": [3]
+      "skills": [
+        "foraging",
+        "combat"
+      ],
+      "seasons": [
+        "winter",
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "id": 11,
+      "source": "Foraging during Winter or dropped by slimes on 41-79 Mines levels."
     },
     {
-      "id": 12,
+      "bundles": [
+        {
+          "bundle_id": 3,
+          "count": 1,
+          "id": 12
+        }
+      ],
       "name": "Crystal Fruit",
-      "source": "Foraging during Winter or dropped by coal sprites on 41-79 Mines levels.",
-      "seasons": ["winter", "spring", "summer", "fall"],
-      "skills": ["foraging", "combat"],
-      "bundles": [3]
+      "skills": [
+        "foraging",
+        "combat"
+      ],
+      "seasons": [
+        "winter",
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "id": 12,
+      "source": "Foraging during Winter or dropped by coal sprites on 41-79 Mines levels."
     },
     {
-      "id": 13,
+      "bundles": [
+        {
+          "bundle_id": 3,
+          "count": 1,
+          "id": 13
+        }
+      ],
       "name": "Snow Yam",
-      "source": "Foraging during Winter (Using a Hoe outside the farm).",
-      "seasons": ["winter"],
-      "skills": ["foraging"],
-      "bundles": [3]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "winter"
+      ],
+      "id": 13,
+      "source": "Foraging during Winter (Using a Hoe outside the farm)."
     },
     {
-      "id": 14,
+      "bundles": [
+        {
+          "bundle_id": 3,
+          "count": 1,
+          "id": 14
+        }
+      ],
       "name": "Crocus",
-      "source": "Foraging during Winter.",
-      "seasons": ["winter"],
-      "skills": ["foraging"],
-      "bundles": [3]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "winter"
+      ],
+      "id": 14,
+      "source": "Foraging during Winter."
     },
     {
-      "id": 15,
+      "bundles": [
+        {
+          "bundle_id": 4,
+          "count": 1,
+          "id": 15
+        },
+        {
+          "bundle_id": 4,
+          "count": 1,
+          "id": 16
+        }
+      ],
       "name": "Wood (99)",
-      "source": "Chopping trees or logs using an axe.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging"],
-      "bundles": [4, 4]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 15,
+      "source": "Chopping trees or logs using an axe."
     },
     {
-      "id": 16,
+      "bundles": [
+        {
+          "bundle_id": 4,
+          "count": 1,
+          "id": 17
+        }
+      ],
       "name": "Stone (99)",
-      "source": "Smashing stones with a pickaxe.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [4]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 16,
+      "source": "Smashing stones with a pickaxe."
     },
     {
-      "id": 17,
+      "bundles": [
+        {
+          "bundle_id": 4,
+          "count": 1,
+          "id": 18
+        }
+      ],
       "name": "Hardwood (10)",
-      "source": "Chopping large stumps with an upgraded axe. Also in crates in the Mines",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging", "mining"],
-      "bundles": [4]
+      "skills": [
+        "foraging",
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 17,
+      "source": "Chopping large stumps with an upgraded axe. Also in crates in the Mines"
     },
     {
-      "id": 18,
+      "bundles": [
+        {
+          "bundle_id": 5,
+          "count": 1,
+          "id": 19
+        }
+      ],
       "name": "Coconut",
-      "source": "Found in the desert.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging"],
-      "bundles": [5]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 18,
+      "source": "Found in the desert."
     },
     {
-      "id": 19,
+      "bundles": [
+        {
+          "bundle_id": 5,
+          "count": 1,
+          "id": 20
+        }
+      ],
       "name": "Cactus Fruit",
-      "source": "Found in the desert.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging"],
-      "bundles": [5]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 19,
+      "source": "Found in the desert."
     },
     {
-      "id": 20,
+      "bundles": [
+        {
+          "bundle_id": 5,
+          "count": 1,
+          "id": 21
+        }
+      ],
       "name": "Cave Carrot",
-      "source": "In boxes inside the mines or using the hoe on soil spots in the Mines.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [5]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 20,
+      "source": "In boxes inside the mines or using the hoe on soil spots in the Mines."
     },
     {
-      "id": 21,
+      "bundles": [
+        {
+          "bundle_id": 5,
+          "count": 1,
+          "id": 22
+        },
+        {
+          "bundle_id": 22,
+          "count": 1,
+          "id": 23
+        }
+      ],
       "name": "Red Mushroom",
-      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging", "mining"],
-      "bundles": [5, 22]
+      "skills": [
+        "foraging",
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 21,
+      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk."
     },
     {
-      "id": 22,
+      "bundles": [
+        {
+          "bundle_id": 5,
+          "count": 1,
+          "id": 24
+        },
+        {
+          "bundle_id": 23,
+          "count": 1,
+          "id": 25
+        }
+      ],
       "name": "Purple Mushroom",
-      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging", "mining"],
-      "bundles": [5, 23]
+      "skills": [
+        "foraging",
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 22,
+      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk."
     },
     {
-      "id": 23,
+      "bundles": [
+        {
+          "bundle_id": 5,
+          "count": 1,
+          "id": 26
+        },
+        {
+          "bundle_id": 21,
+          "count": 1,
+          "id": 27
+        }
+      ],
       "name": "Maple Syrup",
-      "source": "Harvested from maple trees using a Tapper.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging"],
-      "bundles": [5, 21]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 23,
+      "source": "Harvested from maple trees using a Tapper."
     },
     {
-      "id": 24,
+      "bundles": [
+        {
+          "bundle_id": 5,
+          "count": 1,
+          "id": 28
+        },
+        {
+          "bundle_id": 25,
+          "count": 1,
+          "id": 29
+        }
+      ],
       "name": "Oak Resin",
-      "source": "Harvested from oak trees using a Tapper.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging"],
-      "bundles": [5, 25]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 24,
+      "source": "Harvested from oak trees using a Tapper."
     },
     {
-      "id": 25,
+      "bundles": [
+        {
+          "bundle_id": 5,
+          "count": 1,
+          "id": 30
+        }
+      ],
       "name": "Pine Tar",
-      "source": "Harvested from pine trees using a Tapper.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging"],
-      "bundles": [5]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 25,
+      "source": "Harvested from pine trees using a Tapper."
     },
     {
-      "id": 26,
+      "bundles": [
+        {
+          "bundle_id": 5,
+          "count": 1,
+          "id": 31
+        }
+      ],
       "name": "Morel",
-      "source": "In the farm cave if you selected the mushroom perk",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging"],
-      "bundles": [5]
-    },
-    {
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
       "id": 26,
+      "source": "In the farm cave if you selected the mushroom perk"
+    },
+    {
+      "bundles": [
+        {
+          "bundle_id": 6,
+          "count": 1,
+          "id": 32
+        }
+      ],
       "name": "Parsnip",
-      "source": "Crops during Spring.",
-      "seasons": ["spring"],
-      "skills": ["farming"],
-      "bundles": [6]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 26,
+      "source": "Crops during Spring."
     },
     {
-      "id": 28,
+      "bundles": [
+        {
+          "bundle_id": 6,
+          "count": 1,
+          "id": 33
+        }
+      ],
       "name": "Green Bean",
-      "source": "Crops during Spring.",
-      "seasons": ["spring"],
-      "skills": ["farming"],
-      "bundles": [6]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 28,
+      "source": "Crops during Spring."
     },
     {
-      "id": 29,
+      "bundles": [
+        {
+          "bundle_id": 6,
+          "count": 1,
+          "id": 34
+        }
+      ],
       "name": "Cauliflower",
-      "source": "Crops during Spring.",
-      "seasons": ["spring"],
-      "skills": ["farming"],
-      "bundles": [6]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 29,
+      "source": "Crops during Spring."
     },
     {
-      "id": 30,
+      "bundles": [
+        {
+          "bundle_id": 6,
+          "count": 1,
+          "id": 35
+        }
+      ],
       "name": "Potato",
-      "source": "Crops during Spring.",
-      "seasons": ["spring"],
-      "skills": ["farming"],
-      "bundles": [6]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 30,
+      "source": "Crops during Spring."
     },
     {
-      "id": 31,
+      "bundles": [
+        {
+          "bundle_id": 7,
+          "count": 1,
+          "id": 36
+        }
+      ],
       "name": "Tomato",
-      "source": "Crops during Summer.",
-      "seasons": ["summer"],
-      "skills": ["farming"],
-      "bundles": [7]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 31,
+      "source": "Crops during Summer."
     },
     {
-      "id": 32,
+      "bundles": [
+        {
+          "bundle_id": 7,
+          "count": 1,
+          "id": 37
+        }
+      ],
       "name": "Hot Pepper",
-      "source": "Crops during Summer.",
-      "seasons": ["summer"],
-      "skills": ["farming"],
-      "bundles": [7]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 32,
+      "source": "Crops during Summer."
     },
     {
-      "id": 33,
+      "bundles": [
+        {
+          "bundle_id": 7,
+          "count": 1,
+          "id": 38
+        }
+      ],
       "name": "Blueberry",
-      "source": "Crops during Summer.",
-      "seasons": ["summer"],
-      "skills": ["farming"],
-      "bundles": [7]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 33,
+      "source": "Crops during Summer."
     },
     {
-      "id": 34,
+      "bundles": [
+        {
+          "bundle_id": 7,
+          "count": 1,
+          "id": 39
+        }
+      ],
       "name": "Melon",
-      "source": "Crops during Summer.",
-      "seasons": ["summer"],
-      "skills": ["farming"],
-      "bundles": [7]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 34,
+      "source": "Crops during Summer."
     },
     {
-      "id": 35,
+      "bundles": [
+        {
+          "bundle_id": 8,
+          "count": 1,
+          "id": 40
+        }
+      ],
       "name": "Corn",
-      "source": "Crops during Summer and Fall.",
-      "seasons": ["summer", "fall"],
-      "skills": ["farming"],
-      "bundles": [8]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "id": 35,
+      "source": "Crops during Summer and Fall."
     },
     {
-      "id": 36,
+      "bundles": [
+        {
+          "bundle_id": 8,
+          "count": 1,
+          "id": 41
+        }
+      ],
       "name": "Eggplant",
-      "source": "Crops during Fall.",
-      "seasons": ["fall"],
-      "skills": ["farming"],
-      "bundles": [8]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 36,
+      "source": "Crops during Fall."
     },
     {
-      "id": 37,
+      "bundles": [
+        {
+          "bundle_id": 8,
+          "count": 1,
+          "id": 42
+        }
+      ],
       "name": "Pumpkin",
-      "source": "Crops during Fall.",
-      "seasons": ["fall"],
-      "skills": ["farming"],
-      "bundles": [8]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 37,
+      "source": "Crops during Fall."
     },
     {
-      "id": 38,
+      "bundles": [
+        {
+          "bundle_id": 8,
+          "count": 1,
+          "id": 43
+        }
+      ],
       "name": "Yam",
-      "source": "Crops during Fall.",
-      "seasons": ["fall"],
-      "skills": ["farming"],
-      "bundles": [8]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 38,
+      "source": "Crops during Fall."
     },
     {
-      "id": 39,
+      "bundles": [
+        {
+          "bundle_id": 9,
+          "count": 1,
+          "id": 44
+        }
+      ],
       "name": "Parsnip (Gold Star) (5)",
-      "source": "Crops during Spring.",
-      "seasons": ["spring"],
-      "skills": ["farming"],
-      "bundles": [9]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 39,
+      "source": "Crops during Spring."
     },
     {
-      "id": 40,
+      "bundles": [
+        {
+          "bundle_id": 9,
+          "count": 1,
+          "id": 45
+        }
+      ],
       "name": "Melon (Gold Star) (5)",
-      "source": "Crops during Summer.",
-      "seasons": ["summer"],
-      "skills": ["farming"],
-      "bundles": [9]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 40,
+      "source": "Crops during Summer."
     },
     {
-      "id": 41,
+      "bundles": [
+        {
+          "bundle_id": 9,
+          "count": 1,
+          "id": 46
+        }
+      ],
       "name": "Pumpkin (Gold Star) (5)",
-      "source": "Crops during Fall.",
-      "seasons": ["fall"],
-      "skills": ["farming"],
-      "bundles": [9]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 41,
+      "source": "Crops during Fall."
     },
     {
-      "id": 42,
+      "bundles": [
+        {
+          "bundle_id": 9,
+          "count": 1,
+          "id": 47
+        }
+      ],
       "name": "Corn (Gold Star) (5)",
-      "source": "Crops during Summer and Fall.",
-      "seasons": ["summer", "fall"],
-      "skills": ["farming"],
-      "bundles": [9]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "id": 42,
+      "source": "Crops during Summer and Fall."
     },
     {
-      "id": 43,
+      "bundles": [
+        {
+          "bundle_id": 10,
+          "count": 1,
+          "id": 48
+        }
+      ],
       "name": "Milk (Large)",
-      "source": "Cows",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [10]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 43,
+      "source": "Cows"
     },
     {
-      "id": 44,
+      "bundles": [
+        {
+          "bundle_id": 10,
+          "count": 1,
+          "id": 49
+        }
+      ],
       "name": "Egg (Large, Brown)",
-      "source": "Chickens",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [10]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 44,
+      "source": "Chickens"
     },
     {
-      "id": 45,
+      "bundles": [
+        {
+          "bundle_id": 10,
+          "count": 1,
+          "id": 50
+        }
+      ],
       "name": "Egg (Large, White)",
-      "source": "Chickens",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [10]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 45,
+      "source": "Chickens"
     },
     {
-      "id": 46,
+      "bundles": [
+        {
+          "bundle_id": 10,
+          "count": 1,
+          "id": 51
+        }
+      ],
       "name": "Goat Milk (Large)",
-      "source": "Goats",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [10]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 46,
+      "source": "Goats"
     },
     {
-      "id": 47,
+      "bundles": [
+        {
+          "bundle_id": 10,
+          "count": 1,
+          "id": 52
+        }
+      ],
       "name": "Wool",
-      "source": "Sheep, Rabbits",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [10]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 47,
+      "source": "Sheep, Rabbits"
     },
     {
-      "id": 48,
+      "bundles": [
+        {
+          "bundle_id": 10,
+          "count": 1,
+          "id": 53
+        }
+      ],
       "name": "Duck Egg",
-      "source": "Ducks",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [10]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 48,
+      "source": "Ducks"
     },
     {
-      "id": 49,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 54
+        }
+      ],
       "name": "Truffle Oil",
-      "source": "Made from Truffles. Requires Oil Maker",
-      "seasons": ["spring", "summer", "fall"],
-      "skills": ["farming"],
-      "bundles": [11]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "id": 49,
+      "source": "Made from Truffles. Requires Oil Maker"
     },
     {
-      "id": 50,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 55
+        }
+      ],
       "name": "Cloth",
-      "source": "Made from Wool. Requires Loom. Can also be rarely obtained by Recycling Soggy Newspaper.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming", "foraging"],
-      "bundles": [11]
+      "skills": [
+        "farming",
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 50,
+      "source": "Made from Wool. Requires Loom. Can also be rarely obtained by Recycling Soggy Newspaper."
     },
     {
-      "id": 51,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 56
+        }
+      ],
       "name": "Goat Cheese",
-      "source": "Made from Goat Milk. Requires Cheese Press.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [11]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 51,
+      "source": "Made from Goat Milk. Requires Cheese Press."
     },
     {
-      "id": 52,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 57
+        }
+      ],
       "name": "Cheese",
-      "source": "Made from Cow Milk. Requires Cheese Press",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [11]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 52,
+      "source": "Made from Cow Milk. Requires Cheese Press"
     },
     {
-      "id": 53,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 58
+        }
+      ],
       "name": "Honey",
-      "source": "Produced by Bees. Requires Beehive.",
-      "seasons": ["spring", "summer", "fall"],
-      "skills": ["farming"],
-      "bundles": [11]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "id": 53,
+      "source": "Produced by Bees. Requires Beehive."
     },
     {
-      "id": 54,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 59
+        }
+      ],
       "name": "Jelly",
-      "source": "Made from any Fruit. Requires Preserves Jar.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming", "foraging"],
-      "bundles": [11]
+      "skills": [
+        "farming",
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 54,
+      "source": "Made from any Fruit. Requires Preserves Jar."
     },
     {
-      "id": 55,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 60
+        },
+        {
+          "bundle_id": 24,
+          "count": 1,
+          "id": 61
+        }
+      ],
       "name": "Apple",
-      "source": "Gathered from Apple Trees during Fall. Fodder Bundle requires 3.",
-      "seasons": ["fall"],
-      "skills": ["farming"],
-      "bundles": [11, 24]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 55,
+      "source": "Gathered from Apple Trees during Fall. Fodder Bundle requires 3."
     },
     {
-      "id": 56,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 62
+        }
+      ],
       "name": "Apricot",
-      "source": "Gathered from Apricot Trees during Spring.",
-      "seasons": ["spring"],
-      "skills": ["farming"],
-      "bundles": [11]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring"
+      ],
+      "id": 56,
+      "source": "Gathered from Apricot Trees during Spring."
     },
     {
-      "id": 57,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 63
+        }
+      ],
       "name": "Orange",
-      "source": "Gathered from Orange Trees during Summer or found in farm cave if fruit perk selected.",
-      "seasons": ["summer", "spring", "fall", "winter"],
-      "skills": ["farming", "foraging"],
-      "bundles": [11]
+      "skills": [
+        "farming",
+        "foraging"
+      ],
+      "seasons": [
+        "summer",
+        "spring",
+        "fall",
+        "winter"
+      ],
+      "id": 57,
+      "source": "Gathered from Orange Trees during Summer or found in farm cave if fruit perk selected."
     },
     {
-      "id": 58,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 64
+        }
+      ],
       "name": "Peach",
-      "source": "Gathered from Peach Trees during Summer.",
-      "seasons": ["summer"],
-      "skills": ["farming"],
-      "bundles": [11]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 58,
+      "source": "Gathered from Peach Trees during Summer."
     },
     {
-      "id": 59,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 65
+        },
+        {
+          "bundle_id": 25,
+          "count": 1,
+          "id": 66
+        }
+      ],
       "name": "Pomegranate",
-      "source": "Gathered from Pomegranate Trees during Fall.",
-      "seasons": ["fall"],
-      "skills": ["farming"],
-      "bundles": [11, 25]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "fall"
+      ],
+      "id": 59,
+      "source": "Gathered from Pomegranate Trees during Fall."
     },
     {
-      "id": 60,
+      "bundles": [
+        {
+          "bundle_id": 11,
+          "count": 1,
+          "id": 67
+        }
+      ],
       "name": "Cherry",
-      "source": "Gathered from Cherry Trees during Spring or found in farm cave if fruit perk selected.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming", "foraging"],
-      "bundles": [11]
+      "skills": [
+        "farming",
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 60,
+      "source": "Gathered from Cherry Trees during Spring or found in farm cave if fruit perk selected."
     },
     {
-      "id": 61,
+      "bundles": [
+        {
+          "bundle_id": 12,
+          "count": 1,
+          "id": 68
+        }
+      ],
       "name": "Sunfish",
-      "source": "Found in Rivers, Daytime, Spring, and Summer.",
-      "seasons": ["spring", "summer"],
-      "skills": ["fishing"],
-      "bundles": [12]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer"
+      ],
+      "id": 61,
+      "source": "Found in Rivers, Daytime, Spring, and Summer."
     },
     {
-      "id": 62,
+      "bundles": [
+        {
+          "bundle_id": 12,
+          "count": 1,
+          "id": 69
+        }
+      ],
       "name": "Catfish",
-      "source": "Found in Rivers, Anytime, Spring and Fall. Only when raining.",
-      "seasons": ["spring", "fall"],
-      "skills": ["fishing"],
-      "bundles": [12]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "id": 62,
+      "source": "Found in Rivers, Anytime, Spring and Fall. Only when raining."
     },
     {
-      "id": 63,
+      "bundles": [
+        {
+          "bundle_id": 12,
+          "count": 1,
+          "id": 70
+        }
+      ],
       "name": "Shad",
-      "source": "Found in Rivers, Daytime, Spring, Summer, and Fall. Only when raining.",
-      "seasons": ["spring", "summer", "fall"],
-      "skills": ["fishing"],
-      "bundles": [12]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "id": 63,
+      "source": "Found in Rivers, Daytime, Spring, Summer, and Fall. Only when raining."
     },
     {
-      "id": 64,
+      "bundles": [
+        {
+          "bundle_id": 12,
+          "count": 1,
+          "id": 71
+        }
+      ],
       "name": "Tiger Trout",
-      "source": "Found in Rivers, Daytime (Early afternoon), Fall and Winter.",
-      "seasons": ["fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [12]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "id": 64,
+      "source": "Found in Rivers, Daytime (Early afternoon), Fall and Winter."
     },
     {
-      "id": 65,
+      "bundles": [
+        {
+          "bundle_id": 13,
+          "count": 1,
+          "id": 72
+        }
+      ],
       "name": "Largemouth Bass",
-      "source": "Found in Lakes, Daytime, All Seasons.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [13]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 65,
+      "source": "Found in Lakes, Daytime, All Seasons."
     },
     {
-      "id": 66,
+      "bundles": [
+        {
+          "bundle_id": 13,
+          "count": 1,
+          "id": 73
+        }
+      ],
       "name": "Carp",
-      "source": "Found in Lakes, Anytime, All Seasons.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [13]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 66,
+      "source": "Found in Lakes, Anytime, All Seasons."
     },
     {
-      "id": 67,
+      "bundles": [
+        {
+          "bundle_id": 13,
+          "count": 1,
+          "id": 74
+        }
+      ],
       "name": "Bullhead",
-      "source": "Found in Lakes, Anytime, All Seasons.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [13]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 67,
+      "source": "Found in Lakes, Anytime, All Seasons."
     },
     {
-      "id": 68,
+      "bundles": [
+        {
+          "bundle_id": 13,
+          "count": 1,
+          "id": 75
+        }
+      ],
       "name": "Sturgeon",
-      "source": "Found in Lakes, Daytime, Summer and Winter.",
-      "seasons": ["summer", "winter"],
-      "skills": ["fishing"],
-      "bundles": [13]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "id": 68,
+      "source": "Found in Lakes, Daytime, Summer and Winter."
     },
     {
-      "id": 69,
+      "bundles": [
+        {
+          "bundle_id": 14,
+          "count": 1,
+          "id": 76
+        }
+      ],
       "name": "Sardine",
-      "source": "Found in the Ocean, Daytime, Spring, Fall, and Winter.",
-      "seasons": ["spring", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [14]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "fall",
+        "winter"
+      ],
+      "id": 69,
+      "source": "Found in the Ocean, Daytime, Spring, Fall, and Winter."
     },
     {
-      "id": 70,
+      "bundles": [
+        {
+          "bundle_id": 14,
+          "count": 1,
+          "id": 77
+        }
+      ],
       "name": "Tuna",
-      "source": "Found in the Ocean, Daytime, Summer and Winter.",
-      "seasons": ["summer", "winter"],
-      "skills": ["fishing"],
-      "bundles": [14]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "id": 70,
+      "source": "Found in the Ocean, Daytime, Summer and Winter."
     },
     {
-      "id": 71,
+      "bundles": [
+        {
+          "bundle_id": 14,
+          "count": 1,
+          "id": 78
+        }
+      ],
       "name": "Red Snapper",
-      "source": "Found in the Ocean, Daytime, Summer and Fall. Only when raining.",
-      "seasons": ["summer", "fall"],
-      "skills": ["fishing"],
-      "bundles": [14]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "id": 71,
+      "source": "Found in the Ocean, Daytime, Summer and Fall. Only when raining."
     },
     {
-      "id": 72,
+      "bundles": [
+        {
+          "bundle_id": 14,
+          "count": 1,
+          "id": 79
+        }
+      ],
       "name": "Tilapia",
-      "source": "Found in the Ocean, Daytime, Summer and Fall.",
-      "seasons": ["summer", "fall"],
-      "skills": ["fishing"],
-      "bundles": [14]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "id": 72,
+      "source": "Found in the Ocean, Daytime, Summer and Fall."
     },
     {
-      "id": 73,
+      "bundles": [
+        {
+          "bundle_id": 15,
+          "count": 1,
+          "id": 80
+        }
+      ],
       "name": "Walleye",
-      "source": "Found in Rivers, Nighttime, Fall and Winter. Only when raining.",
-      "seasons": ["fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [15]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "id": 73,
+      "source": "Found in Rivers, Nighttime, Fall and Winter. Only when raining."
     },
     {
-      "id": 74,
+      "bundles": [
+        {
+          "bundle_id": 15,
+          "count": 1,
+          "id": 81
+        }
+      ],
       "name": "Bream",
-      "source": "Found in Rivers, Nighttime, All Seasons.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [15]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 74,
+      "source": "Found in Rivers, Nighttime, All Seasons."
     },
     {
-      "id": 75,
+      "bundles": [
+        {
+          "bundle_id": 15,
+          "count": 1,
+          "id": 82
+        }
+      ],
       "name": "Eel",
-      "source": "Found in the Ocean, Nighttime, Spring or Fall. Only when raining.",
-      "seasons": ["spring", "fall"],
-      "skills": ["fishing"],
-      "bundles": [15]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "id": 75,
+      "source": "Found in the Ocean, Nighttime, Spring or Fall. Only when raining."
     },
     {
-      "id": 76,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 83
+        }
+      ],
       "name": "Lobster",
-      "source": "Gathered from Crab Pots.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [16]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 76,
+      "source": "Gathered from Crab Pots."
     },
     {
-      "id": 77,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 84
+        }
+      ],
       "name": "Crayfish",
-      "source": "Gathered from Crab Pot in rivers during any season.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [16]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 77,
+      "source": "Gathered from Crab Pot in rivers during any season."
     },
     {
-      "id": 78,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 85
+        }
+      ],
       "name": "Crab",
-      "source": "Gathered from Crab Pots. Also drops from killing hermit crabs in The Mines.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing", "combat"],
-      "bundles": [16]
+      "skills": [
+        "fishing",
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 78,
+      "source": "Gathered from Crab Pots. Also drops from killing hermit crabs in The Mines."
     },
     {
-      "id": 79,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 86
+        }
+      ],
       "name": "Cockle",
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing", "foraging"],
-      "bundles": [16]
+      "skills": [
+        "fishing",
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 79,
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
     },
     {
-      "id": 80,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 87
+        }
+      ],
       "name": "Mussel",
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing", "foraging"],
-      "bundles": [16]
+      "skills": [
+        "fishing",
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 80,
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
     },
     {
-      "id": 81,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 88
+        }
+      ],
       "name": "Shrimp",
-      "source": "Gathered from Crab Pots.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [16]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 81,
+      "source": "Gathered from Crab Pots."
     },
     {
-      "id": 82,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 89
+        }
+      ],
       "name": "Snail",
-      "source": "Gathered from Crab Pots.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [16]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 82,
+      "source": "Gathered from Crab Pots."
     },
     {
-      "id": 83,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 90
+        }
+      ],
       "name": "Periwinkle",
-      "source": "Gathered from Crab Pots.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [16]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 83,
+      "source": "Gathered from Crab Pots."
     },
     {
-      "id": 84,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 91
+        }
+      ],
       "name": "Oyster",
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing", "foraging"],
-      "bundles": [16]
+      "skills": [
+        "fishing",
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 84,
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
     },
     {
-      "id": 85,
+      "bundles": [
+        {
+          "bundle_id": 16,
+          "count": 1,
+          "id": 92
+        }
+      ],
       "name": "Clam",
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing", "foraging"],
-      "bundles": [16]
+      "skills": [
+        "fishing",
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 85,
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
     },
     {
-      "id": 86,
+      "bundles": [
+        {
+          "bundle_id": 17,
+          "count": 1,
+          "id": 93
+        }
+      ],
       "name": "Pufferfish",
-      "source": "Found in the Ocean, Early Afternoon, Summer. May also be purchased from the Traveling Cart.",
-      "seasons": ["summer"],
-      "skills": ["fishing"],
-      "bundles": [17]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 86,
+      "source": "Found in the Ocean, Early Afternoon, Summer. May also be purchased from the Traveling Cart."
     },
     {
-      "id": 87,
+      "bundles": [
+        {
+          "bundle_id": 17,
+          "count": 1,
+          "id": 94
+        }
+      ],
       "name": "Ghostfish",
-      "source": "Found in ponds in The Mines, Anytime, All Seasons. May also be dropped by Ghosts.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing", "combat"],
-      "bundles": [17]
+      "skills": [
+        "fishing",
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 87,
+      "source": "Found in ponds in The Mines, Anytime, All Seasons. May also be dropped by Ghosts."
     },
     {
-      "id": 88,
+      "bundles": [
+        {
+          "bundle_id": 17,
+          "count": 1,
+          "id": 95
+        }
+      ],
       "name": "Sandfish",
-      "source": "Found in the pond at Calico Desert. May also be purchased from the Traveling Cart.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing", "combat"],
-      "bundles": [17]
+      "skills": [
+        "fishing",
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 88,
+      "source": "Found in the pond at Calico Desert. May also be purchased from the Traveling Cart."
     },
     {
-      "id": 89,
+      "bundles": [
+        {
+          "bundle_id": 17,
+          "count": 1,
+          "id": 96
+        }
+      ],
       "name": "Woodskip",
-      "source": "Found in the Secret Woods, Anytime, All Seasons. May also be purchased from the Traveling Cart.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [17]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 89,
+      "source": "Found in the Secret Woods, Anytime, All Seasons. May also be purchased from the Traveling Cart."
     },
     {
-      "id": 90,
+      "bundles": [
+        {
+          "bundle_id": 18,
+          "count": 1,
+          "id": 97
+        }
+      ],
       "name": "Copper Bar",
-      "source": "Smelting copper ore in the furnace.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [18]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 90,
+      "source": "Smelting copper ore in the furnace."
     },
     {
-      "id": 91,
+      "bundles": [
+        {
+          "bundle_id": 18,
+          "count": 1,
+          "id": 98
+        }
+      ],
       "name": "Iron Bar",
-      "source": "Smelting iron ore in the furnace.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [18]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 91,
+      "source": "Smelting iron ore in the furnace."
     },
     {
-      "id": 92,
+      "bundles": [
+        {
+          "bundle_id": 18,
+          "count": 1,
+          "id": 99
+        }
+      ],
       "name": "Gold Bar",
-      "source": "Smelting gold ore in the furnace.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [18]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 92,
+      "source": "Smelting gold ore in the furnace."
     },
     {
-      "id": 93,
+      "bundles": [
+        {
+          "bundle_id": 19,
+          "count": 1,
+          "id": 100
+        }
+      ],
       "name": "Quartz",
-      "source": "Found on all levels of The Mines and in geodes.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [19]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 93,
+      "source": "Found on all levels of The Mines and in geodes."
     },
     {
-      "id": 94,
+      "bundles": [
+        {
+          "bundle_id": 19,
+          "count": 1,
+          "id": 101
+        }
+      ],
       "name": "Earth Crystal",
-      "source": "Found on levels 1 - 39 of The Mines and in geodes.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [19]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 94,
+      "source": "Found on levels 1 - 39 of The Mines and in geodes."
     },
     {
-      "id": 95,
+      "bundles": [
+        {
+          "bundle_id": 19,
+          "count": 1,
+          "id": 102
+        }
+      ],
       "name": "Frozen Tear",
-      "source": "Found on levels 40 - 79 of The Mines and in geodes.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [19]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 95,
+      "source": "Found on levels 40 - 79 of The Mines and in geodes."
     },
     {
-      "id": 96,
+      "bundles": [
+        {
+          "bundle_id": 19,
+          "count": 1,
+          "id": 103
+        }
+      ],
       "name": "Fire Quartz",
-      "source": "Found on levels 80 - 120 of The Mines and in magma geodes.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [19]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 96,
+      "source": "Found on levels 80 - 120 of The Mines and in magma geodes."
     },
     {
-      "id": 97,
+      "bundles": [
+        {
+          "bundle_id": 20,
+          "count": 1,
+          "id": 104
+        }
+      ],
       "name": "Slime (99)",
-      "source": "Dropped by Slimes in The Mines.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["combat"],
-      "bundles": [20]
+      "skills": [
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 97,
+      "source": "Dropped by Slimes in The Mines."
     },
     {
-      "id": 98,
+      "bundles": [
+        {
+          "bundle_id": 20,
+          "count": 1,
+          "id": 105
+        }
+      ],
       "name": "Bat Wing (10)",
-      "source": "Dropped by Bats in The Mines.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["combat"],
-      "bundles": [20]
+      "skills": [
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 98,
+      "source": "Dropped by Bats in The Mines."
     },
     {
-      "id": 99,
+      "bundles": [
+        {
+          "bundle_id": 20,
+          "count": 1,
+          "id": 106
+        }
+      ],
       "name": "Solar Essence",
-      "source": "Dropped by Ghosts in The Mines.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["combat"],
-      "bundles": [20]
+      "skills": [
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 99,
+      "source": "Dropped by Ghosts in The Mines."
     },
     {
-      "id": 100,
+      "bundles": [
+        {
+          "bundle_id": 20,
+          "count": 1,
+          "id": 107
+        }
+      ],
       "name": "Void Essence",
-      "source": "Dropped by Shadow Brutes in The Mines.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["combat"],
-      "bundles": [20]
+      "skills": [
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 100,
+      "source": "Dropped by Shadow Brutes in The Mines."
     },
     {
-      "id": 101,
+      "bundles": [
+        {
+          "bundle_id": 21,
+          "count": 1,
+          "id": 108
+        }
+      ],
       "name": "Fiddlehead Fern",
-      "source": "Found in the Secret Woods during Summer.",
-      "seasons": ["summer"],
-      "skills": ["foraging"],
-      "bundles": [21]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 101,
+      "source": "Found in the Secret Woods during Summer."
     },
     {
-      "id": 102,
+      "bundles": [
+        {
+          "bundle_id": 21,
+          "count": 1,
+          "id": 109
+        }
+      ],
       "name": "Truffle",
-      "source": "Found by pigs while grazing outdoors.",
-      "seasons": ["spring", "summer", "fall"],
-      "skills": ["farming"],
-      "bundles": [21]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "id": 102,
+      "source": "Found by pigs while grazing outdoors."
     },
     {
-      "id": 103,
+      "bundles": [
+        {
+          "bundle_id": 21,
+          "count": 1,
+          "id": 110
+        }
+      ],
       "name": "Poppy",
-      "source": "Crops during Summer.",
-      "seasons": ["summer"],
-      "skills": ["farming"],
-      "bundles": [21]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 103,
+      "source": "Crops during Summer."
     },
     {
-      "id": 104,
+      "bundles": [
+        {
+          "bundle_id": 21,
+          "count": 1,
+          "id": 111
+        }
+      ],
       "name": "Maki Roll",
-      "source": "Acquired by Cooking. Recipe available from the cooking channel on Summer 21 during odd years.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [21]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 104,
+      "source": "Acquired by Cooking. Recipe available from the cooking channel on Summer 21 during odd years."
     },
     {
-      "id": 105,
+      "bundles": [
+        {
+          "bundle_id": 21,
+          "count": 1,
+          "id": 112
+        }
+      ],
       "name": "Fried Egg",
-      "source": "Acquired by Cooking.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [21]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 105,
+      "source": "Acquired by Cooking."
     },
     {
-      "id": 106,
+      "bundles": [
+        {
+          "bundle_id": 22,
+          "count": 1,
+          "id": 113
+        }
+      ],
       "name": "Sea Urchin",
-      "source": "Can be foraged on the far right side of the beach, accessible after using 300 wood to fix the bridge.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["foraging"],
-      "bundles": [22]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 106,
+      "source": "Can be foraged on the far right side of the beach, accessible after using 300 wood to fix the bridge."
     },
     {
-      "id": 107,
+      "bundles": [
+        {
+          "bundle_id": 22,
+          "count": 1,
+          "id": 114
+        }
+      ],
       "name": "Sunflower",
-      "source": "Crops during Summer and Fall.",
-      "seasons": ["summer", "fall"],
-      "skills": ["farming"],
-      "bundles": [22]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "id": 107,
+      "source": "Crops during Summer and Fall."
     },
     {
-      "id": 108,
+      "bundles": [
+        {
+          "bundle_id": 22,
+          "count": 1,
+          "id": 115
+        }
+      ],
       "name": "Duck Feather",
-      "source": "Produced by ducks in the coop (similar to how chickens and ducks lay eggs)",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [22]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 108,
+      "source": "Produced by ducks in the coop (similar to how chickens and ducks lay eggs)"
     },
     {
-      "id": 109,
+      "bundles": [
+        {
+          "bundle_id": 22,
+          "count": 1,
+          "id": 116
+        }
+      ],
       "name": "Aquamarine",
-      "source": "Can be found in stones and boxes in The Mines.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [22]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 109,
+      "source": "Can be found in stones and boxes in The Mines."
     },
     {
-      "id": 110,
+      "bundles": [
+        {
+          "bundle_id": 22,
+          "count": 1,
+          "id": 117
+        }
+      ],
       "name": "Red Cabbage",
-      "source": "Crops during the Summer. Seeds can be purchased from Pierre's Year 2 and onward. Can be purchased from the Traveling Cart",
-      "seasons": ["summer"],
-      "skills": ["farming"],
-      "bundles": [22]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 110,
+      "source": "Crops during the Summer. Seeds can be purchased from Pierre's Year 2 and onward. Can be purchased from the Traveling Cart"
     },
     {
-      "id": 111,
+      "bundles": [
+        {
+          "bundle_id": 23,
+          "count": 1,
+          "id": 118
+        }
+      ],
       "name": "Nautilus Shell",
-      "source": "Found by foraging from the beach in the Winter.",
-      "seasons": ["winter"],
-      "skills": ["foraging"],
-      "bundles": [23]
+      "skills": [
+        "foraging"
+      ],
+      "seasons": [
+        "winter"
+      ],
+      "id": 111,
+      "source": "Found by foraging from the beach in the Winter."
     },
     {
-      "id": 112,
+      "bundles": [
+        {
+          "bundle_id": 23,
+          "count": 1,
+          "id": 119
+        }
+      ],
       "name": "Chub",
-      "source": "Can be found in the mountain lake and river during all seasons.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["fishing"],
-      "bundles": [23]
+      "skills": [
+        "fishing"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 112,
+      "source": "Can be found in the mountain lake and river during all seasons."
     },
     {
-      "id": 113,
+      "bundles": [
+        {
+          "bundle_id": 23,
+          "count": 1,
+          "id": 120
+        }
+      ],
       "name": "Frozen Geode",
-      "source": "Found on levels 40-79 of The Mines.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["mining"],
-      "bundles": [23]
+      "skills": [
+        "mining"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 113,
+      "source": "Found on levels 40-79 of The Mines."
     },
     {
-      "id": 114,
+      "bundles": [
+        {
+          "bundle_id": 24,
+          "count": 1,
+          "id": 121
+        }
+      ],
       "name": "Wheat (10)",
-      "source": "Crops during Summer.",
-      "seasons": ["summer"],
-      "skills": ["farming"],
-      "bundles": [24]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "summer"
+      ],
+      "id": 114,
+      "source": "Crops during Summer."
     },
     {
-      "id": 115,
+      "bundles": [
+        {
+          "bundle_id": 24,
+          "count": 1,
+          "id": 122
+        }
+      ],
       "name": "Hay (10)",
-      "source": "Purchased from Marnie at The Ranch or created by using the sickle on grass once you have a silo.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming"],
-      "bundles": [24]
+      "skills": [
+        "farming"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 115,
+      "source": "Purchased from Marnie at The Ranch or created by using the sickle on grass once you have a silo."
     },
     {
-      "id": 117,
+      "bundles": [
+        {
+          "bundle_id": 25,
+          "count": 1,
+          "id": 123
+        }
+      ],
       "name": "Wine",
-      "source": "Produced by putting most fruits into a keg.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming", "foraging"],
-      "bundles": [25]
+      "skills": [
+        "farming",
+        "foraging"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 117,
+      "source": "Produced by putting most fruits into a keg."
     },
     {
-      "id": 118,
+      "bundles": [
+        {
+          "bundle_id": 25,
+          "count": 1,
+          "id": 124
+        }
+      ],
       "name": "Rabbit's Foot",
-      "source": "Dropped by Rabbits in the Coop, also dropped by a Serpent in Skull Cavern (0.8%).",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming", "combat"],
-      "bundles": [25]
+      "skills": [
+        "farming",
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 118,
+      "source": "Dropped by Rabbits in the Coop, also dropped by a Serpent in Skull Cavern (0.8%)."
     },
     {
-      "id": 119,
+      "bundles": [
+        {
+          "bundle_id": 26,
+          "count": 1,
+          "id": 125
+        }
+      ],
       "name": "2,500 Gold",
-      "source": "Collect 2,500 Gold and turn in.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
-      "bundles": [26]
+      "skills": [
+        "farming",
+        "mining",
+        "foraging",
+        "fishing",
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 119,
+      "source": "Collect 2,500 Gold and turn in."
     },
     {
-      "id": 120,
+      "bundles": [
+        {
+          "bundle_id": 27,
+          "count": 1,
+          "id": 126
+        }
+      ],
       "name": "5,000 Gold",
-      "source": "Collect 5,000 Gold and turn in.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
-      "bundles": [27]
+      "skills": [
+        "farming",
+        "mining",
+        "foraging",
+        "fishing",
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 120,
+      "source": "Collect 5,000 Gold and turn in."
     },
     {
-      "id": 121,
+      "bundles": [
+        {
+          "bundle_id": 28,
+          "count": 1,
+          "id": 127
+        }
+      ],
       "name": "10,000 Gold",
-      "source": "Collect 10,000 Gold and turn in.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
-      "bundles": [28]
+      "skills": [
+        "farming",
+        "mining",
+        "foraging",
+        "fishing",
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 121,
+      "source": "Collect 10,000 Gold and turn in."
     },
     {
-      "id": 122,
+      "bundles": [
+        {
+          "bundle_id": 29,
+          "count": 1,
+          "id": 128
+        }
+      ],
       "name": "25,000 Gold",
-      "source": "Collect 25,000 Gold and turn in.",
-      "seasons": ["spring", "summer", "fall", "winter"],
-      "skills": ["farming", "mining", "foraging", "fishing", "combat"],
-      "bundles": [29]
+      "skills": [
+        "farming",
+        "mining",
+        "foraging",
+        "fishing",
+        "combat"
+      ],
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "id": 122,
+      "source": "Collect 25,000 Gold and turn in."
     }
   ]
 }
