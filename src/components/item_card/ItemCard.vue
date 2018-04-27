@@ -108,5 +108,10 @@ export default {
 </script>
 
 <style scoped>
-
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 </style>
