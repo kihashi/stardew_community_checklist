@@ -4,7 +4,7 @@
     <span class="icon">
       <font-awesome-icon :icon="ItemInBundle ? InBundleIcon : NotInBundleIcon"/>
     </span>
-    <span>{{bundleItem.bundle.name}}</span>
+    <span>{{bundleItem.bundle.name}}{{numberInBundle}}</span>
   </a>
 </template>
 
@@ -32,6 +32,9 @@ export default {
     },
     NotInBundleIcon () {
       return faSquare
+    },
+    numberInBundle () {
+      return this.bundleItem.count > 1 ? ` (${this.bundleItem.count})` : ''
     }
   },
   methods: {
