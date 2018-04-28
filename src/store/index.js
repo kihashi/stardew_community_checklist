@@ -54,6 +54,7 @@ function loadSkills () {
 function loadRooms () {
   return RoomJson.rooms.map(room => {
     room.bundles = new Array(0)
+    room.items_required = 0
     return room
   })
 }
@@ -62,6 +63,7 @@ function loadBundles (rooms) {
   return BundleJson.bundles.map(bundle => {
     bundle.room = getById(rooms, bundle.room)
     bundle.room.bundles.push(bundle)
+    bundle.room.items_required += bundle.items_required
     bundle.items = new Array(0)
     return bundle
   })
