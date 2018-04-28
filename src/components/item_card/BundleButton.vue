@@ -1,21 +1,34 @@
 <template>
-  <a class="button is-rounded is-fullwidth" :class="ItemInBundle ? 'is-success' : 'is-danger'"
-    @click="ToggleItemInBundle">
-    <span class="icon">
-      <font-awesome-icon :icon="ItemInBundle ? InBundleIcon : NotInBundleIcon"/>
-    </span>
-    <span>{{bundleItem.bundle.name}}{{numberInBundle}}</span>
-  </a>
+  <div class="field has-addons">
+    <div class="control is-expanded">
+      <a class="button is-rounded is-fullwidth" :class="ItemInBundle ? 'is-success' : 'is-danger'"
+        @click="ToggleItemInBundle">
+        <span class="icon">
+          <font-awesome-icon :icon="ItemInBundle ? InBundleIcon : NotInBundleIcon"/>
+        </span>
+        <span class="is-size-7-mobile">{{bundleItem.bundle.name}}{{numberInBundle}}</span>
+      </a>
+    </div>
+    <div class="control">
+      <router-link class="button is-rounded is-light" :to="{ name: 'bundle-items', params: { id: bundleItem.bundle.id } }">
+        <span class="icon">
+          <external-link/>
+        </span>
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script>
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import faCheckSquare from '@fortawesome/fontawesome-free-regular/faCheckSquare'
 import faSquare from '@fortawesome/fontawesome-free-regular/faSquare'
+import ExternalLink from 'mdi-vue/OpenInNewIcon'
 export default {
   name: 'bundle-button',
   components: {
-    'font-awesome-icon': FontAwesomeIcon
+    'font-awesome-icon': FontAwesomeIcon,
+    ExternalLink
   },
   props: {
     bundleItem: {
