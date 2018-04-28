@@ -1,12 +1,26 @@
 <template>
 <div id="bundle-items">
     <section class="container">
-        <h3 class="title">
-          {{bundle.name}}
-        </h3>
-        <h5 class="subtitle">
-          {{bundle.reward}}
-        </h5>
+      <div class="columns">
+        <div class="column">
+          <h3 class="title">
+            {{bundle.name}}
+            <span class="is-pulled-right">{{bundle.items_required}}</span>
+          </h3>
+          <h5 class="subtitle bundle-reward">
+            {{bundle.reward}}
+          </h5>
+        </div>
+        <div class="column">
+          <h3 class="title">
+            {{bundle.room.name}}
+            <span class="is-pulled-right">{{bundle.room.items_required}}</span>
+          </h3>
+          <h5 class="subtitle">
+            {{bundle.room.reward}}
+          </h5>
+        </div>
+      </div>
         <!-- Room Progress -->
         <!-- Bundle Progress -->
     <!-- </section>
