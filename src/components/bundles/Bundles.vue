@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import BundleNav from '@/components/BundleNav.vue'
+import BundleNav from '@/components/bundles/BundleNav.vue'
 export default {
   components: {BundleNav},
   name: 'bundles'

@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Welcome from '@/components/Welcome'
-import Bundles from '@/components/Bundles'
-import BundleItems from '@/components/BundleItems'
+import Bundles from '@/components/bundles/Bundles'
+import BundleItems from '@/components/bundles/BundleItems'
 
 Vue.use(Router)
 
