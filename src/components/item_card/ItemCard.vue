@@ -6,7 +6,7 @@
       </p>
     </header>
     <div class="card-content">
-      <div class="content">
+      <div class="content item-source">
         {{item.source}}
       </div>
       <div class="content">
@@ -14,10 +14,10 @@
       </div>
     </div>
     <footer class="card-footer">
-      <div class="card-footer-item">
+      <div class="card-footer-item item-seasons">
         <season-list :seasons="item.seasons"/>
       </div>
-      <div class="card-footer-item">
+      <div class="card-footer-item item-skills">
         <skill-list :skills="item.skills"/>
       </div>
     </footer>
