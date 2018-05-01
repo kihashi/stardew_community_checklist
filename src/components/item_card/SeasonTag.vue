@@ -1,19 +1,13 @@
 <template>
   <span class="tag is-primary">
     <span class="icon is-small">
-        <spring-icon v-if="season.id === 'spring'"/>
-        <summer-icon v-if="season.id === 'summer'"/>
-        <fall-icon v-if="season.id === 'fall'"/>
-        <winter-icon v-if="season.id === 'winter'"/>
+      <season-icon :season="season"></season-icon>
     </span>
   </span>
 </template>
 
 <script>
-import SpringIcon from 'mdi-vue/FlowerIcon'
-import SummerIcon from 'mdi-vue/WhiteBalanceSunnyIcon'
-import FallIcon from 'mdi-vue/LeafIcon'
-import WinterIcon from 'mdi-vue/SnowflakeIcon'
+import SeasonIcon from '@/components/SeasonIcon'
 export default {
   name: 'season-tag',
   props: {
@@ -29,10 +23,7 @@ export default {
     }
   },
   components: {
-    SpringIcon,
-    SummerIcon,
-    FallIcon,
-    WinterIcon
+    SeasonIcon
   }
 }
 </script>
