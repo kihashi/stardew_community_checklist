@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Welcome from '@/components/Welcome'
 import Bundles from '@/components/bundles/Bundles'
 import BundleItems from '@/components/bundles/BundleItems'
+import Search from '@/components/search/Search'
 
 Vue.use(Router)
 
@@ -33,7 +34,8 @@ export default new Router({
     },
     {
       name: 'Search',
-      path: '/search'
+      path: '/search',
+      component: Search
     },
     {
       name: 'Inventory',
