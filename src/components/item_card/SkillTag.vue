@@ -1,8 +1,6 @@
 <template>
   <span class="tag is-info">
-    <span class="icon is-small">
-      <skill-icon :skill="skill" />
-    </span>
+     <skill-icon :skill="skill" class="is-small"/>
   </span>
 </template>
 

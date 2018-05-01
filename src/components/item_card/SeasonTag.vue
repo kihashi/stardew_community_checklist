@@ -1,8 +1,6 @@
 <template>
   <span class="tag is-primary">
-    <span class="icon is-small">
-      <season-icon :season="season"></season-icon>
-    </span>
+     <season-icon :season="season" class="is-small"></season-icon>
   </span>
 </template>
 

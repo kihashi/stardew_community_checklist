@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <span class="icon">
     <spring-icon v-if="season.id === 'spring'"/>
     <summer-icon v-if="season.id === 'summer'"/>
     <fall-icon v-if="season.id === 'fall'"/>
