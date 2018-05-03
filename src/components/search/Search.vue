@@ -1,6 +1,6 @@
 <template>
 <section class="section">
-  <search-form></search-form>
+  <search-form v-model="search"></search-form>
   <section class="container">
     <div class="columns is-multiline">
       <div class="column is-3 is-flex" v-for="item in filtered_items" :key="item.id">
@@ -21,9 +21,20 @@ export default {
     SearchForm,
     ItemCard
   },
+  data () {
+    return {
+      search: {
+        search_term: '',
+        search_seasons: this.$store.state.seasons,
+        search_skills: this.$store.state.skills
+      }
+    }
+  },
   computed: {
     filtered_items () {
-      return this.$store.state.items
+      var self = this
+      return self.$store.state.items
+        .filter(item => item.name.toLowerCase().indexOf(self.search.search_term.toLowerCase()) !== -1)
     }
   }
 
