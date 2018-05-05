@@ -8,6 +8,11 @@ center and keeping track of which ones I had already turned in. I started workin
 playing the game. Of course, I finished the community center bundles before I finished the site, but I figured that
 maybe someone else would get some use out of it.
 
+NOTE: I am currently working on re-writing the app. The demo site (which is still missing functionality) is available and the code is on the webpack branch.
+
+* Demo Site: https://kihashi.github.io/
+* Webpack Branch: https://github.com/kihashi/stardew_community_checklist/tree/webpack
+
 A live version of the site is available at the following link:
 
 ---
@@ -28,6 +33,10 @@ I've tested the site in Chrome, Firefox, and Safari. IE seems to have
 * Save your progress -- Whenever you make a change to the checklist, it is saved to your browser's local storage.
 * Import and Export -- Want to take your data to another computer? Export the data string and import it at another
   computer.
+  
+Have a feature request? Create a Github issue or make a post at [the subreddit][1].
+
+[1]: https://www.reddit.com/r/stardewchecklist/
 
 ## Item Information
 
