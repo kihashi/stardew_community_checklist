@@ -27,6 +27,9 @@ export default new Vuex.Store({
     },
     GetBundleById: (state) => (bundleId) => {
       return getById(state.bundles, bundleId)
+    },
+    GetItemById: (state) => (itemId) => {
+      return getById(state.items, itemId)
     }
   },
   mutations: {
