@@ -10,7 +10,7 @@
         {{item.source}}
       </div>
       <div class="content">
-          <bundle-button v-for="bundleItem in item.bundles" :key="bundleItem.bundle.id" :bundle-item="bundleItem" :item="item"/>
+          <bundle-button v-for="bundleItem in item.bundles" :key="bundleItem.id" :bundle-item="bundleItem" :item="item"/>
       </div>
     </div>
     <footer class="card-footer">
