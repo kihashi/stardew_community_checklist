@@ -1,13 +1,13 @@
 <template>
   <div class="columns">
     <div class="column">
-      <item-search v-model="search_term" v-on:input="$emit('input', searchFilter())" />
+      <item-search v-model.lazy="value.name_filter" v-on:input="$emit('input', $event.target.value)" />
     </div>
     <div class="column">
-      <season-filter />
+      <season-filter :value="value.season_filter" v-on:input="UpdateSeasons"/>
     </div>
     <div class="column">
-      <skill-filter />
+      <skill-filter :value="value.skill_filter" v-on:input="UpdateSkills" />
     </div>
   </div>
 </template>
@@ -19,25 +19,30 @@ import SkillFilter from '@/components/search/SkillFilter.vue'
 export default {
   name: 'search-form',
   props: {
-    search_term: {
+    value: {
       default () {
-        return ''
-      },
-      search_seasons: {
-        type: Array
-      },
-      search_skills: {
-        type: Array
+        return {
+          name_filter: '',
+          season_filter: {
+            selected_seasons: [],
+            season_exclusive: false
+          },
+          skill_filter: {
+            selected_skills: [],
+            skill_exclusive: false
+          }
+        }
       }
     }
   },
   methods: {
-    searchFilter: function () {
-      return {
-        search_term: this.search_term,
-        search_seasons: this.search_seasons,
-        search_skils: this.search_skills
-      }
+    UpdateSeasons (val) {
+      this.value.season_filter = val
+      this.$emit('input', this.value)
+    },
+    UpdateSkills (val) {
+      this.value.skill_filter = val
+      this.$emit('input', this.value)
     }
   },
   components: {

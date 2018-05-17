@@ -5,8 +5,8 @@
     </div>
     <div class="field-body">
       <div class="field has-addons has-addons-centered">
-        <div class="control" v-for="season in seasons" :key="season.id">
-          <button-check>
+        <div class="control" v-for="season in seasons" :key="season.order">
+          <button-check :value="season.id" :checked="value.selected_seasons" v-on:change="UpdateSeasons">
             <span class="icon is-small">
               <season-icon :season="season"></season-icon>
             </span>
@@ -15,7 +15,7 @@
       </div>
       <div class="field">
         <div class="control is-expanded">
-          <button-check class="is-fullwidth">
+          <button-check class="is-fullwidth" :checked="value.season_exclusive" v-on:change="UpdateExclusive">
             Exclusive
           </button-check>
         </div>
@@ -33,9 +33,29 @@ export default {
     SeasonIcon,
     ButtonCheck
   },
+  props: {
+    value: {
+      default () {
+        return {
+          selected_seasons: [],
+          season_exclusive: false
+        }
+      }
+    }
+  },
   computed: {
     seasons () {
       return this.$store.state.seasons
+    }
+  },
+  methods: {
+    UpdateSeasons (val) {
+      this.value.selected_seasons = val
+      this.$emit('input', this.value)
+    },
+    UpdateExclusive (val) {
+      this.value.season_exclusive = val
+      this.$emit('input', this.value)
     }
   }
 
