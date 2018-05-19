@@ -14,6 +14,9 @@ export default {
   components: {
     HeaderBar,
     AppFooter
+  },
+  created () {
+    this.$store.commit('initState')
   }
 }
 </script>

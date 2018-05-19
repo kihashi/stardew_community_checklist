@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
 import SkillJson from '@/assets/game_data/skills.json'
 import SeasonJson from '@/assets/game_data/seasons.json'
@@ -9,18 +10,24 @@ import ItemJson from '@/assets/game_data/items.json'
 
 Vue.use(Vuex)
 
-var state = {
-  StoredItems: {},
+var prestate = {
   seasons: loadSeasons(),
   skills: loadSkills(),
   rooms: loadRooms()
 }
 
-state.bundles = loadBundles(state.rooms)
-state.items = loadItems(state.bundles, state.skills, state.seasons)
+prestate.bundles = loadBundles(prestate.rooms)
+prestate.items = loadItems(prestate.bundles, prestate.skills, prestate.seasons)
 
 export default new Vuex.Store({
-  state: state,
+  state: {
+    StoredItems: {}
+  },
+  plugins: [
+    createPersistedState({
+      reducer: state => ({ StoredItems: state.StoredItems })
+    })
+  ],
   getters: {
     IsBundleItemRedeemed: (state) => (BundleItem) => {
       return state.StoredItems.hasOwnProperty(BundleItem.id)
@@ -38,6 +45,13 @@ export default new Vuex.Store({
     },
     UndoRedeemItem (state, BundleItem) {
       Vue.delete(state.StoredItems, BundleItem.id)
+    },
+    initState (state) {
+      Vue.set(state, 'seasons', prestate.seasons)
+      Vue.set(state, 'skills', prestate.skills)
+      Vue.set(state, 'rooms', prestate.rooms)
+      Vue.set(state, 'bundles', prestate.bundles)
+      Vue.set(state, 'items', prestate.items)
     }
   }
 })
