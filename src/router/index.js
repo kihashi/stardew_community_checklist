@@ -4,6 +4,7 @@ import Welcome from '@/components/Welcome'
 import Bundles from '@/components/bundles/Bundles'
 import BundleItems from '@/components/bundles/BundleItems'
 import Search from '@/components/search/Search'
+import Changelog from '@/components/changelog/Changelog'
 
 Vue.use(Router)
 
@@ -40,6 +41,10 @@ export default new Router({
     {
       name: 'Inventory',
       path: '/inventory'
+    },
+    {
+      path: '/changelog',
+      component: Changelog
     }
   ],
   linkActiveClass: 'is-active'
