@@ -1,0 +1,57 @@
+{
+  "versions": [
+    {
+      "id": "Version 1.4",
+      "date": "2016-04-16",
+      "link": "Version-1.4",
+      "changes": [
+        "Fixed a bug where items skills were always being hidden",
+        "Updated Season and Skill tabs to sort alphabetically",
+        "Updated to Bulma 0.0.20",
+        "Added a text decoration to completed bundles",
+        "Fixed a bug with side-panel styling",
+        "Reduced the margin size of the room names so they all fit properly in their container.",
+        "Updated the bundles nav to be included in 'Hide Completed'",
+        "Hide Completed and Hide Spoilers settings are now saved.",
+        "Added a more thorough readme."
+      ]
+    },
+    {
+      "id": "Version 1.3",
+      "date": "2016-04-15",
+      "link": "Version-1.3",
+      "changes": [
+        "Bundles rewards are now hidden with other spoilers.",
+        "Added a settings page to allow the user to define what information constitutes spoilers.",
+        "Small Layout Changes"
+      ]
+    },
+    {
+      "id": "Version 1.2",
+      "date": "2016-04-14",
+      "link": "Version-1.2",
+      "changes": [
+        "Added an 'All Season' nav item in the Seasons tab. This shows items that are available in all seasons. Other season tabs now show items that are available in that season and at most 2 others. (#39)"
+      ]
+    },
+    {
+      "id": "Version 1.1",
+      "date": "2016-04-14",
+      "link": "Version-1.1",
+      "changes": [
+        "Added bundle completion numbers (#40)",
+        "'Hide Completed' toggle now hides items in completed bundles, even if the item is not checked. (#44)",
+        "Buttons for items in bundles that have been completed, but are not checked are now transparent. (#46)",
+        "Updated scripts to load via HTTPS so that users loading Github via HTTPS can use the page (#47)"
+      ]
+    },
+    {
+      "id": "Version 1.0",
+      "date": "2016-04-13",
+      "link": "Version-1.0",
+      "changes": [
+        "Initial Version"
+      ]
+    }
+  ]
+}

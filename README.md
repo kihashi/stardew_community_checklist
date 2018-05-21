@@ -1,12 +1,8 @@
 # Stardew Community Checklist
 
-A checklist for the Community Center Bundles in Stardew Valley
+> A Checklist for the Community Center Bundles in Stardew Valley
 
-SCC is an application for keeping track of the community center bundles in Stardew Valley. When I started playing the 
-game, I spent a decent amount of time searching the wiki trying to figure out what items I needed for the community
-center and keeping track of which ones I had already turned in. I started working on this as a way to help myself out
-playing the game. Of course, I finished the community center bundles before I finished the site, but I figured that
-maybe someone else would get some use out of it.
+## Build Setup
 
 NOTE: I am currently working on re-writing the app. The demo site (which is still missing functionality) is available and the code is on the webpack branch.
 
@@ -14,10 +10,6 @@ NOTE: I am currently working on re-writing the app. The demo site (which is stil
 * Webpack Branch: https://github.com/kihashi/stardew_community_checklist/tree/webpack
 
 A live version of the site is available at the following link:
-
----
-# http://www.stardewcommunitychecklist.com/
----
 
 Note: The layout makes pretty big use of [Flexbox](https://www.w3.org/TR/css-flexbox-1/), which is not quite finalized.
 I've tested the site in Chrome, Firefox, and Safari. IE seems to have
@@ -63,18 +55,3 @@ If you think of something, please, [make a post on the subreddit](https://www.re
 
 SCC is a single page application, so all it needs is a web server. You can use any web server that you like, but I
 prefer to use the built-in python web server, which is available on any platform with Python installed.
-
-```
-# Python 3.5
-python -m http.server
-```
-
-Libraries and Frameworks used:
-
-* [vuejs](http://vuejs.org/)
-* [Bulma](http://bulma.io/)
-
-Feature requests and pull requests are certainly welcome. I still need to clean up a lot of things in the repository
-(For example, I changed naming styles part way through and the item "cards" need to be made into a vue component so they
-aren't repeated), but the code should *mostly* be easy to figure out. I suspect there are optimizations to be done in
-the searching and filtering logic as well.
