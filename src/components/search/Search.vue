@@ -15,6 +15,7 @@
 <script>
 import SearchForm from '@/components/search/SearchForm'
 import ItemCard from '@/components/item_card/ItemCard'
+import _ from 'lodash'
 export default {
   name: 'search',
   components: {
@@ -39,10 +40,14 @@ export default {
   computed: {
     filtered_items () {
       var self = this
-      return self.$store.state.items
-        .filter(item => item.name.toLowerCase().indexOf(self.search.name_filter.toLowerCase()) !== -1)
-        .filter(item => this.FilterSeasons(item.seasons.map(ssn => ssn.id), this.search.season_filter))
-        .filter(item => this.FilterSkills(item.skills.map(skl => skl.id), this.search.skill_filter))
+      return _.orderBy(
+        self.$store.state.items
+          .filter(item => item.name.toLowerCase().indexOf(self.search.name_filter.toLowerCase()) !== -1)
+          .filter(item => this.FilterSeasons(item.seasons.map(ssn => ssn.id), this.search.season_filter))
+          .filter(item => this.FilterSkills(item.skills.map(skl => skl.id), this.search.skill_filter))
+        ,
+        'name'
+      )
     }
   },
   methods: {
