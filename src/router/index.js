@@ -4,6 +4,7 @@ import Welcome from '@/components/Welcome'
 import Bundles from '@/components/bundles/Bundles'
 import BundleItems from '@/components/bundles/BundleItems'
 import Search from '@/components/search/Search'
+import Settings from '@/components/Settings'
 import Changelog from '@/components/changelog/Changelog'
 
 Vue.use(Router)
@@ -41,6 +42,11 @@ export default new Router({
     {
       name: 'Inventory',
       path: '/inventory'
+    },
+    {
+      name: 'Settings',
+      path: '/settings',
+      component: Settings
     },
     {
       path: '/changelog',
