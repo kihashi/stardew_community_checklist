@@ -48,3 +48,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.45rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+</style>
