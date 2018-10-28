@@ -2323,10 +2323,11 @@
         "farming"
       ],
       "seasons": [
-        "summer"
+        "summer",
+        "fall"
       ],
       "id": 114,
-      "source": "Crops during Summer."
+      "source": "Crops during Summer and Fall."
     },
     {
       "bundles": [
