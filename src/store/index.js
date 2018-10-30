@@ -57,7 +57,7 @@ export default new Vuex.Store({
 })
 
 function getById (array, id) {
-  return array.find(x => x.id === id)
+  return array.find(x => x.id == id)
 }
 
 function loadSeasons () {
