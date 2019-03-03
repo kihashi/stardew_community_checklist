@@ -21,7 +21,13 @@ prestate.items = loadItems(prestate.bundles, prestate.skills, prestate.seasons)
 
 export default new Vuex.Store({
   state: {
-    StoredItems: {}
+    StoredItems: {},
+    HideSpoilers: false,
+    HideCompleted: false,
+    BundleRewardsSpoilers: true,
+    ItemInfoSpoilers: true,
+    SeasonsSpoilers: true,
+    SkillsSpoilers: true
   },
   plugins: [
     createPersistedState({
@@ -45,6 +51,24 @@ export default new Vuex.Store({
     },
     UndoRedeemItem (state, BundleItem) {
       Vue.delete(state.StoredItems, BundleItem.id)
+    },
+    toggleSpoilers (state) {
+      state.HideSpoilers = !state.HideSpoilers
+    },
+    toggleCompleted (state) {
+      state.HideCompleted = !state.HideCompleted
+    },
+    toggleBundleRewards (state) {
+      state.BundleRewardsSpoilers = !state.BundleRewardsSpoilers
+    },
+    toggleItemInfo (state) {
+      state.ItemInfoSpoilers = !state.ItemInfoSpoilers
+    },
+    toggleSeasons (state) {
+      state.SeasonsSpoilers = !state.SeasonsSpoilers
+    },
+    toggleSkills (state) {
+      state.SkillsSpoilers = !state.SkillsSpoilers
     },
     initState (state) {
       Vue.set(state, 'seasons', prestate.seasons)

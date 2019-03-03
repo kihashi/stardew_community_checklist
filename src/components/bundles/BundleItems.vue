@@ -7,7 +7,7 @@
             {{bundle.name}}
             <span class="is-pulled-right">{{bundle.items_required}}</span>
           </h3>
-          <h5 class="subtitle bundle-reward">
+          <h5 class="subtitle bundle-reward" v-if="!hideBundleItems">
             {{bundle.reward}}
           </h5>
         </div>
@@ -16,7 +16,7 @@
             {{bundle.room.name}}
             <span class="is-pulled-right">{{bundle.room.items_required}}</span>
           </h3>
-          <h5 class="subtitle">
+          <h5 class="subtitle" v-if="!hideBundleItems">
             {{bundle.room.reward}}
           </h5>
         </div>
@@ -41,6 +41,9 @@ export default {
   computed: {
     bundle: function () {
       return this.$store.getters.GetBundleById(this.$route.params.id)
+    },
+    hideBundleItems: function () {
+      return this.$store.state.HideSpoilers && this.$store.state.BundleRewardsSpoilers
     }
   },
   components: {
