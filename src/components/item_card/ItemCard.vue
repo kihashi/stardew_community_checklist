@@ -6,7 +6,7 @@
       </p>
     </header>
     <div class="card-content">
-      <div class="content item-source">
+      <div class="content item-source" v-if="showItemDesc">
         {{item.source}}
       </div>
       <div class="content">
@@ -14,10 +14,10 @@
       </div>
     </div>
     <footer class="card-footer">
-      <div class="card-footer-item item-seasons">
+      <div class="card-footer-item item-seasons" v-if="showSeasonList">
         <season-list :seasons="item.seasons"/>
       </div>
-      <div class="card-footer-item item-skills">
+      <div class="card-footer-item item-skills" v-if="showSkillList">
         <skill-list :skills="item.skills"/>
       </div>
     </footer>
@@ -36,6 +36,17 @@ export default {
     SeasonList
   },
   name: 'item-card',
+  computed: {
+    showItemDesc: function () {
+      return !(this.$store.state.HideSpoilers && this.$store.state.ItemInfoSpoilers)
+    },
+    showSeasonList: function () {
+      return !(this.$store.state.HideSpoilers && this.$store.state.SeasonsSpoilers)
+    },
+    showSkillList: function () {
+      return !(this.$store.state.HideSpoilers && this.$store.state.SkillsSpoilers)
+    }
+  },
   props: {
     item: {
       type: Object,
