@@ -53,7 +53,22 @@ export default new Vuex.Store({
       Vue.delete(state.StoredItems, BundleItem.id)
     },
     toggleSpoilers (state) {
-
+      state.HideSpoilers = !state.HideSpoilers
+    },
+    toggleCompleted (state) {
+      state.HideCompleted = !state.HideCompleted
+    },
+    toggleBundleRewards (state) {
+      state.BundleRewardsSpoilers = !state.BundleRewardsSpoilers
+    },
+    toggleItemInfo (state) {
+      state.ItemInfoSpoilers = !state.ItemInfoSpoilers
+    },
+    toggleSeasons (state) {
+      state.SeasonsSpoilers = !state.SeasonsSpoilers
+    },
+    toggleSkills (state) {
+      state.SkillsSpoilers = !state.SkillsSpoilers
     },
     initState (state) {
       Vue.set(state, 'seasons', prestate.seasons)
