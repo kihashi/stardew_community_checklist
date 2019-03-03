@@ -1,5 +1,5 @@
 <template>
-  <page>
+  <div>
     <section class="section">
       <div class="container">
         <h1 class="title">
@@ -13,13 +13,13 @@
           Displayed Items
         </h2>
         <div class="field">
-          <button-checkbox>
+          <button-checkbox v-model="HideCompleted">
             Hide Completed
           </button-checkbox>
           <p class="help">Hides items that have been turned in to the community center.</p>
         </div>
         <div class="field">
-          <button-checkbox>
+          <button-checkbox v-model="HideSpoilers">
             Hide Spoilers
           </button-checkbox>
           <p class="help">Hides things that are considered spoilers, as defined below.</p>
@@ -32,25 +32,25 @@
           </div>
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox"/>
+              <input type="checkbox" v-model="BundleRewardsSpoilers"/>
                 Bundle Rewards
             </label>
           </div>
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox"/>
+              <input type="checkbox" v-model="ItemInfoSpoilers"/>
               Item Source Information
             </label>
           </div>
           <div class="control">
             <label class="checkbox">
-            <input type="checkbox />
+            <input type="checkbox" v-model="SeasonsSpoilers"/>
               Item Seasons
             </label>
           </div>
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox"/>
+              <input type="checkbox" v-model="SkillsSpoilers"/>
               Item Skills
             </label>
           </div>
@@ -65,7 +65,7 @@
         </div>
       </div>
     </section>
-  </page>
+  </div>
 </template>
 
 <script>
@@ -75,13 +75,56 @@ export default {
   components: {
     ButtonCheckbox
   },
-  data () {
-    return {
-      hide_completed: false,
-      hide_spoilers: false
+  computed: {
+    HideCompleted: {
+      get () {
+        return this.$store.state.HideCompleted
+      },
+      set (newValue) {
+        this.$store.commit('toggleCompleted')
+      }
+    },
+    HideSpoilers: {
+      get () {
+        return this.$store.state.HideSpoilers
+      },
+      set (newValue) {
+        this.$store.commit('toggleSpoilers')
+      }
+    },
+    BundleRewardsSpoilers: {
+      get () {
+        return this.$store.state.BundleRewardsSpoilers
+      },
+      set (newValue) {
+        this.$store.commit('toggleBundleRewards')
+      }
+    },
+    ItemInfoSpoilers: {
+      get () {
+        return this.$store.state.ItemInfoSpoilers
+      },
+      set (newValue) {
+        this.$store.commit('toggleItemInfo')
+      }
+    },
+    SeasonsSpoilers: {
+      get () {
+        return this.$store.state.SeasonsSpoilers
+      },
+      set (newValue) {
+        this.$store.commit('toggleSeasons')
+      }
+    },
+    SkillsSpoilers: {
+      get () {
+        return this.$store.state.SkillsSpoilers
+      },
+      set (newValue) {
+        this.$store.commit('toggleSkills')
+      }
     }
   }
-
 }
 </script>
 
