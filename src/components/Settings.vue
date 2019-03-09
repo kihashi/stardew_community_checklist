@@ -95,6 +95,27 @@
         </div>
       </div>
     </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="subtitle">Reset Data</h2>
+        <p class="content">Use this button to reset your data and start a new game.</p>
+        <div class="field">
+          <div class="control">
+            <button class="button is-large is-rounded" :class="DeleteConfirm ? 'is-warning' : 'is-danger'" @click="ConfirmDelete">
+              <span class="icon">
+                <mdi-delete-icon />
+              </span>
+              <span v-if="DeleteConfirm">
+                Are You Sure?
+              </span>
+              <span v-else>
+                Reset Data
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -102,6 +123,7 @@
 import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
 import 'mdi-vue/ContentCopyIcon'
 import 'mdi-vue/UploadIcon'
+import 'mdi-vue/DeleteIcon'
 export default {
   name: 'Settings',
   components: {
@@ -109,7 +131,8 @@ export default {
   },
   data: function () {
     return {
-      DataToLoad: ''
+      DataToLoad: '',
+      DeleteConfirm: false
     }
   },
   computed: {
@@ -170,6 +193,15 @@ export default {
       if (this.DataToLoad !== '') {
         this.$store.commit('SetSerializedState', this.DataToLoad)
         alert('Data Loaded!')
+      }
+    },
+    ConfirmDelete: function () {
+      if (this.DeleteConfirm) {
+        this.$store.commit('resetData')
+        this.DeleteConfirm = false
+        alert('Data Reset!')
+      } else {
+        this.DeleteConfirm = true
       }
     }
   }
