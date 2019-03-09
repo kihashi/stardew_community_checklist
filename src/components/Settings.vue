@@ -24,12 +24,10 @@
           </button-checkbox>
           <p class="help">Hides things that are considered spoilers, as defined below.</p>
         </div>
-        <div class="field is-grouped">
-          <div class="control">
-            <label class="label">
-              Spoilers
-            </label>
-          </div>
+        <label class="label">
+          Spoilers
+        </label>
+        <div class="field is-grouped is-grouped-multiline">
           <div class="control">
             <label class="checkbox">
               <input type="checkbox" v-model="BundleRewardsSpoilers"/>
@@ -62,7 +60,7 @@
         <h2 class="subtitle">
           Import and Export Saved Data
         </h2>
-        <p>
+        <p class="content">
           Use these controls to port data to another device.
           Copy the data string from the Export field on the source device and paste it into the Import field
           on the target device.
@@ -85,7 +83,7 @@
           <div class="control">
             <input class="input" type="text" placeholder="Enter Saved Data here" v-model="DataToLoad" />
           </div>
-          <div class="controls">
+          <div class="control">
             <button class="button is-info" @click="LoadData">
               <span class="icon">
                 <mdi-upload-icon />
