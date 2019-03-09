@@ -92,6 +92,9 @@ export default new Vuex.Store({
       Vue.set(state, 'rooms', prestate.rooms)
       Vue.set(state, 'bundles', prestate.bundles)
       Vue.set(state, 'items', prestate.items)
+    },
+    resetData (state) {
+      state.StoredItems = {}
     }
   }
 })

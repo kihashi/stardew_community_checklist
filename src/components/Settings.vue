@@ -24,12 +24,10 @@
           </button-checkbox>
           <p class="help">Hides things that are considered spoilers, as defined below.</p>
         </div>
-        <div class="field is-grouped">
-          <div class="control">
-            <label class="label">
-              Spoilers
-            </label>
-          </div>
+        <label class="label">
+          Spoilers
+        </label>
+        <div class="field is-grouped is-grouped-multiline">
           <div class="control">
             <label class="checkbox">
               <input type="checkbox" v-model="BundleRewardsSpoilers"/>
@@ -62,7 +60,7 @@
         <h2 class="subtitle">
           Import and Export Saved Data
         </h2>
-        <p>
+        <p class="content">
           Use these controls to port data to another device.
           Copy the data string from the Export field on the source device and paste it into the Import field
           on the target device.
@@ -85,10 +83,31 @@
           <div class="control">
             <input class="input" type="text" placeholder="Enter Saved Data here" v-model="DataToLoad" />
           </div>
-          <div class="controls">
+          <div class="control">
             <button class="button is-info" @click="LoadData">
               <span class="icon">
                 <mdi-upload-icon />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="subtitle">Reset Data</h2>
+        <p class="content">Use this button to reset your data and start a new game.</p>
+        <div class="field">
+          <div class="control">
+            <button class="button is-large is-rounded" :class="DeleteConfirm ? 'is-warning' : 'is-danger'" @click="ConfirmDelete">
+              <span class="icon">
+                <mdi-delete-icon />
+              </span>
+              <span v-if="DeleteConfirm">
+                Are You Sure?
+              </span>
+              <span v-else>
+                Reset Data
               </span>
             </button>
           </div>
@@ -102,6 +121,7 @@
 import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
 import 'mdi-vue/ContentCopyIcon'
 import 'mdi-vue/UploadIcon'
+import 'mdi-vue/DeleteIcon'
 export default {
   name: 'Settings',
   components: {
@@ -109,7 +129,8 @@ export default {
   },
   data: function () {
     return {
-      DataToLoad: ''
+      DataToLoad: '',
+      DeleteConfirm: false
     }
   },
   computed: {
@@ -170,6 +191,15 @@ export default {
       if (this.DataToLoad !== '') {
         this.$store.commit('SetSerializedState', this.DataToLoad)
         alert('Data Loaded!')
+      }
+    },
+    ConfirmDelete: function () {
+      if (this.DeleteConfirm) {
+        this.$store.commit('resetData')
+        this.DeleteConfirm = false
+        alert('Data Reset!')
+      } else {
+        this.DeleteConfirm = true
       }
     }
   }
