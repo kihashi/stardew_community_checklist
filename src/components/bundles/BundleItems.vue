@@ -26,7 +26,7 @@
     <!-- </section>
     <section class="section"> -->
         <div class="columns is-multiline">
-          <div class="column is-3 is-flex" v-for="bundleitem in bundle.items" :key="bundleitem.id">
+          <div class="column is-3 is-flex" v-for="bundleitem in bundleItems" :key="bundleitem.id">
             <item-card :item="bundleitem.item"></item-card>
           </div>
         </div>
@@ -44,6 +44,14 @@ export default {
     },
     hideBundleItems: function () {
       return this.$store.state.HideSpoilers && this.$store.state.BundleRewardsSpoilers
+    },
+    bundleItems: function () {
+      return this.bundle.items.filter(item => !(this.$store.state.HideCompleted && this.isItemComplete(item)))
+    }
+  },
+  methods: {
+    isItemComplete: function (item) {
+      return item.item.bundles.every(this.$store.getters.IsBundleItemRedeemed)
     }
   },
   components: {
