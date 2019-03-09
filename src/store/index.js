@@ -53,9 +53,15 @@ export default new Vuex.Store({
     },
     GetItemById: (state) => (itemId) => {
       return getById(state.items, itemId)
+    },
+    GetSerializedState: (state) => {
+      return btoa(JSON.stringify(state.StoredItems))
     }
   },
   mutations: {
+    SetSerializedState (state, SerializedState) {
+      state.StoredItems = JSON.parse(atob(SerializedState))
+    },
     RedeemItem (state, BundleItem) {
       Vue.set(state.StoredItems, BundleItem.id, 1)
     },
