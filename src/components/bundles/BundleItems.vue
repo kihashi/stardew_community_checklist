@@ -3,7 +3,7 @@
     <section class="container">
       <div class="columns">
         <div class="column">
-          <h3 class="title">
+          <h3 class="title is-4">
             {{bundle.name}}
             <span class="is-pulled-right">{{bundle.items_required}}</span>
           </h3>
@@ -12,7 +12,7 @@
           </h5>
         </div>
         <div class="column">
-          <h3 class="title">
+          <h3 class="title is-4">
             {{bundle.room.name}}
             <span class="is-pulled-right">{{bundle.room.items_required}}</span>
           </h3>
