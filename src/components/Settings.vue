@@ -10,7 +10,7 @@
     <section class="section">
       <div class="container">
         <h2 class="subtitle">
-          Displayed Items
+          Spoilers and Displayed Items
         </h2>
         <div class="field">
           <button-checkbox v-model="HideCompleted">
@@ -59,9 +59,39 @@
     </section>
     <section class="section">
       <div class="container">
-        <div class="buttons">
-          <button class="button is-info">Import Data</button>
-          <button class="button is-info">Export Data</button>
+        <h2 class="subtitle">
+          Import and Export Saved Data
+        </h2>
+        <p>
+          Use these controls to port data to another device.
+          Copy the data string from the Export field on the source device and paste it into the Import field
+          on the target device.
+        </p>
+        <label class="label">Export</label>
+        <div class="field has-addons">
+          <div class="control">
+            <input class="input" type="text" placeholder="Saved Data" :value=SavedData readonly />
+          </div>
+          <div class="control">
+            <button class="button is-info" v-clipboard:copy="SavedData">
+              <span class="icon">
+                <mdi-content-copy-icon />
+              </span>
+            </button>
+          </div>
+        </div>
+        <label class="label">Import</label>
+        <div class="field has-addons">
+          <div class="control">
+            <input class="input" type="text" placeholder="Enter Saved Data here" v-model="DataToLoad" />
+          </div>
+          <div class="controls">
+            <button class="button is-info" @click="LoadData">
+              <span class="icon">
+                <mdi-upload-icon />
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -70,10 +100,17 @@
 
 <script>
 import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
+import 'mdi-vue/ContentCopyIcon'
+import 'mdi-vue/UploadIcon'
 export default {
   name: 'Settings',
   components: {
     ButtonCheckbox
+  },
+  data: function () {
+    return {
+      DataToLoad: ''
+    }
   },
   computed: {
     HideCompleted: {
@@ -122,6 +159,17 @@ export default {
       },
       set (newValue) {
         this.$store.commit('toggleSkills')
+      }
+    },
+    SavedData: function () {
+      return this.$store.getters.GetSerializedState
+    }
+  },
+  methods: {
+    LoadData: function () {
+      if (this.DataToLoad !== '') {
+        this.$store.commit('SetSerializedState', this.DataToLoad)
+        alert('Data Loaded!')
       }
     }
   }
