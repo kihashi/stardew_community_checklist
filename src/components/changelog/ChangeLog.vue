@@ -1,11 +1,11 @@
 <template>
   <section class="section">
-    <div class="container is-fluid">
+    <section class="container">
       <h1 class="title">
         Changelog
       </h1>
       <version v-for="version in changelog.versions" :key="version.date" :version="version"/>
-    </div>
+    </section>
   </section>
 </template>
 
