@@ -31,7 +31,17 @@ export default new Vuex.Store({
   },
   plugins: [
     createPersistedState({
-      reducer: state => ({ StoredItems: state.StoredItems })
+      reducer: state => (
+        {
+          StoredItems: state.StoredItems,
+          HideSpoilers: state.HideSpoilers,
+          HideCompleted: state.HideCompleted,
+          BundleRewardsSpoilers: state.BundleRewardsSpoilers,
+          ItemInfoSpoilers: state.ItemInfoSpoilers,
+          SeasonsSpoilers: state.SeasonsSpoilers,
+          SkillsSpoilers: state.SkillsSpoilers
+        }
+      )
     })
   ],
   getters: {
