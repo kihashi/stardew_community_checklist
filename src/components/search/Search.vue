@@ -42,6 +42,7 @@ export default {
       var self = this
       return _.orderBy(
         self.$store.state.items
+          .filter(item => !(this.$store.state.HideCompleted && this.isItemComplete(item)))
           .filter(item => item.name.toLowerCase().indexOf(self.search.name_filter.toLowerCase()) !== -1)
           .filter(item => this.FilterSeasons(item.seasons.map(ssn => ssn.id), this.search.season_filter))
           .filter(item => this.FilterSkills(item.skills.map(skl => skl.id), this.search.skill_filter))
@@ -96,6 +97,9 @@ export default {
         }
         return false
       }
+    },
+    isItemComplete: function (item) {
+      return item.bundles.every(this.$store.getters.IsBundleItemRedeemed)
     }
   }
 
