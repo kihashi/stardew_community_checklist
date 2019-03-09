@@ -81,6 +81,7 @@ export default new Vuex.Store({
 })
 
 function getById (array, id) {
+  // eslint-disable-next-line
   return array.find(x => x.id == id)
 }
 
