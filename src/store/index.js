@@ -31,7 +31,17 @@ export default new Vuex.Store({
   },
   plugins: [
     createPersistedState({
-      reducer: state => ({ StoredItems: state.StoredItems })
+      reducer: state => (
+        {
+          StoredItems: state.StoredItems,
+          HideSpoilers: state.HideSpoilers,
+          HideCompleted: state.HideCompleted,
+          BundleRewardsSpoilers: state.BundleRewardsSpoilers,
+          ItemInfoSpoilers: state.ItemInfoSpoilers,
+          SeasonsSpoilers: state.SeasonsSpoilers,
+          SkillsSpoilers: state.SkillsSpoilers
+        }
+      )
     })
   ],
   getters: {
@@ -43,9 +53,15 @@ export default new Vuex.Store({
     },
     GetItemById: (state) => (itemId) => {
       return getById(state.items, itemId)
+    },
+    GetSerializedState: (state) => {
+      return btoa(JSON.stringify(state.StoredItems))
     }
   },
   mutations: {
+    SetSerializedState (state, SerializedState) {
+      state.StoredItems = JSON.parse(atob(SerializedState))
+    },
     RedeemItem (state, BundleItem) {
       Vue.set(state.StoredItems, BundleItem.id, 1)
     },
