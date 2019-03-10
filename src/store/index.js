@@ -56,6 +56,23 @@ export default new Vuex.Store({
     },
     GetSerializedState: (state) => {
       return btoa(JSON.stringify(state.StoredItems))
+    },
+    GetBundleItemsRedeemed: (state, getters) => (bundle) => {
+      return Math.min(bundle.items.reduce((redeemded, item) => {
+        if (getters.IsBundleItemRedeemed(item)) { redeemded++ }
+        return redeemded
+      }, 0), bundle.items_required)
+    },
+    IsBundleComplete: (state, getters) => (bundle) => {
+      return getters.GetBundleItemsRedeemed(bundle) >= bundle.items_required
+    },
+    GetRoomItemsRedeemed: (state, getters) => (room) => {
+      return room.bundles.reduce((redeemed, bundle) => {
+        return redeemed + getters.GetBundleItemsRedeemed(bundle)
+      }, 0)
+    },
+    IsRoomComplete: (state, getters) => (room) => {
+      return getters.GetRoomItemsRedeemed(room) >= room.items_required
     }
   },
   mutations: {

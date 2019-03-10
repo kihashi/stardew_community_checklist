@@ -5,20 +5,22 @@
         <div class="column">
           <h3 class="title is-4">
             {{bundle.name}}
-            <span class="is-pulled-right">{{bundle.items_required}}</span>
+            <span class="is-pulled-right">{{ GetBundleItemsRedeemed(bundle) }} / {{bundle.items_required}}</span>
           </h3>
           <h5 class="subtitle bundle-reward" v-if="!hideBundleItems">
             {{bundle.reward}}
           </h5>
+          <progress class="progress is-info" :value="GetBundleItemsRedeemed(bundle)" :max="bundle.items_required" />
         </div>
         <div class="column">
           <h3 class="title is-4">
             {{bundle.room.name}}
-            <span class="is-pulled-right">{{bundle.room.items_required}}</span>
+            <span class="is-pulled-right">{{ GetRoomItemsRedeemed(bundle.room)}} / {{bundle.room.items_required}}</span>
           </h3>
           <h5 class="subtitle" v-if="!hideBundleItems">
             {{bundle.room.reward}}
           </h5>
+          <progress class="progress is-info" :value="GetRoomItemsRedeemed(bundle.room)" :max="bundle.room.items_required" />
         </div>
       </div>
         <!-- Room Progress -->
@@ -52,7 +54,9 @@ export default {
   methods: {
     isItemComplete: function (item) {
       return item.item.bundles.every(this.$store.getters.IsBundleItemRedeemed)
-    }
+    },
+    GetBundleItemsRedeemed: function (bundle) { return this.$store.getters.GetBundleItemsRedeemed(bundle) },
+    GetRoomItemsRedeemed: function (room) { return this.$store.getters.GetRoomItemsRedeemed(room) }
   },
   components: {
     ItemCard
