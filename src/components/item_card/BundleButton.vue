@@ -1,7 +1,7 @@
 <template>
   <div class="field has-addons">
     <div class="control is-expanded">
-      <a class="button is-rounded is-fullwidth" :class="ItemInBundle ? 'is-success' : 'is-danger'"
+      <a class="button is-rounded is-fullwidth" :class="ButtonClass"
         @click="ToggleItemInBundle">
         <span class="icon">
           <font-awesome-icon :icon="ItemInBundle ? InBundleIcon : NotInBundleIcon"/>
@@ -46,6 +46,15 @@ export default {
     NotInBundleIcon () {
       return faSquare
     },
+    ButtonClass () {
+      if (this.ItemInBundle) {
+        return 'is-success'
+      } else if (this.IsBundleComplete(this.bundleItem.bundle)) {
+        return ''
+      } else {
+        return 'is-danger'
+      }
+    },
     numberInBundle () {
       return this.bundleItem.count > 1 ? ` (${this.bundleItem.count})` : ''
     }
@@ -57,6 +66,9 @@ export default {
       } else {
         this.$store.commit('UndoRedeemItem', this.bundleItem)
       }
+    },
+    IsBundleComplete (bundle) {
+      return this.$store.getters.IsBundleComplete(bundle)
     }
   }
 }
