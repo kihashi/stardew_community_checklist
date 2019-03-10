@@ -65,6 +65,11 @@ export default new Vuex.Store({
     },
     IsBundleComplete: (state, getters) => (bundle) => {
       return getters.GetBundleItemsRedeemed(bundle) >= bundle.items_required
+    },
+    GetRoomItemsRedeemed: (state, getters) => (room) => {
+      return room.bundles.reduce((redeemed, bundle) => {
+        return redeemed + getters.GetBundleItemsRedeemed(bundle)
+      }, 0)
     }
   },
   mutations: {
