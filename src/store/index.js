@@ -58,10 +58,10 @@ export default new Vuex.Store({
       return btoa(JSON.stringify(state.StoredItems))
     },
     GetBundleItemsRedeemed: (state, getters) => (bundle) => {
-      return bundle.items.reduce((redeemded, item) => {
+      return Math.min(bundle.items.reduce((redeemded, item) => {
         if (getters.IsBundleItemRedeemed(item)) { redeemded++ }
         return redeemded
-      }, 0)
+      }, 0), bundle.items_required)
     },
     IsBundleComplete: (state, getters) => (bundle) => {
       return getters.GetBundleItemsRedeemed(bundle) >= bundle.items_required
