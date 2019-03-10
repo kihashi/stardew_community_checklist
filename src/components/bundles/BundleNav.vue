@@ -2,6 +2,9 @@
   <section class="container">
     <nav class="navbar">
       <div class="navbar-brand">
+        <div class="navbar-item">
+          <h1 class="subtitle">Bundles</h1>
+        </div>
         <div class="navbar-burger burger"
               v-bind:class="{ 'is-active': menu_active }"
               @click="menu_active = !menu_active"
