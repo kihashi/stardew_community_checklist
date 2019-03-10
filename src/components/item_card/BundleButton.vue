@@ -4,7 +4,7 @@
       <a class="button is-rounded is-fullwidth" :class="ButtonClass"
         @click="ToggleItemInBundle">
         <span class="icon">
-          <font-awesome-icon :icon="ItemInBundle ? InBundleIcon : NotInBundleIcon"/>
+          <font-awesome-icon :icon="ItemInBundle ? InBundleIcon : NotInBundleIcon"></font-awesome-icon>
         </span>
         <span class="is-size-7-mobile">{{bundleItem.bundle.name}}{{numberInBundle}}</span>
       </a>
@@ -12,7 +12,7 @@
     <div class="control">
       <router-link class="button is-rounded is-light" :to="{ name: 'bundle-items', params: { id: bundleItem.bundle.id } }">
         <span class="icon">
-          <external-link/>
+          <font-awesome-icon icon="link"></font-awesome-icon>
         </span>
       </router-link>
     </div>
@@ -21,14 +21,13 @@
 
 <script>
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-import faCheckSquare from '@fortawesome/fontawesome-free-regular/faCheckSquare'
-import faSquare from '@fortawesome/fontawesome-free-regular/faSquare'
-import ExternalLink from 'mdi-vue/OpenInNewIcon'
+import { faCheckSquare, faSquare } from '@fortawesome/fontawesome-free-regular'
+import { faLink } from '@fortawesome/fontawesome-free-solid'
 export default {
   name: 'bundle-button',
   components: {
     'font-awesome-icon': FontAwesomeIcon,
-    ExternalLink
+    faLink
   },
   props: {
     bundleItem: {
