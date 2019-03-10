@@ -10,6 +10,7 @@
           <h5 class="subtitle bundle-reward" v-if="!hideBundleItems">
             {{bundle.reward}}
           </h5>
+          <progress class="progress is-info" :value="GetBundleItemsRedeemed(bundle)" :max="bundle.items_required" />
         </div>
         <div class="column">
           <h3 class="title is-4">
