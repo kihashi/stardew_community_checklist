@@ -5,7 +5,7 @@
         <div class="column">
           <h3 class="title is-4">
             {{bundle.name}}
-            <span class="is-pulled-right">{{bundle.items_required}}</span>
+            <span class="is-pulled-right">{{ GetBundleItemsRedeemed(bundle) }} / {{bundle.items_required}}</span>
           </h3>
           <h5 class="subtitle bundle-reward" v-if="!hideBundleItems">
             {{bundle.reward}}
@@ -52,7 +52,8 @@ export default {
   methods: {
     isItemComplete: function (item) {
       return item.item.bundles.every(this.$store.getters.IsBundleItemRedeemed)
-    }
+    },
+    GetBundleItemsRedeemed: function (bundle) { return this.$store.getters.GetBundleItemsRedeemed(bundle) }
   },
   components: {
     ItemCard
