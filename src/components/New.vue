@@ -33,7 +33,7 @@
           <ul>
             <li>Use the checklist on your phone while you play on from the couch!</li>
           </ul>
-          <li>More clear room completion- a checkmark will show</li>
+          <li>More clear room completion- a checkmark will show next to completed rooms.</li>
           <li>Combined search screens and replaced with filters</li>
           <ul>
             <li>This lets you do stuff like "Show me items that are only in winter".</li>
