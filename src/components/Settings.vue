@@ -73,7 +73,7 @@
           <div class="control">
             <button class="button is-info" v-clipboard:copy="SavedData">
               <span class="icon">
-                <mdi-content-copy-icon />
+                <font-awesome-icon icon="copy"></font-awesome-icon>
               </span>
             </button>
           </div>
@@ -86,7 +86,7 @@
           <div class="control">
             <button class="button is-info" @click="LoadData">
               <span class="icon">
-                <mdi-upload-icon />
+                <font-awesome-icon icon="cloud-upload-alt"></font-awesome-icon>
               </span>
             </button>
           </div>
@@ -101,7 +101,7 @@
           <div class="control">
             <button class="button is-large is-rounded" :class="DeleteConfirm ? 'is-warning' : 'is-danger'" @click="ConfirmDelete">
               <span class="icon">
-                <mdi-delete-icon />
+                <font-awesome-icon icon="trash"></font-awesome-icon>
               </span>
               <span v-if="DeleteConfirm">
                 Are You Sure?
@@ -118,14 +118,20 @@
 </template>
 
 <script>
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
+import { faCopy, faTrash, faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid'
 import 'mdi-vue/ContentCopyIcon'
 import 'mdi-vue/UploadIcon'
 import 'mdi-vue/DeleteIcon'
 export default {
   name: 'Settings',
   components: {
-    ButtonCheckbox
+    ButtonCheckbox,
+    FontAwesomeIcon,
+    faCopy,
+    faCloudUploadAlt,
+    faTrash
   },
   data: function () {
     return {
