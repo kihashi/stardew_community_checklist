@@ -116,6 +116,30 @@ export default new Vuex.Store({
     resetData (state) {
       state.StoredItems = {}
     }
+  },
+  actions: {
+    LoadV1State (context, v1state) {
+      for (var i = 0; i < v1state.length; i++) {
+        for (var j = 0; j < v1state[i].length; j++) {
+          var itemId = v1state[i][j].item
+          // Patch for duplicate oak
+          if (itemId === 116) {
+            itemId = 24
+          }
+
+          // Patch for parsnip
+          if (itemId === 26 && i === 6) {
+            itemId = 27
+          }
+          var bundleItems = context.getters.GetOpenBundleItems(i, itemId)
+          if (bundleItems.length > 0) {
+            context.commit('RedeemItem', bundleItems[0])
+          } else {
+            console.log(`Tried to redeem bundle ${i} item ${itemId}, but no open bundle items were found`)
+          }
+        }
+      }
+    }
   }
 })
 
