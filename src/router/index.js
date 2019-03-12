@@ -39,10 +39,10 @@ export default new Router({
       path: '/search',
       component: Search
     },
-    {
-      name: 'Inventory',
-      path: '/inventory'
-    },
+    // {
+    //   name: 'Inventory',
+    //   path: '/inventory'
+    // },
     {
       name: 'Settings',
       path: '/settings',
