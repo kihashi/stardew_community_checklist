@@ -6,12 +6,12 @@
         <span class="icon">
           <font-awesome-icon :icon="ItemInBundle ? InBundleIcon : NotInBundleIcon"></font-awesome-icon>
         </span>
-        <span class="is-size-7-mobile">{{bundleItem.bundle.name}}{{numberInBundle}}</span>
+        <span class="is-size-7">{{bundleItem.bundle.name}}{{numberInBundle}}</span>
       </a>
     </div>
     <div class="control">
       <router-link class="button is-rounded is-light" :to="{ name: 'bundle-items', params: { id: bundleItem.bundle.id } }">
-        <span class="icon">
+        <span class="icon is-small">
           <font-awesome-icon icon="link"></font-awesome-icon>
         </span>
       </router-link>

@@ -28,7 +28,7 @@
     <!-- </section>
     <section class="section"> -->
         <div class="columns is-multiline">
-          <div class="column is-3 is-12-mobile is-6-tablet is-flex" v-for="bundleitem in bundleItems" :key="bundleitem.id">
+          <div class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex" v-for="bundleitem in bundleItems" :key="bundleitem.id">
             <item-card :item="bundleitem.item"></item-card>
           </div>
         </div>
