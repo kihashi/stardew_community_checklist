@@ -73,6 +73,9 @@ export default new Vuex.Store({
     },
     IsRoomComplete: (state, getters) => (room) => {
       return getters.GetRoomItemsRedeemed(room) >= room.items_required
+    },
+    GetOpenBundleItems: (state, getters) => (bundleId, itemId) => {
+      return (getters.GetBundleById(bundleId)).items.filter(bundleItem => bundleItem.item.id === itemId && !getters.IsBundleItemRedeemed(bundleItem))
     }
   },
   mutations: {
