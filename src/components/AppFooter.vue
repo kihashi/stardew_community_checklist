@@ -46,7 +46,7 @@ export default {
   data: function () {
     return {
       gh_address: 'https://github.com/kihashi/stardew_community_checklist',
-      reddit_address: 'https://www.reddit.com/r/StardewValley/comments/4ell1b/stardew_community_checklist_a_site_to_keep_track/'
+      reddit_address: 'https://www.reddit.com/r/stardewchecklist/'
     }
   }
 }
