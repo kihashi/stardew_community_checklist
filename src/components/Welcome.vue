@@ -10,14 +10,27 @@
         </h2>
       </div>
     </div>
+    <New :class="ShowModal ? 'is-active' : ''" v-on:dismiss-modal="ShowModal = false"></New>
   </section>
 </template>
 
 <script>
 import ItemCard from '@/components/item_card/ItemCard'
+import New from '@/components/New'
 export default {
-  components: {ItemCard},
-  name: 'welcome'
+  components: {ItemCard, New},
+  name: 'welcome',
+  data: function () {
+    return {
+      ShowModal: false
+    }
+  },
+  created () {
+    if (localStorage.getItem('new_visit') === null) {
+      this.ShowModal = true
+      localStorage.setItem('new_visit', 1)
+    }
+  }
 }
 </script>
 
