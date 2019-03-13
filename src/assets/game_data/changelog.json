@@ -1,6 +1,26 @@
 {
   "versions": [
     {
+      "id": "Version 2.0",
+      "date": "2019-03-12",
+      "link": "Version-2.0",
+      "changes": [
+        "Added support for mobile and tablets via responsive layouts, icons, and menuing",
+        "Update the look and feel of the website",
+        "Replaced the alphabetical listing, season listing, and skill listing with a combined search page",
+        "Added an exclusive search to allow searching for items in *only* the selected seasons/skills",
+        "Completely re-wrote the data backend to better represent an item being in the same bundle twice",
+        "Added support for bundles to have different numbers of an item",
+        "Added a link to the bundle button to take you directly to that bundle",
+        "Added a reset button to allow you to start a new game",
+        "Added checkmarks to completed rooms",
+        "Fixed a bug where oak resin was listed twice",
+        "Fixed a bug where parsnips have the same id as morels",
+        "Switched to using Vuejs single file components",
+        "Updated dependencies (vuejs, bulma)"
+      ]
+    },
+    {
       "id": "Version 1.4",
       "date": "2016-04-16",
       "link": "Version-1.4",
