@@ -2,26 +2,14 @@
 
 > A Checklist for the Community Center Bundles in Stardew Valley
 
-## Build Setup
-
-NOTE: I am currently working on re-writing the app. The demo site (which is still missing functionality) is available and the code is on the webpack branch.
-
-* Demo Site: https://kihashi.github.io/
-* Webpack Branch: https://github.com/kihashi/stardew_community_checklist/tree/webpack
-
-A live version of the site is available at the following link:
-
-Note: The layout makes pretty big use of [Flexbox](https://www.w3.org/TR/css-flexbox-1/), which is not quite finalized.
-I've tested the site in Chrome, Firefox, and Safari. IE seems to have
-[some problems with text layout](http://i.imgur.com/smeMuAi.png), though.
-
 # Features
 
 * View items by bundle, alphabetically, by season, or by the skill involved in getting the item.
 * View Bundle and Room completion rates.
 * Filter out completed items and bundles.
+* Responsive Design -- Use the checklist on your computer or phone.
 * Spoiler Free Mode -- Hide the text, season, and skill information for items as well as bundle rewards.
-* Item Search -- Want to see if an item is in a bundle? Search for it in the Alphabetical list!
+* Item Search -- Want to see which items you need before spring? Search for it in the search page.
 * Save your progress -- Whenever you make a change to the checklist, it is saved to your browser's local storage.
 * Import and Export -- Want to take your data to another computer? Export the data string and import it at another
   computer.
@@ -34,7 +22,7 @@ Have a feature request? Create a Github issue or make a post at [the subreddit][
 
 An item block looks like this:
 
-![Item Block Image](http://i.imgur.com/VbsR6Su.png)
+![Item Block Image](https://i.imgur.com/p0zYYKV.png)
 
 In it, you can see the item name, where it can be obtained, which bundles it is in (and whether you have it checked off
 for those bundles), which seasons it can be obtained in, and which skills can be used in getting it. Want to check it
@@ -48,10 +36,29 @@ If you think of something, please, [make a post on the subreddit](https://www.re
 
 * Season Completion Rate
 * Skill Completion Rate
+* Inventory -- See items that you have, but haven't turned in yet
+* Achievement progress
 * Season Exclusive Toggle -- In the Season tab, shows items that can only be obtained in the selected season.
 * (Maybe) Import data from Stardew Valley Save Files
 
-# Development
+# Contributing
 
-SCC is a single page application, so all it needs is a web server. You can use any web server that you like, but I
-prefer to use the built-in python web server, which is available on any platform with Python installed.
+SCC is made using 
+
+* [Vuejs](https://vuejs.org/)
+* [Vuex](https://vuex.vuejs.org/)
+* [Vue Router](https://router.vuejs.org/)
+* [Bulma](https://bulma.io/)
+
+To get started, you'll need Yarn/NPM installed. Then clone the repository and run
+
+```
+// Install dependencies
+yarn install
+// Startup a dev server on localhost:8080
+yarn dev
+```
+
+The pages and componenets are in `src/components` and the game data is in `src/assets/game_data`.
+
+If you would like to get started and don't know how, send me a message and I will do my best to help.
