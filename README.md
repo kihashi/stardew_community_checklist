@@ -2,6 +2,8 @@
 
 > A Checklist for the Community Center Bundles in Stardew Valley
 
+[https://www.stardewcommunitychecklist.com/](https://www.stardewcommunitychecklist.com/)
+
 # Features
 
 * View items by bundle, alphabetically, by season, or by the skill involved in getting the item.
