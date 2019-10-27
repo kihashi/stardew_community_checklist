@@ -195,8 +195,14 @@ export default {
   methods: {
     LoadData: function () {
       if (this.DataToLoad !== '') {
-        this.$store.commit('SetSerializedState', this.DataToLoad)
-        alert('Data Loaded!')
+        try {
+          assertDataIsValid(this.DataToLoad);
+          this.$store.commit('SetSerializedState', this.DataToLoad)
+          alert('Data Loaded!')
+        } catch (err) {
+          console.error('Invalid data string');
+          alert('Error loading data.')
+        }
       }
     },
     ConfirmDelete: function () {
@@ -209,6 +215,10 @@ export default {
       }
     }
   }
+}
+
+function assertDataIsValid(data) {
+  JSON.parse(atob(data));
 }
 </script>
 
