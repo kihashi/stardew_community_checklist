@@ -16,7 +16,8 @@
         "spring"
       ],
       "id": 0,
-      "source": "Foraging during Spring."
+      "source": "Foraging during Spring.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -34,7 +35,8 @@
         "spring"
       ],
       "id": 1,
-      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance."
+      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -52,7 +54,8 @@
         "spring"
       ],
       "id": 2,
-      "source": "Foraging during Spring."
+      "source": "Foraging during Spring.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -70,7 +73,8 @@
         "spring"
       ],
       "id": 3,
-      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance."
+      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -90,7 +94,8 @@
         "fall"
       ],
       "id": 4,
-      "source": "Foraging during Summer."
+      "source": "Foraging during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -108,7 +113,8 @@
         "summer"
       ],
       "id": 5,
-      "source": "Foraging during Summer."
+      "source": "Foraging during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -126,7 +132,8 @@
         "summer"
       ],
       "id": 6,
-      "source": "Foraging during Summer."
+      "source": "Foraging during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -144,7 +151,8 @@
         "fall"
       ],
       "id": 7,
-      "source": "Foraging during Fall Or if you have the mushroom in your cave."
+      "source": "Foraging during Fall Or if you have the mushroom in your cave.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -162,7 +170,8 @@
         "fall"
       ],
       "id": 8,
-      "source": "Foraging during Fall."
+      "source": "Foraging during Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -180,7 +189,8 @@
         "fall"
       ],
       "id": 9,
-      "source": "Foraging during Fall."
+      "source": "Foraging during Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -198,7 +208,8 @@
         "fall"
       ],
       "id": 10,
-      "source": "Foraging during Fall."
+      "source": "Foraging during Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -220,7 +231,8 @@
         "fall"
       ],
       "id": 11,
-      "source": "Foraging during Winter or dropped by slimes on 41-79 Mines levels."
+      "source": "Foraging during Winter or dropped by slimes on 41-79 Mines levels.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -242,7 +254,8 @@
         "fall"
       ],
       "id": 12,
-      "source": "Foraging during Winter or dropped by coal sprites on 41-79 Mines levels."
+      "source": "Foraging during Winter or dropped by coal sprites on 41-79 Mines levels.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -260,7 +273,8 @@
         "winter"
       ],
       "id": 13,
-      "source": "Foraging during Winter (Using a Hoe outside the farm)."
+      "source": "Foraging during Winter (Using a Hoe outside the farm).",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -278,7 +292,8 @@
         "winter"
       ],
       "id": 14,
-      "source": "Foraging during Winter."
+      "source": "Foraging during Winter.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -304,7 +319,8 @@
         "winter"
       ],
       "id": 15,
-      "source": "Chopping trees or logs using an axe."
+      "source": "Chopping trees or logs using an axe.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -325,7 +341,8 @@
         "winter"
       ],
       "id": 16,
-      "source": "Smashing stones with a pickaxe."
+      "source": "Smashing stones with a pickaxe.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -347,7 +364,8 @@
         "winter"
       ],
       "id": 17,
-      "source": "Chopping large stumps with an upgraded axe. Also in crates in the Mines"
+      "source": "Chopping large stumps with an upgraded axe. Also in crates in the Mines",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -368,7 +386,8 @@
         "winter"
       ],
       "id": 18,
-      "source": "Found in the desert."
+      "source": "Found in the desert.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -389,7 +408,8 @@
         "winter"
       ],
       "id": 19,
-      "source": "Found in the desert."
+      "source": "Found in the desert.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -410,7 +430,8 @@
         "winter"
       ],
       "id": 20,
-      "source": "In boxes inside the mines or using the hoe on soil spots in the Mines."
+      "source": "In boxes inside the mines or using the hoe on soil spots in the Mines.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -437,7 +458,8 @@
         "winter"
       ],
       "id": 21,
-      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk."
+      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -464,7 +486,8 @@
         "winter"
       ],
       "id": 22,
-      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk."
+      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -490,7 +513,8 @@
         "winter"
       ],
       "id": 23,
-      "source": "Harvested from maple trees using a Tapper."
+      "source": "Harvested from maple trees using a Tapper.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -516,7 +540,8 @@
         "winter"
       ],
       "id": 24,
-      "source": "Harvested from oak trees using a Tapper."
+      "source": "Harvested from oak trees using a Tapper.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -537,7 +562,8 @@
         "winter"
       ],
       "id": 25,
-      "source": "Harvested from pine trees using a Tapper."
+      "source": "Harvested from pine trees using a Tapper.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -558,7 +584,8 @@
         "winter"
       ],
       "id": 26,
-      "source": "In the farm cave if you selected the mushroom perk"
+      "source": "In the farm cave if you selected the mushroom perk",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -576,7 +603,8 @@
         "spring"
       ],
       "id": 27,
-      "source": "Crops during Spring."
+      "source": "Crops during Spring.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -594,7 +622,8 @@
         "spring"
       ],
       "id": 28,
-      "source": "Crops during Spring."
+      "source": "Crops during Spring.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -612,7 +641,8 @@
         "spring"
       ],
       "id": 29,
-      "source": "Crops during Spring."
+      "source": "Crops during Spring.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -630,7 +660,8 @@
         "spring"
       ],
       "id": 30,
-      "source": "Crops during Spring."
+      "source": "Crops during Spring.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -648,7 +679,8 @@
         "summer"
       ],
       "id": 31,
-      "source": "Crops during Summer."
+      "source": "Crops during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -666,7 +698,8 @@
         "summer"
       ],
       "id": 32,
-      "source": "Crops during Summer."
+      "source": "Crops during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -684,7 +717,8 @@
         "summer"
       ],
       "id": 33,
-      "source": "Crops during Summer."
+      "source": "Crops during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -702,7 +736,8 @@
         "summer"
       ],
       "id": 34,
-      "source": "Crops during Summer."
+      "source": "Crops during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -721,7 +756,8 @@
         "fall"
       ],
       "id": 35,
-      "source": "Crops during Summer and Fall."
+      "source": "Crops during Summer and Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -739,7 +775,8 @@
         "fall"
       ],
       "id": 36,
-      "source": "Crops during Fall."
+      "source": "Crops during Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -757,7 +794,8 @@
         "fall"
       ],
       "id": 37,
-      "source": "Crops during Fall."
+      "source": "Crops during Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -775,7 +813,8 @@
         "fall"
       ],
       "id": 38,
-      "source": "Crops during Fall."
+      "source": "Crops during Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -793,7 +832,8 @@
         "spring"
       ],
       "id": 39,
-      "source": "Crops during Spring."
+      "source": "Crops during Spring.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -811,7 +851,8 @@
         "summer"
       ],
       "id": 40,
-      "source": "Crops during Summer."
+      "source": "Crops during Summer.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -829,7 +870,8 @@
         "fall"
       ],
       "id": 41,
-      "source": "Crops during Fall."
+      "source": "Crops during Fall.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -848,7 +890,8 @@
         "fall"
       ],
       "id": 42,
-      "source": "Crops during Summer and Fall."
+      "source": "Crops during Summer and Fall",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -869,7 +912,8 @@
         "winter"
       ],
       "id": 43,
-      "source": "Cows"
+      "source": "Cows",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -890,7 +934,8 @@
         "winter"
       ],
       "id": 44,
-      "source": "Chickens"
+      "source": "Chickens",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -911,7 +956,8 @@
         "winter"
       ],
       "id": 45,
-      "source": "Chickens"
+      "source": "Chickens",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -932,7 +978,8 @@
         "winter"
       ],
       "id": 46,
-      "source": "Goats"
+      "source": "Goats",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -953,7 +1000,8 @@
         "winter"
       ],
       "id": 47,
-      "source": "Sheep, Rabbits"
+      "source": "Sheep, Rabbits",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -974,7 +1022,8 @@
         "winter"
       ],
       "id": 48,
-      "source": "Ducks"
+      "source": "Ducks",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -994,7 +1043,8 @@
         "fall"
       ],
       "id": 49,
-      "source": "Made from Truffles. Requires Oil Maker"
+      "source": "Made from Truffles. Requires Oil Maker",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1016,7 +1066,8 @@
         "winter"
       ],
       "id": 50,
-      "source": "Made from Wool. Requires Loom. Can also be rarely obtained by Recycling Soggy Newspaper."
+      "source": "Made from Wool. Requires Loom. Can also be rarely obtained by Recycling Soggy Newspaper.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1037,7 +1088,8 @@
         "winter"
       ],
       "id": 51,
-      "source": "Made from Goat Milk. Requires Cheese Press."
+      "source": "Made from Goat Milk. Requires Cheese Press.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1058,7 +1110,8 @@
         "winter"
       ],
       "id": 52,
-      "source": "Made from Cow Milk. Requires Cheese Press"
+      "source": "Made from Cow Milk. Requires Cheese Press",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1078,7 +1131,8 @@
         "fall"
       ],
       "id": 53,
-      "source": "Produced by Bees. Requires Beehive."
+      "source": "Produced by Bees. Requires Beehive.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1100,7 +1154,8 @@
         "winter"
       ],
       "id": 54,
-      "source": "Made from any Fruit. Requires Preserves Jar."
+      "source": "Made from any Fruit. Requires Preserves Jar.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1123,7 +1178,8 @@
         "fall"
       ],
       "id": 55,
-      "source": "Gathered from Apple Trees during Fall."
+      "source": "Gathered from Apple Trees during Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1141,7 +1197,8 @@
         "spring"
       ],
       "id": 56,
-      "source": "Gathered from Apricot Trees during Spring."
+      "source": "Gathered from Apricot Trees during Spring.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1163,7 +1220,8 @@
         "winter"
       ],
       "id": 57,
-      "source": "Gathered from Orange Trees during Summer or found in farm cave if fruit perk selected."
+      "source": "Gathered from Orange Trees during Summer or found in farm cave if fruit perk selected.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1181,7 +1239,8 @@
         "summer"
       ],
       "id": 58,
-      "source": "Gathered from Peach Trees during Summer."
+      "source": "Gathered from Peach Trees during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1204,7 +1263,8 @@
         "fall"
       ],
       "id": 59,
-      "source": "Gathered from Pomegranate Trees during Fall."
+      "source": "Gathered from Pomegranate Trees during Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1226,7 +1286,8 @@
         "winter"
       ],
       "id": 60,
-      "source": "Gathered from Cherry Trees during Spring or found in farm cave if fruit perk selected."
+      "source": "Gathered from Cherry Trees during Spring or found in farm cave if fruit perk selected.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1245,7 +1306,8 @@
         "summer"
       ],
       "id": 61,
-      "source": "Found in Rivers, Daytime, Spring, and Summer."
+      "source": "Found in Rivers, Daytime, Spring, and Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1264,7 +1326,8 @@
         "fall"
       ],
       "id": 62,
-      "source": "Found in Rivers, Anytime, Spring and Fall. Only when raining."
+      "source": "Found in Rivers, Anytime, Spring and Fall. Only when raining.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1284,7 +1347,8 @@
         "fall"
       ],
       "id": 63,
-      "source": "Found in Rivers, Daytime, Spring, Summer, and Fall. Only when raining."
+      "source": "Found in Rivers, Daytime, Spring, Summer, and Fall. Only when raining.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1303,7 +1367,8 @@
         "winter"
       ],
       "id": 64,
-      "source": "Found in Rivers, Daytime (Early afternoon), Fall and Winter."
+      "source": "Found in Rivers, Daytime (Early afternoon), Fall and Winter.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1324,7 +1389,8 @@
         "winter"
       ],
       "id": 65,
-      "source": "Found in Lakes, Daytime, All Seasons."
+      "source": "Found in Lakes, Daytime, All Seasons.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1345,7 +1411,8 @@
         "winter"
       ],
       "id": 66,
-      "source": "Found in Lakes, Anytime, All Seasons."
+      "source": "Found in Lakes, Anytime, All Seasons.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1366,7 +1433,8 @@
         "winter"
       ],
       "id": 67,
-      "source": "Found in Lakes, Anytime, All Seasons."
+      "source": "Found in Lakes, Anytime, All Seasons.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1385,7 +1453,8 @@
         "winter"
       ],
       "id": 68,
-      "source": "Found in Lakes, Daytime, Summer and Winter."
+      "source": "Found in Lakes, Daytime, Summer and Winter.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1405,7 +1474,8 @@
         "winter"
       ],
       "id": 69,
-      "source": "Found in the Ocean, Daytime, Spring, Fall, and Winter."
+      "source": "Found in the Ocean, Daytime, Spring, Fall, and Winter.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1424,7 +1494,8 @@
         "winter"
       ],
       "id": 70,
-      "source": "Found in the Ocean, Daytime, Summer and Winter."
+      "source": "Found in the Ocean, Daytime, Summer and Winter.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1443,7 +1514,8 @@
         "fall"
       ],
       "id": 71,
-      "source": "Found in the Ocean, Daytime, Summer and Fall. Only when raining."
+      "source": "Found in the Ocean, Daytime, Summer and Fall. Only when raining.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1462,7 +1534,8 @@
         "fall"
       ],
       "id": 72,
-      "source": "Found in the Ocean, Daytime, Summer and Fall."
+      "source": "Found in the Ocean, Daytime, Summer and Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1481,7 +1554,8 @@
         "winter"
       ],
       "id": 73,
-      "source": "Found in Rivers, Nighttime, Fall and Winter. Only when raining."
+      "source": "Found in Rivers, Nighttime, Fall and Winter. Only when raining.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1502,7 +1576,8 @@
         "winter"
       ],
       "id": 74,
-      "source": "Found in Rivers, Nighttime, All Seasons."
+      "source": "Found in Rivers, Nighttime, All Seasons.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1521,7 +1596,8 @@
         "fall"
       ],
       "id": 75,
-      "source": "Found in the Ocean, Nighttime, Spring or Fall. Only when raining."
+      "source": "Found in the Ocean, Nighttime, Spring or Fall. Only when raining.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1542,7 +1618,8 @@
         "winter"
       ],
       "id": 76,
-      "source": "Gathered from Crab Pots."
+      "source": "Gathered from Crab Pots.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1563,7 +1640,8 @@
         "winter"
       ],
       "id": 77,
-      "source": "Gathered from Crab Pot in rivers during any season."
+      "source": "Gathered from Crab Pot in rivers during any season.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1585,7 +1663,8 @@
         "winter"
       ],
       "id": 78,
-      "source": "Gathered from Crab Pots. Also drops from killing hermit crabs in The Mines."
+      "source": "Gathered from Crab Pots. Also drops from killing hermit crabs in The Mines.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1607,7 +1686,8 @@
         "winter"
       ],
       "id": 79,
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1629,7 +1709,8 @@
         "winter"
       ],
       "id": 80,
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1650,7 +1731,8 @@
         "winter"
       ],
       "id": 81,
-      "source": "Gathered from Crab Pots."
+      "source": "Gathered from Crab Pots.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1671,7 +1753,8 @@
         "winter"
       ],
       "id": 82,
-      "source": "Gathered from Crab Pots."
+      "source": "Gathered from Crab Pots.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1692,7 +1775,8 @@
         "winter"
       ],
       "id": 83,
-      "source": "Gathered from Crab Pots."
+      "source": "Gathered from Crab Pots.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1714,7 +1798,8 @@
         "winter"
       ],
       "id": 84,
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1736,7 +1821,8 @@
         "winter"
       ],
       "id": 85,
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
+      "source": "Gathered from Crab Pots. Can be foraged from areas with sand.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1754,7 +1840,8 @@
         "summer"
       ],
       "id": 86,
-      "source": "Found in the Ocean, Early Afternoon, Summer. May also be purchased from the Traveling Cart."
+      "source": "Found in the Ocean, Early Afternoon, Summer. May also be purchased from the Traveling Cart.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1776,7 +1863,8 @@
         "winter"
       ],
       "id": 87,
-      "source": "Found in ponds in The Mines, Anytime, All Seasons. May also be dropped by Ghosts."
+      "source": "Found in ponds in The Mines, Anytime, All Seasons. May also be dropped by Ghosts.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1798,7 +1886,8 @@
         "winter"
       ],
       "id": 88,
-      "source": "Found in the pond at Calico Desert. May also be purchased from the Traveling Cart."
+      "source": "Found in the pond at Calico Desert. May also be purchased from the Traveling Cart.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1819,7 +1908,8 @@
         "winter"
       ],
       "id": 89,
-      "source": "Found in the Secret Woods, Anytime, All Seasons. May also be purchased from the Traveling Cart."
+      "source": "Found in the Secret Woods, Anytime, All Seasons. May also be purchased from the Traveling Cart.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1840,7 +1930,8 @@
         "winter"
       ],
       "id": 90,
-      "source": "Smelting copper ore in the furnace."
+      "source": "Smelting copper ore in the furnace.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1861,7 +1952,8 @@
         "winter"
       ],
       "id": 91,
-      "source": "Smelting iron ore in the furnace."
+      "source": "Smelting iron ore in the furnace.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1882,7 +1974,8 @@
         "winter"
       ],
       "id": 92,
-      "source": "Smelting gold ore in the furnace."
+      "source": "Smelting gold ore in the furnace.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -1903,7 +1996,8 @@
         "winter"
       ],
       "id": 93,
-      "source": "Found on all levels of The Mines and in geodes."
+      "source": "Found on all levels of The Mines and in geodes.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -1924,7 +2018,8 @@
         "winter"
       ],
       "id": 94,
-      "source": "Found on levels 1 - 39 of The Mines and in geodes."
+      "source": "Found on levels 1 - 39 of The Mines and in geodes.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -1945,7 +2040,8 @@
         "winter"
       ],
       "id": 95,
-      "source": "Found on levels 40 - 79 of The Mines and in geodes."
+      "source": "Found on levels 40 - 79 of The Mines and in geodes.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -1966,7 +2062,8 @@
         "winter"
       ],
       "id": 96,
-      "source": "Found on levels 80 - 120 of The Mines and in magma geodes."
+      "source": "Found on levels 80 - 120 of The Mines and in magma geodes.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -1987,7 +2084,8 @@
         "winter"
       ],
       "id": 97,
-      "source": "Dropped by Slimes in The Mines."
+      "source": "Dropped by Slimes in The Mines.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2008,7 +2106,8 @@
         "winter"
       ],
       "id": 98,
-      "source": "Dropped by Bats in The Mines."
+      "source": "Dropped by Bats in The Mines.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2029,7 +2128,8 @@
         "winter"
       ],
       "id": 99,
-      "source": "Dropped by Ghosts in The Mines."
+      "source": "Dropped by Ghosts in The Mines.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2050,7 +2150,8 @@
         "winter"
       ],
       "id": 100,
-      "source": "Dropped by Shadow Brutes in The Mines."
+      "source": "Dropped by Shadow Brutes in The Mines.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2068,7 +2169,8 @@
         "summer"
       ],
       "id": 101,
-      "source": "Found in the Secret Woods during Summer."
+      "source": "Found in the Secret Woods during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2088,7 +2190,8 @@
         "fall"
       ],
       "id": 102,
-      "source": "Found by pigs while grazing outdoors."
+      "source": "Found by pigs while grazing outdoors",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2106,7 +2209,8 @@
         "summer"
       ],
       "id": 103,
-      "source": "Crops during Summer."
+      "source": "Crops during Summer.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2127,7 +2231,8 @@
         "winter"
       ],
       "id": 104,
-      "source": "Acquired by Cooking. Recipe available from the cooking channel on Summer 21 during odd years."
+      "source": "Acquired by Cooking. Recipe available from the cooking channel on Summer 21 during odd years.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2148,7 +2253,8 @@
         "winter"
       ],
       "id": 105,
-      "source": "Acquired by Cooking."
+      "source": "Acquired by Cooking",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2169,7 +2275,8 @@
         "winter"
       ],
       "id": 106,
-      "source": "Can be foraged on the far right side of the beach, accessible after using 300 wood to fix the bridge."
+      "source": "Can be foraged on the far right side of the beach, accessible after using 300 wood to fix the bridge.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2188,7 +2295,8 @@
         "fall"
       ],
       "id": 107,
-      "source": "Crops during Summer and Fall."
+      "source": "Crops during Summer and Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2209,7 +2317,8 @@
         "winter"
       ],
       "id": 108,
-      "source": "Produced by ducks in the coop (similar to how chickens and ducks lay eggs)"
+      "source": "Produced by ducks in the coop (similar to how chickens and ducks lay eggs)",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2230,7 +2339,8 @@
         "winter"
       ],
       "id": 109,
-      "source": "Can be found in stones and boxes in The Mines."
+      "source": "Can be found in stones and boxes in The Mines.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -2248,7 +2358,8 @@
         "summer"
       ],
       "id": 110,
-      "source": "Crops during the Summer. Seeds can be purchased from Pierre's Year 2 and onward. Can be purchased from the Traveling Cart"
+      "source": "Crops during the Summer. Seeds can be purchased from Pierre's Year 2 and onward. Can be purchased from the Traveling Cart",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2266,7 +2377,8 @@
         "winter"
       ],
       "id": 111,
-      "source": "Found by foraging from the beach in the Winter."
+      "source": "Found by foraging from the beach in the Winter.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2287,7 +2399,8 @@
         "winter"
       ],
       "id": 112,
-      "source": "Can be found in the mountain lake and river during all seasons."
+      "source": "Can be found in the mountain lake and river during all seasons.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2308,7 +2421,8 @@
         "winter"
       ],
       "id": 113,
-      "source": "Found on levels 40-79 of The Mines."
+      "source": "Found on levels 40-79 of The Mines.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -2327,7 +2441,8 @@
         "fall"
       ],
       "id": 114,
-      "source": "Crops during Summer and Fall."
+      "source": "Crops during Summer and Fall.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2348,7 +2463,8 @@
         "winter"
       ],
       "id": 115,
-      "source": "Purchased from Marnie at The Ranch or created by using the sickle on grass once you have a silo."
+      "source": "Purchased from Marnie at The Ranch or created by using the sickle on grass once you have a silo.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -2370,7 +2486,8 @@
         "winter"
       ],
       "id": 117,
-      "source": "Produced by putting most fruits into a keg."
+      "source": "Produced by putting most fruits into a keg.",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2392,7 +2509,8 @@
         "winter"
       ],
       "id": 118,
-      "source": "Dropped by Rabbits in the Coop, also dropped by a Serpent in Skull Cavern (0.8%)."
+      "source": "Dropped by Rabbits in the Coop, also dropped by a Serpent in Skull Cavern (0.8%).",
+      "soldByTravelingCart": true
     },
     {
       "bundles": [
@@ -2417,7 +2535,8 @@
         "winter"
       ],
       "id": 119,
-      "source": "Collect 2,500 Gold and turn in."
+      "source": "Collect 2,500 Gold and turn in.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -2442,7 +2561,8 @@
         "winter"
       ],
       "id": 120,
-      "source": "Collect 5,000 Gold and turn in."
+      "source": "Collect 5,000 Gold and turn in.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -2467,7 +2587,8 @@
         "winter"
       ],
       "id": 121,
-      "source": "Collect 10,000 Gold and turn in."
+      "source": "Collect 10,000 Gold and turn in.",
+      "soldByTravelingCart": false
     },
     {
       "bundles": [
@@ -2492,7 +2613,8 @@
         "winter"
       ],
       "id": 122,
-      "source": "Collect 25,000 Gold and turn in."
+      "source": "Collect 25,000 Gold and turn in.",
+      "soldByTravelingCart": false
     }
   ]
 }
