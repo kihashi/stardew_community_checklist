@@ -3,6 +3,7 @@
     <header class="card-header">
       <p class="card-header-title">
         {{item.name}}
+        <traveling-cart-icon v-if="showItemDesc && item.soldByTravelingCart" />
       </p>
     </header>
     <div class="card-content">
@@ -27,13 +28,15 @@
 <script>
 import SeasonList from './SeasonList'
 import SkillList from './SkillList'
+import TravelingCartIcon from '../TravelingCartIcon'
 import BundleButton from './BundleButton'
 
 export default {
   components: {
     BundleButton,
     SkillList,
-    SeasonList
+    SeasonList,
+    TravelingCartIcon
   },
   name: 'item-card',
   computed: {
@@ -123,6 +126,10 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.card-header-title {
+  display: flex;
   justify-content: space-between;
 }
 </style>
