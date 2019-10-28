@@ -1,5 +1,5 @@
 <template>
-  <span class="icon">
+  <span class="icon" v-bind:data-skill="skill.id">
       <farming-icon v-if="skill.id === 'farming'"/>
       <mining-icon v-if="skill.id === 'mining'"/>
       <foraging-icon v-if="skill.id === 'foraging'"/>
@@ -38,6 +38,23 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .icon {
+      position: relative;
+  }
 
+  .icon:hover::after {
+    content: attr(data-skill);
+    display: block;
+    position: absolute;
+    bottom: -1.85rem;
+    border-radius: 3px;
+    font-size: .75rem;
+    background-color: #209cee;
+    padding: .1rem .3rem;
+    text-transform: capitalize;
+    color: #FFF;
+    z-index: 100;
+    font-weight: bold;
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <span class="icon">
+  <span class="icon" v-bind:data-season="season.id">
     <spring-icon v-if="season.id === 'spring'"/>
     <summer-icon v-if="season.id === 'summer'"/>
     <fall-icon v-if="season.id === 'fall'"/>
@@ -35,6 +35,23 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .icon {
+      position: relative;
+  }
 
+  .icon:hover::after {
+    content: attr(data-season);
+    display: block;
+    position: absolute;
+    bottom: -1.85rem;
+    border-radius: 3px;
+    font-size: .75rem;
+    background-color: #00d1b2;
+    padding: .1rem .3rem;
+    text-transform: capitalize;
+    color: #000;
+    z-index: 100;
+    font-weight: bold;
+  }
 </style>
