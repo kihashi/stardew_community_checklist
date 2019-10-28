@@ -3,7 +3,7 @@
   <search-form v-model="search"></search-form>
   <section class="container">
     <div class="columns is-multiline">
-      <div class="column is-3 is-12-mobile is-6-tablet is-flex" v-for="item in filtered_items" :key="item.id">
+      <div class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex" v-for="item in filtered_items" :key="item.id">
         <item-card :item="item"></item-card>
       </div>
     </div>
