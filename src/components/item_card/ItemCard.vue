@@ -125,4 +125,11 @@ export default {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 </style>
