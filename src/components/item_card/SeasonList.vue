@@ -44,5 +44,8 @@ export default {
 </script>
 
 <style scoped>
-
+.tags {
+  justify-content: center;
+  flex-wrap: no-wrap;
+}
 </style>

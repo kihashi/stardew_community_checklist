@@ -3,7 +3,8 @@
   <search-form v-model="search"></search-form>
   <section class="container">
     <div class="columns is-multiline">
-      <div class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex" v-for="item in filtered_items" :key="item.id">
+      <item-table v-if="CompactView" :items="filtered_items" />
+      <div v-else class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex" v-for="item in filtered_items" :key="item.id">
         <item-card :item="item"></item-card>
       </div>
     </div>
@@ -15,12 +16,14 @@
 <script>
 import SearchForm from '@/components/search/SearchForm'
 import ItemCard from '@/components/item_card/ItemCard'
+import ItemTable from '@/components/item_table/ItemTable.vue'
 import _ from 'lodash'
 export default {
   name: 'search',
   components: {
     SearchForm,
-    ItemCard
+    ItemCard,
+    ItemTable
   },
   data () {
     return {
@@ -49,6 +52,9 @@ export default {
         ,
         'name'
       )
+    },
+    CompactView () {
+      return this.$store.state.CompactView
     }
   },
   methods: {

@@ -58,6 +58,24 @@
     <section class="section">
       <div class="container">
         <h2 class="subtitle">
+          Compact View
+        </h2>
+        <p class="content">
+          Enable a more compact table view instead of the card view.
+          Note that this may result in horizontal scrolling on smaller (phone-sized) devices.
+          The card view is recommended for those.
+        </p>
+        <div class="field">
+          <button-checkbox v-model="CompactView">
+            Use Compact View
+          </button-checkbox>
+          <p class="help">Enables a compact tabular view for item information.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="subtitle">
           Import and Export Saved Data
         </h2>
         <p class="content">
@@ -186,6 +204,14 @@ export default {
       },
       set (newValue) {
         this.$store.commit('toggleSkills')
+      }
+    },
+    CompactView: {
+      get () {
+        return this.$store.state.CompactView
+      },
+      set (newValue) {
+        this.$store.commit('toggleCompactView')
       }
     },
     SavedData: function () {

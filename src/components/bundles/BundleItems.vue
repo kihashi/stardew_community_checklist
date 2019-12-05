@@ -23,12 +23,9 @@
           <progress class="progress is-info" :value="GetRoomItemsRedeemed(bundle.room)" :max="bundle.room.items_required" />
         </div>
       </div>
-        <!-- Room Progress -->
-        <!-- Bundle Progress -->
-    <!-- </section>
-    <section class="section"> -->
         <div class="columns is-multiline">
-          <div class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex" v-for="bundleitem in bundleItems" :key="bundleitem.id">
+          <item-table v-if="CompactView" :items="bundleItems.map(i => i.item)" />
+          <div v-else class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex" v-for="bundleitem in bundleItems" :key="bundleitem.id">
             <item-card :item="bundleitem.item"></item-card>
           </div>
         </div>
@@ -38,6 +35,7 @@
 
 <script>
 import ItemCard from '@/components/item_card/ItemCard'
+import ItemTable from '@/components/item_table/ItemTable.vue'
 export default {
   name: 'bundle-items',
   computed: {
@@ -49,6 +47,9 @@ export default {
     },
     bundleItems: function () {
       return this.bundle.items.filter(item => !(this.$store.state.HideCompleted && this.isItemComplete(item)))
+    },
+    CompactView () {
+      return this.$store.state.CompactView
     }
   },
   methods: {
@@ -59,7 +60,8 @@ export default {
     GetRoomItemsRedeemed: function (room) { return this.$store.getters.GetRoomItemsRedeemed(room) }
   },
   components: {
-    ItemCard
+    ItemCard,
+    ItemTable
   }
 }
 </script>

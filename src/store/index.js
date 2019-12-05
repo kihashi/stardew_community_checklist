@@ -27,7 +27,8 @@ export default new Vuex.Store({
     BundleRewardsSpoilers: true,
     ItemInfoSpoilers: true,
     SeasonsSpoilers: true,
-    SkillsSpoilers: true
+    SkillsSpoilers: true,
+    CompactView: false
   },
   plugins: [
     createPersistedState({
@@ -39,7 +40,8 @@ export default new Vuex.Store({
           BundleRewardsSpoilers: state.BundleRewardsSpoilers,
           ItemInfoSpoilers: state.ItemInfoSpoilers,
           SeasonsSpoilers: state.SeasonsSpoilers,
-          SkillsSpoilers: state.SkillsSpoilers
+          SkillsSpoilers: state.SkillsSpoilers,
+          CompactView: state.CompactView
         }
       )
     })
@@ -105,6 +107,9 @@ export default new Vuex.Store({
     },
     toggleSkills (state) {
       state.SkillsSpoilers = !state.SkillsSpoilers
+    },
+    toggleCompactView (state) {
+      state.CompactView = !state.CompactView
     },
     initState (state) {
       Vue.set(state, 'seasons', prestate.seasons)
