@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <header-bar/>
-    <router-view/>
+    <transition name="fade"
+     mode="out-in">
+      <router-view/>
+    </transition>
     <app-footer/>
   </div>
 </template>
@@ -26,3 +29,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+}
+
+</style>
