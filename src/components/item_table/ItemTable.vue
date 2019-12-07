@@ -8,10 +8,10 @@
         <th>
           Source
         </th>
-        <th>
+        <th v-if="showSeasonList">
           Seasons
         </th>
-        <th>
+        <th v-if="showSkillList">
           Skills
         </th>
         <th>
@@ -41,6 +41,14 @@ export default {
   props: {
     items: {
       type: Array
+    }
+  },
+  computed: {
+    showSeasonList: function () {
+      return !(this.$store.state.HideSpoilers && this.$store.state.SeasonsSpoilers)
+    },
+    showSkillList: function () {
+      return !(this.$store.state.HideSpoilers && this.$store.state.SkillsSpoilers)
     }
   }
 }
