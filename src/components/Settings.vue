@@ -109,6 +109,13 @@
             </button>
           </div>
         </div>
+
+        <label class="label">Upload</label>
+        <div class="field has-addons">
+          <div class="control">
+            <input type="file" @change="OnFileChange"/>
+          </div>
+        </div>
       </div>
     </section>
     <section class="section">
@@ -142,6 +149,7 @@ import { faCopy, faTrash, faCloudUploadAlt } from '@fortawesome/fontawesome-free
 import 'mdi-vue/ContentCopyIcon'
 import 'mdi-vue/UploadIcon'
 import 'mdi-vue/DeleteIcon'
+import XmlJs from 'xml-js'
 export default {
   name: 'Settings',
   components: {
@@ -223,6 +231,30 @@ export default {
       if (this.DataToLoad !== '') {
         this.$store.commit('SetSerializedState', this.DataToLoad)
         alert('Data Loaded!')
+      }
+    },
+    OnFileChange: function (e) {
+      var files = e.target.files || e.dataTransfer.files
+      if (files.length) {
+        let file = files[0]
+        let reader = new FileReader()
+        reader.readAsText(file, 'UTF-8')
+        reader.onload = evt => {
+          let f = XmlJs.xml2js(evt.target.result, { compact: true, spaces: 2 })
+
+          console.log(f)
+
+          let locations = f.SaveGame.locations.GameLocation
+          for (let i = 0; i < locations.length; i++) {
+            if (locations[i].name._text === 'CommunityCenter') {
+              console.log(locations[i])
+            }
+          }
+          console.log('Done printing')
+        }
+        reader.onerror = evt => {
+          console.error(evt)
+        }
       }
     },
     ConfirmDelete: function () {
