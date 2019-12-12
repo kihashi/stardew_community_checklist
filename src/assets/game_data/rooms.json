@@ -29,6 +29,11 @@
       "id": 5,
       "name": "Vault",
       "reward": "Bus Repair"
+    },
+    {
+      "id": 6,
+      "name": "Abandoned JojaMart",
+      "reward": "Movie Theater"
     }
   ]
 }
