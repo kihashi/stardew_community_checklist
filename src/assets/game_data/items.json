@@ -16,7 +16,7 @@
         "spring"
       ],
       "id": 0,
-      "source": "Foraging during Spring."
+      "source": "Spring Foraging."
     },
     {
       "bundles": [
@@ -34,7 +34,7 @@
         "spring"
       ],
       "id": 1,
-      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance."
+      "source": "Spring Foraging. Buy from Pierre's Shop at the Flower Dance."
     },
     {
       "bundles": [
@@ -52,7 +52,7 @@
         "spring"
       ],
       "id": 2,
-      "source": "Foraging during Spring."
+      "source": "Spring Foraging."
     },
     {
       "bundles": [
@@ -70,7 +70,7 @@
         "spring"
       ],
       "id": 3,
-      "source": "Foraging during Spring. Buy from Pierre's Shop at the Flower Dance."
+      "source": "Spring Foraging. Buy from Pierre's Shop at the Flower Dance."
     },
     {
       "bundles": [
@@ -90,7 +90,7 @@
         "fall"
       ],
       "id": 4,
-      "source": "Foraging during Summer."
+      "source": "Summer Foraging. Fall Farming."
     },
     {
       "bundles": [
@@ -108,7 +108,7 @@
         "summer"
       ],
       "id": 5,
-      "source": "Foraging during Summer."
+      "source": "Summer Foraging. The Farm Cave (fruit bat option)."
     },
     {
       "bundles": [
@@ -126,7 +126,7 @@
         "summer"
       ],
       "id": 6,
-      "source": "Foraging during Summer."
+      "source": "Summer Foraging."
     },
     {
       "bundles": [
@@ -144,7 +144,7 @@
         "fall"
       ],
       "id": 7,
-      "source": "Foraging during Fall Or if you have the mushroom in your cave."
+      "source": "Fall Foraging. Spring & Fall Foraging in the Secret Woods. The Farm Cafe (mushroom option). Tapping a Mushroom Tree."
     },
     {
       "bundles": [
@@ -162,7 +162,7 @@
         "fall"
       ],
       "id": 8,
-      "source": "Foraging during Fall."
+      "source": "Fall Foraging. The Farm Cave (fruit bat option)."
     },
     {
       "bundles": [
@@ -180,7 +180,7 @@
         "fall"
       ],
       "id": 9,
-      "source": "Foraging during Fall."
+      "source": "Fall Foraging."
     },
     {
       "bundles": [
@@ -198,7 +198,7 @@
         "fall"
       ],
       "id": 10,
-      "source": "Foraging during Fall."
+      "source": "Fall Foraging. The Farm Cave (fruit bat option)."
     },
     {
       "bundles": [
@@ -220,7 +220,7 @@
         "fall"
       ],
       "id": 11,
-      "source": "Foraging during Winter or dropped by slimes on 41-79 Mines levels."
+      "source": "Tilling soil or Artifact Spots in Winter or dropped by slimes on 41-79 Mines levels."
     },
     {
       "bundles": [
@@ -242,7 +242,7 @@
         "fall"
       ],
       "id": 12,
-      "source": "Foraging during Winter or dropped by coal sprites on 41-79 Mines levels."
+      "source": "Foraging during Winter or dropped by dust sprites on 41-79 Mines levels."
     },
     {
       "bundles": [
@@ -260,7 +260,7 @@
         "winter"
       ],
       "id": 13,
-      "source": "Foraging during Winter (Using a Hoe outside the farm)."
+      "source": "Tilling soil or Artifact Spots in Winter."
     },
     {
       "bundles": [
@@ -347,7 +347,7 @@
         "winter"
       ],
       "id": 17,
-      "source": "Chopping large stumps with an upgraded axe. Also in crates in the Mines"
+      "source": "Chopping Large Stumps or Large Logs with an upgraded Axe. Smashing crates in The Mines"
     },
     {
       "bundles": [
@@ -368,7 +368,7 @@
         "winter"
       ],
       "id": 18,
-      "source": "Found in the desert."
+      "source": "Desert Foraging."
     },
     {
       "bundles": [
@@ -389,7 +389,7 @@
         "winter"
       ],
       "id": 19,
-      "source": "Found in the desert."
+      "source": "Desert Foraging."
     },
     {
       "bundles": [
@@ -410,7 +410,7 @@
         "winter"
       ],
       "id": 20,
-      "source": "In boxes inside the mines or using the hoe on soil spots in the Mines."
+      "source": "The Mines, either smashing boxes or tilling soil."
     },
     {
       "bundles": [
@@ -437,7 +437,7 @@
         "winter"
       ],
       "id": 21,
-      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk."
+      "source": "Foraging in The Mines, Summer or Fall Foraging in the Secret Woods, The Farm Cave (mushroom option), Tapping a Mushroom Tree, Forest Farm Map in Fall."
     },
     {
       "bundles": [
@@ -464,7 +464,7 @@
         "winter"
       ],
       "id": 22,
-      "source": "Can be found in the mines or in the farm cave if you selected the mushroom perk."
+      "source": "The Mines, The Farm Cave (mushroom option), Forest Farm Map Foraging in Fall"
     },
     {
       "bundles": [
@@ -490,7 +490,7 @@
         "winter"
       ],
       "id": 23,
-      "source": "Harvested from maple trees using a Tapper."
+      "source": "Tapped Maple Tree."
     },
     {
       "bundles": [
@@ -516,7 +516,7 @@
         "winter"
       ],
       "id": 24,
-      "source": "Harvested from oak trees using a Tapper."
+      "source": "Tapped Oak Tree."
     },
     {
       "bundles": [
@@ -537,7 +537,7 @@
         "winter"
       ],
       "id": 25,
-      "source": "Harvested from pine trees using a Tapper."
+      "source": "Tapped Pine Tree."
     },
     {
       "bundles": [
@@ -558,7 +558,7 @@
         "winter"
       ],
       "id": 26,
-      "source": "In the farm cave if you selected the mushroom perk"
+      "source": "Foraging in the Secret Woods or Forest Farm Map in Spring, The Farm Cave (mushroom option)"
     },
     {
       "bundles": [
@@ -775,7 +775,7 @@
         "fall"
       ],
       "id": 38,
-      "source": "Crops during Fall."
+      "source": "Crops during Fall. Dropped by Duggys on floors 6-29 of The Mines (3%)"
     },
     {
       "bundles": [
@@ -793,7 +793,7 @@
         "spring"
       ],
       "id": 39,
-      "source": "Crops during Spring."
+      "source": "Gold quality Spring Crops."
     },
     {
       "bundles": [
@@ -811,7 +811,7 @@
         "summer"
       ],
       "id": 40,
-      "source": "Crops during Summer."
+      "source": "Gold quality Summer Crops."
     },
     {
       "bundles": [
@@ -829,7 +829,7 @@
         "fall"
       ],
       "id": 41,
-      "source": "Crops during Fall."
+      "source": "Gold quality Fall Crops."
     },
     {
       "bundles": [
@@ -848,7 +848,7 @@
         "fall"
       ],
       "id": 42,
-      "source": "Crops during Summer and Fall."
+      "source": "Gold quality Summer / Fall Crops."
     },
     {
       "bundles": [
@@ -1016,7 +1016,7 @@
         "winter"
       ],
       "id": 50,
-      "source": "Made from Wool. Requires Loom. Can also be rarely obtained by Recycling Soggy Newspaper."
+      "source": "Made from Wool. Requires Loom. Can also be rarely obtained from Desert Trader or by Recycling Soggy Newspaper."
     },
     {
       "bundles": [
@@ -1058,7 +1058,7 @@
         "winter"
       ],
       "id": 52,
-      "source": "Made from Cow Milk. Requires Cheese Press"
+      "source": "Made from Cow Milk. Requires Cheese Press. Desert Trader."
     },
     {
       "bundles": [
@@ -1078,7 +1078,7 @@
         "fall"
       ],
       "id": 53,
-      "source": "Produced by Bees. Requires Beehive."
+      "source": "Produced by Bees. Requires Beehive. Oasis."
     },
     {
       "bundles": [
@@ -1123,7 +1123,7 @@
         "fall"
       ],
       "id": 55,
-      "source": "Gathered from Apple Trees during Fall."
+      "source": "Gathered from Apple Trees during Fall. The Farm Cave (fruit bat option)."
     },
     {
       "bundles": [
@@ -1141,7 +1141,7 @@
         "spring"
       ],
       "id": 56,
-      "source": "Gathered from Apricot Trees during Spring."
+      "source": "Gathered from Apricot Trees during Spring. The Farm Cave (fruit bat option)."
     },
     {
       "bundles": [
@@ -1163,7 +1163,7 @@
         "winter"
       ],
       "id": 57,
-      "source": "Gathered from Orange Trees during Summer or found in farm cave if fruit perk selected."
+      "source": "Gathered from Orange Trees during Summer. The Farm Cave (fruit bat option)."
     },
     {
       "bundles": [
@@ -1181,7 +1181,7 @@
         "summer"
       ],
       "id": 58,
-      "source": "Gathered from Peach Trees during Summer."
+      "source": "Gathered from Peach Trees during Summer. The Farm Cave (fruit bat option)."
     },
     {
       "bundles": [
@@ -1204,7 +1204,7 @@
         "fall"
       ],
       "id": 59,
-      "source": "Gathered from Pomegranate Trees during Fall."
+      "source": "Gathered from Pomegranate Trees during Fall. The Farm Cave (fruit bat option)."
     },
     {
       "bundles": [
@@ -1226,7 +1226,7 @@
         "winter"
       ],
       "id": 60,
-      "source": "Gathered from Cherry Trees during Spring or found in farm cave if fruit perk selected."
+      "source": "Gathered from Cherry Trees during Spring. The Farm Cave (fruit bat option)."
     },
     {
       "bundles": [
@@ -1245,7 +1245,7 @@
         "summer"
       ],
       "id": 61,
-      "source": "Found in Rivers, Daytime, Spring, and Summer."
+      "source": "Found in Rivers, 6am – 7pm, Spring, and Summer during sunny weather. Found in the Riverlands Farm or in the Wilderness Farm pond during rainy weather."
     },
     {
       "bundles": [
@@ -1264,7 +1264,7 @@
         "fall"
       ],
       "id": 62,
-      "source": "Found in Rivers, Anytime, Spring and Fall. Only when raining."
+      "source": "Found in Rivers and Secret Woods Pond 6am – midnight, Spring and Fall. Only when raining."
     },
     {
       "bundles": [
@@ -1284,7 +1284,7 @@
         "fall"
       ],
       "id": 63,
-      "source": "Found in Rivers, Daytime, Spring, Summer, and Fall. Only when raining."
+      "source": "Found in Rivers, 9am – 2am, Spring, Summer, and Fall. Only when raining."
     },
     {
       "bundles": [
@@ -1303,7 +1303,7 @@
         "winter"
       ],
       "id": 64,
-      "source": "Found in Rivers, Daytime (Early afternoon), Fall and Winter."
+      "source": "Found in Rivers, 6am – 7pm, Fall and Winter."
     },
     {
       "bundles": [
@@ -1324,7 +1324,7 @@
         "winter"
       ],
       "id": 65,
-      "source": "Found in Lakes, Daytime, All Seasons."
+      "source": "Found in the Mountain lake, 6am – 7pm, All Seasons."
     },
     {
       "bundles": [
@@ -1345,7 +1345,7 @@
         "winter"
       ],
       "id": 66,
-      "source": "Found in Lakes, Anytime, All Seasons."
+      "source": "Found in the Mountain lake, Anytime, during Summer, Spring, or Fall. Found in Cindersap Forest pond, Anytime, Spring, Summer, or Fall. Found in Secret Woods or Sewer, Anytime, All Seasons."
     },
     {
       "bundles": [
@@ -1385,7 +1385,7 @@
         "winter"
       ],
       "id": 68,
-      "source": "Found in Lakes, Daytime, Summer and Winter."
+      "source": "Found in the Mountain Lake, 6am – 7pm, Summer and Winter."
     },
     {
       "bundles": [
@@ -1405,7 +1405,7 @@
         "winter"
       ],
       "id": 69,
-      "source": "Found in the Ocean, Daytime, Spring, Fall, and Winter."
+      "source": "Found in the Ocean, 6am – 7pm, Spring, Fall, and Winter."
     },
     {
       "bundles": [
@@ -1424,7 +1424,7 @@
         "winter"
       ],
       "id": 70,
-      "source": "Found in the Ocean, Daytime, Summer and Winter."
+      "source": "Found in the Ocean, 6am – 7pm, Summer and Winter."
     },
     {
       "bundles": [
@@ -1443,7 +1443,7 @@
         "fall"
       ],
       "id": 71,
-      "source": "Found in the Ocean, Daytime, Summer and Fall. Only when raining."
+      "source": "Found in the Ocean, 6am – 7pm, Summer and Fall. Only when raining."
     },
     {
       "bundles": [
@@ -1462,7 +1462,7 @@
         "fall"
       ],
       "id": 72,
-      "source": "Found in the Ocean, Daytime, Summer and Fall."
+      "source": "Found in the Ocean, 6am – 2pm, Summer and Fall."
     },
     {
       "bundles": [
@@ -1481,7 +1481,7 @@
         "winter"
       ],
       "id": 73,
-      "source": "Found in Rivers, Nighttime, Fall and Winter. Only when raining."
+      "source": "Found in Rivers, Lakes and Forest Pond, 12pm – 2am, Fall. Only when raining."
     },
     {
       "bundles": [
@@ -1502,7 +1502,7 @@
         "winter"
       ],
       "id": 74,
-      "source": "Found in Rivers, Nighttime, All Seasons."
+      "source": "Found in Rivers, 6pm – 2am, All Seasons."
     },
     {
       "bundles": [
@@ -1521,7 +1521,7 @@
         "fall"
       ],
       "id": 75,
-      "source": "Found in the Ocean, Nighttime, Spring or Fall. Only when raining."
+      "source": "Found in the Ocean, 4pm – 2am, Spring or Fall. Only when raining."
     },
     {
       "bundles": [
@@ -1542,7 +1542,7 @@
         "winter"
       ],
       "id": 76,
-      "source": "Gathered from Crab Pots."
+      "source": "Caught in Crab Pots (ocean)."
     },
     {
       "bundles": [
@@ -1563,7 +1563,7 @@
         "winter"
       ],
       "id": 77,
-      "source": "Gathered from Crab Pot in rivers during any season."
+      "source": "Caught in Crab Pots (freshwater)."
     },
     {
       "bundles": [
@@ -1585,7 +1585,7 @@
         "winter"
       ],
       "id": 78,
-      "source": "Gathered from Crab Pots. Also drops from killing hermit crabs in The Mines."
+      "source": "Caught in Crab Pots (ocean), drops from Rock Crabs or Lava Crabs in The Mines."
     },
     {
       "bundles": [
@@ -1607,7 +1607,7 @@
         "winter"
       ],
       "id": 79,
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
+      "source": "Caught in Crab Pots (ocean), Beach Foraging."
     },
     {
       "bundles": [
@@ -1629,7 +1629,7 @@
         "winter"
       ],
       "id": 80,
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
+      "source": "Caught in Crab Pots (ocean), Beach Foraging."
     },
     {
       "bundles": [
@@ -1650,7 +1650,7 @@
         "winter"
       ],
       "id": 81,
-      "source": "Gathered from Crab Pots."
+      "source": "Caught in Crab Pots (ocean)."
     },
     {
       "bundles": [
@@ -1671,7 +1671,7 @@
         "winter"
       ],
       "id": 82,
-      "source": "Gathered from Crab Pots."
+      "source": "Caught in Crab Pots (freshwater)."
     },
     {
       "bundles": [
@@ -1692,7 +1692,7 @@
         "winter"
       ],
       "id": 83,
-      "source": "Gathered from Crab Pots."
+      "source": "Caught in Crab Pots (freshwater)."
     },
     {
       "bundles": [
@@ -1714,7 +1714,7 @@
         "winter"
       ],
       "id": 84,
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
+      "source": "Caught in Crab Pots (ocean), Beach Foraging."
     },
     {
       "bundles": [
@@ -1736,7 +1736,7 @@
         "winter"
       ],
       "id": 85,
-      "source": "Gathered from Crab Pots. Can be foraged from areas with sand."
+      "source": "Caught in Crab Pots (ocean), Beach Foraging."
     },
     {
       "bundles": [
@@ -1754,7 +1754,7 @@
         "summer"
       ],
       "id": 86,
-      "source": "Found in the Ocean, Early Afternoon, Summer. May also be purchased from the Traveling Cart."
+      "source": "Found in the Ocean, 12pm – 4pm, Summer during sunny weather. May also be purchased from the Traveling Cart."
     },
     {
       "bundles": [
@@ -1776,7 +1776,7 @@
         "winter"
       ],
       "id": 87,
-      "source": "Found in ponds in The Mines, Anytime, All Seasons. May also be dropped by Ghosts."
+      "source": "Found in ponds in The Mines floors 20 and 60, Anytime, All Seasons. May also be dropped by Ghosts."
     },
     {
       "bundles": [
@@ -1798,7 +1798,7 @@
         "winter"
       ],
       "id": 88,
-      "source": "Found in the pond at Calico Desert. May also be purchased from the Traveling Cart."
+      "source": "Found in the pond in The Desert, 6am – 8pm, All Seasons."
     },
     {
       "bundles": [
@@ -1819,7 +1819,7 @@
         "winter"
       ],
       "id": 89,
-      "source": "Found in the Secret Woods, Anytime, All Seasons. May also be purchased from the Traveling Cart."
+      "source": "Found in the Secret Woods and the Forest Farm, Anytime, All Seasons."
     },
     {
       "bundles": [
@@ -1861,7 +1861,7 @@
         "winter"
       ],
       "id": 91,
-      "source": "Smelting iron ore in the furnace."
+      "source": "Smelting Iron Ore in the Furnace, Crafting the 'Transmute (Fe)' recipe."
     },
     {
       "bundles": [
@@ -1882,7 +1882,7 @@
         "winter"
       ],
       "id": 92,
-      "source": "Smelting gold ore in the furnace."
+      "source": "Smelting Gold Ore in the Furnace, Crafting the 'Transmute (Au)' recipe."
     },
     {
       "bundles": [
@@ -1903,7 +1903,7 @@
         "winter"
       ],
       "id": 93,
-      "source": "Found on all levels of The Mines and in geodes."
+      "source": "Foraging on all floors of The Mines."
     },
     {
       "bundles": [
@@ -1924,7 +1924,7 @@
         "winter"
       ],
       "id": 94,
-      "source": "Found on levels 1 - 39 of The Mines and in geodes."
+      "source": "Foraging on floors 1-39 of The Mines, Geodes, Omni Geodes, drop from Duggies in the Mines (floors 1-29)."
     },
     {
       "bundles": [
@@ -1945,7 +1945,7 @@
         "winter"
       ],
       "id": 95,
-      "source": "Found on levels 40 - 79 of The Mines and in geodes."
+      "source": "Foraging on floors 40-79 of The Mines, Frozen Geodes, Omni Geodes, drop from Dust Sprites in the Mines (floors 40-80)."
     },
     {
       "bundles": [
@@ -1966,7 +1966,7 @@
         "winter"
       ],
       "id": 96,
-      "source": "Found on levels 80 - 120 of The Mines and in magma geodes."
+      "source": "Foraging on floors 80-120 of The Mines, Magma Geodes, Omni Geodes."
     },
     {
       "bundles": [
@@ -2029,7 +2029,7 @@
         "winter"
       ],
       "id": 99,
-      "source": "Dropped by Ghosts in The Mines."
+      "source": "Dropped by Ghosts, Squid Kids, or Metal Heads in The Mines, dropped by Mummies in the Skull Cavern."
     },
     {
       "bundles": [
@@ -2050,7 +2050,7 @@
         "winter"
       ],
       "id": 100,
-      "source": "Dropped by Shadow Brutes in The Mines."
+      "source": "Dropped by Shadow Brutes in The Mines or Serpents in the Skull Cavern."
     },
     {
       "bundles": [
@@ -2068,7 +2068,7 @@
         "summer"
       ],
       "id": 101,
-      "source": "Found in the Secret Woods during Summer."
+      "source": "Summer Foraging in the Secret Woods."
     },
     {
       "bundles": [
@@ -2127,7 +2127,7 @@
         "winter"
       ],
       "id": 104,
-      "source": "Acquired by Cooking. Recipe available from the cooking channel on Summer 21 during odd years."
+      "source": "Cooking (recipe sources: The Queen of Sauce, The Saloon)."
     },
     {
       "bundles": [
@@ -2169,7 +2169,7 @@
         "winter"
       ],
       "id": 106,
-      "source": "Can be foraged on the far right side of the beach, accessible after using 300 wood to fix the bridge."
+      "source": "Beach Foraging, after using 300 wood to fix the bridge to the right side of the beach."
     },
     {
       "bundles": [
@@ -2230,7 +2230,7 @@
         "winter"
       ],
       "id": 109,
-      "source": "Can be found in stones and boxes in The Mines."
+      "source": "Aquamarine Nodes, boxes in The Mines, Fishing Treasure Chests."
     },
     {
       "bundles": [
@@ -2287,7 +2287,7 @@
         "winter"
       ],
       "id": 112,
-      "source": "Can be found in the mountain lake and river during all seasons."
+      "source": "Can be found in the mountain lake and river during all seasons, any time."
     },
     {
       "bundles": [
@@ -2348,7 +2348,7 @@
         "winter"
       ],
       "id": 115,
-      "source": "Purchased from Marnie at The Ranch or created by using the sickle on grass once you have a silo."
+      "source": "Purchase at Marnie's Ranch or Desert Trader, or harvest from Grass or Wheat."
     },
     {
       "bundles": [
