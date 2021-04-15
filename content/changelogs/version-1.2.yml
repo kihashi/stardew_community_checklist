@@ -1,0 +1,6 @@
+name: Version 1.2
+date: "2016-04-14"
+link: Version-1.2
+changes:
+ - "Added an 'All Season' nav item in the Seasons tab. This shows items that are available in all seasons. 
+    Other season tabs now show items that are available in that season and at most 2 others. (#39)"

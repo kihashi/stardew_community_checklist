@@ -1,0 +1,8 @@
+name: Version 2.1
+date: "2021-01-03"
+link: Version-2.1
+changes:
+  - Fixed a bug where only 2 cards per row were displayed instead of 4 on certain viewports (#119)
+  - Fixed alignment of checklist buttons in cards so that they are consistent (#120)
+  - Add page and bundle transition animations (#143)
+  - Add compact view, a smaller, table-like view enabled via the settings page. (#144)
