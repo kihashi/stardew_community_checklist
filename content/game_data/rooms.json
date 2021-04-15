@@ -1,0 +1,34 @@
+{
+  "rooms": [
+    {
+      "id": 0,
+      "name": "Crafts Room",
+      "reward": "Bridge Repair"
+    },
+    {
+      "id": 1,
+      "name": "Pantry",
+      "reward": "Greenhouse"
+    },
+    {
+      "id": 2,
+      "name": "Fish Tank",
+      "reward": "Glittering Boulder Removed"
+    },
+    {
+      "id": 3,
+      "name": "Boiler Room",
+      "reward": "Minecarts Repaired"
+    },
+    {
+      "id": 4,
+      "name": "Bulletin Board",
+      "reward": "Friendship"
+    },
+    {
+      "id": 5,
+      "name": "Vault",
+      "reward": "Bus Repair"
+    }
+  ]
+}
