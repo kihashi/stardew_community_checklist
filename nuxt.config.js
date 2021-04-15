@@ -40,7 +40,8 @@ export default {
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxt/content'
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -48,6 +49,10 @@ export default {
     manifest: {
       lang: 'en'
     }
+  },
+
+  content: {
+
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
