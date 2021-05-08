@@ -17,7 +17,7 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.7",
     "@fortawesome/vue-fontawesome": "^0.0.22",
     "bulma": "^0.6.2",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "mdi-vue": "^0.2.11",
     "node-sass": "^4.13.1",
     "sass-loader": "^6.0.6",
