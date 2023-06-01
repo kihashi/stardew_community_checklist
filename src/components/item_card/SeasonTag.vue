@@ -1,11 +1,11 @@
 <template>
   <span class="tag is-primary">
-     <season-icon :season="season" class="is-small"></season-icon>
+    <season-icon :season="season" class="is-small"></season-icon>
   </span>
 </template>
 
 <script>
-import SeasonIcon from '@/components/SeasonIcon'
+import SeasonIcon from '@/components/SeasonIcon.vue'
 export default {
   name: 'season-tag',
   props: {
@@ -26,6 +26,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

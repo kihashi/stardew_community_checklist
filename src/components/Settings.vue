@@ -2,53 +2,43 @@
   <div>
     <section class="section">
       <div class="container">
-        <h1 class="title">
-          Settings
-        </h1>
+        <h1 class="title">Settings</h1>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="subtitle">
-          Spoilers and Displayed Items
-        </h2>
+        <h2 class="subtitle">Spoilers and Displayed Items</h2>
         <div class="field">
-          <button-checkbox v-model="HideCompleted">
-            Hide Completed
-          </button-checkbox>
+          <button-checkbox v-model="HideCompleted"> Hide Completed </button-checkbox>
           <p class="help">Hides items that have been turned in to the community center.</p>
         </div>
         <div class="field">
-          <button-checkbox v-model="HideSpoilers">
-            Hide Spoilers
-          </button-checkbox>
+          <button-checkbox v-model="HideSpoilers"> Hide Spoilers </button-checkbox>
           <p class="help">Hides things that are considered spoilers, as defined below.</p>
         </div>
-        <label class="label">
-          Spoilers
-        </label>
+        <label class="label"> Spoilers </label>
         <div class="field is-grouped is-grouped-multiline">
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox" v-model="BundleRewardsSpoilers"/>
-                Bundle Rewards
+              <input type="checkbox" v-model="BundleRewardsSpoilers" />
+              Bundle Rewards
             </label>
           </div>
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox" v-model="ItemInfoSpoilers"/>
+              <input type="checkbox" v-model="ItemInfoSpoilers" />
               Item Source Information
             </label>
           </div>
           <div class="control">
             <label class="checkbox">
-            <input type="checkbox" v-model="SeasonsSpoilers"/>
+              <input type="checkbox" v-model="SeasonsSpoilers" />
               Item Seasons
             </label>
           </div>
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox" v-model="SkillsSpoilers"/>
+              <input type="checkbox" v-model="SkillsSpoilers" />
               Item Skills
             </label>
           </div>
@@ -57,36 +47,29 @@
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="subtitle">
-          Compact View
-        </h2>
+        <h2 class="subtitle">Compact View</h2>
         <p class="content">
-          Enable a more compact table view instead of the card view.
-          Note that this may result in horizontal scrolling on smaller (phone-sized) devices.
-          The card view is recommended for those.
+          Enable a more compact table view instead of the card view. Note that this may result in
+          horizontal scrolling on smaller (phone-sized) devices. The card view is recommended for
+          those.
         </p>
         <div class="field">
-          <button-checkbox v-model="CompactView">
-            Use Compact View
-          </button-checkbox>
+          <button-checkbox v-model="CompactView"> Use Compact View </button-checkbox>
           <p class="help">Enables a compact tabular view for item information.</p>
         </div>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="subtitle">
-          Import and Export Saved Data
-        </h2>
+        <h2 class="subtitle">Import and Export Saved Data</h2>
         <p class="content">
-          Use these controls to port data to another device.
-          Copy the data string from the Export field on the source device and paste it into the Import field
-          on the target device.
+          Use these controls to port data to another device. Copy the data string from the Export
+          field on the source device and paste it into the Import field on the target device.
         </p>
         <label class="label">Export</label>
         <div class="field has-addons">
           <div class="control">
-            <input class="input" type="text" placeholder="Saved Data" :value=SavedData readonly />
+            <input class="input" type="text" placeholder="Saved Data" :value="SavedData" readonly />
           </div>
           <div class="control">
             <button class="button is-info" v-clipboard:copy="SavedData">
@@ -99,7 +82,12 @@
         <label class="label">Import</label>
         <div class="field has-addons">
           <div class="control">
-            <input class="input" type="text" placeholder="Enter Saved Data here" v-model="DataToLoad" />
+            <input
+              class="input"
+              type="text"
+              placeholder="Enter Saved Data here"
+              v-model="DataToLoad"
+            />
           </div>
           <div class="control">
             <button class="button is-info" @click="LoadData">
@@ -117,16 +105,16 @@
         <p class="content">Use this button to reset your data and start a new game.</p>
         <div class="field">
           <div class="control">
-            <button class="button is-large is-rounded" :class="DeleteConfirm ? 'is-warning' : 'is-danger'" @click="ConfirmDelete">
+            <button
+              class="button is-large is-rounded"
+              :class="DeleteConfirm ? 'is-warning' : 'is-danger'"
+              @click="ConfirmDelete"
+            >
               <span class="icon">
                 <font-awesome-icon icon="trash"></font-awesome-icon>
               </span>
-              <span v-if="DeleteConfirm">
-                Are You Sure?
-              </span>
-              <span v-else>
-                Reset Data
-              </span>
+              <span v-if="DeleteConfirm"> Are You Sure? </span>
+              <span v-else> Reset Data </span>
             </button>
           </div>
         </div>
@@ -136,7 +124,7 @@
 </template>
 
 <script>
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
 import { faCopy, faTrash, faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid'
 import 'mdi-vue/ContentCopyIcon'
@@ -159,58 +147,58 @@ export default {
   },
   computed: {
     HideCompleted: {
-      get () {
+      get() {
         return this.$store.state.HideCompleted
       },
-      set (newValue) {
+      set(newValue) {
         this.$store.commit('toggleCompleted')
       }
     },
     HideSpoilers: {
-      get () {
+      get() {
         return this.$store.state.HideSpoilers
       },
-      set (newValue) {
+      set(newValue) {
         this.$store.commit('toggleSpoilers')
       }
     },
     BundleRewardsSpoilers: {
-      get () {
+      get() {
         return this.$store.state.BundleRewardsSpoilers
       },
-      set (newValue) {
+      set(newValue) {
         this.$store.commit('toggleBundleRewards')
       }
     },
     ItemInfoSpoilers: {
-      get () {
+      get() {
         return this.$store.state.ItemInfoSpoilers
       },
-      set (newValue) {
+      set(newValue) {
         this.$store.commit('toggleItemInfo')
       }
     },
     SeasonsSpoilers: {
-      get () {
+      get() {
         return this.$store.state.SeasonsSpoilers
       },
-      set (newValue) {
+      set(newValue) {
         this.$store.commit('toggleSeasons')
       }
     },
     SkillsSpoilers: {
-      get () {
+      get() {
         return this.$store.state.SkillsSpoilers
       },
-      set (newValue) {
+      set(newValue) {
         this.$store.commit('toggleSkills')
       }
     },
     CompactView: {
-      get () {
+      get() {
         return this.$store.state.CompactView
       },
-      set (newValue) {
+      set(newValue) {
         this.$store.commit('toggleCompactView')
       }
     },
@@ -238,6 +226,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

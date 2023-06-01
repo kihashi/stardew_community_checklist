@@ -1,11 +1,11 @@
 <template>
   <span class="tag is-info">
-     <skill-icon :skill="skill" class="is-small"/>
+    <skill-icon :skill="skill" class="is-small" />
   </span>
 </template>
 
 <script>
-import SkillIcon from '@/components/SkillIcon'
+import SkillIcon from '@/components/SkillIcon.vue'
 export default {
   name: 'skill-tag',
   props: {
@@ -26,6 +26,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

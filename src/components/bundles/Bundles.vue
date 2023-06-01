@@ -2,10 +2,7 @@
   <div>
     <BundleNav />
     <section class="section">
-      <transition
-        name="fade"
-        mode="out-in"
-      >
+      <transition name="fade" mode="out-in">
         <router-view :key="bundle"></router-view>
       </transition>
     </section>
@@ -15,7 +12,7 @@
 <script>
 import BundleNav from '@/components/bundles/BundleNav.vue'
 export default {
-  components: {BundleNav},
+  components: { BundleNav },
   name: 'bundles',
   computed: {
     bundle: function () {
@@ -26,13 +23,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.5s ease;
 }
 
-.fade-enter, .fade-leave-active {
+.fade-enter,
+.fade-leave-active {
   opacity: 0;
 }
-
 </style>

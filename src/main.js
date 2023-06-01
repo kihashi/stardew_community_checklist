@@ -1,21 +1,16 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import VueClipboard from 'vue-clipboard2'
-import App from './App'
+import '../node_modules/bulma/bulma.sass'
+
+import { createApp } from 'vue'
+
+import App from './App.vue'
 import router from './router'
-import store from './store'
+// import store from './store'
+import VueClipboard from 'vue-clipboard2'
 
-require('./assets/sass/main.scss')
+const app = createApp(App)
 
-Vue.config.productionTip = false
-Vue.use(VueClipboard)
+app.use(router)
+app.use(VueClipboard)
+// app.use(store)
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  store,
-  components: { App },
-  template: '<App/>'
-})
+app.mount('#app')

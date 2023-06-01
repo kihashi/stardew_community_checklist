@@ -1,16 +1,20 @@
 <template>
   <div class="field has-addons">
     <div class="control is-expanded">
-      <a class="button is-rounded is-fullwidth" :class="ButtonClass"
-        @click="ToggleItemInBundle">
+      <a class="button is-rounded is-fullwidth" :class="ButtonClass" @click="ToggleItemInBundle">
         <span class="icon">
-          <font-awesome-icon :icon="ItemInBundle ? InBundleIcon : NotInBundleIcon"></font-awesome-icon>
+          <font-awesome-icon
+            :icon="ItemInBundle ? InBundleIcon : NotInBundleIcon"
+          ></font-awesome-icon>
         </span>
-        <span class="is-size-7">{{bundleItem.bundle.name}}{{numberInBundle}}</span>
+        <span class="is-size-7">{{ bundleItem.bundle.name }}{{ numberInBundle }}</span>
       </a>
     </div>
     <div class="control">
-      <router-link class="button is-rounded is-light" :to="{ name: 'bundle-items', params: { id: bundleItem.bundle.id } }">
+      <router-link
+        class="button is-rounded is-light"
+        :to="{ name: 'bundle-items', params: { id: bundleItem.bundle.id } }"
+      >
         <span class="icon is-small">
           <font-awesome-icon icon="link"></font-awesome-icon>
         </span>
@@ -20,7 +24,7 @@
 </template>
 
 <script>
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCheckSquare, faSquare } from '@fortawesome/fontawesome-free-regular'
 import { faLink } from '@fortawesome/fontawesome-free-solid'
 export default {
@@ -39,13 +43,13 @@ export default {
     ItemInBundle: function () {
       return this.$store.getters.IsBundleItemRedeemed(this.bundleItem)
     },
-    InBundleIcon () {
+    InBundleIcon() {
       return faCheckSquare
     },
-    NotInBundleIcon () {
+    NotInBundleIcon() {
       return faSquare
     },
-    ButtonClass () {
+    ButtonClass() {
       if (this.ItemInBundle) {
         return 'is-success'
       } else if (this.IsBundleComplete(this.bundleItem.bundle)) {
@@ -54,25 +58,23 @@ export default {
         return 'is-danger'
       }
     },
-    numberInBundle () {
+    numberInBundle() {
       return this.bundleItem.count > 1 ? ` (${this.bundleItem.count})` : ''
     }
   },
   methods: {
-    ToggleItemInBundle () {
+    ToggleItemInBundle() {
       if (!this.ItemInBundle) {
         this.$store.commit('RedeemItem', this.bundleItem)
       } else {
         this.$store.commit('UndoRedeemItem', this.bundleItem)
       }
     },
-    IsBundleComplete (bundle) {
+    IsBundleComplete(bundle) {
       return this.$store.getters.IsBundleComplete(bundle)
     }
   }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

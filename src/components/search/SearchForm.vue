@@ -1,10 +1,13 @@
 <template>
   <div class="columns">
     <div class="column">
-      <item-search v-model.lazy="value.name_filter" v-on:input="$emit('input', $event.target.value)" />
+      <item-search
+        v-model.lazy="value.name_filter"
+        v-on:input="$emit('input', $event.target.value)"
+      />
     </div>
     <div class="column">
-      <season-filter :value="value.season_filter" v-on:input="UpdateSeasons"/>
+      <season-filter :value="value.season_filter" v-on:input="UpdateSeasons" />
     </div>
     <div class="column">
       <skill-filter :value="value.skill_filter" v-on:input="UpdateSkills" />
@@ -20,7 +23,7 @@ export default {
   name: 'search-form',
   props: {
     value: {
-      default () {
+      default() {
         return {
           name_filter: '',
           season_filter: {
@@ -36,11 +39,11 @@ export default {
     }
   },
   methods: {
-    UpdateSeasons (val) {
+    UpdateSeasons(val) {
       this.value.season_filter = val
       this.$emit('input', this.value)
     },
-    UpdateSkills (val) {
+    UpdateSkills(val) {
       this.value.skill_filter = val
       this.$emit('input', this.value)
     }
@@ -50,10 +53,7 @@ export default {
     SeasonFilter,
     SkillFilter
   }
-
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

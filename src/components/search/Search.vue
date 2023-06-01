@@ -1,21 +1,25 @@
 <template>
-<section class="section">
-  <search-form v-model="search"></search-form>
-  <section class="container">
-    <div class="columns is-multiline">
-      <item-table v-if="CompactView" :items="filtered_items" />
-      <div v-else class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex" v-for="item in filtered_items" :key="item.id">
-        <item-card :item="item"></item-card>
+  <section class="section">
+    <search-form v-model="search"></search-form>
+    <section class="container">
+      <div class="columns is-multiline">
+        <item-table v-if="CompactView" :items="filtered_items" />
+        <div
+          v-else
+          class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex"
+          v-for="item in filtered_items"
+          :key="item.id"
+        >
+          <item-card :item="item"></item-card>
+        </div>
       </div>
-    </div>
+    </section>
   </section>
-
-</section>
 </template>
 
 <script>
-import SearchForm from '@/components/search/SearchForm'
-import ItemCard from '@/components/item_card/ItemCard'
+import SearchForm from '@/components/search/SearchForm.vue'
+import ItemCard from '@/components/item_card/ItemCard.vue'
 import ItemTable from '@/components/item_table/ItemTable.vue'
 import _ from 'lodash'
 export default {
@@ -25,7 +29,7 @@ export default {
     ItemCard,
     ItemTable
   },
-  data () {
+  data() {
     return {
       search: {
         name_filter: '',
@@ -41,24 +45,35 @@ export default {
     }
   },
   computed: {
-    filtered_items () {
+    filtered_items() {
       var self = this
       return _.orderBy(
         self.$store.state.items
-          .filter(item => !(this.$store.state.HideCompleted && this.isItemComplete(item)))
-          .filter(item => item.name.toLowerCase().indexOf(self.search.name_filter.toLowerCase()) !== -1)
-          .filter(item => this.FilterSeasons(item.seasons.map(ssn => ssn.id), this.search.season_filter))
-          .filter(item => this.FilterSkills(item.skills.map(skl => skl.id), this.search.skill_filter))
-        ,
+          .filter((item) => !(this.$store.state.HideCompleted && this.isItemComplete(item)))
+          .filter(
+            (item) => item.name.toLowerCase().indexOf(self.search.name_filter.toLowerCase()) !== -1
+          )
+          .filter((item) =>
+            this.FilterSeasons(
+              item.seasons.map((ssn) => ssn.id),
+              this.search.season_filter
+            )
+          )
+          .filter((item) =>
+            this.FilterSkills(
+              item.skills.map((skl) => skl.id),
+              this.search.skill_filter
+            )
+          ),
         'name'
       )
     },
-    CompactView () {
+    CompactView() {
       return this.$store.state.CompactView
     }
   },
   methods: {
-    FilterSeasons (itemSeasons, seasonFilter) {
+    FilterSeasons(itemSeasons, seasonFilter) {
       if (seasonFilter.season_exclusive) {
         if (itemSeasons.length !== seasonFilter.selected_seasons.length) {
           return false
@@ -68,7 +83,9 @@ export default {
           a.sort()
           b.sort()
           for (var i = 0; i < a.length; ++i) {
-            if (a[i] !== b[i]) { return false }
+            if (a[i] !== b[i]) {
+              return false
+            }
           }
           return true
         }
@@ -81,7 +98,7 @@ export default {
         return false
       }
     },
-    FilterSkills (itemSkills, skillFilter) {
+    FilterSkills(itemSkills, skillFilter) {
       if (skillFilter.skill_exclusive) {
         if (itemSkills.length !== skillFilter.selected_skills.length) {
           return false
@@ -91,7 +108,9 @@ export default {
           a.sort()
           b.sort()
           for (var i = 0; i < a.length; ++i) {
-            if (a[i] !== b[i]) { return false }
+            if (a[i] !== b[i]) {
+              return false
+            }
           }
           return true
         }
@@ -108,10 +127,7 @@ export default {
       return item.bundles.every(this.$store.getters.IsBundleItemRedeemed)
     }
   }
-
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

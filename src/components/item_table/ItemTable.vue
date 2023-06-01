@@ -2,21 +2,11 @@
   <table class="table is-bordered is-striped is-narrow is-fullwidth">
     <thead>
       <tr>
-        <th>
-          Item
-        </th>
-        <th>
-          Source
-        </th>
-        <th v-if="showSeasonList">
-          Seasons
-        </th>
-        <th v-if="showSkillList">
-          Skills
-        </th>
-        <th>
-          Bundles
-        </th>
+        <th>Item</th>
+        <th>Source</th>
+        <th v-if="showSeasonList">Seasons</th>
+        <th v-if="showSkillList">Skills</th>
+        <th>Bundles</th>
       </tr>
     </thead>
     <tbody>
@@ -33,10 +23,8 @@ export default {
   components: {
     ItemTableRow
   },
-  data () {
-    return {
-
-    }
+  data() {
+    return {}
   },
   props: {
     items: {
@@ -56,6 +44,6 @@ export default {
 
 <style lang="scss" scoped>
 table {
-  table-layout: fixed
+  table-layout: fixed;
 }
 </style>

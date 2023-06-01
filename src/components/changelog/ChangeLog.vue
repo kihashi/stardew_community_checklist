@@ -1,10 +1,8 @@
 <template>
   <section class="section">
     <section class="container">
-      <h1 class="title">
-        Changelog
-      </h1>
-      <version v-for="version in changelog.versions" :key="version.date" :version="version"/>
+      <h1 class="title">Changelog</h1>
+      <version v-for="version in changelog.versions" :key="version.date" :version="version" />
     </section>
   </section>
 </template>
@@ -17,7 +15,7 @@ export default {
   components: {
     Version
   },
-  data () {
+  data() {
     return {
       changelog: ChangeLogJson
     }
@@ -25,6 +23,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,14 +1,14 @@
 <template>
-  <span class='tags has-addons'>
-    <season-tag v-for='season in seasons' :key='season.order' :season='season'/>
+  <span class="tags has-addons">
+    <season-tag v-for="season in seasons" :key="season.order" :season="season" />
   </span>
 </template>
 
 <script>
-import SeasonTag from './SeasonTag'
+import SeasonTag from './SeasonTag.vue'
 
 export default {
-  components: {SeasonTag},
+  components: { SeasonTag },
   name: 'season-list',
   props: {
     seasons: {

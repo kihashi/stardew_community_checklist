@@ -6,7 +6,12 @@
     <div class="field-body">
       <div class="field">
         <div class="control">
-            <input class="input" placeholder="Item Name" v-bind:value="value" v-on:input="$emit('input', $event.target.value)"/>
+          <input
+            class="input"
+            placeholder="Item Name"
+            v-bind:value="value"
+            v-on:input="$emit('input', $event.target.value)"
+          />
         </div>
       </div>
     </div>
@@ -18,15 +23,12 @@ export default {
   name: 'item-search',
   props: {
     value: {
-      default () {
+      default() {
         return ''
       }
     }
   }
-
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
