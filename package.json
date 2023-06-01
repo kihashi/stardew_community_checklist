@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext .js,.vue"
+    "lint": "eslint . --ext .js,.vue,.ts --ignore-path .gitignore",
+    "lint:fix": "lint --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
@@ -26,21 +27,17 @@
     "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
     "@types/jsdom": "^21.1.1",
     "@types/node": "^18.16.8",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
     "@vue/tsconfig": "^0.4.0",
     "autoprefixer": "^7.1.2",
-    "eslint": "^4.18.2",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.0.0",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
     "postcss-import": "^11.0.0",
     "postcss-url": "^7.2.1",
     "typescript": "^5.1.3",
