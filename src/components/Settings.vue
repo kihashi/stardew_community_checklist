@@ -72,7 +72,8 @@
             <input class="input" type="text" placeholder="Saved Data" :value="SavedData" readonly />
           </div>
           <div class="control">
-            <button class="button is-info" v-clipboard:copy="SavedData">
+            <!-- TODO: Clipboard <button class="button is-info" v-clipboard:copy="SavedData"> -->
+            <button class="button is-info">
               <span class="icon">
                 <font-awesome-icon icon="copy"></font-awesome-icon>
               </span>
@@ -127,6 +128,7 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
 import { faCopy, faTrash, faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid'
+
 export default {
   name: 'Settings',
   components: {
