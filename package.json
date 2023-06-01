@@ -26,8 +26,11 @@
     "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
+    "@types/jsdom": "^21.1.1",
+    "@types/node": "^18.16.8",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vue/tsconfig": "^0.4.0",
     "autoprefixer": "^7.1.2",
     "eslint": "^4.18.2",
     "eslint-config-standard": "^10.2.1",
@@ -40,6 +43,7 @@
     "eslint-plugin-vue": "^4.0.0",
     "postcss-import": "^11.0.0",
     "postcss-url": "^7.2.1",
+    "typescript": "^5.1.3",
     "vite": "^4.3.5"
   },
   "engines": {
