@@ -20,8 +20,8 @@
     "mdi-vue": "^3.0.13",
     "sass": "^1.62.1",
     "vue": "^3.3.4",
-    "vue-clipboard2": "^0.3.0",
     "vue-router": "^4.2.2",
+    "vue3-clipboard": "^1.0.0",
     "vuex": "^3.0.1",
     "vuex-persistedstate": "^2.5.4"
   },
