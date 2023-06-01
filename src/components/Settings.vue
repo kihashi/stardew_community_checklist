@@ -127,9 +127,6 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
 import { faCopy, faTrash, faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid'
-import 'mdi-vue/ContentCopyIcon'
-import 'mdi-vue/UploadIcon'
-import 'mdi-vue/DeleteIcon'
 export default {
   name: 'Settings',
   components: {

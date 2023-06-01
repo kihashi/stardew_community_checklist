@@ -17,7 +17,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "bulma": "^0.9.4",
     "lodash": "^4.17.19",
-    "mdi-vue": "^0.2.11",
+    "mdi-vue": "^3.0.13",
     "sass": "^1.62.1",
     "vue": "^3.3.4",
     "vue-clipboard2": "^0.3.0",

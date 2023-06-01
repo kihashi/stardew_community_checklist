@@ -1,17 +1,13 @@
 <template>
   <span class="icon" v-bind:data-season="season.id">
-    <spring-icon v-if="season.id === 'spring'" />
-    <summer-icon v-if="season.id === 'summer'" />
-    <fall-icon v-if="season.id === 'fall'" />
-    <winter-icon v-if="season.id === 'winter'" />
+    <mdicon name="flower" v-if="season.id === 'spring'" />
+    <mdicon name="sun" v-if="season.id === 'summer'" />
+    <mdicon name="leaf" v-if="season.id === 'fall'" />
+    <mdicon name="snowflake" v-if="season.id === 'winter'" />
   </span>
 </template>
 
 <script>
-import SpringIcon from 'mdi-vue/FlowerIcon'
-import SummerIcon from 'mdi-vue/WhiteBalanceSunnyIcon'
-import FallIcon from 'mdi-vue/LeafIcon'
-import WinterIcon from 'mdi-vue/SnowflakeIcon'
 export default {
   name: 'season-icon',
   props: {
@@ -25,12 +21,6 @@ export default {
         }
       }
     }
-  },
-  components: {
-    SpringIcon,
-    SummerIcon,
-    FallIcon,
-    WinterIcon
   }
 }
 </script>

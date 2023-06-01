@@ -19,7 +19,7 @@
       <p class="card-footer-item">
         <a :href="release_url" class="button">
           <span class="icon">
-            <github-box />
+            <font-awesome-icon :icon="gh_icon" />
           </span>
           <span>Release</span>
         </a>
@@ -29,12 +29,10 @@
 </template>
 
 <script>
-import GithubBox from 'mdi-vue/GithubBoxIcon'
+import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
+
 export default {
   name: 'version',
-  components: {
-    GithubBox
-  },
   props: {
     version: {
       type: Object,
@@ -53,6 +51,9 @@ export default {
       return (
         'https://github.com/kihashi/stardew_community_checklist/releases/tag/' + this.version.link
       )
+    },
+    gh_icon() {
+      return faGithub
     }
   }
 }
