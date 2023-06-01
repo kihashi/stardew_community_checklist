@@ -1,12 +1,14 @@
+import { createRouter, createWebHistory } from 'vue-router'
+
 import Welcome from '@/components/Welcome.vue'
 import Bundles from '@/components/bundles/Bundles.vue'
 import BundleItems from '@/components/bundles/BundleItems.vue'
 import Search from '@/components/search/Search.vue'
 import Settings from '@/components/Settings.vue'
 import Changelog from '@/components/changelog/Changelog.vue'
-import { createRouter } from 'vue-router'
 
 const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/welcome',
