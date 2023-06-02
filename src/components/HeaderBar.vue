@@ -1,3 +1,12 @@
+<script setup>
+import router from '@/router'
+import { ref } from 'vue'
+
+const menuActive = ref(false)
+
+const named_routes = router.options.routes.filter((route) => route.name)
+</script>
+
 <template>
   <section class="hero is-info is-bold">
     <nav class="navbar">
@@ -11,21 +20,21 @@
           </a>
           <div
             class="navbar-burger"
-            v-bind:class="{ 'is-active': menu_active }"
-            @click="menu_active = !menu_active"
+            v-bind:class="{ 'is-active': menuActive }"
+            @click="menuActive = !menuActive"
           >
             <span></span>
             <span></span>
             <span></span>
           </div>
         </div>
-        <div class="navbar-menu" v-bind:class="{ 'is-active': menu_active }">
+        <div class="navbar-menu" v-bind:class="{ 'is-active': menuActive }">
           <div class="navbar-end">
             <router-link
               v-for="route in named_routes"
               :key="route.order"
               class="navbar-item"
-              @click.native="menu_active = false"
+              @click="menuActive = false"
               :to="route"
             >
               {{ route.name }}
@@ -36,21 +45,5 @@
     </nav>
   </section>
 </template>
-
-<script>
-export default {
-  name: 'header-bar',
-  data: function () {
-    return {
-      menu_active: false
-    }
-  },
-  computed: {
-    named_routes: function () {
-      return this.$router.options.routes.filter((route) => route.hasOwnProperty('name'))
-    }
-  }
-}
-</script>
 
 <style scoped></style>

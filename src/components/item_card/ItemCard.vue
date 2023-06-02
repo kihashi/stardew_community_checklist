@@ -1,5 +1,44 @@
+<script setup lang="ts">
+import SeasonList from './SeasonList.vue'
+import SkillList from './SkillList.vue'
+import BundleButton from './BundleButton.vue'
+import { useGeneralStore, type Item } from '@/store'
+
+const store = useGeneralStore()
+
+const showItemDesc = !(store.HideSpoilers && store.ItemInfoSpoilers)
+const showSeasonList = !(store.HideSpoilers && store.SeasonsSpoilers)
+const showSkillList = !(store.HideSpoilers && store.SkillsSpoilers)
+
+interface Props {
+  item?: Item
+}
+
+withDefaults(defineProps<Props>(), {
+  item: () => ({
+    id: 22,
+    name: 'Purple Mushroom',
+    source: 'Can be found in the mines or in the farm cave if you selected the mushroom perk.',
+    seasons: ['spring', 'summer', 'fall', 'winter'],
+    skills: ['mining', 'foraging'],
+    bundles: [
+      {
+        count: 1,
+        bundle_id: 5,
+        id: 24
+      },
+      {
+        count: 1,
+        bundle_id: 23,
+        id: 25
+      }
+    ]
+  })
+})
+</script>
+
 <template>
-  <div class="card">
+  <div class="card" v-if="item">
     <header class="card-header">
       <p class="card-header-title">
         {{ item.name }}
@@ -11,7 +50,7 @@
       </div>
       <div class="content">
         <bundle-button
-          v-for="bundleItem in item.bundles"
+          v-for="bundleItem in store.getBundleItemsForItem(item.id)"
           :key="bundleItem.id"
           :bundle-item="bundleItem"
           :item="item"
@@ -28,101 +67,6 @@
     </footer>
   </div>
 </template>
-
-<script>
-import SeasonList from './SeasonList.vue'
-import SkillList from './SkillList.vue'
-import BundleButton from './BundleButton.vue'
-
-export default {
-  components: {
-    BundleButton,
-    SkillList,
-    SeasonList
-  },
-  name: 'item-card',
-  computed: {
-    showItemDesc: function () {
-      return !(this.$store.state.HideSpoilers && this.$store.state.ItemInfoSpoilers)
-    },
-    showSeasonList: function () {
-      return !(this.$store.state.HideSpoilers && this.$store.state.SeasonsSpoilers)
-    },
-    showSkillList: function () {
-      return !(this.$store.state.HideSpoilers && this.$store.state.SkillsSpoilers)
-    }
-  },
-  props: {
-    item: {
-      type: Object,
-      default: function () {
-        return {
-          id: 22,
-          name: 'Purple Mushroom',
-          source:
-            'Can be found in the mines or in the farm cave if you selected the mushroom perk.',
-          seasons: [
-            {
-              id: 'spring',
-              order: 0,
-              name: 'Spring'
-            },
-            {
-              id: 'summer',
-              order: 1,
-              name: 'Summer'
-            },
-            {
-              id: 'fall',
-              order: 2,
-              name: 'Fall'
-            },
-            {
-              id: 'winter',
-              order: 3,
-              name: 'Winter'
-            }
-          ],
-          skills: [
-            {
-              id: 'mining',
-              order: 1,
-              name: 'Mining'
-            },
-            {
-              id: 'foraging',
-              order: 2,
-              name: 'Foraging'
-            }
-          ],
-          bundles: [
-            {
-              count: 1,
-              bundle: {
-                id: 5,
-                name: 'Exotic Foraging Bundle',
-                room: 0,
-                reward: "Autumn's Bounty (5)"
-              },
-              id: 24
-            },
-            {
-              count: 1,
-              bundle: {
-                id: 23,
-                name: 'Field Research Bundle',
-                room: 4,
-                reward: 'Recycling Machine'
-              },
-              id: 25
-            }
-          ]
-        }
-      }
-    }
-  }
-}
-</script>
 
 <style scoped>
 .card {

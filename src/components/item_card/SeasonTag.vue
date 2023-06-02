@@ -10,13 +10,10 @@ export default {
   name: 'season-tag',
   props: {
     season: {
-      type: Object,
+      type: String,
       required: true,
       default: function () {
-        return {
-          id: 'spring',
-          name: 'Spring'
-        }
+        return 'spring'
       }
     }
   },

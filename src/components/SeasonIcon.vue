@@ -1,9 +1,9 @@
 <template>
   <span class="icon" v-bind:data-season="season.id">
-    <mdicon name="flower" v-if="season.id === 'spring'" />
-    <mdicon name="sun" v-if="season.id === 'summer'" />
-    <mdicon name="leaf" v-if="season.id === 'fall'" />
-    <mdicon name="snowflake" v-if="season.id === 'winter'" />
+    <mdicon name="flower" v-if="season === 'spring'" />
+    <mdicon name="white-balance-sunny" v-if="season === 'summer'" />
+    <mdicon name="leaf" v-if="season === 'fall'" />
+    <mdicon name="snowflake" v-if="season === 'winter'" />
   </span>
 </template>
 
@@ -12,13 +12,10 @@ export default {
   name: 'season-icon',
   props: {
     season: {
-      type: Object,
+      type: String,
       required: true,
       default: function () {
-        return {
-          id: 'spring',
-          name: 'Spring'
-        }
+        return 'spring'
       }
     }
   }

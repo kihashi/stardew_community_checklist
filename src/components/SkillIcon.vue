@@ -1,10 +1,10 @@
 <template>
   <span class="icon" v-bind:data-skill="skill.id">
-    <mdicon name="cow" v-if="skill.id === 'farming'" />
-    <mdicon name="diamond" v-if="skill.id === 'mining'" />
-    <mdicon name="mushroom" v-if="skill.id === 'foraging'" />
-    <mdicon name="fish" v-if="skill.id === 'fishing'" />
-    <mdicon name="sword" v-if="skill.id === 'combat'" />
+    <mdicon name="cow" v-if="skill === 'farming'" />
+    <mdicon name="diamond" v-if="skill === 'mining'" />
+    <mdicon name="mushroom" v-if="skill === 'foraging'" />
+    <mdicon name="fish" v-if="skill === 'fishing'" />
+    <mdicon name="sword" v-if="skill === 'combat'" />
   </span>
 </template>
 
@@ -13,13 +13,10 @@ export default {
   name: 'skill-icon',
   props: {
     skill: {
-      type: Object,
+      type: String,
       required: true,
       default: function () {
-        return {
-          id: 'farming',
-          name: 'Farming'
-        }
+        return 'farming'
       }
     }
   }
@@ -35,7 +32,7 @@ export default {
   content: attr(data-skill);
   display: block;
   position: absolute;
-  bottom: -1.85rem;
+  bottom: -0.85rem;
   border-radius: 3px;
   font-size: 0.75rem;
   background-color: #209cee;

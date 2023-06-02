@@ -133,10 +133,7 @@ export default {
   name: 'Settings',
   components: {
     ButtonCheckbox,
-    FontAwesomeIcon,
-    faCopy,
-    faCloudUploadAlt,
-    faTrash
+    FontAwesomeIcon
   },
   data: function () {
     return {

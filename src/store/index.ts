@@ -19,12 +19,12 @@ const skills = SkillJson.skills
 const rooms = RoomJson.rooms
 const seasons = SeasonJson.seasons
 
-type Bundle = (typeof bundles)[0]
-type Item = (typeof items)[0]
-type BundleItem = (typeof bundleItems)[0]
-type Room = (typeof rooms)[0]
-type Season = (typeof seasons)[0]
-type Skill = (typeof skills)[0]
+export type Bundle = (typeof bundles)[0]
+export type Item = (typeof items)[0]
+export type BundleItem = (typeof bundleItems)[0]
+export type Room = (typeof rooms)[0]
+export type Season = (typeof seasons)[0]
+export type Skill = (typeof skills)[0]
 
 export const useGeneralStore = defineStore('general', {
   state: () => ({
@@ -47,18 +47,31 @@ export const useGeneralStore = defineStore('general', {
     getItemById:
       (state) =>
       (itemId: number): Item | undefined =>
-        state.items.find((item) => item.id === itemId),
+        getById(state.items, itemId),
     getBundleById:
       (state) =>
-      (bundleId: number): Bundle | undefined => {
-        return getById(state.bundles, bundleId)
-      },
+      (bundleId: number): Bundle | undefined =>
+        getById(state.bundles, bundleId),
     getRoomById(state) {
-      return (roomId: number): Room[] => state.rooms.filter((room) => room.id === roomId)
+      return (roomId: number): Room | undefined => getById(state.rooms, roomId)
+    },
+    getBundleItemsForItem(state) {
+      return (itemId: number): BundleItem[] =>
+        state.bundleItems.filter((bundleItem) => bundleItem.item_id === itemId)
     },
     getBundleItemsInBundle(state) {
       return (bundleId: number): BundleItem[] =>
         state.bundleItems.filter((bundleItem) => bundleItem.bundle_id === bundleId)
+    },
+    getBundleItemsInRoom() {
+      return (roomId: number): BundleItem[] =>
+        this.getBundlesInRoom(roomId).flatMap((bundle) => this.getBundleItemsInBundle(bundle.id))
+    },
+    getTotalRoomRequired() {
+      return (roomId: number): number =>
+        this.getBundlesInRoom(roomId)
+          .flatMap((bundle) => bundle.items_required)
+          .reduce((room_required, bundle_required) => room_required + bundle_required, 0)
     },
     getBundlesInRoom(state) {
       return (roomId: number): Bundle[] => state.bundles.filter((bundle) => bundle.room === roomId)
@@ -73,11 +86,18 @@ export const useGeneralStore = defineStore('general', {
     },
     getNumberOfBundleItemsStoredInBundle(state) {
       return (bundleId: number): number => {
-        return state.StoredBundleItemIds.filter((id) =>
-          this.getBundleItemsInBundle(bundleId)
-            .map((item) => item.id)
-            .includes(id)
-        ).length
+        // FIXME: Need to find a better way of handling undefined here instead of just assigning an arbitrary value
+        // Shouldn't even be undefined, but just in case
+        const bundleItemsRequired = this.getBundleById(bundleId)?.items_required ?? 100
+
+        return Math.min(
+          state.StoredBundleItemIds.filter((id) =>
+            this.getBundleItemsInBundle(bundleId)
+              .map((item) => item.id)
+              .includes(id)
+          ).length,
+          bundleItemsRequired
+        )
       }
     },
     getNumberOfRoomItemsStored() {
@@ -93,7 +113,7 @@ export const useGeneralStore = defineStore('general', {
       return (bundleId: number): boolean => {
         return (
           this.getNumberOfBundleItemsStoredInBundle(bundleId) >=
-          this.getBundleItemsInBundle(bundleId).length
+          (this.getBundleById(bundleId)?.items_required ?? 0)
         )
       }
     },
@@ -113,7 +133,7 @@ export const useGeneralStore = defineStore('general', {
       this.StoredBundleItemIds.push(bundleItemId)
     },
     unstoreItem(bundleItemId: number) {
-      this.StoredBundleItemIds.filter((item) => item !== bundleItemId)
+      this.StoredBundleItemIds = this.StoredBundleItemIds.filter((item) => item !== bundleItemId)
     },
     toggleSpoilers() {
       this.HideSpoilers = !this.HideSpoilers
@@ -138,32 +158,32 @@ export const useGeneralStore = defineStore('general', {
     },
     resetData() {
       this.StoredBundleItemIds = []
-    },
-    loadV1State(v1state: { item: number }[][]) {
-      for (let i = 0; i < v1state.length; i++) {
-        for (let j = 0; j < v1state[i].length; j++) {
-          let itemId = v1state[i][j].item
-          // Patch for duplicate oak
-          if (itemId === 116) {
-            itemId = 24
-          }
-          // Patch for parsnip
-          if (itemId === 26 && i === 6) {
-            itemId = 27
-          }
-
-          const bundleItems = this.getOpenBundleItems(i, itemId)
-
-          if (bundleItems.length > 0) {
-            this.storeItem(bundleItems[0])
-          } else {
-            console.log(
-              `Tried to redeem bundle ${i} item ${itemId}, but no open bundle items were found`
-            )
-          }
-        }
-      }
     }
+    // loadV1State(v1state: { item: number }[][]) {
+    //   for (let i = 0; i < v1state.length; i++) {
+    //     for (let j = 0; j < v1state[i].length; j++) {
+    //       let itemId = v1state[i][j].item
+    //       // Patch for duplicate oak
+    //       if (itemId === 116) {
+    //         itemId = 24
+    //       }
+    //       // Patch for parsnip
+    //       if (itemId === 26 && i === 6) {
+    //         itemId = 27
+    //       }
+
+    //       const bundleItems = this.getOpenBundleItems(i, itemId)
+
+    //       if (bundleItems.length > 0) {
+    //         this.storeItem(bundleItems[0])
+    //       } else {
+    //         console.log(
+    //           `Tried to redeem bundle ${i} item ${itemId}, but no open bundle items were found`
+    //         )
+    //       }
+    //     }
+    //   }
+    // }
   }
 })
 

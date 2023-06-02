@@ -6,17 +6,15 @@
 
 <script>
 import SkillIcon from '@/components/SkillIcon.vue'
+
 export default {
   name: 'skill-tag',
   props: {
     skill: {
-      type: Object,
+      type: String,
       required: true,
       default: function () {
-        return {
-          id: 'farming',
-          name: 'Farming'
-        }
+        return 'farming'
       }
     }
   },

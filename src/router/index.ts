@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Welcome from '@/components/Welcome.vue'
-import Bundles from '@/components/bundles/Bundles.vue'
+import Bundles from '@/views/BundlesView.vue'
 import BundleItems from '@/components/bundles/BundleItems.vue'
 import Search from '@/components/search/Search.vue'
 import Settings from '@/components/Settings.vue'
-import Changelog from '@/components/changelog/Changelog.vue'
+import ChangeLog from '@/components/changelog/ChangeLog.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -49,7 +49,7 @@ const router = createRouter({
     },
     {
       path: '/changelog',
-      component: Changelog
+      component: ChangeLog
     }
   ],
   linkActiveClass: 'is-active'
