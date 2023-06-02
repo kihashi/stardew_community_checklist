@@ -15,7 +15,7 @@ const props = defineProps<Props>()
 const bundle = store.getBundleById(props.bundleItem.bundle_id)
 
 const itemInBundle = computed(() => store.isBundleItemStored(props.bundleItem.id))
-console.log(itemInBundle)
+
 const buttonClass = computed(() => {
   if (itemInBundle.value) {
     return 'is-success'
@@ -30,7 +30,6 @@ const numberInBundle = computed(() => {
 })
 
 function toggleItemInBundle() {
-  console.log(itemInBundle.value)
   if (!itemInBundle.value) {
     store.storeItem(props.bundleItem.id)
   } else {

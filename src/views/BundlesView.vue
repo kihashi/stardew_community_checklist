@@ -3,7 +3,8 @@ import BundleNav from '@/components/bundles/BundleNav.vue'
 import router from '@/router'
 import { useGeneralStore } from '@/store'
 
-const bundle = useGeneralStore().getBundleById(Number(router.currentRoute.value.params.id))
+const store = useGeneralStore()
+const bundle = store.getBundleById(Number(router.currentRoute.value.params.id))
 </script>
 
 <template>

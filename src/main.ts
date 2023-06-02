@@ -1,12 +1,13 @@
-import '../node_modules/bulma/bulma.sass'
-
-import { createApp } from 'vue'
+import * as mdijs from '@mdi/js'
+import mdiVue from 'mdi-vue/v3'
 import { createPinia } from 'pinia'
+import piniaPluginPersistedState from 'pinia-plugin-persistedstate'
+import { createApp } from 'vue'
 
 import App from './App.vue'
 import router from './router'
-import mdiVue from 'mdi-vue/v3'
-import * as mdijs from '@mdi/js'
+
+import '../node_modules/bulma/bulma.sass'
 
 const app = createApp(App)
 
@@ -16,6 +17,7 @@ app.use(mdiVue, {
 })
 
 const pinia = createPinia()
+pinia.use(piniaPluginPersistedState)
 app.use(pinia)
 
 app.mount('#app')

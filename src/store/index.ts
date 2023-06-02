@@ -43,6 +43,7 @@ export const useGeneralStore = defineStore('general', {
     skills,
     rooms
   }),
+  persist: true,
   getters: {
     getItemById:
       (state) =>
