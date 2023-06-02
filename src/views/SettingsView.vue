@@ -1,3 +1,33 @@
+<script setup lang="ts">
+import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
+import { useGeneralStore } from '@/store'
+import { faCloudUploadAlt, faCopy, faTrash } from '@fortawesome/fontawesome-free-solid'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { ref } from 'vue'
+
+const store = useGeneralStore()
+
+const dataToLoad = ref('')
+const deleteConfirm = ref(false)
+
+function loadData() {
+  if (dataToLoad.value !== '') {
+    store.setSerializedState(dataToLoad.value)
+    alert('Data Loaded!')
+  }
+}
+
+function onDelete() {
+  if (deleteConfirm.value) {
+    store.resetData()
+    deleteConfirm.value = false
+    alert('Data Reset!')
+  } else {
+    deleteConfirm.value = true
+  }
+}
+</script>
+
 <template>
   <div>
     <section class="section">
@@ -9,36 +39,38 @@
       <div class="container">
         <h2 class="subtitle">Spoilers and Displayed Items</h2>
         <div class="field">
-          <button-checkbox v-model="HideCompleted"> Hide Completed </button-checkbox>
+          <ButtonCheckbox v-model="store.HideCompleted" :checked="store.HideCompleted">
+            Hide Completed
+          </ButtonCheckbox>
           <p class="help">Hides items that have been turned in to the community center.</p>
         </div>
         <div class="field">
-          <button-checkbox v-model="HideSpoilers"> Hide Spoilers </button-checkbox>
+          <button-checkbox v-model="store.HideSpoilers"> Hide Spoilers </button-checkbox>
           <p class="help">Hides things that are considered spoilers, as defined below.</p>
         </div>
         <label class="label"> Spoilers </label>
         <div class="field is-grouped is-grouped-multiline">
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox" v-model="BundleRewardsSpoilers" />
+              <input type="checkbox" v-model="store.BundleRewardsSpoilers" />
               Bundle Rewards
             </label>
           </div>
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox" v-model="ItemInfoSpoilers" />
+              <input type="checkbox" v-model="store.ItemInfoSpoilers" />
               Item Source Information
             </label>
           </div>
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox" v-model="SeasonsSpoilers" />
+              <input type="checkbox" v-model="store.SeasonsSpoilers" />
               Item Seasons
             </label>
           </div>
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox" v-model="SkillsSpoilers" />
+              <input type="checkbox" v-model="store.SkillsSpoilers" />
               Item Skills
             </label>
           </div>
@@ -54,7 +86,7 @@
           those.
         </p>
         <div class="field">
-          <button-checkbox v-model="CompactView"> Use Compact View </button-checkbox>
+          <button-checkbox v-model="store.CompactView"> Use Compact View </button-checkbox>
           <p class="help">Enables a compact tabular view for item information.</p>
         </div>
       </div>
@@ -69,13 +101,19 @@
         <label class="label">Export</label>
         <div class="field has-addons">
           <div class="control">
-            <input class="input" type="text" placeholder="Saved Data" :value="SavedData" readonly />
+            <input
+              class="input"
+              type="text"
+              placeholder="Saved Data"
+              :value="store.getSerializedState"
+              readonly
+            />
           </div>
           <div class="control">
             <!-- TODO: Clipboard <button class="button is-info" v-clipboard:copy="SavedData"> -->
             <button class="button is-info">
               <span class="icon">
-                <font-awesome-icon icon="copy"></font-awesome-icon>
+                <font-awesome-icon :icon="faCopy"></font-awesome-icon>
               </span>
             </button>
           </div>
@@ -87,13 +125,13 @@
               class="input"
               type="text"
               placeholder="Enter Saved Data here"
-              v-model="DataToLoad"
+              v-model="dataToLoad"
             />
           </div>
           <div class="control">
-            <button class="button is-info" @click="LoadData">
+            <button class="button is-info" @click="loadData">
               <span class="icon">
-                <font-awesome-icon icon="cloud-upload-alt"></font-awesome-icon>
+                <font-awesome-icon :icon="faCloudUploadAlt"></font-awesome-icon>
               </span>
             </button>
           </div>
@@ -108,13 +146,13 @@
           <div class="control">
             <button
               class="button is-large is-rounded"
-              :class="DeleteConfirm ? 'is-warning' : 'is-danger'"
-              @click="ConfirmDelete"
+              :class="deleteConfirm ? 'is-warning' : 'is-danger'"
+              @click="onDelete"
             >
               <span class="icon">
-                <font-awesome-icon icon="trash"></font-awesome-icon>
+                <font-awesome-icon :icon="faTrash"></font-awesome-icon>
               </span>
-              <span v-if="DeleteConfirm"> Are You Sure? </span>
+              <span v-if="deleteConfirm"> Are You Sure? </span>
               <span v-else> Reset Data </span>
             </button>
           </div>
@@ -123,103 +161,5 @@
     </section>
   </div>
 </template>
-
-<script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
-import { faCopy, faTrash, faCloudUploadAlt } from '@fortawesome/fontawesome-free-solid'
-
-export default {
-  name: 'Settings',
-  components: {
-    ButtonCheckbox,
-    FontAwesomeIcon
-  },
-  data: function () {
-    return {
-      DataToLoad: '',
-      DeleteConfirm: false
-    }
-  },
-  computed: {
-    HideCompleted: {
-      get() {
-        return this.$store.state.HideCompleted
-      },
-      set(newValue) {
-        this.$store.commit('toggleCompleted')
-      }
-    },
-    HideSpoilers: {
-      get() {
-        return this.$store.state.HideSpoilers
-      },
-      set(newValue) {
-        this.$store.commit('toggleSpoilers')
-      }
-    },
-    BundleRewardsSpoilers: {
-      get() {
-        return this.$store.state.BundleRewardsSpoilers
-      },
-      set(newValue) {
-        this.$store.commit('toggleBundleRewards')
-      }
-    },
-    ItemInfoSpoilers: {
-      get() {
-        return this.$store.state.ItemInfoSpoilers
-      },
-      set(newValue) {
-        this.$store.commit('toggleItemInfo')
-      }
-    },
-    SeasonsSpoilers: {
-      get() {
-        return this.$store.state.SeasonsSpoilers
-      },
-      set(newValue) {
-        this.$store.commit('toggleSeasons')
-      }
-    },
-    SkillsSpoilers: {
-      get() {
-        return this.$store.state.SkillsSpoilers
-      },
-      set(newValue) {
-        this.$store.commit('toggleSkills')
-      }
-    },
-    CompactView: {
-      get() {
-        return this.$store.state.CompactView
-      },
-      set(newValue) {
-        this.$store.commit('toggleCompactView')
-      }
-    },
-    SavedData: function () {
-      return this.$store.getters.GetSerializedState
-    }
-  },
-  methods: {
-    LoadData: function () {
-      if (this.DataToLoad !== '') {
-        this.$store.commit('SetSerializedState', this.DataToLoad)
-        alert('Data Loaded!')
-      }
-    },
-    ConfirmDelete: function () {
-      if (this.DeleteConfirm) {
-        this.$store.commit('resetData')
-        this.DeleteConfirm = false
-        alert('Data Reset!')
-      } else {
-        this.DeleteConfirm = true
-      }
-    }
-  }
-}
-</script>
 
 <style></style>

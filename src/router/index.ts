@@ -4,7 +4,7 @@ import Welcome from '@/components/Welcome.vue'
 import Bundles from '@/views/BundlesView.vue'
 import BundleItems from '@/components/bundles/BundleItems.vue'
 import Search from '@/components/search/Search.vue'
-import Settings from '@/components/Settings.vue'
+import Settings from '@/views/SettingsView.vue'
 import ChangeLog from '@/components/changelog/ChangeLog.vue'
 
 const router = createRouter({
