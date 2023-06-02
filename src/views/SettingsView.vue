@@ -39,13 +39,11 @@ function onDelete() {
       <div class="container">
         <h2 class="subtitle">Spoilers and Displayed Items</h2>
         <div class="field">
-          <ButtonCheckbox v-model="store.HideCompleted" :checked="store.HideCompleted">
-            Hide Completed
-          </ButtonCheckbox>
+          <ButtonCheckbox v-model="store.HideCompleted"> Hide Completed </ButtonCheckbox>
           <p class="help">Hides items that have been turned in to the community center.</p>
         </div>
         <div class="field">
-          <button-checkbox v-model="store.HideSpoilers"> Hide Spoilers </button-checkbox>
+          <ButtonCheckbox v-model="store.HideSpoilers"> Hide Spoilers </ButtonCheckbox>
           <p class="help">Hides things that are considered spoilers, as defined below.</p>
         </div>
         <label class="label"> Spoilers </label>
@@ -86,7 +84,7 @@ function onDelete() {
           those.
         </p>
         <div class="field">
-          <button-checkbox v-model="store.CompactView"> Use Compact View </button-checkbox>
+          <ButtonCheckbox v-model="store.CompactView"> Use Compact View </ButtonCheckbox>
           <p class="help">Enables a compact tabular view for item information.</p>
         </div>
       </div>
