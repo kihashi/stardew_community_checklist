@@ -12,12 +12,12 @@ interface Filters {
 const props = defineProps<{
   filters: Filters
 }>()
-const emit = defineEmits(['update:filters'])
+const emit = defineEmits<{ (e: 'update:filters', val: Filters): void }>()
 
 function updateName(name: string) {
   const obj = { ...props.filters, nameFilter: name }
   console.log(obj, name)
-  emit('update:filters', { filters: { ...props.filters, nameFilter: name } })
+  emit('update:filters', { ...props.filters, nameFilter: name })
 }
 
 function updateSeasons(seasonFilter: typeof props.filters.seasonFilter) {
@@ -35,11 +35,11 @@ function updateSkills(skillFilter: typeof props.filters.skillFilter) {
     <div class="column">
       <ItemSearch v-model="filters.nameFilter" />
     </div>
-    <!-- <div class="column">
-      <SeasonFilter :modelValue="filters.seasonFilter" @update:modelValue="updateSeasons" />
-    </div> -->
-    <!-- <div class="column">
+    <div class="column">
+      <SeasonFilter v-model="filters.seasonFilter" />
+    </div>
+    <div class="column">
       <SkillFilter v-model="filters.skillFilter" />
-    </div> -->
+    </div>
   </div>
 </template>

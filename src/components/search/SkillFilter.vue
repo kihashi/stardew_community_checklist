@@ -1,3 +1,27 @@
+<script setup lang="ts">
+import SkillIcon from '@/components/SkillIcon.vue'
+import ButtonCheck from '@/components/ButtonCheckbox.vue'
+import { useGeneralStore } from '@/store'
+
+interface ModelValue {
+  selectedSkills: string[]
+  skillExclusive: boolean
+}
+
+const props = defineProps<{ modelValue: ModelValue }>()
+const emit = defineEmits<{ (e: 'update:modelValue', value: ModelValue): void }>()
+
+const store = useGeneralStore()
+
+function updateSkills(val: string[]) {
+  emit('update:modelValue', { ...props.modelValue, selectedSkills: val })
+}
+
+function updateExclusive(val: boolean) {
+  emit('update:modelValue', { ...props.modelValue, skillExclusive: val })
+}
+</script>
+
 <template>
   <div class="field is-horizontal">
     <div class="field-label is-normal">
@@ -5,68 +29,29 @@
     </div>
     <div class="field-body">
       <div class="field has-addons has-addons-centered">
-        <div class="control" v-for="skill in skills" :key="skill.id">
-          <button-check
+        <div class="control" v-for="skill in store.skills" :key="skill.id">
+          <ButtonCheckbox
             :value="skill.id"
-            :checked="value.selected_skills"
-            v-on:change="UpdateSkills"
+            :modelValue="modelValue.selectedSkills"
+            @update:modelValue="updateSkills"
           >
             <span class="icon is-small">
-              <skill-icon :skill="skill" />
+              <skill-icon :skill="skill.id" />
             </span>
-          </button-check>
+          </ButtonCheckbox>
         </div>
       </div>
       <div class="field">
         <div class="control is-expanded">
-          <button-check
+          <ButtonCheck
             class="is-fullwidth"
-            :checked="value.skill_exclusive"
-            v-on:change="UpdateExclusive"
+            :modelValue="modelValue.skillExclusive"
+            @update:modelValue="updateExclusive"
           >
             Exclusive
-          </button-check>
+          </ButtonCheck>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-import SkillIcon from '@/components/SkillIcon.vue'
-import ButtonCheck from '@/components/ButtonCheckbox.vue'
-export default {
-  name: 'skill-filter',
-  components: {
-    SkillIcon,
-    ButtonCheck
-  },
-  props: {
-    value: {
-      default() {
-        return {
-          selectedSkills: [],
-          skillExclusive: false
-        }
-      }
-    }
-  },
-  computed: {
-    skills() {
-      return this.$store.state.skills
-    }
-  },
-  methods: {
-    UpdateSkills(val) {
-      this.value.selected_skills = val
-      this.$emit('input', this.value)
-    },
-    UpdateExclusive(val) {
-      this.value.skill_exclusive = val
-      this.$emit('input', this.value)
-    }
-  }
-}
-</script>
-
-<style></style>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SeasonIcon from '@/components/SeasonIcon.vue'
-import ButtonCheck from '@/components/ButtonCheckbox.vue'
+import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
 import { useGeneralStore } from '@/store'
 
 interface ModelValue {
@@ -30,26 +30,26 @@ function updateExclusive(val: boolean) {
     <div class="field-body">
       <div class="field has-addons has-addons-centered">
         <div class="control" v-for="season in store.seasons" :key="season.order">
-          <button-check
+          <ButtonCheckbox
             :value="season.id"
-            :model-value="modelValue.selectedSeasons"
-            @click="updateSeasons"
+            :modelValue="modelValue.selectedSeasons"
+            @update:modelValue="updateSeasons"
           >
             <span class="icon is-small">
               <season-icon :season="season.id"></season-icon>
             </span>
-          </button-check>
+          </ButtonCheckbox>
         </div>
       </div>
       <div class="field">
         <div class="control is-expanded">
-          <button-check
+          <ButtonCheckbox
             class="is-fullwidth"
-            :model-value="modelValue.seasonExclusive"
-            @click="updateExclusive"
+            :modelValue="modelValue.seasonExclusive"
+            @update:modelValue="updateExclusive"
           >
             Exclusive
-          </button-check>
+          </ButtonCheckbox>
         </div>
       </div>
     </div>

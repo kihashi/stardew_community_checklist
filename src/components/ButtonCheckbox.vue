@@ -12,6 +12,7 @@ function onUpdate() {
   if (Array.isArray(props.modelValue) && props.value) {
     const newValue = [...props.modelValue]
 
+    console.log(newValue)
     if (isChecked.value) {
       newValue.splice(newValue.indexOf(props.value), 1)
     } else {

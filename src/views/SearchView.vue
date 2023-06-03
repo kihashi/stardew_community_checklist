@@ -2,7 +2,6 @@
 import ItemCard from '@/components/item_card/ItemCard.vue'
 import ItemTable from '@/components/item_table/ItemTable.vue'
 import SearchForm from '@/components/search/SearchForm.vue'
-import ItemSearch from '@/components/search/ItemSearch.vue'
 import { useGeneralStore } from '@/store'
 import _ from 'lodash'
 import { computed, reactive } from 'vue'
@@ -87,17 +86,6 @@ const filteredItems = computed(() => {
 <template>
   <section class="section">
     <SearchForm v-model:filters="filters"></SearchForm>
-    <!-- <div class="columns">
-      <div class="column">
-        <ItemSearch v-model="filters.nameFilter" />
-      </div>
-      <div class="column">
-      <season-filter :value="seasonFilter" v-on:input="updateSeasons" />
-    </div>
-    <div class="column">
-      <skill-filter :value="skillFilter" v-on:input="updateSkills" />
-    </div>
-    </div> -->
     <section class="container">
       <div class="columns is-multiline">
         <item-table v-if="store.CompactView" :items="filteredItems" />
