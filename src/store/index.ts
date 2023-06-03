@@ -28,7 +28,7 @@ export type Skill = (typeof skills)[0]
 
 export const useGeneralStore = defineStore('general', {
   state: () => ({
-    StoredBundleItemIds: [] as number[],
+    StoredBundleItemIds: {} as { [key: number]: number },
     HideSpoilers: false,
     HideCompleted: false,
     BundleRewardsSpoilers: true,
@@ -78,25 +78,20 @@ export const useGeneralStore = defineStore('general', {
       return (roomId: number): Bundle[] => state.bundles.filter((bundle) => bundle.room === roomId)
     },
     getIncompleteBundleItems(state) {
-      return state.bundleItems.filter((bundleItem) =>
-        state.StoredBundleItemIds.includes(bundleItem.id)
-      )
+      return state.bundleItems.filter((bundleItem) => !(bundleItem.id in state.StoredBundleItemIds))
     },
     isBundleItemStored(state) {
-      return (bundleItemId: number): boolean => state.StoredBundleItemIds.includes(bundleItemId)
+      return (bundleItemId: number): boolean => bundleItemId in state.StoredBundleItemIds
     },
-
-    getNumberOfBundleItemsStoredInBundle(state) {
+    getNumberOfBundleItemsStoredInBundle() {
       return (bundleId: number): number => {
         // FIXME: Need to find a better way of handling undefined here instead of just assigning an arbitrary value
         // Shouldn't even be undefined, but just in case
         const bundleItemsRequired = this.getBundleById(bundleId)?.items_required ?? 100
 
         return Math.min(
-          state.StoredBundleItemIds.filter((id) =>
-            this.getBundleItemsInBundle(bundleId)
-              .map((item) => item.id)
-              .includes(id)
+          this.getBundleItemsInBundle(bundleId).filter((bundleItem) =>
+            this.isBundleItemStored(bundleItem.id)
           ).length,
           bundleItemsRequired
         )
@@ -111,14 +106,14 @@ export const useGeneralStore = defineStore('general', {
         }, 0)
       }
     },
-    isItemComplete(state) {
+    isItemComplete() {
       return (itemId: number): boolean => {
         const item = this.getItemById(itemId)
 
         if (!item) return false
 
         const bundleItems = this.getBundleItemsForItem(itemId)
-        return bundleItems.every((bundleItem) => state.StoredBundleItemIds.includes(bundleItem.id))
+        return bundleItems.every((bundleItem) => this.isBundleItemStored(bundleItem.id))
       }
     },
     isBundleComplete() {
@@ -142,10 +137,10 @@ export const useGeneralStore = defineStore('general', {
       this.StoredBundleItemIds = JSON.parse(atob(SerializedState))
     },
     storeItem(bundleItemId: number) {
-      this.StoredBundleItemIds.push(bundleItemId)
+      this.StoredBundleItemIds[bundleItemId] = 1
     },
     unstoreItem(bundleItemId: number) {
-      this.StoredBundleItemIds = this.StoredBundleItemIds.filter((item) => item !== bundleItemId)
+      delete this.StoredBundleItemIds[bundleItemId]
     },
     toggleSpoilers() {
       this.HideSpoilers = !this.HideSpoilers
@@ -169,7 +164,7 @@ export const useGeneralStore = defineStore('general', {
       this.CompactView = !this.CompactView
     },
     resetData() {
-      this.StoredBundleItemIds = []
+      this.StoredBundleItemIds = {}
     }
     // loadV1State(v1state: { item: number }[][]) {
     //   for (let i = 0; i < v1state.length; i++) {
