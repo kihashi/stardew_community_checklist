@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import New from '@/components/New.vue'
+import WhatsNewModal from '@/components/WhatsNewModal.vue'
 import { onMounted, ref } from 'vue'
 
 const showModal = ref(false)
@@ -20,7 +20,10 @@ onMounted(() => {
         <h2 class="subtitle">Track Your Progress on the Community Center!</h2>
       </div>
     </div>
-    <New :class="showModal ? 'is-active' : ''" v-on:dismiss-modal="showModal = false"></New>
+    <WhatsNewModal
+      :class="showModal ? 'is-active' : ''"
+      v-on:dismiss-modal="showModal = false"
+    ></WhatsNewModal>
   </section>
 </template>
 

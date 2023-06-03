@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const emit = defineEmits(['dismiss-modal'])
+
+function dismiss() {
+  emit('dismiss-modal')
+}
+</script>
+
 <template>
   <div class="modal">
     <div class="modal-background" @click="dismiss"></div>
@@ -60,14 +68,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'whats-new',
-  methods: {
-    dismiss: function () {
-      this.$emit('dismiss-modal')
-    }
-  }
-}
-</script>
