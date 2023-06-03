@@ -2,6 +2,7 @@
 import BundleNav from '@/components/bundles/BundleNav.vue'
 import router from '@/router'
 import { useGeneralStore } from '@/store'
+import { RouterView } from 'vue-router'
 
 const store = useGeneralStore()
 const bundle = store.getBundleById(Number(router.currentRoute.value.params.id))
@@ -11,7 +12,7 @@ const bundle = store.getBundleById(Number(router.currentRoute.value.params.id))
   <div>
     <BundleNav />
     <section class="section">
-      <router-view :key="bundle?.id"></router-view>
+      <RouterView :key="bundle?.id"></RouterView>
     </section>
   </div>
 </template>

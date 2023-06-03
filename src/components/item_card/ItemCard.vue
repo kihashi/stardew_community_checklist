@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { useGeneralStore, type Item } from '@/store'
+import BundleButton from './BundleButton.vue'
 import SeasonList from './SeasonList.vue'
 import SkillList from './SkillList.vue'
-import BundleButton from './BundleButton.vue'
-import { useGeneralStore, type Item } from '@/store'
 
 const store = useGeneralStore()
 
@@ -49,7 +49,7 @@ withDefaults(defineProps<Props>(), {
         {{ item.source }}
       </div>
       <div class="content">
-        <bundle-button
+        <BundleButton
           v-for="bundleItem in store.getBundleItemsForItem(item.id)"
           :key="bundleItem.id"
           :bundle-item="bundleItem"
@@ -59,10 +59,10 @@ withDefaults(defineProps<Props>(), {
     </div>
     <footer class="card-footer">
       <div class="card-footer-item item-seasons" v-if="showSeasonList">
-        <season-list :seasons="item.seasons" />
+        <SeasonList :seasons="item.seasons" />
       </div>
       <div class="card-footer-item item-skills" v-if="showSkillList">
-        <skill-list :skills="item.skills" />
+        <SkillList :skills="item.skills" />
       </div>
     </footer>
   </div>

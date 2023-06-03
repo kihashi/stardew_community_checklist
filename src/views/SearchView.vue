@@ -90,14 +90,14 @@ const filteredItems = computed(() => {
     <SearchForm v-model:filters="filters"></SearchForm>
     <section class="container">
       <div class="columns is-multiline">
-        <item-table v-if="store.CompactView" :items="filteredItems" />
+        <ItemTable v-if="store.CompactView" :items="filteredItems" />
         <div
           v-else
           class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex"
           v-for="item in filteredItems"
           :key="item.id"
         >
-          <item-card :item="item"></item-card>
+          <ItemCard :item="item"></ItemCard>
         </div>
       </div>
     </section>
