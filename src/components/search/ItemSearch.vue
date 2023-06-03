@@ -1,6 +1,17 @@
 <script setup lang="ts">
-defineProps<{ modelValue: string }>()
-defineEmits<{ (e: 'update:modelValue', value: string): void }>()
+import { computed } from 'vue'
+
+const props = defineProps<{ modelValue: string }>()
+const emit = defineEmits(['update:modelValue'])
+
+const value = computed({
+  get() {
+    return props.modelValue
+  },
+  set(value) {
+    emit('update:modelValue', value)
+  }
+})
 </script>
 
 <template>
@@ -11,12 +22,7 @@ defineEmits<{ (e: 'update:modelValue', value: string): void }>()
     <div class="field-body">
       <div class="field">
         <div class="control">
-          <input
-            class="input"
-            placeholder="Item Name"
-            :value="modelValue"
-            @input="$emit('update:modelValue', $event.target?.value)"
-          />
+          <input class="input" placeholder="Item Name" v-model="value" />
         </div>
       </div>
     </div>

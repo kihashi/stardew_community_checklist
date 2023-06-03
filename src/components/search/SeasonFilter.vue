@@ -36,7 +36,7 @@ function updateExclusive(val: boolean) {
             @update:modelValue="updateSeasons"
           >
             <span class="icon is-small">
-              <season-icon :season="season.id"></season-icon>
+              <SeasonIcon :season="season.id"></SeasonIcon>
             </span>
           </ButtonCheckbox>
         </div>

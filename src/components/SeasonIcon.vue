@@ -31,7 +31,8 @@ export default {
   content: attr(data-season);
   display: block;
   position: absolute;
-  bottom: -1.85rem;
+  bottom: -0.75rem;
+  width: 100%;
   border-radius: 3px;
   font-size: 0.75rem;
   background-color: #00d1b2;

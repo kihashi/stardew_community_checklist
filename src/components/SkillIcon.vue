@@ -33,6 +33,7 @@ export default {
   display: block;
   position: absolute;
   bottom: -0.85rem;
+  width: 100%;
   border-radius: 3px;
   font-size: 0.75rem;
   background-color: #209cee;

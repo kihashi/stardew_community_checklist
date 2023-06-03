@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SkillIcon from '@/components/SkillIcon.vue'
-import ButtonCheck from '@/components/ButtonCheckbox.vue'
+import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
 import { useGeneralStore } from '@/store'
 
 interface ModelValue {
@@ -36,20 +36,20 @@ function updateExclusive(val: boolean) {
             @update:modelValue="updateSkills"
           >
             <span class="icon is-small">
-              <skill-icon :skill="skill.id" />
+              <SkillIcon :skill="skill.id" />
             </span>
           </ButtonCheckbox>
         </div>
       </div>
       <div class="field">
         <div class="control is-expanded">
-          <ButtonCheck
+          <ButtonCheckbox
             class="is-fullwidth"
             :modelValue="modelValue.skillExclusive"
             @update:modelValue="updateExclusive"
           >
             Exclusive
-          </ButtonCheck>
+          </ButtonCheckbox>
         </div>
       </div>
     </div>

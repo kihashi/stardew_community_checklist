@@ -4,11 +4,11 @@ import ItemTable from '@/components/item_table/ItemTable.vue'
 import SearchForm from '@/components/search/SearchForm.vue'
 import { useGeneralStore } from '@/store'
 import _ from 'lodash'
-import { computed, reactive } from 'vue'
+import { computed, ref } from 'vue'
 
 const store = useGeneralStore()
 
-const filters = reactive({
+const filters = ref({
   nameFilter: '',
   seasonFilter: {
     selectedSeasons: ['spring', 'summer', 'fall', 'winter'],
@@ -21,12 +21,12 @@ const filters = reactive({
 })
 
 function filterSeasons(itemSeasons: string[]) {
-  if (filters.seasonFilter.seasonExclusive) {
-    if (itemSeasons.length !== filters.seasonFilter.selectedSeasons.length) {
+  if (filters.value.seasonFilter.seasonExclusive) {
+    if (itemSeasons.length !== filters.value.seasonFilter.selectedSeasons.length) {
       return false
     } else {
       var a = itemSeasons
-      var b = filters.seasonFilter.selectedSeasons
+      var b = filters.value.seasonFilter.selectedSeasons
       a.sort()
       b.sort()
       for (var i = 0; i < a.length; ++i) {
@@ -37,7 +37,7 @@ function filterSeasons(itemSeasons: string[]) {
       return true
     }
   } else {
-    for (var season of filters.seasonFilter.selectedSeasons) {
+    for (var season of filters.value.seasonFilter.selectedSeasons) {
       if (itemSeasons.indexOf(season) !== -1) {
         return true
       }
@@ -46,12 +46,12 @@ function filterSeasons(itemSeasons: string[]) {
   }
 }
 function filterSkills(itemSkills: string[]) {
-  if (filters.skillFilter.skillExclusive) {
-    if (itemSkills.length !== filters.skillFilter.selectedSkills.length) {
+  if (filters.value.skillFilter.skillExclusive) {
+    if (itemSkills.length !== filters.value.skillFilter.selectedSkills.length) {
       return false
     } else {
       var a = itemSkills
-      var b = filters.skillFilter.selectedSkills
+      var b = filters.value.skillFilter.selectedSkills
       a.sort()
       b.sort()
       for (var i = 0; i < a.length; ++i) {
@@ -62,7 +62,7 @@ function filterSkills(itemSkills: string[]) {
       return true
     }
   } else {
-    for (var season of filters.skillFilter.selectedSkills) {
+    for (var season of filters.value.skillFilter.selectedSkills) {
       if (itemSkills.indexOf(season) !== -1) {
         return true
       }
@@ -75,7 +75,9 @@ const filteredItems = computed(() => {
   return _.orderBy(
     store.items
       .filter((item) => !(store.HideCompleted && store.isItemComplete(item.id)))
-      .filter((item) => item.name.toLowerCase().indexOf(filters.nameFilter.toLowerCase()) !== -1)
+      .filter(
+        (item) => item.name.toLowerCase().indexOf(filters.value.nameFilter.toLowerCase()) !== -1
+      )
       .filter((item) => filterSeasons(item.seasons))
       .filter((item) => filterSkills(item.skills)),
     'name'

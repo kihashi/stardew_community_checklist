@@ -15,13 +15,10 @@ const props = defineProps<{
 const emit = defineEmits<{ (e: 'update:filters', val: Filters): void }>()
 
 function updateName(name: string) {
-  const obj = { ...props.filters, nameFilter: name }
-  console.log(obj, name)
   emit('update:filters', { ...props.filters, nameFilter: name })
 }
 
 function updateSeasons(seasonFilter: typeof props.filters.seasonFilter) {
-  console.log(seasonFilter)
   emit('update:filters', { ...props.filters, seasonFilter })
 }
 
@@ -33,13 +30,13 @@ function updateSkills(skillFilter: typeof props.filters.skillFilter) {
 <template>
   <div class="columns">
     <div class="column">
-      <ItemSearch v-model="filters.nameFilter" />
+      <ItemSearch :modelValue="filters.nameFilter" @update:modelValue="updateName" />
     </div>
     <div class="column">
-      <SeasonFilter v-model="filters.seasonFilter" />
+      <SeasonFilter :modelValue="filters.seasonFilter" @update:modelValue="updateSeasons" />
     </div>
     <div class="column">
-      <SkillFilter v-model="filters.skillFilter" />
+      <SkillFilter :modelValue="filters.skillFilter" @update:modelValue="updateSkills" />
     </div>
   </div>
 </template>
