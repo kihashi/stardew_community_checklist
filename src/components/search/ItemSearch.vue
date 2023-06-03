@@ -1,3 +1,8 @@
+<script setup lang="ts">
+defineProps<{ modelValue: string }>()
+defineEmits<{ (e: 'update:modelValue', value: string): void }>()
+</script>
+
 <template>
   <div class="field is-horizontal">
     <div class="field-label is-normal">
@@ -9,26 +14,11 @@
           <input
             class="input"
             placeholder="Item Name"
-            v-bind:value="value"
-            v-on:input="$emit('input', $event.target.value)"
+            :value="modelValue"
+            @input="$emit('update:modelValue', $event.target?.value)"
           />
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'item-search',
-  props: {
-    value: {
-      default() {
-        return ''
-      }
-    }
-  }
-}
-</script>
-
-<style></style>

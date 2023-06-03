@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Welcome from '@/components/Welcome.vue'
+import Welcome from '@/views/WelcomeView.vue'
 import Bundles from '@/views/BundlesView.vue'
 import BundleItems from '@/components/bundles/BundleItems.vue'
-import Search from '@/components/search/Search.vue'
+import Search from '@/views/SearchView.vue'
 import Settings from '@/views/SettingsView.vue'
 import ChangeLog from '@/components/changelog/ChangeLog.vue'
 

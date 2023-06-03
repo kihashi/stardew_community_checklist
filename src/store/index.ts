@@ -85,6 +85,7 @@ export const useGeneralStore = defineStore('general', {
     isBundleItemStored(state) {
       return (bundleItemId: number): boolean => state.StoredBundleItemIds.includes(bundleItemId)
     },
+
     getNumberOfBundleItemsStoredInBundle(state) {
       return (bundleId: number): number => {
         // FIXME: Need to find a better way of handling undefined here instead of just assigning an arbitrary value
@@ -108,6 +109,16 @@ export const useGeneralStore = defineStore('general', {
         return bundlesInRoom.reduce((stored, bundle) => {
           return stored + this.getNumberOfBundleItemsStoredInBundle(bundle.id)
         }, 0)
+      }
+    },
+    isItemComplete(state) {
+      return (itemId: number): boolean => {
+        const item = this.getItemById(itemId)
+
+        if (!item) return false
+
+        const bundleItems = this.getBundleItemsForItem(itemId)
+        return bundleItems.every((bundleItem) => state.StoredBundleItemIds.includes(bundleItem.id))
       }
     },
     isBundleComplete() {

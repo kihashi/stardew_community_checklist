@@ -45,8 +45,8 @@ export default {
     value: {
       default() {
         return {
-          selected_skills: [],
-          skill_exclusive: false
+          selectedSkills: [],
+          skillExclusive: false
         }
       }
     }
