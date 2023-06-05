@@ -19,7 +19,7 @@ const named_routes = router.options.routes.filter((route) => route.name)
             <h1 class="is-size-3 has-text-weight-semibold is-hidden-tablet">SCC</h1>
           </a>
           <div
-            class="navbar-burger"
+            class="navbar-burger has-text-white"
             v-bind:class="{ 'is-active': menuActive }"
             @click="menuActive = !menuActive"
           >
