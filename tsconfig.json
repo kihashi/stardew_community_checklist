@@ -1,7 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["**/*.ts", "**/*.js", "**/*.vue"],
-  "exclude": ["src/**/__tests__/*", "node_modules"],
+  "exclude": ["src/**/__tests__/*", "node_modules", "dist"],
   "compilerOptions": {
     "allowJs": true,
     "baseUrl": ".",

@@ -205,7 +205,6 @@ export const useGeneralStore = defineStore('general', {
     migrateV2StateIfExists() {
       const v2data = localStorage.getItem('vuex')
 
-      console.log(v2data)
       if (v2data === null || v2data === '') return
 
       const v2state = JSON.parse(v2data)
