@@ -4,9 +4,12 @@ import { useGeneralStore } from '@/store'
 import { faCloudUploadAlt, faCopy, faTrash } from '@fortawesome/fontawesome-free-solid'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { ref } from 'vue'
+import useClipboard from 'vue-clipboard3'
 
 const store = useGeneralStore()
+const { toClipboard } = useClipboard()
 
+const serializedStateRef = ref()
 const dataToLoad = ref('')
 const deleteConfirm = ref(false)
 
@@ -25,6 +28,11 @@ function onDelete() {
   } else {
     deleteConfirm.value = true
   }
+}
+
+async function copySerializedState() {
+  await toClipboard(store.getSerializedState)
+  serializedStateRef.value.focus()
 }
 </script>
 
@@ -103,13 +111,14 @@ function onDelete() {
               class="input"
               type="text"
               placeholder="Saved Data"
+              ref="serializedStateRef"
+              @focus=";($event.target as HTMLInputElement)?.select()"
               :value="store.getSerializedState"
               readonly
             />
           </div>
           <div class="control">
-            <!-- TODO: Clipboard <button class="button is-info" v-clipboard:copy="SavedData"> -->
-            <button class="button is-info">
+            <button class="button is-info" @click="copySerializedState">
               <span class="icon">
                 <font-awesome-icon :icon="faCopy"></font-awesome-icon>
               </span>
