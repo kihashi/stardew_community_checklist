@@ -3,7 +3,7 @@ import ItemCard from '@/components/item-card/ItemCard.vue'
 import ItemTable from '@/components/item-table/ItemTable.vue'
 import SearchForm from '@/components/search/SearchForm.vue'
 import { useGeneralStore } from '@/store'
-import _ from 'lodash'
+import orderBy from 'lodash/orderBy'
 import { computed, ref } from 'vue'
 
 const store = useGeneralStore()
@@ -72,7 +72,7 @@ function filterSkills(itemSkills: string[]) {
 }
 
 const filteredItems = computed(() => {
-  return _.orderBy(
+  return orderBy(
     store.items
       .filter((item) => !(store.HideCompleted && store.isItemComplete(item.id)))
       .filter(
