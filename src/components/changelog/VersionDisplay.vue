@@ -56,5 +56,3 @@ const releaseUrl = computed(
     </div>
   </div>
 </template>
-
-<style></style>

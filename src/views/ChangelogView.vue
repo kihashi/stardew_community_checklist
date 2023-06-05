@@ -11,5 +11,3 @@ import Version from '@/components/changelog/VersionDisplay.vue'
     </section>
   </section>
 </template>
-
-<style></style>

@@ -45,5 +45,3 @@ const named_routes = router.options.routes.filter((route) => route.name)
     </nav>
   </section>
 </template>
-
-<style scoped></style>

@@ -26,5 +26,3 @@ onMounted(() => {
     ></WhatsNewModal>
   </section>
 </template>
-
-<style scoped></style>

@@ -168,5 +168,3 @@ async function copySerializedState() {
     </section>
   </div>
 </template>
-
-<style></style>

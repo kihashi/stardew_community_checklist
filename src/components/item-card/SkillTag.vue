@@ -9,5 +9,3 @@ import SkillIcon from '@/components/SkillIcon.vue'
 
 defineProps<{ skill: string }>()
 </script>
-
-<style scoped></style>
