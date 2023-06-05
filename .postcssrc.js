@@ -1,10 +1,23 @@
 // https://github.com/michael-ciniawsky/postcss-load-config
 
 module.exports = {
-  "plugins": {
-    "postcss-import": {},
-    "postcss-url": {},
-    // to edit target browsers: use "browserslist" field in package.json
-    "autoprefixer": {}
-  }
+  plugins: [
+    require('postcss-import'),
+    require('postcss-url'),
+    require('autoprefixer'),
+    process.env.NODE_ENV === 'production' &&
+      require('@fullhuman/postcss-purgecss')({
+        content: ['**/*.vue', '**/*.ts'],
+        defaultExtractor(content) {
+          const contentWithoutStyleBlocks = content.replace(/<style[^]+?<\/style>/gi, '')
+          return contentWithoutStyleBlocks.match(/[A-Za-z0-9-_/:]*[A-Za-z0-9-_/]+/g) || []
+        },
+        safelist: [
+          /-(leave|enter|appear)(|-(to|from|active))$/,
+          /^(?!(|.*?:)cursor-move).+-move$/,
+          /^router-link(|-exact)-active$/,
+          /data-v-.*/
+        ]
+      })
+  ]
 }
