@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import ItemCard from '@/components/item_card/ItemCard.vue'
-import ItemTable from '@/components/item_table/ItemTable.vue'
-import { useGeneralStore } from '@/store'
+import ItemCard from '@/components/item-card/ItemCard.vue'
+import ItemTable from '@/components/item-table/ItemTable.vue'
+import { useGeneralStore, type Item } from '@/store'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -16,7 +16,10 @@ const bundleItems = computed(() =>
   bundle.value ? store.getBundleItemsInBundle(bundle.value.id) : []
 )
 const items = computed(() =>
-  bundleItems.value.map((i) => store.getItemById(i.item_id)).filter((v, i, a) => a.indexOf(v) === i)
+  bundleItems.value
+    .map((i) => store.getItemById(i.item_id))
+    .filter((item): item is Item => !!item)
+    .filter((v, i, a) => a.indexOf(v) === i)
 )
 const room = computed(() => (bundle.value ? store.getRoomById(bundle.value.room) : undefined))
 
@@ -68,7 +71,7 @@ const hideBundleItems = computed(() => store.HideSpoilers && store.BundleRewards
           v-else
           class="column is-3-widescreen is-4-desktop is-12-mobile is-6-tablet is-flex"
           v-for="item in items"
-          :key="item?.id"
+          :key="item.id"
         >
           <item-card :item="item"></item-card>
         </div>

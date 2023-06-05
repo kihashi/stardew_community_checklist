@@ -3,23 +3,14 @@ import SeasonIcon from '@/components/SeasonIcon.vue'
 import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
 import { useGeneralStore } from '@/store'
 
+const store = useGeneralStore()
+
 interface ModelValue {
   selectedSeasons: string[]
   seasonExclusive: boolean
 }
 
-const props = defineProps<{ modelValue: ModelValue }>()
-const emit = defineEmits<{ (e: 'update:modelValue', value: ModelValue): void }>()
-
-const store = useGeneralStore()
-
-function updateSeasons(val: string[]) {
-  emit('update:modelValue', { ...props.modelValue, selectedSeasons: val })
-}
-
-function updateExclusive(val: boolean) {
-  emit('update:modelValue', { ...props.modelValue, seasonExclusive: val })
-}
+const modelValue = defineModel<ModelValue>()
 </script>
 
 <template>
@@ -27,14 +18,10 @@ function updateExclusive(val: boolean) {
     <div class="field-label is-normal">
       <label class="label">Season</label>
     </div>
-    <div class="field-body">
+    <div class="field-body" v-if="modelValue">
       <div class="field has-addons has-addons-centered">
         <div class="control" v-for="season in store.seasons" :key="season.order">
-          <ButtonCheckbox
-            :value="season.id"
-            :modelValue="modelValue.selectedSeasons"
-            @update:modelValue="updateSeasons"
-          >
+          <ButtonCheckbox :value="season.id" v-model="modelValue.selectedSeasons">
             <span class="icon is-small">
               <SeasonIcon :season="season.id"></SeasonIcon>
             </span>
@@ -43,11 +30,7 @@ function updateExclusive(val: boolean) {
       </div>
       <div class="field">
         <div class="control is-expanded">
-          <ButtonCheckbox
-            class="is-fullwidth"
-            :modelValue="modelValue.seasonExclusive"
-            @update:modelValue="updateExclusive"
-          >
+          <ButtonCheckbox class="is-fullwidth" v-model="modelValue.seasonExclusive">
             Exclusive
           </ButtonCheckbox>
         </div>

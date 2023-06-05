@@ -5,7 +5,7 @@ import Bundles from '@/views/BundlesView.vue'
 import BundleItems from '@/components/bundles/BundleItems.vue'
 import Search from '@/views/SearchView.vue'
 import Settings from '@/views/SettingsView.vue'
-import ChangeLog from '@/components/changelog/ChangeLog.vue'
+import Changelog from '@/views/ChangelogView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -49,7 +49,7 @@ const router = createRouter({
     },
     {
       path: '/changelog',
-      component: ChangeLog
+      component: Changelog
     }
   ],
   linkActiveClass: 'is-active'

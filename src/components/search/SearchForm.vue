@@ -9,34 +9,19 @@ interface Filters {
   skillFilter: { selectedSkills: string[]; skillExclusive: boolean }
 }
 
-const props = defineProps<{
-  filters: Filters
-}>()
-const emit = defineEmits<{ (e: 'update:filters', val: Filters): void }>()
-
-function updateName(name: string) {
-  emit('update:filters', { ...props.filters, nameFilter: name })
-}
-
-function updateSeasons(seasonFilter: typeof props.filters.seasonFilter) {
-  emit('update:filters', { ...props.filters, seasonFilter })
-}
-
-function updateSkills(skillFilter: typeof props.filters.skillFilter) {
-  emit('update:filters', { ...props.filters, skillFilter })
-}
+const filters = defineModel<Filters>()
 </script>
 
 <template>
-  <div class="columns">
+  <div class="columns" v-if="filters">
     <div class="column">
-      <ItemSearch :modelValue="filters.nameFilter" @update:modelValue="updateName" />
+      <ItemSearch v-model="filters.nameFilter" />
     </div>
     <div class="column">
-      <SeasonFilter :modelValue="filters.seasonFilter" @update:modelValue="updateSeasons" />
+      <SeasonFilter v-model="filters.seasonFilter" />
     </div>
     <div class="column">
-      <SkillFilter :modelValue="filters.skillFilter" @update:modelValue="updateSkills" />
+      <SkillFilter v-model="filters.skillFilter" />
     </div>
   </div>
 </template>

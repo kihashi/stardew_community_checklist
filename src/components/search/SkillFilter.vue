@@ -8,18 +8,9 @@ interface ModelValue {
   skillExclusive: boolean
 }
 
-const props = defineProps<{ modelValue: ModelValue }>()
-const emit = defineEmits<{ (e: 'update:modelValue', value: ModelValue): void }>()
+const modelValue = defineModel<ModelValue>()
 
 const store = useGeneralStore()
-
-function updateSkills(val: string[]) {
-  emit('update:modelValue', { ...props.modelValue, selectedSkills: val })
-}
-
-function updateExclusive(val: boolean) {
-  emit('update:modelValue', { ...props.modelValue, skillExclusive: val })
-}
 </script>
 
 <template>
@@ -27,14 +18,10 @@ function updateExclusive(val: boolean) {
     <div class="field-label is-normal">
       <label class="label">Skills</label>
     </div>
-    <div class="field-body">
+    <div class="field-body" v-if="modelValue">
       <div class="field has-addons has-addons-centered">
         <div class="control" v-for="skill in store.skills" :key="skill.id">
-          <ButtonCheckbox
-            :value="skill.id"
-            :modelValue="modelValue.selectedSkills"
-            @update:modelValue="updateSkills"
-          >
+          <ButtonCheckbox :value="skill.id" v-model="modelValue.selectedSkills">
             <span class="icon is-small">
               <SkillIcon :skill="skill.id" />
             </span>
@@ -43,11 +30,7 @@ function updateExclusive(val: boolean) {
       </div>
       <div class="field">
         <div class="control is-expanded">
-          <ButtonCheckbox
-            class="is-fullwidth"
-            :modelValue="modelValue.skillExclusive"
-            @update:modelValue="updateExclusive"
-          >
+          <ButtonCheckbox class="is-fullwidth" v-model="modelValue.skillExclusive">
             Exclusive
           </ButtonCheckbox>
         </div>

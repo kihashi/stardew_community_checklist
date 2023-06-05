@@ -1,5 +1,9 @@
+<script setup lang="ts">
+defineProps<{ skill: string }>()
+</script>
+
 <template>
-  <span class="icon" v-bind:data-skill="skill.id">
+  <span class="icon" v-bind:data-skill="skill">
     <mdicon name="cow" v-if="skill === 'farming'" />
     <mdicon name="diamond" v-if="skill === 'mining'" />
     <mdicon name="mushroom" v-if="skill === 'foraging'" />
@@ -7,21 +11,6 @@
     <mdicon name="sword" v-if="skill === 'combat'" />
   </span>
 </template>
-
-<script>
-export default {
-  name: 'skill-icon',
-  props: {
-    skill: {
-      type: String,
-      required: true,
-      default: function () {
-        return 'farming'
-      }
-    }
-  }
-}
-</script>
 
 <style scoped>
 .icon {
@@ -32,8 +21,7 @@ export default {
   content: attr(data-skill);
   display: block;
   position: absolute;
-  bottom: -0.85rem;
-  width: 100%;
+  bottom: -1.85rem;
   border-radius: 3px;
   font-size: 0.75rem;
   background-color: #209cee;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ItemCard from '@/components/item_card/ItemCard.vue'
-import ItemTable from '@/components/item_table/ItemTable.vue'
+import ItemCard from '@/components/item-card/ItemCard.vue'
+import ItemTable from '@/components/item-table/ItemTable.vue'
 import SearchForm from '@/components/search/SearchForm.vue'
 import { useGeneralStore } from '@/store'
 import _ from 'lodash'
@@ -87,7 +87,7 @@ const filteredItems = computed(() => {
 
 <template>
   <section class="section">
-    <SearchForm v-model:filters="filters"></SearchForm>
+    <SearchForm v-model="filters"></SearchForm>
     <section class="container">
       <div class="columns is-multiline">
         <ItemTable v-if="store.CompactView" :items="filteredItems" />

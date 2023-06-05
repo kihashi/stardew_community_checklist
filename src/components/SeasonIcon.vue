@@ -1,26 +1,15 @@
+<script setup lang="ts">
+defineProps<{ season: string }>()
+</script>
+
 <template>
-  <span class="icon" v-bind:data-season="season.id">
+  <span class="icon" v-bind:data-season="season">
     <mdicon name="flower" v-if="season === 'spring'" />
     <mdicon name="white-balance-sunny" v-if="season === 'summer'" />
     <mdicon name="leaf" v-if="season === 'fall'" />
     <mdicon name="snowflake" v-if="season === 'winter'" />
   </span>
 </template>
-
-<script>
-export default {
-  name: 'season-icon',
-  props: {
-    season: {
-      type: String,
-      required: true,
-      default: function () {
-        return 'spring'
-      }
-    }
-  }
-}
-</script>
 
 <style scoped>
 .icon {
@@ -31,8 +20,7 @@ export default {
   content: attr(data-season);
   display: block;
   position: absolute;
-  bottom: -0.75rem;
-  width: 100%;
+  bottom: -1.85rem;
   border-radius: 3px;
   font-size: 0.75rem;
   background-color: #00d1b2;
