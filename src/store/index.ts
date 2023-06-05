@@ -165,32 +165,56 @@ export const useGeneralStore = defineStore('general', {
     },
     resetData() {
       this.StoredBundleItemIds = {}
+    },
+    migrateV1StateIfExists() {
+      const v1data = localStorage.getItem('user_data')
+
+      if (v1data === null || v1data === '') return
+
+      const v1state = JSON.parse(atob(v1data)) as { item: number }[][]
+
+      for (let bundleId = 0; bundleId < v1state.length; bundleId++) {
+        for (let j = 0; j < v1state[bundleId].length; j++) {
+          let itemId = v1state[bundleId][j].item
+          // Patch for duplicate oak
+          if (itemId === 116) {
+            itemId = 24
+          }
+          // Patch for parsnip
+          if (itemId === 26 && bundleId === 6) {
+            itemId = 27
+          }
+
+          const bundleItemsToStore = this.getBundleItemsForItem(itemId)
+            .filter((bundleItem) => bundleItem.bundle_id === bundleId)
+            .filter((bundleItem) => !this.isBundleItemStored(bundleItem.id))
+
+          if (bundleItemsToStore.length > 0) {
+            this.storeItem(bundleItemsToStore[0].id)
+          } else {
+            console.log(
+              `Tried to redeem bundle ${bundleId} item ${itemId}, but no open bundle items were found`
+            )
+          }
+        }
+      }
+
+      localStorage.removeItem('user_data')
+      localStorage.setItem('v1data', v1data)
+    },
+    migrateV2StateIfExists() {
+      const v2data = localStorage.getItem('vuex')
+
+      console.log(v2data)
+      if (v2data === null || v2data === '') return
+
+      const v2state = JSON.parse(v2data)
+
+      this.StoredBundleItemIds = v2state.StoredItems
+
+      localStorage.removeItem('vuex')
+      localStorage.setItem('v2data', v2data)
     }
-    // loadV1State(v1state: { item: number }[][]) {
-    //   for (let i = 0; i < v1state.length; i++) {
-    //     for (let j = 0; j < v1state[i].length; j++) {
-    //       let itemId = v1state[i][j].item
-    //       // Patch for duplicate oak
-    //       if (itemId === 116) {
-    //         itemId = 24
-    //       }
-    //       // Patch for parsnip
-    //       if (itemId === 26 && i === 6) {
-    //         itemId = 27
-    //       }
-
-    //       const bundleItems = this.getOpenBundleItems(i, itemId)
-
-    //       if (bundleItems.length > 0) {
-    //         this.storeItem(bundleItems[0])
-    //       } else {
-    //         console.log(
-    //           `Tried to redeem bundle ${i} item ${itemId}, but no open bundle items were found`
-    //         )
-    //       }
-    //     }
-    //   }
-    // }
   }
 })
 

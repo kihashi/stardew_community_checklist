@@ -1,7 +1,16 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import AppFooter from './components/AppFooter.vue'
 import HeaderBar from './components/HeaderBar.vue'
 import { RouterView } from 'vue-router'
+import { useGeneralStore } from './store'
+
+const store = useGeneralStore()
+
+onMounted(() => {
+  store.migrateV1StateIfExists()
+  store.migrateV2StateIfExists()
+})
 </script>
 
 <template>
