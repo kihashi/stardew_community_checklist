@@ -35,9 +35,9 @@ const menuActive = ref(false)
             :key="room.id"
           >
             <a class="navbar-link">
-              <span class="icon has-text-success" v-if="store.isRoomComplete(room.id)"
-                ><font-awesome-icon icon="check-circle"
-              /></span>
+              <span class="icon has-text-success" v-if="store.isRoomComplete(room.id)">
+                <font-awesome-icon icon="check-circle" />
+              </span>
               <span>{{ room.name }}</span>
             </a>
             <div class="navbar-dropdown">
@@ -48,9 +48,9 @@ const menuActive = ref(false)
                 @click="menuActive = false"
                 :to="{ name: 'bundle-items', params: { id: bundle.id } }"
               >
-                <span class="icon has-text-success" v-if="store.isBundleComplete(bundle.id)"
-                  ><font-awesome-icon icon="check-circle"
-                /></span>
+                <span class="icon has-text-success" v-if="store.isBundleComplete(bundle.id)">
+                  <font-awesome-icon icon="check-circle" />
+                </span>
                 <span>{{ bundle.name }}</span>
               </RouterLink>
             </div>

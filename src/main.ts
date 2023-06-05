@@ -12,12 +12,13 @@ import '../node_modules/bulma/bulma.sass'
 const app = createApp(App)
 
 app.use(router)
-app.use(mdiVue, {
-  icons: mdijs
-})
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedState)
 app.use(pinia)
+
+app.use(mdiVue, {
+  icons: mdijs
+})
 
 app.mount('#app')
