@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import ButtonCheckbox from '@/components/ButtonCheckbox.vue'
 import { useGeneralStore } from '@/store'
-import { faCloudUploadAlt, faCopy, faTrash } from '@fortawesome/fontawesome-free-solid'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { ref } from 'vue'
 import useClipboard from 'vue-clipboard3'
 
@@ -120,7 +118,7 @@ async function copySerializedState() {
           <div class="control">
             <button class="button is-info" @click="copySerializedState">
               <span class="icon">
-                <font-awesome-icon :icon="faCopy"></font-awesome-icon>
+                <font-awesome-icon icon="fa-solid fa-copy"></font-awesome-icon>
               </span>
             </button>
           </div>
@@ -138,7 +136,7 @@ async function copySerializedState() {
           <div class="control">
             <button class="button is-info" @click="loadData">
               <span class="icon">
-                <font-awesome-icon :icon="faCloudUploadAlt"></font-awesome-icon>
+                <font-awesome-icon icon="fa-solid fa-cloud-upload-alt"></font-awesome-icon>
               </span>
             </button>
           </div>
@@ -157,7 +155,7 @@ async function copySerializedState() {
               @click="onDelete"
             >
               <span class="icon">
-                <font-awesome-icon :icon="faTrash"></font-awesome-icon>
+                <font-awesome-icon icon="fa-solid fa-trash"></font-awesome-icon>
               </span>
               <span v-if="deleteConfirm"> Are You Sure? </span>
               <span v-else> Reset Data </span>

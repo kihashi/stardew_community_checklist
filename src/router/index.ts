@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Welcome from '@/views/WelcomeView.vue'
-import Bundles from '@/views/BundlesView.vue'
-import BundleItems from '@/components/bundles/BundleItems.vue'
-import Search from '@/views/SearchView.vue'
-import Settings from '@/views/SettingsView.vue'
-import Changelog from '@/views/ChangelogView.vue'
+const Welcome = () => import('@/views/WelcomeView.vue')
+const Bundles = () => import('@/views/BundlesView.vue')
+const BundleItems = () => import('@/components/bundles/BundleItems.vue')
+const Search = () => import('@/views/SearchView.vue')
+const Settings = () => import('@/views/SettingsView.vue')
+const Changelog = () => import('@/views/ChangelogView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

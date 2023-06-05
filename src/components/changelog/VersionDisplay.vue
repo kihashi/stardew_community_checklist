@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { computed } from 'vue'
 
 const props = withDefaults(
@@ -48,7 +46,7 @@ const releaseUrl = computed(
       <p class="card-footer-item">
         <a :href="releaseUrl" class="button">
           <span class="icon">
-            <FontAwesomeIcon :icon="faGithub" />
+            <font-awesome-icon icon="fa-brands fa-github" />
           </span>
           <span>Release</span>
         </a>

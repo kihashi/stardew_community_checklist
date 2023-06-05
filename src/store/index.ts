@@ -166,7 +166,7 @@ export const useGeneralStore = defineStore('general', {
     resetData() {
       this.StoredBundleItemIds = {}
     },
-    migrateV1StateIfExists() {
+    async migrateV1StateIfExists() {
       const v1data = localStorage.getItem('user_data')
 
       if (v1data === null || v1data === '') return
@@ -202,7 +202,7 @@ export const useGeneralStore = defineStore('general', {
       localStorage.removeItem('user_data')
       localStorage.setItem('v1data', v1data)
     },
-    migrateV2StateIfExists() {
+    async migrateV2StateIfExists() {
       const v2data = localStorage.getItem('vuex')
 
       if (v2data === null || v2data === '') return

@@ -11,5 +11,18 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          bundles: [
+            './src/views/BundlesView.vue',
+            './src/components/bundles/BundleItems.vue',
+            './src/components/bundles/BundleNav.vue'
+          ]
+        }
+      }
+    }
   }
 })

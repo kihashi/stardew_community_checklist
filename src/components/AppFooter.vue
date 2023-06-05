@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
-import faReddit from '@fortawesome/fontawesome-free-brands/faReddit'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { RouterLink } from 'vue-router'
 </script>
 
@@ -29,10 +26,10 @@ import { RouterLink } from 'vue-router'
         </p>
         <div class="github-reddit">
           <a href="https://github.com/kihashi/stardew_community_checklist">
-            <FontAwesomeIcon :icon="faGithub" />
+            <font-awesome-icon icon="fa-brands fa-github" />
           </a>
           <a href="https://www.reddit.com/r/stardewchecklist/">
-            <FontAwesomeIcon :icon="faReddit" />
+            <font-awesome-icon icon="fa-brands fa-reddit" />
           </a>
         </div>
       </div>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { useGeneralStore } from '@/store'
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
@@ -36,7 +35,7 @@ const menuActive = ref(false)
           >
             <a class="navbar-link">
               <span class="icon has-text-success" v-if="store.isRoomComplete(room.id)">
-                <font-awesome-icon icon="check-circle" />
+                <font-awesome-icon icon="fa-solid fa-check-circle" />
               </span>
               <span>{{ room.name }}</span>
             </a>
@@ -49,7 +48,7 @@ const menuActive = ref(false)
                 :to="{ name: 'bundle-items', params: { id: bundle.id } }"
               >
                 <span class="icon has-text-success" v-if="store.isBundleComplete(bundle.id)">
-                  <font-awesome-icon icon="check-circle" />
+                  <font-awesome-icon icon="fa-solid fa-check-circle" />
                 </span>
                 <span>{{ bundle.name }}</span>
               </RouterLink>

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faCheckSquare, faSquare } from '@fortawesome/fontawesome-free-regular'
 import { useGeneralStore, type BundleItem } from '@/store'
 import { computed } from 'vue'
 
@@ -43,7 +41,9 @@ function toggleItemInBundle() {
     <div class="control is-expanded">
       <a class="button is-rounded is-fullwidth" :class="buttonClass" @click="toggleItemInBundle">
         <span class="icon">
-          <font-awesome-icon :icon="itemInBundle ? faCheckSquare : faSquare"></font-awesome-icon>
+          <font-awesome-icon
+            :icon="itemInBundle ? 'fa-regular fa-check-square' : 'fa-regular fa-square'"
+          />
         </span>
         <span class="is-size-7" v-if="bundle">{{ bundle.name }}{{ numberInBundle }}</span>
       </a>
@@ -54,7 +54,7 @@ function toggleItemInBundle() {
         :to="{ name: 'bundle-items', params: { id: bundleItem.bundle_id } }"
       >
         <span class="icon is-small">
-          <font-awesome-icon icon="link"></font-awesome-icon>
+          <font-awesome-icon icon="fa-solid fa-link"></font-awesome-icon>
         </span>
       </router-link>
     </div>
